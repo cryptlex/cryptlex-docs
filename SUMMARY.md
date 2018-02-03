@@ -1,11 +1,11 @@
 # Summary
 
 * [Introduction](/README.md)
-* Basic Concepts
+* [Basic Concepts](basic-concepts.md)
   * [Product](/BasicConcepts/Product.md)
 * Online Activations
   * [Product](/BasicConcepts/Product.md)
-* Timed Trials
+* [Timed Trials](timed-trials.md)
   * [Product](/BasicConcepts/Product.md)
 * Floating Licenses
   * [Product](/BasicConcepts/Product.md)
