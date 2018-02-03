@@ -2,13 +2,13 @@
 
 * [Introduction](/README.md)
 * BASIC CONCEPTS
-  * [Product](/BasicConcepts/Product.md)
+  * [Product](/basic-concepts/product.md)
 * ONLINE ACTIVATIONS
-  * [Product](/BasicConcepts/Product.md)
+  * [Product](/basic-concepts/product.md)
 * TIMED TRIALS
-  * [Product](/BasicConcepts/Product.md)
+  * [Product](/basic-concepts/product.md)
 * FLOATING LICENSES
-  * [Product](/BasicConcepts/Product.md)
+  * [Product](/basic-concepts/product.md)
 * WEB INTEGRATION
-  * [Product](/WebIntegration/Product.md)
+  * [Product](/web-integration/product.md)
 
