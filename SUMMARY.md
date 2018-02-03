@@ -1,9 +1,9 @@
 # Summary
 
 * [Introduction](/README.md)
-* BASIC CONCEPTS
+### BASIC CONCEPTS
   * [Product](/basic-concepts/products.md)
-* ONLINE ACTIVATIONS
+## ONLINE ACTIVATIONS
   * [Product](/basic-concepts/products.md)
 * TIMED TRIALS
   * [Product](/basic-concepts/products.md)
