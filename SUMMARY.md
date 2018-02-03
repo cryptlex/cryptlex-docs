@@ -10,5 +10,5 @@
 * FLOATING LICENSES
   * [Product](/BasicConcepts/Product.md)
 * WEB INTEGRATION
-  * [Product](/BasicConcepts/Product.md)
+  * [Product](/WebIntegration/Product.md)
 
