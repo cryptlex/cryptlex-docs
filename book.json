@@ -1,19 +1,28 @@
 {
     "gitbook": "3.2.2",
     "title": "Cryptlex Docs",
-    "plugins": ["edit-link", "prism", "swagger", "-highlight", "github", "anchorjs"],
+    "plugins": [
+        "edit-link",
+        "prism",
+        "swagger",
+        "-highlight",
+        "github",
+        "anchorjs",
+        "custom-favicon"
+    ],
     "pluginsConfig": {
-      "edit-link": {
-        "base": "https://github.com/cryptlex/cryptlex-docs/tree/master",
-        "label": "Edit This Page"
-      },
-      "github": {
-        "url": "https://github.com/cryptlex/cryptlex-docs"
-      },
-      "theme-default": {
-        "styles": {
-          "website": "build/gitbook.css"
+        "favicon": "https://app-dev.cryptlex.com/favicon.ico",
+        "edit-link": {
+            "base": "https://github.com/cryptlex/cryptlex-docs/tree/master",
+            "label": "Edit This Page"
+        },
+        "github": {
+            "url": "https://github.com/cryptlex/cryptlex-docs"
+        },
+        "theme-default": {
+            "styles": {
+                "website": "build/gitbook.css"
+            }
         }
-      }
     }
-  }
+}
