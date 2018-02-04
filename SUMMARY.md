@@ -1,7 +1,7 @@
 # Summary
 
 ### BASIC CONCEPTS
-* [Product](/basic-concepts/products.md)
+* [Getting Started](/README.md)
 ### ONLINE ACTIVATIONS
 * [Product](/basic-concepts/products.md)
 ### TIMED TRIALS
