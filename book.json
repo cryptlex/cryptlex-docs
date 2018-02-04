@@ -8,10 +8,13 @@
         "-highlight",
         "github",
         "anchorjs",
-        "custom-favicon"
+        "favicon"
     ],
     "pluginsConfig": {
-        "favicon": "https://app-dev.cryptlex.com/favicon.ico",
+        "favicon":{
+            "shortcut": "assets/images/favicon.ico",
+            "bookmark": "assets/images/favicon.ico"
+        },
         "edit-link": {
             "base": "https://github.com/cryptlex/cryptlex-docs/tree/master",
             "label": "Edit This Page"
