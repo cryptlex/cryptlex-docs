@@ -25,7 +25,8 @@
 ## FLOATING LICENSES
 
 * [Overview](floating-licenses/overview.md)
-* [LexFloat Server](floating-licenses/lexfloat-server.md)
+* [LexFloatServer](floating-licenses/lexfloat-server.md)
+* [Using LexFloatClient](floating-licenses/using-lexfloatclient.md)
 
 ## WEB INTEGRATION
 
