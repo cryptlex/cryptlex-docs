@@ -18,7 +18,9 @@
 
 ## TIMED TRIALS
 
-* [Product](/basic-concepts/products.md)
+* [Verified Trials](timed-trials/verified-trials.md)
+* [Unverified Trials](timed-trials/unverified-trials.md)
+* [Trial Extensions](timed-trials/trial-extensions.md)
 
 ## FLOATING LICENSES
 
