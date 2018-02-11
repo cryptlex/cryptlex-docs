@@ -10,7 +10,6 @@
 
 ## ONLINE ACTIVATIONS
 
-* [Product](/basic-concepts/products.md)
 * [Using LexActivator](basic-concepts/using-lexactivator.md)
 
 ## TIMED TRIALS
