@@ -24,7 +24,7 @@
 
 ## FLOATING LICENSES
 
-* [Product](/basic-concepts/products.md)
+* [Overview](floating-licenses/overview.md)
 
 ## WEB INTEGRATION
 
