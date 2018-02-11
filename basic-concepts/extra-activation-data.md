@@ -2,8 +2,6 @@
 
 You can pass additional data to the Cryptlex servers when activating. You can see the extra data by clicking any product key link on the product version page.
 
-
-
 [![](https://cryptlex.com/public/img/docs/sample-activation-data.png "activation-data")](https://cryptlex.com/public/img/docs/sample-activation-data.png)
 
 ### How to pass extra activation data during activation
@@ -37,8 +35,5 @@ You can use extra activation data to pass on:
 * Customer name activating the product
 * OS details etc.
 
-
-
-  
 
 

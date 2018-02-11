@@ -12,6 +12,7 @@
 
 * [Using LexActivator](basic-concepts/using-lexactivator.md)
 * [Extra Activation Data](basic-concepts/extra-activation-data.md)
+* [Offline Activation](basic-concepts/offline-activation.md)
 
 ## TIMED TRIALS
 
