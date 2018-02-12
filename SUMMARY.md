@@ -7,6 +7,7 @@
 * [Custom License Fields](custom-license-fields.md)
 * [Managing Users](managing-users.md)
 * [Switching your Licensing to Cryptlex](switching-your-licensing-to-cryptlex.md)
+* Web API
 
 ## ONLINE ACTIVATIONS
 
@@ -30,5 +31,7 @@
 
 ## WEB INTEGRATION
 
-* [Product](/web-integration/products.md)
+* [Web API](web-integration/web-api.md)
+* Webhooks
+* Zapier
 
