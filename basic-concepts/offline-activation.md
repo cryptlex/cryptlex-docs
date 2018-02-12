@@ -2,17 +2,12 @@
 
 Suppose your user doesn't have access to an internet connection or may not have in near future. For such cases you can provide your users with an offline activation response file which can be used to activate the product offline. Offline activation process has following three steps:
 
-
-
 ### Generating offline activation request file
 
 To allow your users to generate offline activation request file use following LexActivator API function:
 
 ```
-GenerateOfflineActivationRequest
-(
-)
-;
+GenerateOfflineActivationRequest();
 ```
 
 ### Generating offline activation response file
@@ -26,10 +21,7 @@ Now, after getting the offline activation response file from user, go to product
 To allow your users to activate using the generated offline activation response file use following LexActivator API function:
 
 ```
-ActivateProductOffline
-(
-)
-;
+ActivateProductOffline();
 ```
 
 In case user formats the PC, the generated offline activation response can be reused, till the validity expires, to activate your app on the user's machine.
