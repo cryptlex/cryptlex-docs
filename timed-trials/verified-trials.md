@@ -4,8 +4,6 @@ Verified trial uses online activation. It ensures that trial doesn't reset even 
 
 As the count of trial activations is usually much higher than product activations,**TEN**trial activations consume**ONE**activation from your plan. When a trial user activates using a product key, trial activation registered against the user's machine is automatically freed up, hence allowing more trial activations.
 
-
-
 ### Adding Verified Trial to your App
 
 To add verified trial to your app you need the**Trial Key**. Each product version has one Trial Key which can be used to activate that product version. To get your Trial Key click "Trial Activations" button below the product version on the products page.
@@ -15,151 +13,43 @@ To add verified trial to your app you need the**Trial Key**. Each product versio
 When your user installs your application first time, invoke`SetTrialKey()`and`ActivateTrial()`LexActivator API functions to start the trial. Following sample code should be executed once after user installs your app, ideally on a button click. Executing multiple times would unnecessarily re-validate the trial by contacting Cryptlex servers.
 
 ```
-int
- trialStatus
-;
-
-    trialStatus 
-=
-SetTrialKey
-(
-"YOUR TRIAL KEY"
-)
-;
-if
-(
-LA_OK 
-!=
- status
-)
-{
-printf
-(
-"Error code: %d"
-,
-status
-)
-;
-getchar
-(
-)
-;
-return
- status
-;
+int trialStatus;trialStatus =SetTrialKey("YOUR TRIAL KEY");
+if(LA_OK !=status){
+   printf("Error code: %d",status);
+   getchar();
+   return status;
 }
 
-    trialStatus 
-=
-ActivateTrial
-(
-)
-;
-if
-(
-LA_OK 
-==
- trialStatus
-)
-{
-unsigned
-int
- daysLeft 
-=
-0
-;
-GetTrialDaysLeft
-(
-&
-daysLeft
-,
-LA_V_TRIAL
-)
-;
-printf
-(
-"Trial started, days left: %d"
-,
-daysLeft
-)
-;
+trialStatus =ActivateTrial();
+if(LA_OK ==trialStatus)
+   {unsigned int daysLeft =0;
+   GetTrialDaysLeft(&daysLeft,LA_V_TRIAL);
+   printf("Trial started, days left: %d",daysLeft);
 }
-else
-{
-//Trial was tampered or has expired
-printf
-(
-"Trial activation failed: %d"
-,
- trialStatus
-)
-;
+else{
+   //Trial was tampered or has expired
+   printf("Trial activation failed: %d",trialStatus);
 }
 ```
 
 Once the trial is started you only need to invoke`IsTrialGenuine()`and`GetTrialDaysLeft()`LexActivator API functions at the start of your app after`IsProductGenuine()`check. Following is the sample code:
 
 ```
-int
- trialStatus
-;
-
-    trialStatus 
-=
-IsTrialGenuine
-(
-)
-;
-if
-(
-LA_OK 
-==
- trialStatus
-)
+int trialStatus;
+trialStatus =IsTrialGenuine();
+if(LA_OK ==trialStatus)
 {
-unsigned
-int
- daysLeft 
-=
-0
-;
-GetTrialDaysLeft
-(
-&
-daysLeft
-,
-LA_V_TRIAL
-)
-;
-printf
-(
-"Trial days left: %d"
-,
- daysLeft
-)
-;
+    unsigned int daysLeft =0;
+    GetTrialDaysLeft(&daysLeft,LA_V_TRIAL);
+    printf("Trial days left: %d",daysLeft);
 }
-else
-if
-(
-LA_T_EXPIRED 
-==
- trialStatus
-)
+else if(LA_T_EXPIRED == trialStatus)
 {
-printf
-(
-"Trial has expired!"
-)
-;
+    printf("Trial has expired!");
 }
 else
 {
-printf
-(
-"Either trial has not started or has been tampered!"
-)
-;
+    printf("Either trial has not started or has been tampered!");
 }
 ```
 
