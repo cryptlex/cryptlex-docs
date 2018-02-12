@@ -14,19 +14,21 @@ When your user installs your application first time, invoke`SetTrialKey()`and`Ac
 
 ```
 int trialStatus;trialStatus =SetTrialKey("YOUR TRIAL KEY");
-if(LA_OK !=status){
+if (LA_OK !=status){
    printf("Error code: %d",status);
    getchar();
    return status;
 }
 
 trialStatus =ActivateTrial();
-if(LA_OK ==trialStatus)
-   {unsigned int daysLeft =0;
+if (LA_OK ==trialStatus)
+{
+   unsigned int daysLeft =0;
    GetTrialDaysLeft(&daysLeft,LA_V_TRIAL);
    printf("Trial started, days left: %d",daysLeft);
 }
-else{
+else
+{
    //Trial was tampered or has expired
    printf("Trial activation failed: %d",trialStatus);
 }
@@ -37,13 +39,13 @@ Once the trial is started you only need to invoke`IsTrialGenuine()`and`GetTrialD
 ```
 int trialStatus;
 trialStatus =IsTrialGenuine();
-if(LA_OK ==trialStatus)
+if (LA_OK ==trialStatus)
 {
     unsigned int daysLeft =0;
     GetTrialDaysLeft(&daysLeft,LA_V_TRIAL);
     printf("Trial days left: %d",daysLeft);
 }
-else if(LA_T_EXPIRED == trialStatus)
+else if (LA_T_EXPIRED == trialStatus)
 {
     printf("Trial has expired!");
 }
