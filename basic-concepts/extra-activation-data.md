@@ -9,20 +9,13 @@ You can pass additional data to the Cryptlex servers when activating. You can se
 Passing extra activation data to Cryptlex servers is pretty simple. Just invoke the following function:
 
 ```
-SetExtraActivationData
-(
-"Sample activation data"
-)
-;
+SetExtraActivationData("Sample activation data");
 ```
 
 before invoking the activation function:
 
 ```
-ActivateProduct
-(
-)
-;
+ActivateProduct();
 ```
 
 This will set the extra data which is then passed to Cryptlex servers during activation. The maximun size of activation data should be less than 256 UTF-8 characters.
