@@ -12,7 +12,7 @@ To add unverified trial to your app, you only need to invoke`InitializeTrial()`a
 int trialStatus,trialLength; 
 trialLength =30; // Must be same as set in the dashboard for the product version
 trialStatus =InitializeTrial(trialLength);
-if(LA_OK ==trialStatus)
+if (LA_OK ==trialStatus)
 {
    unsigned int daysLeft =0;
    GetTrialDaysLeft(&daysLeft,LA_UV_TRIAL);
