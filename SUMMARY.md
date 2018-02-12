@@ -7,11 +7,17 @@
 * [Custom License Fields](custom-license-fields.md)
 * [Managing Users](managing-users.md)
 * [Switching your Licensing to Cryptlex](switching-your-licensing-to-cryptlex.md)
-* Web API
 
 ## ONLINE ACTIVATIONS
 
 * [Using LexActivator](basic-concepts/using-lexactivator.md)
+  * [C, C++, and Objective-C](basic-concepts/using-lexactivator/c-c++-and-objective-c.md)
+  * C\#
+  * Delphi
+  * Java
+  * VB.NET
+  * GO
+  * Others
 * [Extra Activation Data](basic-concepts/extra-activation-data.md)
 * [Offline Activation](basic-concepts/offline-activation.md)
 * [Virtual Machines](basic-concepts/virtual-machines.md)

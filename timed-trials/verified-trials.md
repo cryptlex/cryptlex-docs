@@ -12,7 +12,7 @@ To add verified trial to your app you need the**Trial Key**. Each product versio
 
 When your user installs your application first time, invoke`SetTrialKey()`and`ActivateTrial()`LexActivator API functions to start the trial. Following sample code should be executed once after user installs your app, ideally on a button click. Executing multiple times would unnecessarily re-validate the trial by contacting Cryptlex servers.
 
-```
+```c
 int trialStatus;trialStatus =SetTrialKey("YOUR TRIAL KEY");
 if (LA_OK !=status)
 {
@@ -37,7 +37,7 @@ else
 
 Once the trial is started you only need to invoke`IsTrialGenuine()`and`GetTrialDaysLeft()`LexActivator API functions at the start of your app after`IsProductGenuine()`check. Following is the sample code:
 
-```
+```c
 int trialStatus;
 trialStatus =IsTrialGenuine();
 if (LA_OK ==trialStatus)
