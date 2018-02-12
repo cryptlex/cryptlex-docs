@@ -33,5 +33,5 @@
 
 * [Web API](web-integration/web-api.md)
 * [Webhooks](web-integration/webhooks.md)
-* Zapier
+* [Zapier](web-integration/zapier.md)
 
