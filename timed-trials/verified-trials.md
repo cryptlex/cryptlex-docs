@@ -14,7 +14,8 @@ When your user installs your application first time, invoke`SetTrialKey()`and`Ac
 
 ```
 int trialStatus;trialStatus =SetTrialKey("YOUR TRIAL KEY");
-if (LA_OK !=status){
+if (LA_OK !=status)
+{
    printf("Error code: %d",status);
    getchar();
    return status;
