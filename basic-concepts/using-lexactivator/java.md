@@ -25,8 +25,7 @@ LexActivator example project \(Netbeans\) for Java contains the LexActivator pac
 
 LexActivator is compiled as a native binary, so you will need to include the LexActivator binaries for every platform you want to support. It looks for the native platform libraries in the folder "lexactivator" relative to your jar file. The folder structure should be as follows:
 
-```
-
+```c
 myapp.jar
 lexactivator/
      mac/
@@ -40,7 +39,6 @@ lexactivator/
      linux-x86-64/
           libLexActivator.so
 
-
 ```
 
 In case you are creating platform specific installers, you only need to include the versions of LexActivator applicable to that platform.
@@ -49,19 +47,9 @@ In case you are creating platform specific installers, you only need to include 
 
 The first LexActivator API function you need to use in your code is`SetVersionGUID()`. It sets the version GUID of the product you will be adding licensing to. If the Product.dat file is not present in the same directory as your app or has been renamed, you need to invoke`SetProductFile()`function first to set the path of the product file.
 
-```
+```c
 
-    LexActivator
-.
-SetVersionGUID
-(
-"YOUR VERSION GUID"
-,
- LexActivator
-.
-LA_USER
-)
-;
+    LexActivator.SetVersionGUID("YOUR VERSION GUID", LexActivator.LA_USER);
 ```
 
 If your app requires admin \(root\) privileges to run \(e.g. services, daemons etc.\), instead of passing`LexActivator.LA_USER`flag, you need to pass`LexActivator.LA_SYSTEM`flag.
@@ -70,122 +58,31 @@ If your app requires admin \(root\) privileges to run \(e.g. services, daemons e
 
 To activate your app using the product key, you will use`ActivateProduct()`LexActivator API function. It contacts the Cryptlex servers, validates the key and returns with encrypted and digitally signed response which it stores and uses to activate the product.
 
-```
-int
- status
-;
-try
-{
+```c
+ int status;
+    try
+    {
+    	LexActivator.SetProductKey("YOUR PRODUCT KEY");
+    	LexActivator.SetExtraActivationData("sample data");
+    	status = LexActivator.ActivateProduct();
+    	if (status == LexActivator.LA_OK)
+    	{
+    		System.out.println("Activation successful");
+    	}
+    	if (status == LexActivator.LA_EXPIRED)
+    	{
+    		System.out.println("Activation successful, but license validity has expired!");
+    	}
+    	else
+    	{
+    		System.out.println("Error activating the product: " + status);
+    	}
 
-    	LexActivator
-.
-SetProductKey
-(
-"YOUR PRODUCT KEY"
-)
-;
-
-    	LexActivator
-.
-SetExtraActivationData
-(
-"sample data"
-)
-;
-
-    	status 
-=
- LexActivator
-.
-ActivateProduct
-(
-)
-;
-if
-(
-status 
-==
- LexActivator
-.
-LA_OK
-)
-{
-
-    		System
-.
-out
-.
-println
-(
-"Activation successful"
-)
-;
-}
-if
-(
-status 
-==
- LexActivator
-.
-LA_EXPIRED
-)
-{
-
-    		System
-.
-out
-.
-println
-(
-"Activation successful, but license validity has expired!"
-)
-;
-}
-else
-{
-
-    		System
-.
-out
-.
-println
-(
-"Error activating the product: "
-+
- status
-)
-;
-}
-}
-catch
-(
-LexActivatorException
- ex
-)
-{
-
-    	System
-.
-out
-.
-println
-(
-ex
-.
-getCode
-(
-)
-+
-": "
-+
- ex
-.
-getMessage
-(
-)
-)
-;
-}
+    }
+    catch (LexActivatorException ex)
+    {
+    	System.out.println(ex.getCode() + ": " + ex.getMessage());
+    }
 ```
 
 The above code should be executed at the time of registration, ideally on a button click.
@@ -194,144 +91,40 @@ The above code should be executed at the time of registration, ideally on a butt
 
 Each time, your app starts, you need to verify whether your app is already activated or not. This verification should occur locally by verifying the cryptographic digital signature fetched at the time of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate the activation periodically. For this you need to use`IsProductGenuine()`LexActivator API function.
 
-```
-int
- status
-;
-try
-{
+```c
+ int status;
+    try
+    {
+    	LexActivator.SetVersionGUID("YOUR VERSION GUID", LexActivator.LA_USER);
 
-    	LexActivator
-.
-SetVersionGUID
-(
-"YOUR VERSION GUID"
-,
- LexActivator
-.
-LA_USER
-)
-;
+    	status = LexActivator.IsProductGenuine();
+    	if (LexActivator.LA_OK == status)
+    	{
+    		System.out.println("Product is genuinely activated!");
+    	}
+    	else if (LexActivator.LA_EXPIRED == status)
+    	{
+    		System.out.println("Product is genuinely activated, but license validity has expired!");
+    	}
+    	else if (LexActivator.LA_GP_OVER == status)
+    	{
+    		System.out.println("Product is genuinely activated, but grace period is over!");
+    	}
+    	else
+    	{
+    		System.out.println("Product is not activated!");
+    	}
 
-
-    	status 
-=
- LexActivator
-.
-IsProductGenuine
-(
-)
-;
-if
-(
-LexActivator
-.
-LA_OK 
-==
- status
-)
-{
-
-    		System
-.
-out
-.
-println
-(
-"Product is genuinely activated!"
-)
-;
-}
-else
-if
-(
-LexActivator
-.
-LA_EXPIRED 
-==
- status
-)
-{
-
-    		System
-.
-out
-.
-println
-(
-"Product is genuinely activated, but license validity has expired!"
-)
-;
-}
-else
-if
-(
-LexActivator
-.
-LA_GP_OVER 
-==
- status
-)
-{
-
-    		System
-.
-out
-.
-println
-(
-"Product is genuinely activated, but grace period is over!"
-)
-;
-}
-else
-{
-
-    		System
-.
-out
-.
-println
-(
-"Product is not activated!"
-)
-;
-}
-}
-catch
-(
-LexActivatorException
- ex
-)
-{
-
-    	System
-.
-out
-.
-println
-(
-ex
-.
-getCode
-(
-)
-+
-": "
-+
- ex
-.
-getMessage
-(
-)
-)
-;
-}
+    }
+    catch (LexActivatorException ex)
+    {
+    	System.out.println(ex.getCode() + ": " + ex.getMessage());
+    }
 ```
 
 The above code should be executed everytime user starts the app. After verifying locally, it schedules a server check in a separate thread.
 
 ### Need more help?
 
-In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our[support forum](https://cryptlex.com/forums)or can contact us through[email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
+In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our[support forum](https://cryptlex.com/forums)or can contact us through[email](mailto:support@cryptlex.com?Subject=Using LexActivator).
 
