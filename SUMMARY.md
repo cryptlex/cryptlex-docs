@@ -13,7 +13,7 @@
 * [Using LexActivator](basic-concepts/using-lexactivator.md)
   * [C, C++, and Objective-C](basic-concepts/using-lexactivator/c-c++-and-objective-c.md)
   * [C\#](basic-concepts/using-lexactivator/c.md)
-  * Delphi
+  * [Delphi](basic-concepts/using-lexactivator/delphi.md)
   * Java
   * VB.NET
   * GO
