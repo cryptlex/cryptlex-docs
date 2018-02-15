@@ -14,7 +14,7 @@
   * [C, C++, and Objective-C](basic-concepts/using-lexactivator/c-c++-and-objective-c.md)
   * [C\#](basic-concepts/using-lexactivator/c.md)
   * [Delphi](basic-concepts/using-lexactivator/delphi.md)
-  * Java
+  * [Java](basic-concepts/using-lexactivator/java.md)
   * VB.NET
   * GO
   * Others
