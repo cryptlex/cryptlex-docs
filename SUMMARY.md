@@ -15,7 +15,7 @@
   * [C\#](basic-concepts/using-lexactivator/c.md)
   * [Delphi](basic-concepts/using-lexactivator/delphi.md)
   * [Java](basic-concepts/using-lexactivator/java.md)
-  * VB.NET
+  * [VB.NET](basic-concepts/using-lexactivator/vbnet.md)
   * GO
   * Others
 * [Extra Activation Data](basic-concepts/extra-activation-data.md)
