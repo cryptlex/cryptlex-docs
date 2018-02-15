@@ -8,7 +8,7 @@ As the unverified trial data is completely stored on the user's machine, you can
 
 To add unverified trial to your app, you only need to invoke`InitializeTrial()`and`GetTrialDaysLeft()`LexActivator API functions at the start of your app. Following is the sample code:
 
-```
+```c
 int trialStatus,trialLength; 
 trialLength =30; // Must be same as set in the dashboard for the product version
 trialStatus =InitializeTrial(trialLength);
