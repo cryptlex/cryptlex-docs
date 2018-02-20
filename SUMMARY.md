@@ -38,7 +38,7 @@
   * [C\#](floating-licenses/using-lexfloatclient/c.md)
   * [Delphi](floating-licenses/using-lexfloatclient/delphi.md)
   * [Java](floating-licenses/using-lexfloatclient/java.md)
-  * VB.NET
+  * [VB.NET](floating-licenses/using-lexfloatclient/vbnet.md)
 
 ## WEB INTEGRATION
 
