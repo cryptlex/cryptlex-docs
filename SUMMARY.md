@@ -35,7 +35,7 @@
 * [LexFloatServer](floating-licenses/lexfloat-server.md)
 * [Using LexFloatClient](floating-licenses/using-lexfloatclient.md)
   * [C, C++, and Objective-C](floating-licenses/using-lexfloatclient/c-c++-and-objective-c.md)
-  * C\#
+  * [C\#](floating-licenses/using-lexfloatclient/c.md)
   * Delphi
   * Java
   * VB.NET
