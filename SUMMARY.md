@@ -37,7 +37,7 @@
   * [C, C++, and Objective-C](floating-licenses/using-lexfloatclient/c-c++-and-objective-c.md)
   * [C\#](floating-licenses/using-lexfloatclient/c.md)
   * [Delphi](floating-licenses/using-lexfloatclient/delphi.md)
-  * Java
+  * [Java](floating-licenses/using-lexfloatclient/java.md)
   * VB.NET
 
 ## WEB INTEGRATION
