@@ -34,6 +34,11 @@
 * [Overview](floating-licenses/overview.md)
 * [LexFloatServer](floating-licenses/lexfloat-server.md)
 * [Using LexFloatClient](floating-licenses/using-lexfloatclient.md)
+  * [C, C++, and Objective-C](floating-licenses/using-lexfloatclient/c-c++-and-objective-c.md)
+  * C\#
+  * Delphi
+  * Java
+  * VB.NET
 
 ## WEB INTEGRATION
 
