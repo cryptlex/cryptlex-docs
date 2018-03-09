@@ -1,5 +1,11 @@
 ## Webhooks
 
+The concept of a WebHook is simple. A WebHook is an HTTP callback: an HTTP POST that occurs when something happens; a simple event-notification via HTTP POST.
+
+
+
+Webhook simply  is an HTTP callback : an HTTP POST which launches whenever an activity is done; or simply an event-notification via HTTP POST
+
 Webhooks enable you to develop or set GitHub Apps which buy in to specific occasions on GitHub.com. When one of those occasions is activated, we'll send a HTTP POST payload to the webhook's designed URL. Webhooks can be utilized to refresh an outer issue tracker, trigger CI assembles, refresh a reinforcement reflect, or even convey to your generation server. You're just restricted by your creative energy.
 
 Webhooks can be introduced on an association or a particular storehouse. Once introduced, the webhook will be set off each time at least one bought in occasions happens.
@@ -77,5 +83,28 @@ The accessible occasions are:
 
 ### Payload
 
-ghkhgckgck
+Each event type has a specific payload format with the relevant event information. All event payloads mirror [the payloads for the Event types](https://developer.github.com/v3/activity/events/types/), with the exception of [the original`push`event](https://developer.github.com/v3/activity/events/types/#pushevent), which has a more detailed webhook payload.
+
+In addition to the fields [documented for each event](https://developer.github.com/v3/activity/events/types/), webhook payloads include the user who performed the event \(`sender`\) as well as the organization \(`organization`\) and/or repository \(`repository`\) which the event occurred on, and for a[GitHub App](https://developer.github.com/apps/)'s webhook may include the installation \(`installation`\) which an event relates to. An example is given in the [PullRequestEvent payload](https://developer.github.com/v3/activity/events/types/#pullrequestevent).
+
+### Delivery headers
+
+HTTP POST payloads that are delivered to your webhook's configured URL endpoint will contain several special headers:
+
+| Header | Description |
+| :--- | :--- |
+|  |  |
+|  |  |
+|  |  |
+
+
+
+### 
+
+  
+
+
+
+
+
 
