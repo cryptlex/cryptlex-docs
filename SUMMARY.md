@@ -3,6 +3,7 @@
 ## BASIC CONCEPTS
 
 * [Getting Started](/README.md)
+* [Products](products.md)
 * [Product Keys](product-keys.md)
 * [Custom License Fields](custom-license-fields.md)
 * [Managing Users](managing-users.md)
