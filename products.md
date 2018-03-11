@@ -77,7 +77,7 @@ Total number of floating clients allowed.
 
 #### Allowed Countries
 
-Product allowed in the countries.
+Product allowed in the countries. If none of the country is included, the setting is ignored.
 
 #### Disallowed Countries
 
