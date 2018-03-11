@@ -38,8 +38,7 @@ There are two types of product key
 
 #### Allowed Activations
 
-Total number of activations allowed per user  
-.
+Total number of activations allowed per user.
 
 #### Allowed Deactivation
 
@@ -49,7 +48,7 @@ Total number of deactivations allowed per user.
 
 Whenever the application starts, the server sync occurs immediately. This setting determines the interval for further server syncs if the application is not closed.
 
-#### Grace Period
+#### Grace Period
 
 It determines the number of days for which the server sync failure due to network error is acceptable.
 
@@ -92,8 +91,6 @@ It prevents licenses from working on cloned virtual machines.
 
 It prevents users from using the same key in a machine with the same fingerprint.
 
-
-
 ### Trial Settings
 
 It consists of following settings:
@@ -103,8 +100,4 @@ It consists of following settings:
 #### Trial Length
 
 The number of days after which the trial is expired.
-
-
-
-
 
