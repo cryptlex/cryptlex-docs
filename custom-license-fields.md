@@ -12,11 +12,17 @@ On the "Custom Fields" page, click "Plus symbol" button and fill in all the valu
 
 ![](/assets/4.PNG)
 
-**Name :** This is the name of the custom field.
+#### **Name **
 
-**Required : **Choosing if the field is necessarily required to be filled or not**.**
+This is the name of the custom field.
 
-**Accessible :** Once user activates your app the field data is accessible to you in the app. On activation, encrypted fields data is sent along with signed activation data. So, after user has activated your app, you can use LexActivator API function GetCustomLicenseField\(\) to access the field value.
+#### **Required **
+
+Choosing if the field is necessarily required to be filled or not at the time of creation of product key.
+
+#### **Accessible **
+
+Once user activates your app the field data is accessible to you in the app. On activation, encrypted fields data is sent along with signed activation data. So, after user has activated your app, you can use LexActivator API function GetCustomLicenseField\(\) to access the field value.
 
 ### Using a Custom License Field
 
