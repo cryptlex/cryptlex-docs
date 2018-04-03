@@ -42,7 +42,7 @@
 
 ## WEB INTEGRATION
 
-* [Web API](web-integration/web-api.md)
+* [Web API](https://docs.cryptlex.com/web-api.html)
 * [Webhooks](web-integration/webhooks.md)
 * [Zapier](web-integration/zapier.md)
 
