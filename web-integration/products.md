@@ -1,1 +1,0 @@
-<swagger>https://cryptlex-web-api-dev.herokuapp.com/swagger/v1/swagger.json</swagger>
