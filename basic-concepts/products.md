@@ -1,24 +1,102 @@
-## Getting Started
+# Products
 
-This tutorial will guide you through the process of adding Cryptlex Licensing to your product. The complete process has three steps:
+End-user organizations can control where and how products are able to run.
 
+## Product Versions
 
+Each product has a product version which constitutes of following :
 
-### Add a product in Cryptlex
+![](../.gitbook/assets/3.PNG)
 
-Log in to your Cryptlex account. Click the "Add Product" button on the left side.
+### Name
 
-[![](https://cryptlex.com/public/img/docs/dashboard.png "dashboard")](https://cryptlex.com/public/img/docs/dashboard.png)
+This includes the name of your product version.
 
-On the "Add Product" page fill in all the values for the product to which you'll be adding licensing.
+### App Version
 
-[![](https://cryptlex.com/public/img/docs/add-product.png "add-product")](https://cryptlex.com/public/img/docs/add-product.png)
+This includes values for the product version information.
 
-### Adding LexActivator to your Product
+App Version should be set to the latest version of your software. This value is accessible and can be used to detect software updates.
 
-LexActivator is the library which you will use to add licensing to your product. It is a shared library available for all the major platforms - Windows, Mac OS X and Linux. The library can be used with all the programming languages.
+## Product Keys Settings
 
-### Using Cryptlex Web API to automate order process
+The product key consists of following settings:
 
-You can use the web API to automate your order processes by generating new product keys when an order is processed. The web API can be used with any payment processor to generate product keys when an order is processed.
+![](../.gitbook/assets/1.PNG)
+
+### Validity
+
+The number of days after which the product gets expired.
+
+### Type
+
+There are two types of product key
+
+* **Node-locked**: This is the default type which locks the product key to the machine.
+* **Floating** : This type is used for LexFloatServer.
+
+### Allowed Activations
+
+Total number of activations allowed per user.
+
+### Allowed Deactivation
+
+Total number of deactivations allowed per user.
+
+### Server sync Interval
+
+Whenever the application starts, the server sync occurs immediately. This setting determines the interval for further server syncs if the application is not closed.
+
+### Grace Period
+
+It determines the number of days for which the server sync failure due to network error is acceptable.
+
+### Expiration Strategy
+
+The time after which the product key starts count of expiry . Its of three types:
+
+* **Immediate : **The product key starts expiring right after the product key is created.
+* **Delayed : **The product key starts expiring after the product key is activated first time. 
+  * If the product allows more than one activation then all the other activations will also start expiring right after the first activation of the product key.
+* **Rolling : **The product key starts expiring after the product key is activated.
+  * ** **If the product key allows more than one activation,all the other activations of the product key will start expiring right after they are activated.
+  * If any of the activation of the product key is deactivated, the expiry date of that activation  will start from the day its reactivated.
+
+### Fingerprint Matching Strategy
+
+This includes how the fingerprints will be compared. Its of three types:
+
+* **Exact : **There should be an exact match of the hardwares of the machine. If their is a minor change in the hardware, fingerprints will not be accepted.
+* **Fuzzy :**
+* **Loose : **If any of the hardware is matched, the fingerprint is accepted.
+
+### Allowed Floating Clients
+
+Total number of floating clients allowed.
+
+### Allowed Countries
+
+Product allowed in the countries. If none of the country is included, the setting is ignored.
+
+### Disallowed Countries
+
+Product not allowed in the countries.
+
+### Allow VM Activations
+
+It prevents licenses from working on cloned virtual machines.
+
+### Enable User Lock
+
+It prevents users from using the same key in a machine with the same fingerprint.
+
+## Trial Settings
+
+It consists of following settings:
+
+![](../.gitbook/assets/capture.PNG)
+
+### Trial Length
+
+The number of days after which the trial is expired.
 

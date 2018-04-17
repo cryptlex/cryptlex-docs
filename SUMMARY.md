@@ -1,27 +1,29 @@
-# Summary
+# Table of contents
+
+* [Introduction](README.md)
 
 ## BASIC CONCEPTS
 
-* [Getting Started](/README.md)
-* [Products](products.md)
-* [Custom License Fields](custom-license-fields.md)
-* [Managing Users](managing-users.md)
-* [Switching your Licensing to Cryptlex](switching-your-licensing-to-cryptlex.md)
+* [Getting Started](basic-concepts/getting-started.md)
+* [Products](basic-concepts/products.md)
+* [Custom License Fields](basic-concepts/custom-license-fields.md)
+* [Managing Users](basic-concepts/managing-users.md)
+* [Switching your Licensing to Cryptlex](basic-concepts/switching-your-licensing-to-cryptlex.md)
 
 ## ONLINE ACTIVATIONS
 
-* [Using LexActivator](basic-concepts/using-lexactivator.md)
-  * [C, C++, and Objective-C](basic-concepts/using-lexactivator/c-c++-and-objective-c.md)
-  * [C\#](basic-concepts/using-lexactivator/c.md)
-  * [Delphi](basic-concepts/using-lexactivator/delphi.md)
-  * [Java](basic-concepts/using-lexactivator/java.md)
-  * [VB.NET](basic-concepts/using-lexactivator/vbnet.md)
+* [Using LexActivator](online-activations/using-lexactivator/README.md)
+  * [C, C++, and Objective-C](online-activations/using-lexactivator/c-c++-and-objective-c.md)
+  * [C\#](online-activations/using-lexactivator/c.md)
+  * [Delphi](online-activations/using-lexactivator/delphi.md)
+  * [Java](online-activations/using-lexactivator/java.md)
+  * [VB.NET](online-activations/using-lexactivator/vb.net.md)
   * GO
   * Others
-* [Extra Activation Data](basic-concepts/extra-activation-data.md)
-* [Offline Activation](basic-concepts/offline-activation.md)
-* [Virtual Machines](basic-concepts/virtual-machines.md)
-* [Proxies](basic-concepts/proxies.md)
+* [Extra Activation Data](online-activations/extra-activation-data.md)
+* [Offline Activation](online-activations/offline-activation.md)
+* [Virtual Machines](online-activations/virtual-machines.md)
+* [Proxies](online-activations/proxies.md)
 
 ## TIMED TRIALS
 
@@ -32,17 +34,18 @@
 ## FLOATING LICENSES
 
 * [Overview](floating-licenses/overview.md)
-* [LexFloatServer](floating-licenses/lexfloat-server.md)
-* [Using LexFloatClient](floating-licenses/using-lexfloatclient.md)
+* [LexFloatServer](floating-licenses/lexfloatserver.md)
+* [Using LexFloatClient](floating-licenses/using-lexfloatclient/README.md)
   * [C, C++, and Objective-C](floating-licenses/using-lexfloatclient/c-c++-and-objective-c.md)
   * [C\#](floating-licenses/using-lexfloatclient/c.md)
   * [Delphi](floating-licenses/using-lexfloatclient/delphi.md)
   * [Java](floating-licenses/using-lexfloatclient/java.md)
-  * [VB.NET](floating-licenses/using-lexfloatclient/vbnet.md)
+  * [VB.NET](floating-licenses/using-lexfloatclient/vb.net.md)
 
 ## WEB INTEGRATION
 
 * [Web API](https://docs.cryptlex.com/web-api.html)
 * [Webhooks](web-integration/webhooks.md)
 * [Zapier](web-integration/zapier.md)
+* [Untitled](web-integration/untitled.md)
 

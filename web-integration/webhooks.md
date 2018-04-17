@@ -1,10 +1,8 @@
-## Webhooks
+# Webhooks
 
 The concept of a WebHook is simple. A WebHook is an HTTP callback: an HTTP POST that occurs when something happens; a simple event-notification via HTTP POST.
 
-
-
-Webhook simply  is an HTTP callback : an HTTP POST which launches whenever an activity is done; or simply an event-notification via HTTP POST
+Webhook simply is an HTTP callback : an HTTP POST which launches whenever an activity is done; or simply an event-notification via HTTP POST
 
 Webhooks enable you to develop or set GitHub Apps which buy in to specific occasions on GitHub.com. When one of those occasions is activated, we'll send a HTTP POST payload to the webhook's designed URL. Webhooks can be utilized to refresh an outer issue tracker, trigger CI assembles, refresh a reinforcement reflect, or even convey to your generation server. You're just restricted by your creative energy.
 
@@ -19,16 +17,12 @@ In the event that you utilize Stripe just to acknowledge card installments, webh
 You may likewise utilize webhooks as the premise to:
 
 * Refresh a client's participation record in your database when a membership installment succeeds
-
 * Email a client when a membership installment comes up short
-
 * Analyze the Dashboard in the event that you see that a question was documented
-
 * Make changes in accordance with a receipt when it's made \(however before it's been paid\)
-
 * Log a bookkeeping passage when an exchange is paid
 
-### Events
+## Events
 
 While designing a webhook, you can pick which occasions you might want to get payloads for. You can even select in to all present and future occasions. Just buying in to the particular occasions you anticipate taking care of is valuable for constraining the quantity of HTTP solicitations to your server. You can change the rundown of bought in occasions through the API or UI whenever. Of course, webhooks are just bought in to the push occasion.
 
@@ -81,13 +75,13 @@ The accessible occasions are:
 | **oauthApplication.updated** | This event is triggered when an existing oauth Application is updated |
 | **oauthApplication.deleted** | This event is triggered when a  oauth Application is deleted |
 
-### Payload
+## Payload
 
 Each event type has a specific payload format with the relevant event information. All event payloads mirror [the payloads for the Event types](https://developer.github.com/v3/activity/events/types/), with the exception of [the original`push`event](https://developer.github.com/v3/activity/events/types/#pushevent), which has a more detailed webhook payload.
 
 In addition to the fields [documented for each event](https://developer.github.com/v3/activity/events/types/), webhook payloads include the user who performed the event \(`sender`\) as well as the organization \(`organization`\) and/or repository \(`repository`\) which the event occurred on, and for a[GitHub App](https://developer.github.com/apps/)'s webhook may include the installation \(`installation`\) which an event relates to. An example is given in the [PullRequestEvent payload](https://developer.github.com/v3/activity/events/types/#pullrequestevent).
 
-### Delivery headers
+## Delivery headers
 
 HTTP POST payloads that are delivered to your webhook's configured URL endpoint will contain several special headers:
 
@@ -96,15 +90,4 @@ HTTP POST payloads that are delivered to your webhook's configured URL endpoint 
 |  |  |
 |  |  |
 |  |  |
-
-
-
-### 
-
-  
-
-
-
-
-
 

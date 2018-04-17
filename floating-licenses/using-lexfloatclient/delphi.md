@@ -1,4 +1,4 @@
-## Using LexFloatClient with Delphi
+# Delphi
 
 First of all, login to your Cryptlex account and download LexFloatClient for Windows or Mac OS X:
 
@@ -7,24 +7,24 @@ First of all, login to your Cryptlex account and download LexFloatClient for Win
 
 The above download package includes an example project. It contains all the functions you will be using to add licensing to your app.
 
-### Adding Licensing to your App
+## Adding Licensing to your App
 
 After you've added a product for your app in the dashboard, go to the version page of the product you will be adding licensing to. You will need to do two things:
 
 * Download the Product.dat for the product version.
 * Note the Version GUID for the product version.
 
-[![](https://cryptlex.com/public/img/docs/version.png "product-version")](https://cryptlex.com/public/img/docs/version.png)
+![product-version](https://cryptlex.com/public/img/docs/version.png)
 
 Product.dat contains version data which is used by LexFloatClient and is to be included in the same directory as your app. Version GUID is the identifier of your product version which is to be used in the code.
 
-#### Adding Library to your App
+### Adding Library to your App
 
 LexFloatClient example project for Delphi \(7 or newer\) contains the**LexFloatClient.pas**unit file. In addition to that it includes**LexFloatClient.DelphiFeatures.pas**unit file used internally.
 
 You need to add these files to your app in order to use LexFloatClient API in your app. Both units must be added, but only LexFloatClient unit must be added to uses list.
 
-#### Setting Version GUID
+### Setting Version GUID
 
 The first LexFloatClient API procedure you need to use in your code is`GetHandle()`. It sets the version GUID of the product you will be adding licensing to. If the Product.dat file is not present in the same directory as your app or has been renamed, you need to invoke`SetProductFile()`procedure first to set the path of the product file.
 
@@ -35,9 +35,7 @@ var
       Handle := GetHandle('YOUR VERSION GUID');
 ```
 
-
-
-#### Requesting License Lease
+### Requesting License Lease
 
 To receive a floating license, you will use`ILFHandle.SetFloatServer()`,`ILFHandle.SetLicenseCallback()`and`ILFHandle.RequestLicense()`LexFloatClient API methods. It sets LexFloatServer address, callback for error notifications, contacts the server and receives the leased license.
 
@@ -68,12 +66,11 @@ To receive a floating license, you will use`ILFHandle.SetFloatServer()`,`ILFHand
 
 The above code can be executed everytime user starts the app or needs a new license.
 
-#### Renewing License Lease
+### Renewing License Lease
 
 License lease automatically renews itself in a background thread. When something goes wrong, Callback is invoked \(from background thread\). Callback can be either object method, class method or a closure \(also known as anonymous function\). Note that GUI applications cannot safely interact with GUI elements from a thread other than GUI one.`TThread.Synchronize()`method or another option must be used to avoid race conditions.
 
 ```c
-
     { callback implemented via class function }
     type
       TSimpleCallback = class
@@ -92,24 +89,23 @@ License lease automatically renews itself in a background thread. When something
 
 You would ideally request for a new license if Callback gets invoked.
 
-#### Dropping License Lease
+### Dropping License Lease
 
 When your user is done using the app, the app should send a request to free the license, thereby making it available for other users. If the app doesn't, the license becomes \(zombie\) useless until lease time is over.
 
 ```c
-
   Handle := nil;
 ```
 
 The above code should be executed everytime user closes the app.
 
-#### Automatic and manual ILFHandle reference management
+### Automatic and manual ILFHandle reference management
 
 `ILFHandle`is a reference-counted object. Zombie licenses should be avoided, thus`ILFHandle`wrapper drops the license when its last reference is being released. Leaving a scope containing a local variable or destroying an object containing a field \(such as form object\) releases a reference, so in most cases`ILFHandle`will do its best to not to leave zombie licenses. Note that, however, early versions of Delphi had a bug: global variables were not finalized.
 
 Low-level details can be manipulated by`ILFHandle.Handle`and`ILFHandle.Owned properties`.`CreateLFHandleWrapper()`can be used to create wrappers manually.`FindHandle()`API is notable because this low-level API had no good mapping in higher-level API. It returns LongWord Handle, which can be wrapped then into either not owned or owned wrapper, but this would be another wrapper, and reference counters won't sum. Another owner might invalidate the handle at any moment.`ILFHandle.SetLicenseCallback`must only be used on wrappers created by`GetHandle()`, other APIs should work without problem as soon as handle is still valid.
 
-### Need more help?
+## Need more help?
 
 In case you need more help for adding LexFloatClient to your app, we'll be glad to help you make the integration. You can either post your questions on our[support forum](https://cryptlex.com/forums)or can contact us through[email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
 

@@ -1,4 +1,4 @@
-# Introduction
+# Getting Started
 
 This tutorial will guide you through the process of adding Cryptlex Licensing to your product. The complete process has three steps:
 

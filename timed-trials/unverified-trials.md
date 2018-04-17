@@ -1,10 +1,10 @@
-## Unverified Trials
+# Unverified Trials
 
 Unverified trial does not require online activation. All the information regarding trial is only stored on the user's machine in an encrypted form. The trial resets if user formats the PC or deletes the local hidden trial data. This type of trial is not recommended.
 
 As the unverified trial data is completely stored on the user's machine, you can have unlimited trial users and trial can start without an internet connection.
 
-### Adding Unverified Trial to your App
+## Adding Unverified Trial to your App
 
 To add unverified trial to your app, you only need to invoke`InitializeTrial()`and`GetTrialDaysLeft()`LexActivator API functions at the start of your app. Following is the sample code:
 
