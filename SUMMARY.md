@@ -1,5 +1,25 @@
 # Table of contents
 
 * [Initial page](README.md)
-* [Getting Started](getting-started.md)
+* [Getting Started](getting-started/README.md)
+  * [Basic Concepts](getting-started/basic-concepts.md)
+  * [Licensing Models](getting-started/untitled.md)
+  * [Managing Users](getting-started/managing-users.md)
+  * [Metadata](getting-started/metadata.md)
+* Node Locked Licenses
+  * [Using LexActivator](node-locked-licenses/using-lexactivator.md)
+  * [Offline Activations](node-locked-licenses/offline-activations.md)
+  * [Using Web API](node-locked-licenses/using-web-api.md)
+* Timed Trials
+  * [Verified Trials](timed-trials/verified-trials.md)
+  * [Unverified Trials](timed-trials/unverified-trials.md)
+  * [Trial Extensions](timed-trials/trial-extensions.md)
+* Floating Licenses
+  * [Using LexActivator](floating-licenses/using-lexactivator.md)
+  * [LexFloatServer](floating-licenses/lexfloatserver.md)
+  * [Using LexFloatClient](floating-licenses/using-lexfloatclient.md)
+* [Webhooks](webhooks.md)
+* [Integrations](integrations.md)
+* [Changelog](changelog.md)
+* [FAQ](faq.md)
 
