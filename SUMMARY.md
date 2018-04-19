@@ -18,9 +18,11 @@
   * [Verified Trials](timed-trials/verified-trials.md)
   * [Unverified Trials](timed-trials/unverified-trials.md)
 * Floating Licenses
+  * Overview
   * [Using LexActivator](floating-licenses/using-lexactivator.md)
-  * [LexFloatServer](floating-licenses/lexfloatserver.md)
-  * [Using LexFloatClient](floating-licenses/using-lexfloatclient.md)
+  * On-Premise Floating Licenses
+    * LexFloatServer
+    * Using LexFloatClient
 * [Webhooks](webhooks.md)
 * [Integrations](integrations.md)
 * [Changelog](changelog.md)
