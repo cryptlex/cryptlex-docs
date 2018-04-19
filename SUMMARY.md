@@ -18,8 +18,8 @@
   * [Verified Trials](timed-trials/verified-trials.md)
   * [Unverified Trials](timed-trials/unverified-trials.md)
 * Floating Licenses
-  * Overview
-  * [Using LexActivator](floating-licenses/using-lexactivator.md)
+  * [Overview](floating-licenses/overview.md)
+  * Hosted Floating License Server
   * On-Premise Floating Licenses
     * LexFloatServer
     * Using LexFloatClient
