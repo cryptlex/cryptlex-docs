@@ -142,7 +142,7 @@ Server Stats
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+Gets the current server stats
 {% endapi-method-description %}
 
 {% api-method-spec %}
