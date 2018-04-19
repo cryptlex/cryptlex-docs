@@ -27,11 +27,15 @@ If you think you want do it yourself then you can skip this tutorial and move on
 
 You can use any** programming language** to integrate LexActivator with any app that runs on Windows, MacOS or Linux. Following are tutorials for some commonly used programming languages:
 
-* [Using LexActivator with C, C++, and Objective-C](https://cryptlex.com/help/using-lexactivator/with-c)
-* [Using LexActivator with C\#](https://cryptlex.com/help/using-lexactivator/with-c-sharp)
-* [Using LexActivator with Delphi](https://cryptlex.com/help/using-lexactivator/with-delphi)
-* [Using LexActivator with Java](https://cryptlex.com/help/using-lexactivator/with-java)
-* [Using LexActivator with VB.NET](https://cryptlex.com/help/using-lexactivator/with-vb-net)
+{% page-ref page="using-lexactivator-with-c-c++-and-objective-c.md" %}
+
+{% page-ref page="using-lexactivator-with-c.md" %}
+
+{% page-ref page="using-lexactivator-with-vb.net.md" %}
+
+{% page-ref page="using-lexactivator-with-java.md" %}
+
+{% page-ref page="using-lexactivator-with-delphi.md" %}
 
 ## Minimum Requirements
 
