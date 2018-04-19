@@ -1,6 +1,6 @@
 # Using LexActivator with C, C++ & Objective C
 
-First of all, login to your Cryptlex account and download LexActivator library for Windows, Mac OS X or Linux:
+First of all, login to your Cryptlex account and download LexActivator library for Windows, MacOS or Linux:
 
 * [Download LexActivator for Windows](https://cryptlex.com/app/api)
 * [Download LexActivator for Mac OS X](https://cryptlex.com/app/api)
@@ -74,7 +74,7 @@ else
 }
 ```
 
-The above code should be executed at the time of registration, ideally on a button click.
+The above code should be executed at the time of license activation, ideally on a button click.
 
 ### Verifying License Activation
 

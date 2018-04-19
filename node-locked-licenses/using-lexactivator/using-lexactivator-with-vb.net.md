@@ -1,12 +1,10 @@
 # Using LexActivator with VB.NET
 
-First of all, login to your Cryptlex account and download LexActivator library for Windows, Mac OS X or Linux:
+First of all, login to your Cryptlex account and download LexActivator library for Windows:
 
 * ​[Download LexActivator for Windows](https://cryptlex.com/app/api)​
-* ​[Download LexActivator for Mac OS X](https://cryptlex.com/app/api)​
-* ​[Download LexActivator for Linux](https://cryptlex.com/app/api)​
 
-The above download package contains the library \(shared as well as static\) which you will be using to add licensing to your app.
+The above download package contains the library which you will be using to add licensing to your app.
 
 ## Adding Licensing to your App {#adding-licensing-to-your-app}
 
@@ -20,9 +18,13 @@ Product.dat contains product data which is used by LexActivator. Product id is t
 
 ### Adding Library to your App {#adding-library-to-your-app}
 
-LexActivator example project for C contains the **LexActivator.h** header file. In addition to that it includes **LexActivator.lib** file required in case of Windows. It contains all the LexActivator API functions needed to add licensing to your app.
+LexActivator example project for VB.NET contains **LexActivator.vb** file. You will need to add this file to your VB.NET project. It contains all the LexActivator API functions needed to add licensing to your app.
 
-Depending on the platform you are targeting **\(x86 or x64\)** you need to link the respective LexActivator.dll with your application.
+Depending on the platform you are targeting **\(x86, x64 or AnyCPU\)** you need to copy the respective LexActivator.dll to the Debug and Release folders of your project.
+
+{% hint style="info" %}
+In case you choose **AnyCPU** Platform, you will need to copy both x86 LexActivator.dll and x64 LexActivator.dll \(renamed as LexActivator64.dll\) to your project. Additionally, you will have to add \(uncomment\) `LA_ANY_CPU = 1` custom constant in **LexActivator.vb** file.
+{% endhint %}
 
 ### Setting Product.dat file and Product Id {#setting-product.dat-file-and-product-id}
 
@@ -30,28 +32,68 @@ The first thing you need to do is either embed the Product.dat file in your app 
 
 The next thing you need to do is to set the product id of your application in your code using `SetProductId()` function. It sets the id of the product you will be adding licensing to.
 
-```text
-SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");SetProductId("PASTE_PRODUCT_ID", LA_USER);
+```csharp
+LexActivator.SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");
+LexActivator.SetProductId("PASTE_PRODUCT_ID", LexActivator.PermissionFlags.LA_USER);
 ```
 
-If your app requires admin \(root\) privileges to run \(e.g. services, daemons etc.\), instead of passing `LA_USER` flag, you need to pass `LA_SYSTEM` flag.
+If your app requires admin \(root\) privileges to run \(e.g. services, daemons etc.\), instead of passing   `LexActivator.PermissionFlags.LA_USER` flag, you need to pass `LexActivator.PermissionFlags.LA_SYSTEM` flag.
 
 ### License Activation {#license-activation}
 
 To activate the license in your app using the license key, you will use `ActivateLicense()` LexActivator API function. It invokes the `/v3/activations` Cryptlex Web API endpoint, verifies the encrypted and digitally signed response to validate the license.
 
-```text
-int status;status = SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");if (LA_OK != status){	// handle error}status = SetProductId("PASTE_PRODUCT_ID", LA_USER);if (LA_OK != status){	// handle error}status = SetLicenseKey("PASTE_LICENCE_KEY");if (LA_OK != status){	 // handle error}status = SetActivationMetadata("key1", "value1");if (LA_OK != status){	 // handle error}status = ActivateLicense();if (LA_OK == status || LA_EXPIRED == status || LA_SUSPENDED == status || LA_USAGE_LIMIT_REACHED == status){	printf("License activated successfully: %d", status);}else{	printf("License activation failed: %d", status);}
+```csharp
+Private Sub activateLicenseBtn_Click(ByVal sender As Object, ByVal e As EventArgs)
+    Dim status As Integer
+    status = LexActivator.SetLicenseKey(productKeyBox.Text)
+    If status <> LexActivator.StatusCodes.LA_OK Then
+        ' handle error
+    End If
+
+    status = LexActivator.SetActivationMetadata("key1", "value1")
+    If status <> LexActivator.StatusCodes.LA_OK Then
+        ' handle error
+    End If
+
+    status = LexActivator.ActivateLicense()
+    If status = LexActivator.StatusCodes.LA_OK OrElse status = LexActivator.StatusCodes.LA_EXPIRED OrElse status = LexActivator.StatusCodes.LA_SUSPENDED Then
+        ' activation successfull
+    Else
+        ' activation failed
+    End If
+End Sub
 ```
 
-The above code should be executed at the time of registration, ideally on a button click.
+The above code should be executed at the time of license activation.
 
 ### Verifying License Activation {#verifying-license-activation}
 
 Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this you need to use `IsLicenseGenuine()` LexActivator API function.
 
-```text
-int status;status = SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");if (LA_OK != status){	// handle error}status = SetProductId("PASTE_PRODUCT_ID", LA_USER);if (LA_OK != status){	// handle error}status = IsLicenseGenuine();if (LA_OK == status || LA_EXPIRED == status || LA_SUSPENDED == status || LA_USAGE_LIMIT_REACHED == status){	printf("License is genuinely activated: %d", status);}else{	printf("License is not activated: %d", status);}
+```csharp
+Public Sub New()
+    InitializeComponent()
+    Dim status As Integer
+    status = LexActivator.SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE")
+    If status <> LexActivator.StatusCodes.LA_OK Then
+        Me.statusLabel.Text = "Error setting product data: " & status.ToString()
+        Return
+    End If
+
+    status = LexActivator.SetProductId("PASTE_PRODUCT_ID", LexActivator.PermissionFlags.LA_USER)
+    If status <> LexActivator.StatusCodes.LA_OK Then
+        Me.statusLabel.Text = "Error setting product id: " & status.ToString()
+        Return
+    End If
+
+    status = LexActivator.IsLicenseGenuine()
+    If status = LexActivator.StatusCodes.LA_OK OrElse status = LexActivator.StatusCodes.LA_EXPIRED OrElse status = LexActivator.StatusCodes.LA_SUSPENDED OrElse status = LexActivator.StatusCodes.LA_GRACE_PERIOD_OVER Then
+        Me.statusLabel.Text = "License is activated: " & status.ToString()
+    Else
+        Me.statusLabel.Text = "License is not activated: " & status.ToString()
+    End If
+End Sub
 ```
 
 The above code should be executed every time user starts the app. After verifying locally, it schedules a periodic server check in a separate thread.
