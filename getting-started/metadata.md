@@ -1,23 +1,33 @@
+---
+description: >-
+  Metadata (key/value pairs) helps you with customization and so that you can
+  customize Cryptlex to fit into your licensing needs which may not be available
+  out of the box.
+---
+
 # Metadata
 
-## Getting Super Powers
+## Product Metadata
 
-Becoming a super hero is a fairly straight forward process:
+This metadata can be added to products and can be accessed in your application once a trial or license is activated.
 
-```
-$ give me super-powers
-```
+It can be used for many purposes, like detecting software updates in your application, displaying some custom data which can change over time etc.
 
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
+## License Metadata
 
-Once you're strong enough, save the world:
+This metadata can be added to your licenses at the time of creating a license. You can store additional data like order\_id_, _customer\_id etc_. _with the license.
 
-```
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
+This can be accessed in your application once a license is activated. It's common use case is feature detection, i.e. if you wish to restrict the features in your application based on the value of metadata fields.
 
+## Activation Metadata
 
+This metadata can be added by your application at the time of activating the license.
+
+It can be used to collect additional details from user who is activating the license.
+
+## Trial Activation Metadata
+
+This metadata can be added by your application at the time of activating the trial.
+
+It can be used to collect additional details from user who is activating the trial.
 
