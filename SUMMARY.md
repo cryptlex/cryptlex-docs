@@ -21,7 +21,7 @@
   * [Overview](floating-licenses/overview.md)
   * Hosted Floating License Server
   * On-Premise Floating Licenses
-    * LexFloatServer
+    * [LexFloatServer](floating-licenses/on-premise-floating-licenses/lexfloatserver.md)
     * Using LexFloatClient
 * [Webhooks](webhooks.md)
 * [Integrations](integrations.md)
