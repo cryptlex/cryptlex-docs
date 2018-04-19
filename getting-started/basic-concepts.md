@@ -22,11 +22,21 @@ A trial policy is similar to a license policy, with the difference that it is ap
 
 A single trial policy can be shared across different products and each product may have a trial policy. Not attaching a trial policy to a product disables trials automatically.
 
+## User
+
+A user refers to your customer whom you want to license your product. 
+
+Cryptlex provides identity management for your customers, which means you can authenticate your customers using email/password, and other features like password reset etc.
+
 ## License
 
 A license is what you use to license your application. Licenses are grouped under products and inherit all the properties of license policy attached to the product.
 
 You can override all the properties of the license inherited from a license policy if needed.
+
+{% hint style="info" %}
+You may or may not attach a user to a license depending on whether you want store your user data in Cryptlex or not.
+{% endhint %}
 
 ## Activation
 
