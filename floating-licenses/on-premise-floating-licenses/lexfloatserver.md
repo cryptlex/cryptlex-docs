@@ -179,29 +179,5 @@ Gets the current server stats
 {% endapi-method-spec %}
 {% endapi-method %}
 
-```text
 
-GET /api/stats
-
-HTTP/1.1  200
-Content-Type: application/json
-{
-  "availableLicenseActivations": 3,
-  "totalLicenseActivations": 5,
-  "expiresAt": 1580732402,
-  "leaselength": 60,
-  "version": "3.0.0",
-  "activationStatus": "ok",
-  "floatingClients": [
-    {
-      "ip": "192.168.1.2",
-      "leaseRefreshedAt": 1480702402
-    },
-    {
-      "ip": "192.168.1.7",
-      "leaseRefreshedAt": 1480702428
-    }
-  ]
-}
-```
 
