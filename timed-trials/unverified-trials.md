@@ -1,22 +1,51 @@
 # Unverified Trials
 
-## Getting Super Powers
+Unverified trial does not require online activation. All the information regarding trial is only stored on the user's machine in an encrypted form. The trial resets if user formats the PC or deletes the local hidden trial data. This type of trial is not recommended.
 
-Becoming a super hero is a fairly straight forward process:
+As the unverified trial data is completely stored on the user's machine, you can have unlimited trial users and trial can start without an internet connection.
 
+## Adding Unverified Trial to your App
+
+When your user installs your application first time, invoke `ActivateLocalTrial()` LexActivator API functions to start the trial. Following sample code should be executed once after user installs your app, ideally on a button click. Executing multiple times would will not reset the trial.
+
+```c
+int status;
+status = ActivateLocalTrial();
+if (LA_OK == status)
+{
+	printf("Product trial activated successfully!");
+}
+else if (LA_LOCAL_TRIAL_EXPIRED == status)
+{
+	printf("Product trial has expired!");
+}
+else
+{
+	printf("Product trial activation failed: %d", status);
+}
 ```
-$ give me super-powers
-```
 
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
+Once the trial is started you only need to invoke `IsLocalTrialGenuine()` and `GetLocalTrialExpiryDate()` LexActivator API functions at the start of your app after `IsLicenseGenuine()` check. Following is the sample code:
 
-Once you're strong enough, save the world:
-
-```
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
+```c
+int trialStatus;
+trialStatus = IsLocalTrialGenuine();
+if (LA_OK == trialStatus)
+{
+	unsigned int trialExpiryDate = 0;
+	GetLocalTrialExpiryDate(&trialExpiryDate);
+	int daysLeft = (trialExpiryDate - time(NULL)) / 86500;
+	printf("Trial days left: %d", daysLeft);
+}
+else if (LA_LOCAL_TRIAL_EXPIRED == trialStatus)
+{
+	printf("Trial has expired!");
+}
+else
+{
+	printf("Either trial has not started or has been tampered!");
+	// Activate the trial
+}
 ```
 
 

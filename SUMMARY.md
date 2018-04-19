@@ -17,7 +17,6 @@
 * Timed Trials
   * [Verified Trials](timed-trials/verified-trials.md)
   * [Unverified Trials](timed-trials/unverified-trials.md)
-  * [Trial Extensions](timed-trials/trial-extensions.md)
 * Floating Licenses
   * [Using LexActivator](floating-licenses/using-lexactivator.md)
   * [LexFloatServer](floating-licenses/lexfloatserver.md)
