@@ -43,31 +43,26 @@ To activate the license in your app using the license key, you will use `Activat
 
 ```c
 int status;
-
 status = SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");
 if (LA_OK != status)
 {
 	// handle error
 }
-
 status = SetProductId("PASTE_PRODUCT_ID", LA_USER);
 if (LA_OK != status)
 {
 	// handle error
 }
-
 status = SetLicenseKey("PASTE_LICENCE_KEY");
 if (LA_OK != status)
 {
 	 // handle error
 }
-
 status = SetActivationMetadata("key1", "value1");
 if (LA_OK != status)
 {
 	 // handle error
 }
-
 status = ActivateLicense();
 if (LA_OK == status || LA_EXPIRED == status || LA_SUSPENDED == status || LA_USAGE_LIMIT_REACHED == status)
 {
@@ -78,4 +73,39 @@ else
 	printf("License activation failed: %d", status);
 }
 ```
+
+The above code should be executed at the time of registration, ideally on a button click.
+
+### Verifying License Activation
+
+Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this you need to use `IsLicenseGenuine()` LexActivator API function.
+
+```c
+int status;
+status = SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");
+if (LA_OK != status)
+{
+	// handle error
+}
+status = SetProductId("PASTE_PRODUCT_ID", LA_USER);
+if (LA_OK != status)
+{
+	// handle error
+}
+status = IsLicenseGenuine();
+if (LA_OK == status || LA_EXPIRED == status || LA_SUSPENDED == status || LA_USAGE_LIMIT_REACHED == status)
+{
+	printf("License is genuinely activated: %d", status);
+}
+else
+{
+	printf("License is not activated: %d", status);
+}
+```
+
+The above code should be executed every time user starts the app. After verifying locally, it schedules a periodic server check in a separate thread.
+
+## Need More Help
+
+In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://cryptlex.com/forums) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
 
