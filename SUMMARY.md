@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Initial page](README.md)
-* [Getting Started](getting-started/README.md)
+* Getting Started
   * [Basic Concepts](getting-started/basic-concepts.md)
   * [Licensing Models](getting-started/licensing-models.md)
   * [Metadata](getting-started/metadata.md)

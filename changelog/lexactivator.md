@@ -4,11 +4,19 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## \[3.0.0\] - 2018-05-01
+
+### Added
+
+### Changed
+
+### Deleted
+
 ## \[2.9.6\] - 2017-11-19
 
 ### Added
 
-* GetProductKeyExpiryDate\(\) function to get the product key expiry timestamp.
+* `GetProductKeyExpiryDate()` function to get the product key expiry timestamp.
 * Support for Linux ARMv8 64 bit architecture
 
 ## \[2.9.5\] - 2017-10-19
@@ -44,8 +52,8 @@ description: All notable changes to LexActivator are documented here.
 
 ### Changed
 
-* ActivateProduct\(\) function now returns \(throws\) LA\_E\_ACT\_LIMIT error \(exception\) if activation limit is reached
-* IsProductGenuine\(\) function won't reactivate the product key, if deactivated server side
+* `ActivateProduct()` function now returns \(throws\) LA\_E\_ACT\_LIMIT error \(exception\) if activation limit is reached
+* `IsProductGenuine()` function won't reactivate the product key, if deactivated server side
 
 ## \[2.8.1\] - 2017-05-21
 
@@ -84,13 +92,13 @@ description: All notable changes to LexActivator are documented here.
 
 ### Fixed
 
-* A memory leak in IsProductGenuine\(\) function if being invoked periodically
+* A memory leak in `IsProductGenuine()` function if being invoked periodically
 
 ## \[2.6.0\] - 2017-01-22
 
 ### Changed
 
-* DeactivateProduct\(\) now returns LA\_E\_DEACT\_LIMIT instead of LA\_FAIL if deactivation limit is reached for the key
+* `DeactivateProduct()` now returns LA\_E\_DEACT\_LIMIT instead of LA\_FAIL if deactivation limit is reached for the key
 
 ### Fixed
 
@@ -100,8 +108,8 @@ description: All notable changes to LexActivator are documented here.
 
 ### Changed
 
-* All setter functions other than SetVersionGUID\(\) are now only needed at the time of activation
-* DeactivateProduct\(\) now deactivates the product even if product key is expired
+* All setter functions other than `SetVersionGUID()` are now only needed at the time of activation
+* `DeactivateProduct()` now deactivates the product even if product key is expired
 
 ### Fixed
 
@@ -111,11 +119,11 @@ description: All notable changes to LexActivator are documented here.
 
 ### Added
 
-* SetUserLock\(\) function to support user locked licenses.
+* `SetUserLock()` function to support user locked licenses.
 
 ### Changed
 
-* DeactivateProduct\(\) function now deactivates the product locally even if product key is already deactivated server side, and LA\_FAIL is returned.
+* `DeactivateProduct()` function now deactivates the product locally even if product key is already deactivated server side, and LA\_FAIL is returned.
 
 ## \[2.3.0\] - 2016-05-22
 
@@ -128,6 +136,6 @@ description: All notable changes to LexActivator are documented here.
 
 ### Added
 
-* GetExtraActivationData\(\) function to get the value of the extra activation data.
-* GetDaysLeftToExpiration\(\) function to get the number of remaining days after which the license expires.
+* `GetExtraActivationData() `function to get the value of the extra activation data.
+* `GetDaysLeftToExpiration()` function to get the number of remaining days after which the license expires.
 
