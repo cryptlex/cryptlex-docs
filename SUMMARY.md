@@ -28,7 +28,7 @@
       * [Using LexFloatClient with VB.NET](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-vb.net.md)
       * [Using LexFloatClient with Java](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-java.md)
 * [Webhooks](webhooks.md)
-* [Integrations](integrations.md)
+* Integrations
 * [Changelog](changelog.md)
 * [FAQ](faq.md)
 
