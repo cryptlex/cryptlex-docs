@@ -1,3 +1,10 @@
+---
+description: >-
+  Using webhooks you can subscribe to events, that happen within your Cryptlex
+  account. When one of those events is triggered, we'll send an HTTP POST
+  payload to the webhook's configured URL.
+---
+
 # Webhooks
 
 ## When to use webhooks
