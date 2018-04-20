@@ -9,7 +9,7 @@ description: >-
 
 ## When to use webhooks
 
-The most common use-case of webhooks is to automate the communication between Cryptlex and other 3rd party apps. You might use webhooks to:
+The most common use-case of webhooks is to automate the communication between Cryptlex and other 3rd party apps asynchronously. You might use webhooks to:
 
 * Email a license key to your customer after a successful purchase.
 * Email your customer when the license expires.
