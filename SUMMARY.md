@@ -23,6 +23,10 @@
   * On-Premise Floating Licenses
     * [LexFloatServer](floating-licenses/on-premise-floating-licenses/lexfloatserver.md)
     * Using LexFloatClient
+      * [Using LexFloatClient with C, C++ & Objective C](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-c-c++-and-objective-c.md)
+      * [Using LexFloatClient with C\#](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-c.md)
+      * [Using LexFloatClient with VB.NET](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-vb.net.md)
+      * [Using LexFloatClient with Java](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-java.md)
 * [Webhooks](webhooks.md)
 * [Integrations](integrations.md)
 * [Changelog](changelog.md)
