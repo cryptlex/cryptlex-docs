@@ -29,6 +29,8 @@
       * [Using LexFloatClient with Java](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-java.md)
 * [Webhooks](webhooks.md)
 * Integrations
-* [Changelog](changelog.md)
+* Changelog
+  * [Web API](changelog/web-api.md)
+  * [LexActivator](changelog/lexactivator.md)
 * [FAQ](faq.md)
 
