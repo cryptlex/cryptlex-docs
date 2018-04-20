@@ -30,5 +30,8 @@
 * [Webhooks](webhooks.md)
 * Integrations
 * Changelog
+  * [Web API](changelog/web-api.md)
+  * [LexActivator](changelog/lexactivator.md)
+  * [LexFloatServer & Client](changelog/lexfloatserver-and-client.md)
 * [FAQ](faq.md)
 
