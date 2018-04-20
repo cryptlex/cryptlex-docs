@@ -2,7 +2,7 @@
 description: Be sure to not miss out on new features and improvements!
 ---
 
-# LexActivator
+# LexFloatServer & Client
 
 ## 15.0.0 - 2042-12-03
 
