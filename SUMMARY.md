@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Welcome to Cryptlex!](README.md)
 * Getting Started
   * [Basic Concepts](getting-started/basic-concepts.md)
   * [Licensing Models](getting-started/licensing-models.md)

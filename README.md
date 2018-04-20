@@ -1,21 +1,20 @@
-# Initial page
+---
+description: >-
+  Cryptlex offers a complete software licensing solution to help you license
+  your digital products.
+---
 
-## Getting Super Powers
+# Welcome to Cryptlex!
 
-Becoming a super hero is a fairly straight forward process:
+## Cryptlex Licensing Web API
 
-```text
-$ give me super-powers
-```
+Cryptlex web API let's you implement any software licensing model with node-locked licensing, floating licensing, perpetual licenses, subscriptions, timed trials and more supported out of the box. 
 
-{% hint style="info" %}
-Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
+## Cryptlex Client Library - LexActivator 
 
-Once you're strong enough, save the world:
+LexActivator makes it dead simple to implement any type of licensing model, including hosted floating licenses, by abstracting away HTTPS network requests, AES encryption, RSA signature verification, advanced machine fingerprinting, virtual machine detection and much more.
 
-```text
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
+## LexFloatServer & LexFloatClient
+
+An on-premise floating license server to help you implement floating licensing model inside networks which may or may not be connected to internet.
 
