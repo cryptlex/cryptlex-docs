@@ -19,7 +19,7 @@
   * [Unverified Trials](timed-trials/unverified-trials.md)
 * Floating Licenses
   * [Overview](floating-licenses/overview.md)
-  * Hosted Floating License Server
+  * [Hosted Floating License Server](floating-licenses/hosted-floating-license-server.md)
   * On-Premise Floating Licenses
     * [LexFloatServer](floating-licenses/on-premise-floating-licenses/lexfloatserver.md)
     * Using LexFloatClient
