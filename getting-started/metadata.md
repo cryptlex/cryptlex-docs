@@ -1,10 +1,3 @@
----
-description: >-
-  Metadata (key/value pairs) helps you with customization and so that you can
-  customize Cryptlex to fit into your licensing needs which may not be available
-  out of the box.
----
-
 # Metadata
 
 ## Product Metadata

@@ -1,7 +1,3 @@
----
-description: Start using Cryptlex now.
----
-
 # Getting Started
 
 ## Getting Super Powers

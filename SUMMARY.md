@@ -3,7 +3,7 @@
 * [Initial page](README.md)
 * [Getting Started](getting-started/README.md)
   * [Basic Concepts](getting-started/basic-concepts.md)
-  * [Licensing Models](getting-started/untitled.md)
+  * [Licensing Models](getting-started/licensing-models.md)
   * [Metadata](getting-started/metadata.md)
 * Node Locked Licenses
   * [Using LexActivator](node-locked-licenses/using-lexactivator/README.md)

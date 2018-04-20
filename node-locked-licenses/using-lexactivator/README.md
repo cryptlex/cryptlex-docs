@@ -1,10 +1,3 @@
----
-description: >-
-  LexActivator is the library which you include in your app to invoke Cryptlex
-  Web API. It adds support for license activations, license offline activations,
-  and trials in your app.
----
-
 # Using LexActivator
 
 ## Why use LexActivator

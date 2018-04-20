@@ -1,10 +1,3 @@
----
-description: >-
-  Here we quickly go through some terminology related to different licensing
-  models. Licenses can be classified into different categories based on time and
-  seat.
----
-
 # Licensing Models
 
 ## Time based Licensing Models

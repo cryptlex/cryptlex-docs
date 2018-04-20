@@ -1,7 +1,3 @@
----
-description: Common questions about Cryptlex.
----
-
 # FAQ
 
 ## Can I become who I want to be?

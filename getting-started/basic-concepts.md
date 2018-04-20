@@ -1,7 +1,3 @@
----
-description: Here we will quickly go through some terminology we use in Cryptlex.
----
-
 # Basic Concepts
 
 ## Product
