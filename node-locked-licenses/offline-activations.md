@@ -14,8 +14,6 @@ GenerateOfflineActivationRequest();
 
 Now, after getting the offline activation response file from user, go to activations page of license and click the "Offline Activation" button. You will be presented with a form, paste the contents of offline activation response file, set the validity of response and click "ACTIVATE" button. If request is valid then offline activation response file will start downloading.
 
-![offline-activation](https://cryptlex.com/public/img/docs/offline-activation.png)
-
 ## Activating using offline activation response file
 
 To allow your users to activate using the generated offline activation response file use following LexActivator API function:
