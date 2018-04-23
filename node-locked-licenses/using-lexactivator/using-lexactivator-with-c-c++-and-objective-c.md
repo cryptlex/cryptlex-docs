@@ -14,7 +14,7 @@ After you've added a product for your app in the dashboard, go to the product pa
 
 * Note the product id for the product.
 * Download the Product.dat for the product.
-* Download the example project from github
+* Download the example project from [Github](https://github.com/cryptlex/lexactivator-c)
 
 Product.dat contains product data which is used by LexActivator. Product id is the identifier of your product which is to be used in the code.
 

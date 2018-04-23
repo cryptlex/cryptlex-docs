@@ -11,7 +11,7 @@ The above download package contains the library which you will be using to add l
 After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
 
 * Note the product id for the product.
-* Download the example project from github
+* Download the example project from [Github](https://github.com/cryptlex/lexfloatclient-vb.net)
 
 Product id is the identifier of your product which is to be used in the code. The product id of the LexFloatServer and LexFloatClient must match.
 
