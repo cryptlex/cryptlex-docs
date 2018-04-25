@@ -2,7 +2,7 @@
 
 * [Welcome to Cryptlex!](README.md)
 * Getting Started
-  * [Basic Concepts](getting-started/basic-concepts.md)
+  * [Overview](getting-started/basic-concepts.md)
   * [Licensing Models](getting-started/licensing-models.md)
   * [Metadata](getting-started/metadata.md)
 * Node Locked Licenses
