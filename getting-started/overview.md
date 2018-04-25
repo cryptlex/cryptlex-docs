@@ -42,7 +42,7 @@ You may or may not attach a user to a license depending on whether you want stor
 
 A license activation is said to occur when your customer uses a license key to activate the license in your application on his/her machine.
 
-By default all activations are node-locked, it means the the machine fingerprint is stored along with the activation details.
+By default all activations are node-locked, it means that the machine fingerprint is stored along with the activation details.
 
 ## Trial Activation
 
