@@ -4,7 +4,7 @@
 
 LexActivator is basically a **libcurl** based HTTP client which invokes Cryptlex Web API endpoints from your application to activate your licenses and trials.
 
-You can do this yourself too in your app using any HTTP library, but it does something more which can save you a lot of time:
+You can do this by yourself too in your app using any HTTP library, but it does something more which can save you a lot of time:
 
 * Abstracts away HTTP part, so you basically call simple functions like `ActivateLicense(),` `ActivateTrial()` etc. instead of sending HTTP requests.
 * Verifies the HTTP response signature using RSA public key.
