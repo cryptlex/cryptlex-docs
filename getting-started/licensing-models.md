@@ -1,3 +1,7 @@
+---
+description: Let's quickly go through some licensing terminology.
+---
+
 # Licensing Models
 
 ## Time based Licensing Models
