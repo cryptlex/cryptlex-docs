@@ -4,6 +4,7 @@
 * Getting Started
   * [Overview](getting-started/overview.md)
   * [Licensing Models](getting-started/licensing-models.md)
+  * [License Policies](getting-started/license-policies.md)
   * [Metadata](getting-started/metadata.md)
 * Node Locked Licenses
   * [Using LexActivator](node-locked-licenses/using-lexactivator/README.md)

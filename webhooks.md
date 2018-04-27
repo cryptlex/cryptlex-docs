@@ -21,10 +21,21 @@ The most common use-case of webhooks is to automate the communication between Cr
 
 You can easily create a webhook through dashboard. Go to the [webhooks](https://app.cryptlex.com/webhooks) section in the dashboard and click the add the button. A webhook form with following fields will popup: 
 
-* **URL** - the endpoint which will receive the HTTP POST payload
-* **Token** - the secret which will be used to sign the payload using **HMAC256** algorithm
-* **Events** - the list of events you want to subscribe
-* **Active** - whether webhook is active not, you can use it to disable a webhook
+#### **URL**
+
+The endpoint which will receive the HTTP POST payload
+
+#### **Token**
+
+The secret which will be used to sign the payload using **HMAC256** algorithm
+
+#### Events
+
+The list of events you want to subscribe
+
+#### **Active**
+
+Whether webhook is active not, you can use it to disable a webhook
 
 ## Webhook payload
 
