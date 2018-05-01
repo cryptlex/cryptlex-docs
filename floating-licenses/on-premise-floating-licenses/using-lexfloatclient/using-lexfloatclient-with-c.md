@@ -4,7 +4,7 @@ First of all, login to your Cryptlex account and download LexFloatClient library
 
 * [Download LexFloatClient for Windows](https://cryptlex.com/app/api)
 * [Download LexFloatClient for MacOS](https://cryptlex.com/app/api)
-* [Download LexFloatClient for Linux](https://cryptlex.com/app/api)
+* [Download LexFloatClient for Linux](https://app.cryptlex.com/downloads)
 
 The above download package contains the library which you will be using to add licensing to your app.
 
