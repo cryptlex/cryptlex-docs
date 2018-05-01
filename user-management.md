@@ -32,7 +32,7 @@ Any user with any **custom** **role** is counted against the admins in your plan
 
 ## Creating Users
 
-You will usually create users with **admin role** through dashboard but creating users with **user role** for your licenses will be most of the times done using the Web API, when your customer makes a purchase.
+You will usually create users with **admin role** through dashboard but creating users with **user role** for your licenses will be most of the times done using the web API, when your customer makes a purchase.
 
 Following is a sample request which creates a user with user role:
 
