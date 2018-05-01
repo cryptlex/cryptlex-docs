@@ -6,7 +6,7 @@ First of all, login to your Cryptlex account and download LexActivator library f
 
 * ​[Download LexActivator for Windows](https://app.cryptlex.com/downloads)​
 * ​[Download LexActivator for Mac OS X](https://app.cryptlex.com/downloads)​
-* ​[Download LexActivator for Linux](https://cryptlex.com/app/api)​
+* ​[Download LexActivator for Linux](https://app.cryptlex.com/downloads)​
 
 The above download package contains the library  which you will be using to add licensing to your app.
 
