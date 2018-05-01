@@ -2,7 +2,7 @@
 
 LexFloatServer is the server software that leases floating license to your app which is installed on some computer \(which is referred to as a license server\) in your customer's local network. Normally, only one license server is required in your network.
 
-LexFloat Server is designed to be robust, low memory and very fast. Hence, it can even be installed on any old machine connected to the local network.
+LexFloatServer is designed to be robust, low memory and very fast. Hence, it can even be installed on any old machine connected to the local network.
 
 {% hint style="info" %}
 LexFloatServer has **libnss3** dependency on Linux. Make sure dependency is installed before running the server.
@@ -10,7 +10,7 @@ LexFloatServer has **libnss3** dependency on Linux. Make sure dependency is inst
 
 ## Activating the LexFloat Server
 
-LexFloat Server needs to be activated using a license key of type **"on-premise-floating"**, before it can be used. To activate use **"-a"** switch along with the license key and product file path:
+LexFloatServer needs to be activated using a license key of type **"on-premise-floating"**, before it can be used. To activate use **"-a"** switch along with the license key and product file path:
 
 ```bash
 LexFloatServer -a -licensekey=LICENSE_KEY -productfile="path/of/myproduct.dat"
