@@ -2,7 +2,7 @@
 
 First of all, login to your Cryptlex account and download LexFloatClient library for Windows, MacOS or Linux:
 
-* [Download LexFloatClient for Windows](https://cryptlex.com/app/api)
+* [Download LexFloatClient for Windows](https://app.cryptlex.com/downloads)
 * [Download LexFloatClient for MacOS](https://app.cryptlex.com/downloads)
 * [Download LexFloatClient for Linux](https://cryptlex.com/app/api)
 
