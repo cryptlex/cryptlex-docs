@@ -32,7 +32,7 @@ You can use any** programming language** to integrate LexActivator with any app 
 
 ## Minimum Requirements
 
-LexActivator works on Windows XP through Windows 10, MacOS 10.6+ and all Linux distributions \(minimum supported glibc library version is 2.13\).
+LexActivator works on Windows XP through Windows 10, MacOS 10.6+ and all Linux distributions \(minimum supported glibc library version is v2.13 and libnss3 library version is v3.12\).
 
 There are no additional dependencies. It supports 32 bit as well as 64 bit cpu architectures for all the platforms. Additionally, for Linux ARM cpu architecture is also supported.
 
