@@ -38,6 +38,10 @@ This option is valid for **floating** license type only. It sets the duration fo
 
 This option is valid for **on-premise** **floating** license type only. It sets the maximum number of concurrent clients which can lease the license from the server.
 
+{% hint style="info" %}
+For hosted floating licenses, the the maximum number of concurrent clients which can lease the license from the server is determined by **allowedActivations** property
+{% endhint %}
+
 #### Allowed Activations
 
 Allowed number of activations for the license. If you allow \(say\) 10 activations for a license, then the license can be used on 10 different machines.
