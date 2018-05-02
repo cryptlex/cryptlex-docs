@@ -98,7 +98,7 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 ### Added
 
 * API endpoint to get the server stats: /services/api/stats
-* Client IP check to prevent VM snap-shopped floating clients 
+* Client IP check to prevent VM snapshot floating clients 
 
 ## \[2.3.0\] - 2016-05-22
 
