@@ -12,6 +12,10 @@ This metadata can be added to products and can be accessed in your application o
 
 It can be used for many purposes, like detecting software updates in your application, displaying some custom data which can change over time etc.
 
+## User Metadata
+
+This metadata can be added to your licenses at the time of creating an user. You can store additional data like phone\_number, address etc._ _with the user.
+
 ## License Metadata
 
 This metadata can be added to your licenses at the time of creating a license. You can store additional data like order\_id_, _customer\_id etc_. _with the license.
