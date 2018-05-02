@@ -35,7 +35,7 @@ The list of events you want to subscribe.
 
 #### **Active**
 
-Whether webhook is active not, you can use it to disable a webhook.
+Whether webhook should be triggered or not, you can use it to disable a webhook.
 
 ## Webhook payload
 
