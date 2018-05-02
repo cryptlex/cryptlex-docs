@@ -103,7 +103,7 @@ List of roles, set it to \["user"\]
 
 ## Authenticating Users
 
-You can authenticate your users to get the access token of the user which can further be used to get the user profile, list of user licenses in the client itself.
+You can authenticate your users to get the access token of the user which can further be used to get the user profile and list of user licenses.
 
 {% api-method method="post" host="https://api.cryptlex.com" path="/v3/account/login" %}
 {% api-method-summary %}
