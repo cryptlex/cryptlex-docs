@@ -20,9 +20,6 @@
     * [Using LexActivator with Delphi](node-locked-licenses/using-lexactivator/using-lexactivator-with-delphi.md)
   * [Offline Activations](node-locked-licenses/offline-activations.md)
   * [Using Web API](node-locked-licenses/using-web-api.md)
-* Timed Trials
-  * [Verified Trials](timed-trials/verified-trials.md)
-  * [Unverified Trials](timed-trials/unverified-trials.md)
 * Floating Licenses
   * [Overview](floating-licenses/overview.md)
   * [Hosted Floating License Server](floating-licenses/hosted-floating-license-server.md)
@@ -33,6 +30,9 @@
       * [Using LexFloatClient with C\#](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-c.md)
       * [Using LexFloatClient with VB.NET](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-vb.net.md)
       * [Using LexFloatClient with Java](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-java.md)
+* Timed Trials
+  * [Verified Trials](timed-trials/verified-trials.md)
+  * [Unverified Trials](timed-trials/unverified-trials.md)
 * [Webhooks](webhooks.md)
 * [Web Integration](web-integration.md)
 * Changelog
