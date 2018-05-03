@@ -8,7 +8,7 @@ description: >-
 
 ## Order Automation 
 
-You can easily automate the order process of your product using Cryptlex Web API. The API can be used with any payment processor. You can find two examples in `Node.js` and `PHP` which you can tailor as per your requirements:
+You can easily automate the order process of your product using Cryptlex Web API. The API can be used with any payment processor. We have examples available on Github  in `Node.js` and `PHP` which you can tailor as per your requirements:
 
 * [Node.js License Generator](https://github.com/cryptlex/nodejs-license-generator)
 * [PHP License Generator](https://github.com/cryptlex/php-license-generator)
