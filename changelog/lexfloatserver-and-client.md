@@ -12,6 +12,7 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 ### Changed
 
+* Updated stats API endpoint, for details check [docs](https://docs.cryptlex.com/floating-licenses/on-premise-floating-licenses/lexfloatserver#getting-server-stats)
 * `SetVersionGUID` function to `SetProductId()`
 * `GetCustomField()` function to `GetLicenseMetadata()`
 * `LexFloatServer` now uses `LexActivator` `v3.0.0` for license activation
@@ -41,7 +42,7 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 ### Added
 
-* lastSyncedAt and gracePeriodStartAt properties to stats api
+* `lastSyncedAt` and `gracePeriodStartAt` properties to stats API
 
 ## 2.9.2 \(2017-08-27\)
 
@@ -95,7 +96,7 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 ### Added
 
-* "status" property to the stats api
+* `status` property to the stats api
 
 ### Fixed
 
@@ -105,9 +106,9 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 ### Added
 
-* Command line parameter "-displayname" to update service name in Windows
-* Command line parameter "-status" to display activation status details
-* Command line parameters "-proxy", "-graceperiod", "-servercheckinterval" and "-extradata" which can only be passed at the time of activation
+* Command line parameter `-displayname` to update service name in Windows
+* Command line parameter `-status` to display activation status details
+* Command line parameters `-proxy`, `-graceperiod`, `-servercheckinterval` and `-extradata` which can only be passed at the time of activation
 * Support for multiple service instances
 
 ### Removed
