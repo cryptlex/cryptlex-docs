@@ -8,124 +8,125 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 ### Added
 
-* Command line parameters `-metadatakey` & `-metadatavalue`
+* **LexFloatServer: **Command line parameters `-metadatakey` & `-metadatavalue`
 
 ### Changed
 
-* Updated stats API endpoint, for details check [docs](https://docs.cryptlex.com/floating-licenses/on-premise-floating-licenses/lexfloatserver#getting-server-stats)
-* `SetVersionGUID` function to `SetProductId()`
-* `GetCustomField()` function to `GetLicenseMetadata()`
-* `LexFloatServer` now uses `LexActivator` `v3.0.0` for license activation
-* Command line parameter `-pkey` to `-licensekey`
-* Command line parameter `-pfile` to `-productfile`
-* Command line parameter `-orequest` to `-offlinerequest`
-* Command line parameter `-oresponse` to `-offlineresponse`
+* **LexFloatClient: **All status codes have been updated
+* **LexFloatClient: **Renamed`SetVersionGUID` function to `SetProductId()`
+* **LexFloatClient: **Renamed`GetCustomField()` function to `GetLicenseMetadata()`
+* **LexFloatServer: **Updated stats API endpoint, for details check [docs](https://docs.cryptlex.com/floating-licenses/on-premise-floating-licenses/lexfloatserver#getting-server-stats)
+* **LexFloatServer:** Now uses `LexActivator` `v3.0.0` for license activation
+* **LexFloatServer: **Renamed command line parameter `-pkey` to `-licensekey`
+* **LexFloatServer: **Renamed command line parameter `-pfile` to `-productfile`
+* **LexFloatServer: **Renamed command line parameter `-orequest` to `-offlinerequest`
+* **LexFloatServer: **Renamed command line parameter `-oresponse` to `-offlineresponse`
 
 ### Deleted
 
-* `SetProductFile()` function
-* Command line parameter `-extradata` 
+* **LexFloatClient: **`SetProductFile()` function
+* **LexFloatServer: **Command line parameter `-extradata` 
 
 ## 2.9.5 \(2017-10-19\)
 
 ### Fixed
 
-* Bug preventing grace period not to expire on no server sync
+* **LexFloatServer: **Bug preventing grace period not to expire on no server sync
 
 ## 2.9.4 \(2017-09-23\)
 
 ### Fixed
 
-* Bug causing incorrect detection of Hyper-V
+* **LexFloatServer: **Bug causing incorrect detection of Hyper-V
 
 ## 2.9.3 \(2017-09-09\)
 
 ### Added
 
-* `lastSyncedAt` and `gracePeriodStartAt` properties to stats API
+* **LexFloatServer: **`lastSyncedAt` and `gracePeriodStartAt` properties to stats API
 
 ## 2.9.2 \(2017-08-27\)
 
 ### Fixed
 
-* Major bug causing LA\_FAIL status to be returned for activated server
+* **LexFloatServer: **Major bug causing `LA_FAIL` status to be returned for activated server
 
 ## 2.9.0 \(2017-07-03\)
 
 ### Added
 
-* clang build for macOS
+* **LexFloatClient: **clang build for macOS
 
 ## 2.8.1 \(2017-05-21\)
 
 ### Fixed
 
-* Embedded server version
+* **LexFloatServer: **Embedded server version
 
 ## 2.8.0 \(2017-05-16\)
 
 ### Added
 
-* Support for changing product version without restart
+* **LexFloatServer: **Support for changing product version without restart
 
 ### Changed
 
-* Disallowed leasing of licenses, if grace period is over and server is running
+* **LexFloatServer: **Disallowed leasing of licenses, if grace period is over and server is running
 
 ### Fixed
 
-* Fixed a time sync issue
+* **LexFloatServer: **Fixed a time sync issue
 
 ## 2.7.0 \(2017-03-04\)
 
 ### Added
 
-* Support for running the server, in case server is not activated
+* **LexFloatServer: **Support for running the server, in case server is not activated
 
 ### Fixed
 
-* A startup issue as service on Windows 7
+* **LexFloatServer: **A startup issue as service on Windows 7
 
 ## 2.6.1 \(2017-01-26\)
 
 ### Fixed
 
-* A memory leak issue
+* **LexFloatServer: **A memory leak issue
 
 ## 2.6.0 \(2017-01-22\)
 
 ### Added
 
-* `status` property to the stats api
+* **LexFloatServer: **`status` property to the stats api
 
 ### Fixed
 
-* Minor bug fixes
+* **LexFloatServer: **Minor bug fixes
 
 ## 2.5.1 \(2016-12-27\)
 
 ### Added
 
-* Command line parameter `-displayname` to update service name in Windows
-* Command line parameter `-status` to display activation status details
-* Command line parameters `-proxy`, `-graceperiod`, `-servercheckinterval` and `-extradata` which can only be passed at the time of activation
-* Support for multiple service instances
+* **LexFloatServer: **Command line parameter `-displayname` to update service name in Windows
+* **LexFloatServer: **Command line parameter `-status` to display activation status details
+* **LexFloatServer: **Command line parameters `-proxy`, `-graceperiod`, `-servercheckinterval` and `-extradata` which can only be passed at the time of activation
+* **LexFloatServer: **Support for multiple service instances
 
 ### Removed
 
-* Proxy, GracePeriod and ServerCheckInterval from config file
+* **LexFloatServer: **`Proxy`, `GracePeriod` and `ServerCheckInterval` from config file
 
 ## 2.4.0 \(2016-12-12\)
 
 ### Added
 
-* API endpoint to get the server stats: /services/api/stats
-* Client IP check to prevent VM snapshot floating clients 
+* **LexFloatServer: **API endpoint to get the server stats: /services/api/stats
+* **LexFloatServer: **Client IP check to prevent VM snapshot floating clients 
 
 ## 2.3.0 \(2016-05-22\)
 
 ### Added
 
-* Support for blocking ip addresses
-* Support for offline activations
+* **LexFloatServer: **Support for blocking ip addresses
+* **LexFloatServer: **Support for offline activations
 

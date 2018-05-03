@@ -8,9 +8,46 @@ description: All notable changes to LexActivator are documented here.
 
 ### Added
 
+* `SetProductData()` function
+* `SetLicenseCallback()` function
+* `SetTrialActivationMetadata()` function
+* `SetAppVersion()` function
+* `GetProductMetadata()` function
+* `GetLicenseUserEmail()` function
+* `GetLicenseUserName()` function
+* `GetTrialActivationMetadata()` function
+* `GetTrialExpiryDate()` function
+* `GetTrialId()` function
+* `GetLocalTrialExpiryDate()` function
+* `IsLocalTrialGenuine()` function
+* `ExtendLocalTrial()` function
+* `Reset()` function
+
 ### Changed
 
+* All status codes have been updated
+* Renamed `SetVersionGUID()` function to `SetProductId()`
+* Renamed `SetProductKey()` function to `SetLicenseKey()`
+* Renamed `SetExtraActivationData()` function to `SetActivationMetadata()`
+* Renamed `ActivateProduct()` function to `ActivateLicense()`
+* Renamed `DeactivateProduct()` function to `DeactivateLicense()`
+* Renamed `ActivateProductOffline()` function to `ActivateLicenseOffline()`
+* Renamed `IsProductGenuine()` function to `IsLicenseGenuine()`
+* Renamed `IsProductActivated()` function to `IsLicenseValid()`
+* Renamed `GetExtraActivationData()` function to `GetActivationMetadata()`
+* Renamed `GetCustomLicenseField()` function to `GetLicenseMetadata()`
+* Renamed `GetProductKeyExpiryDate()` function to `GetLicenseExpiryDate()`
+* Renamed `InitializeTrial()` function to `ActivateLocalTrial()`
+
 ### Deleted
+
+* `GetDaysLeftToExpiration()` function
+* `SetTrialKey()` function
+* `ExtendTrial()` function
+* `GetTrialDaysLeft()` function
+* `SetDayIntervalForServerCheck()` function
+* `SetGracePeriodForNetworkError()` function
+* `SetUserLock()` function
 
 ## 2.9.6 \(2017-11-19\)
 
