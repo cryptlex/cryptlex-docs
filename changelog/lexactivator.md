@@ -4,7 +4,7 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
-## \[3.0.0\] - 2018-05-01
+## 3.0.0 \(2018-05-03\)
 
 ### Added
 
@@ -12,39 +12,39 @@ description: All notable changes to LexActivator are documented here.
 
 ### Deleted
 
-## \[2.9.6\] - 2017-11-19
+## 2.9.6 \(2017-11-19\)
 
 ### Added
 
 * `GetProductKeyExpiryDate()` function to get the product key expiry timestamp.
 * Support for Linux ARMv8 64 bit architecture
 
-## \[2.9.5\] - 2017-10-19
+## 2.9.5 \(2017-10-19\)
 
 ### Fixed
 
 * Bug preventing grace period not to expire on no server sync
 
-## \[2.9.4\] - 2017-09-23
+## 2.9.4 \(2017-09-23\)
 
 ### Fixed
 
 * Bug causing incorrect detection of Hyper-V
 
-## \[2.9.3\] - 2017-09-09
+## 2.9.3 \(2017-09-09\)
 
 ### Fixed
 
 * Bug causing grace period not to expire
 * Regression causing LA\_EXPIRED to return for deactivated licenses
 
-## \[2.9.2\] - 2017-08-28
+## 2.9.2 \(2017-08-28\)
 
 ### Fixed
 
 * A major bug causing LA\_FAIL status to be returned for activated products
 
-## \[2.9.0\] - 2017-07-03
+## 2.9.0 \(2017-07-03\)
 
 ### Added
 
@@ -55,13 +55,13 @@ description: All notable changes to LexActivator are documented here.
 * `ActivateProduct()` function now returns \(throws\) LA\_E\_ACT\_LIMIT error \(exception\) if activation limit is reached
 * `IsProductGenuine()` function won't reactivate the product key, if deactivated server side
 
-## \[2.8.1\] - 2017-05-21
+## 2.8.1 \(2017-05-21\)
 
 ### Fixed
 
 * Embedded version
 
-## \[2.8.0\] - 2017-05-16
+## 2.8.0 \(2017-05-16\)
 
 ### Added
 
@@ -71,13 +71,13 @@ description: All notable changes to LexActivator are documented here.
 
 * Minor bug fixes
 
-## \[2.7.1\] - 2017-04-05
+## 2.7.1 \(2017-04-05\)
 
 ### Fixed
 
 * GCE VM detection bug
 
-## \[2.7.0\] - 2017-03-04
+## 2.7.0 \(2017-03-04\)
 
 ### Added
 
@@ -88,13 +88,13 @@ description: All notable changes to LexActivator are documented here.
 
 * Minor bug fixes
 
-## \[2.6.1\] - 2017-01-26
+## 2.6.1 \(2017-01-26\)
 
 ### Fixed
 
 * A memory leak in `IsProductGenuine()` function if being invoked periodically
 
-## \[2.6.0\] - 2017-01-22
+## 2.6.0 \(2017-01-22\)
 
 ### Changed
 
@@ -104,7 +104,7 @@ description: All notable changes to LexActivator are documented here.
 
 * Minor bug fixes
 
-## \[2.5.1\] - 2016-12-27
+## 2.5.1 \(2016-12-27\)
 
 ### Changed
 
@@ -115,7 +115,7 @@ description: All notable changes to LexActivator are documented here.
 
 * AWS VM detection bug
 
-## \[2.4.0\] - 2016-12-12
+## 2.4.0 \(2016-12-12\)
 
 ### Added
 
@@ -125,14 +125,14 @@ description: All notable changes to LexActivator are documented here.
 
 * `DeactivateProduct()` function now deactivates the product locally even if product key is already deactivated server side, and LA\_FAIL is returned.
 
-## \[2.3.0\] - 2016-05-22
+## 2.3.0 \(2016-05-22\)
 
 ### Fixed
 
 * A minor bug in offline activation.
 * A minor bug in VM activation.
 
-## \[2.2.1\] - 2016-03-21
+## 2.2.1 \(2016-03-21\)
 
 ### Added
 
