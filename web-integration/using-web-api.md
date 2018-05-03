@@ -4,7 +4,7 @@ description: >-
   party apps.
 ---
 
-# Web Integration
+# Using Web API
 
 ## Order Automation 
 

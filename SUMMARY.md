@@ -34,7 +34,9 @@
   * [Verified Trials](timed-trials/verified-trials.md)
   * [Unverified Trials](timed-trials/unverified-trials.md)
 * [Webhooks](webhooks.md)
-* [Web Integration](web-integration.md)
+* Web Integration
+  * [Using Web API](web-integration/using-web-api.md)
+  * [Using Zapier](web-integration/using-zapier.md)
 * Changelog
   * [Web API](changelog/web-api.md)
   * [LexActivator](changelog/lexactivator.md)
