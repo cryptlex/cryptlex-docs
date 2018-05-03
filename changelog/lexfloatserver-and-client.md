@@ -8,7 +8,7 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 ### Added
 
-* Command line parameter `-metadatakey` & `-metadatavalue`
+* Command line parameters `-metadatakey` & `-metadatavalue`
 
 ### Changed
 
