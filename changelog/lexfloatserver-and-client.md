@@ -4,6 +4,27 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 3.0.0 \(2018-05-03\)
+
+### Added
+
+* Command line parameter `-metadatakey` & `-metadatavalue`
+
+### Changed
+
+* `SetVersionGUID` function to `SetProductId()`
+* `GetCustomField()` function to `GetLicenseMetadata()`
+* `LexFloatServer` now uses `LexActivator` `v3.0.0` for license activation
+* Command line parameter `-pkey` to `-licensekey`
+* Command line parameter `-pfile` to `-productfile`
+* Command line parameter `-orequest` to `-offlinerequest`
+* Command line parameter `-oresponse` to `-offlineresponse`
+
+### Deleted
+
+* `SetProductFile()` function
+* Command line parameter `-extradata` 
+
 ## 2.9.5 \(2017-10-19\)
 
 ### Fixed
