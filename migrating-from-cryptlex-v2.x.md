@@ -27,11 +27,19 @@ No, you need to create a new account for using Cryptlex v3.x.
 
 ### How long do you plan to support Cryptlex v2.x?
 
-We are planning to support it for one more year \(upto May 2019\), after which the accounts will become readonly, i.e. you won't be allowed to create more products, product versions, product keys etc.
+We are planning to support it for one year \(upto May 2019\), after which the accounts will become readonly, i.e. you won't be allowed to create more products, product versions, product keys etc.
 
 ### What about our existing customers who will still be using Cryptlex v2.x after one year?
 
 Don't worry activation and deactivation API endpoints will still work after one year. Cryptlex v2.x won't be retired unless we reach zero traffic on Cryptlex v2.x servers.
+
+### Do our customers need to reactivate when we integrate LexActivator v3.x or upgrade to LexFloatServer v3.x?
+
+Yes, a reactivation will be required. You can do an auto-activation if you store the key in your application settings and after upgrade check whether key exists and do an auto-activation.
+
+### If I subscribe to a paid plan on Cryptlex v3.x will  I be charged for Cryptlex v2.x?
+
+No, when you subscribe to any paid plan on Cryptlex v3.x your Cryptlex v2.x account subscription will get discounted by the amount you pay for your subscription. Please notify us when you do so.
 
 ## What's new in Cryptlex v3.x?
 
@@ -74,7 +82,7 @@ You can now easily integrate Cryptlex with third party apps and take actions whe
 Cryptlex v2.x allowed for storing custom fields with your licenses. This has been replaced with metadata which can be stored along with your products, licenses, users, activations and trial activations.
 
 {% hint style="info" %}
-You can use product metadata to easily detect software updates in your app by storing your release version.. After trial or license activation product metadata can be accessed in your app.
+You can use product metadata to easily detect software updates in your app by storing your release version. After trial or license activation product metadata can be accessed in your app.
 {% endhint %}
 
 ### Analytics
@@ -83,7 +91,7 @@ Analytics have been improved and we are adding more metrics to further give you 
 
 ### Updated LexActivator
 
-LexActivator has gone major upgrade and now supports lot many new features. You can checkout the [changelog](https://docs.cryptlex.com/changelog/lexactivator).
+LexActivator has gone through major upgrade and now supports a lot many new features. You can checkout the [changelog](https://docs.cryptlex.com/changelog/lexactivator).
 
 ### Other features
 
@@ -105,7 +113,7 @@ Rename the fields as per the new schema:
 
 `"key", "email", "allowedActivations", "allowedDeactivations","Custom Fields"`
 
-Each custom fields should be added as a separate field, assuming you had stored order\_id_, _first\_name_,      _last\_name:
+Each custom field should be added as a separate field, assuming you had stored order\_id_, _first\_name_,      _last\_name:
 
 `"key", "email", "allowedActivations", "allowedDeactivations","order_id", "first_name", "last_name"`
 
@@ -113,9 +121,9 @@ Each custom fields should be added as a separate field, assuming you had stored 
 
 We have created a sample project on [Github](https://github.com/cryptlex/csv-importer) to help you with the import. It's a Node.js script which you can modify as per your requirements.
 
-You need to decide whether you want to store the user data as separate resource or simply store it as part of license metadata. The script uses user data to create a new user and links the user the the license. You can modify the script as per your requirements.
+You need to decide whether you want to store the user data as separate user resource or simply store it as part of license metadata. The script uses user data to create a new user and links the user with the license. You can modify the script as per your requirements.
 
-The script invokes Cryptlex v3.x web API, so you will need access token to use the script. Go the "[Personal Access Tokens](https://app.cryptlex.com/api/personal-access-tokens)" section in dashboard and create an access token with following four permissions:
+The script invokes Cryptlex v3.x Web API, so you will need an access token to use the script. Go the "[Personal Access Tokens](https://app.cryptlex.com/api/personal-access-tokens)" section in dashboard and create an access token with following four permissions:
 
 `license:read`, `license:write`, `user:read`, `user:write`
 
