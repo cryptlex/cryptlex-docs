@@ -16,6 +16,7 @@ Yes, it's a completely new product. Everything has been rewritten using the late
 * New client libraries
 * New hosting provider \([Heroku](https://heroku.com)\)
 * Code samples have been moved to [Github](https://github.com/cryptlex)
+* Updated [pricing plans](https://cryptlex.com/pricing)
 
 {% hint style="info" %}
 Cryptlex v3.x is not backward compatible with Cryptlex v2.x.
@@ -27,7 +28,7 @@ No, you need to create a new account for using Cryptlex v3.x.
 
 ### How long do you plan to support Cryptlex v2.x?
 
-We are planning to support it for one year \(upto May 2019\), after which the accounts will become readonly, i.e. you won't be allowed to create more products, product versions, product keys etc.
+We are planning to support it for one year \(upto May 2019\), after which the accounts will become read only, i.e. you won't be allowed to create more products, product versions, product keys etc.
 
 ### What about our existing customers who will still be using Cryptlex v2.x after one year?
 
@@ -37,7 +38,7 @@ Don't worry activation and deactivation API endpoints will still work after one 
 
 Yes, a reactivation will be required. You can do an auto-activation if you store the key in your application settings and after upgrade check whether key exists and do an auto-activation.
 
-### If I subscribe to a paid plan on Cryptlex v3.x will  I be charged for Cryptlex v2.x?
+### If I subscribe to a paid plan on Cryptlex v3.x will I be charged for Cryptlex v2.x?
 
 No, when you subscribe to any paid plan on Cryptlex v3.x your Cryptlex v2.x account subscription will get discounted by the amount you pay for your subscription. Please notify us when you do so.
 
@@ -95,7 +96,7 @@ LexActivator has gone through major upgrade and now supports a lot many new feat
 
 ### Other features
 
-To keep it short we won't be discussing all the features, you can go through the docs and use the dashboard to see the new features.
+To keep it short we won't be discussing all the features, if you have any queries drop an [email](mailto:support@cryptlex.com) and our team will reach out to you.
 
 ## How to migrate to Cryptlex v3.x?
 
