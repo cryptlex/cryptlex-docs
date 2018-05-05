@@ -41,4 +41,5 @@
   * [Web API](changelog/web-api.md)
   * [LexActivator](changelog/lexactivator.md)
   * [LexFloatServer & Client](changelog/lexfloatserver-and-client.md)
+* [Migrating from Cryptlex v2.x](migrating-from-cryptlex-v2.x.md)
 
