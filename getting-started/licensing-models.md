@@ -4,7 +4,7 @@ description: Let's quickly go through some licensing terminology.
 
 # Licensing Models
 
-## Time based Licensing Models
+## Time Based Licensing Models
 
 ### Perpetual Licenses
 
@@ -14,7 +14,7 @@ It refers to licenses which have lifetime validity. A user buys a license and ca
 
 It refers to licenses which expire after a certain amount of time period. You customers pay a monthly or a yearly subscription amount and if they don't renew, the license expires. 
 
-## Seat based Licensing Models
+## Seat Based Licensing Models
 
 ### Node-Locked Licenses
 
@@ -30,12 +30,9 @@ So if your floating license allows for 100 activations \(seats\), then at any in
 
 ## What Should I Choose
 
-Depending on your business requirements you will usually create four types of licenses:
+You will most of the time use node locked licenses which would be either perpetual or subscription based. 
 
-* Node-Locked + Perpetual
-* Node-Locked + Subscription
-* Floating + Perpetual
-* Floating + Subscription
+When licensing your product you any university or a big company you will usually opt for floating licenses as that is more economical.
 
 Other than this you can add some other restrictions too like usage count or implement a completely custom licensing model using metadata fields which you can add to your licenses.
 
