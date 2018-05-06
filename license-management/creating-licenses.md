@@ -1,8 +1,7 @@
 ---
 description: >-
-  You will usually create license policies through dashboard but creating
-  licenses will be most of the times done using the web API, when your customer
-  makes a purchase.
+  You can easily create licenses through dashboard but it will be most of the
+  times done using the web API, when your customer makes the purchase.
 ---
 
 # Creating Licenses
