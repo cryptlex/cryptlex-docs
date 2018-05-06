@@ -18,7 +18,7 @@ If the license expiration strategy for license \(or it's policy\) is set to `rol
 
 ## Renewing License Expiry
 
-As mentioned above `expiresAt` is a computed property, so to renew the subscription you need to hit the [license renew endpoint](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdRenewPost). It increments the `expiresAt` using the value of `validity` property.
+As mentioned above `expiresAt` is a computed property, so to renew the subscription you need to hit the [license renew endpoint](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdRenewPost). It increments the `expiresAt` property using the value of `validity` property.
 
 {% api-method method="post" host="https://api.cryptlex.com" path="/v3/licenses/:id/renew" %}
 {% api-method-summary %}
