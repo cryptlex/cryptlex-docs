@@ -4,8 +4,11 @@
 * Getting Started
   * [Overview](getting-started/overview.md)
   * [Licensing Models](getting-started/licensing-models.md)
-  * [License Policies](getting-started/license-policies.md)
   * [Metadata](getting-started/metadata.md)
+* License Management
+  * [License Policies](license-management/license-policies.md)
+  * [Creating Licenses](license-management/creating-licenses.md)
+  * [Renewing Licenses](license-management/renewing-licenses.md)
 * User Management
   * [Roles](user-management/roles.md)
   * [Creating Users](user-management/creating-users.md)
