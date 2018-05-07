@@ -21,6 +21,7 @@
     * [Using LexActivator with VB.NET](node-locked-licenses/using-lexactivator/using-lexactivator-with-vb.net.md)
     * [Using LexActivator with Java](node-locked-licenses/using-lexactivator/using-lexactivator-with-java.md)
     * [Using LexActivator with Delphi](node-locked-licenses/using-lexactivator/using-lexactivator-with-delphi.md)
+    * [Using LexActivator with Python](node-locked-licenses/using-lexactivator/using-lexactivator-with-python.md)
   * [Offline Activations](node-locked-licenses/offline-activations.md)
   * [Using Web API](node-locked-licenses/using-web-api.md)
 * Floating Licenses
