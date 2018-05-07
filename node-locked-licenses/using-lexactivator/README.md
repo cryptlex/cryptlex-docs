@@ -30,6 +30,8 @@ You can use any** programming language** to integrate LexActivator with any app 
 
 {% page-ref page="using-lexactivator-with-delphi.md" %}
 
+{% page-ref page="using-lexactivator-with-python.md" %}
+
 ## Minimum Requirements
 
 LexActivator works on Windows XP through Windows 10, MacOS 10.6+ and all Linux distributions \(minimum supported `glibc` library version is `v2.13` and `libnss3` library version is `v3.12`\).
