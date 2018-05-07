@@ -87,10 +87,6 @@ def main():
         LexActivator.GetLicenseExpiryDate(ctypes.byref(expiryDate))
         daysLeft = (expiryDate.value - time.time()) / 86500
         print("Days left: ", daysLeft)
-        bufferSize = 256
-        name = ctypes.create_string_buffer(bufferSize)
-        LexActivator.GetLicenseUserName(name, bufferSize)
-        print("License user: ", name.value)
         print("License is genuinely activated!")
     elif LexActivator.StatusCodes.LA_EXPIRED == status:
         print("License is genuinely activated but has expired!")
