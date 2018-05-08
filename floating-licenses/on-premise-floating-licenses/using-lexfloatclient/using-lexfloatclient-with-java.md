@@ -8,7 +8,7 @@ First of all, login to your Cryptlex account and download LexFloatClient library
 
 The above download package contains the library which you will be using to add licensing to your app.
 
-## Adding Licensing to your App
+## Adding licensing to your app
 
 After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
 
@@ -17,7 +17,7 @@ After you've added a product for your app in the dashboard, go to the product pa
 
 Product id is the identifier of your product which is to be used in the code. The product id of the LexFloatServer and LexFloatClient must match.
 
-### Adding Library to your App
+### Adding library to your app
 
 LexFloatClient example project \(Netbeans\) for Java contains the LexFloatClient package and [JNA](https://github.com/java-native-access/jna) jar file. You will need to add these files to your project. It contains all the LexFloatClient API functions needed to add licensing to your app.
 
@@ -40,7 +40,7 @@ lexactivator/
 
 In case you are creating platform specific installers, you only need to include the versions of LexFloatClient applicable to that platform.
 
-### Setting Product Id
+### Setting product id
 
 The first LexFloatClient API function you need to use in your code is `SetProductId()`. It sets the product id of the product you will be adding licensing to. 
 
@@ -49,7 +49,7 @@ LexFloatClient floatClient = new LexFloatClient();
 floatClient.SetProductId("PASTE_PRODUCT_ID");
 ```
 
-### Requesting License Lease
+### Requesting license lease
 
 To receive a floating license, you will use `SetFloatServer()`, `SetLicenseCallback()` and `RequestLicense()`LexFloatClient API methods. It sets LexFloatServer address, callback for status notifications, contacts the server and receives the leased license.
 
@@ -71,7 +71,7 @@ try
 
 The above code can be executed every time user starts the app or needs a new license.
 
-### Renewing License Lease
+### Renewing license lease
 
 License lease automatically renews itself in a background thread. When something goes wrong, Callback is invoked \(from background thread\).
 
@@ -105,7 +105,7 @@ class CallbackEventListener implements LicenseCallbackEvent
 
 You would usually request for a new license if callback gets invoked.
 
-### Dropping License Lease
+### Dropping license lease
 
 When your user is done using the app, the app should send a request to free the license, thereby making it available for other users. If the app doesn't, the license becomes \(zombie\) useless until lease time is over.
 
@@ -123,7 +123,7 @@ try
 
 The above code should be executed every time user closes the app.
 
-## Need More Help
+## Need more help
 
-In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://cryptlex.com/forums) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
+In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://cryptlex.com/forums) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
 
