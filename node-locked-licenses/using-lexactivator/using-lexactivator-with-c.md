@@ -62,7 +62,7 @@ private void activateLicenseBtn_Click(object sender, EventArgs e)
     status = LexActivator.ActivateLicense();
     if (status == LexActivator.StatusCodes.LA_OK || status == LexActivator.StatusCodes.LA_EXPIRED || status == LexActivator.StatusCodes.LA_SUSPENDED)
     {
-        // Activation successfull
+        // Activation successful
     }
     else
     {

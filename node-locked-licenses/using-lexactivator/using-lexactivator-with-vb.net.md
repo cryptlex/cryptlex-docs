@@ -58,7 +58,7 @@ Private Sub activateLicenseBtn_Click(ByVal sender As Object, ByVal e As EventArg
 
     status = LexActivator.ActivateLicense()
     If status = LexActivator.StatusCodes.LA_OK OrElse status = LexActivator.StatusCodes.LA_EXPIRED OrElse status = LexActivator.StatusCodes.LA_SUSPENDED Then
-        ' activation successfull
+        ' activation successful
     Else
         ' activation failed
     End If
