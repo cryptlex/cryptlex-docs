@@ -7,9 +7,18 @@ description: >-
 
 # Using Web API
 
-## Activating the License Key
+## Adding Licensing to your App
 
-Following is a sample request which creates a license activation:
+After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
+
+* Note the product id for the product.
+* Download the 2048-bit RSA public key for the product.
+
+RSA public key is needed to verify the signature of the activation token which you get on activating a license. Product id is the identifier of your product which is to be licensed.
+
+### License Activation
+
+To activate the license in your app using the license key, you need to send a POST request to the [/v3/activations](https://api.cryptlex.com/v3/docs#operation/V3ActivationsPost) API endpoint. Following is a sample request which creates a license activation:
 
 {% api-method method="post" host="https://api.cryptlex.com" path="/v3/activations" %}
 {% api-method-summary %}
@@ -66,12 +75,12 @@ Unique identifier for the product.
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 {
   "activationToken": "string"
 }
@@ -81,9 +90,17 @@ Unique identifier for the product.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-## Updating the License Activation
+On successful activation it returns an activation token. Activation token is basically a [JWT](https://jwt.io/) and you can easily verify it's signature using any of the JWT libraries available for your language.
 
-In order to sync the client changes with the server and vice-versa you need to frequently sent the update request. You can decide on the update frequency as per your requirement.
+### Verifying License Activation
+
+Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the signature of activation token using the RSA public key. 
+
+{% hint style="info" %}
+It is recommended to store the token in an encrypted form though not required unless you have any sensitive metadata information in the token.
+{% endhint %}
+
+In order to sync the client changes with the server and vice-versa you need to frequently sent an update request. You can decide on the update frequency as per your requirement.
 
 {% api-method method="patch" host="https://api.cryptlex.com" path="/v3/activations/:id" %}
 {% api-method-summary %}
