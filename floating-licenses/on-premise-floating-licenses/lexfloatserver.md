@@ -8,7 +8,7 @@ LexFloatServer is designed to be robust, low memory and very fast. Hence, it can
 LexFloatServer has **libnss3** dependency on Linux. Make sure dependency is installed before running the server.
 {% endhint %}
 
-## Activating the LexFloat Server
+## Activating the LexFloatServer
 
 LexFloatServer needs to be activated using a license key of type **"on-premise-floating"**, before it can be used. To activate use **"-a"** switch along with the license key and product file path:
 
@@ -22,7 +22,7 @@ You can also pass other options. To check all the command line options use the *
 You need admin rights to run the LexFloatServer. 
 {% endhint %}
 
-## Configuring the LexFloat Server
+## Configuring the LexFloatServer
 
 LexFloatServer uses a simple key value based text file as it's config file. It is loaded at the start of the server. Any changes to the config file will be ignored until the server is restarted. Following is a sample file which would suffice for most of the cases:
 
@@ -60,7 +60,7 @@ loglevel=2
 
 ```
 
-## Installing LexFloat Server on Windows
+## Installing LexFloatServer on Windows
 
 LexFloatServer runs as a service on Windows. To install it as a service after activating the license simply pass the **"-i"** switch along with product and config file paths:
 
@@ -136,13 +136,13 @@ If your init method \(e.g. systemd\) expects your process not to self daemonize,
 LexFloatServer -s -silent
 ```
 
-## Getting Server Stats
+## Getting server stats
 
 LexFloatServer exposes a stats API endpoint which can be used to get the current stats of the server.
 
 {% api-method method="get" host="http://localhost:8090" path="/api/stats" %}
 {% api-method-summary %}
-Server Stats
+Server stats
 {% endapi-method-summary %}
 
 {% api-method-description %}

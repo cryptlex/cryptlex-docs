@@ -6,9 +6,9 @@ description: >-
 
 # Renewing Licenses
 
-## Understanding License Expiry
+## Understanding license expiry
 
-Whenever you create a license with validity say 30 days, you will see a property in the license resource named `expiresAt`. It is a read only, computed property and determines when license will expire.
+Whenever you create a license with validity say 30 days, you will see a property in the license resource named `expiresAt`. It is a read only, computed property and determines time when license will expire.
 
 If the license expiration strategy for license \(or it's policy\) is set to `immediate`, this property will be populated with the date on which license will expire starting from the time when license was created.
 
@@ -16,13 +16,13 @@ If the license expiration strategy for license \(or it's policy\) is set to `del
 
 If the license expiration strategy for license \(or it's policy\) is set to `rolling`, this property will always be `null` as license expiry is specific to each activation. In this case you can refer to `expiresAt` property of license activation.
 
-## Renewing License Expiry
+## Renewing license expiry
 
 To renew the license subscription you need to hit the [license renew endpoint](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdRenewPost). It extends the license expiry by it's validity.
 
 {% api-method method="post" host="https://api.cryptlex.com" path="/v3/licenses/:id/renew" %}
 {% api-method-summary %}
-Renewing License
+Renewing license
 {% endapi-method-summary %}
 
 {% api-method-description %}

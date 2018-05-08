@@ -4,7 +4,7 @@ Unverified trial does not require online activation. All the information regardi
 
 As the unverified trial data is completely stored on the user's machine, you can have unlimited trial users and trial can start without an internet connection.
 
-## Adding Unverified Trial to your App
+## Adding unverified trial to your app
 
 When your user installs your application first time, invoke `ActivateLocalTrial()` LexActivator API functions to start the trial. Following sample code should be executed once after user installs your app, ideally on a button click. Executing multiple times would will not reset the trial.
 

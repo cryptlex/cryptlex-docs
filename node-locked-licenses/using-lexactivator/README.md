@@ -16,7 +16,7 @@ You can do this by yourself too in your app using any HTTP library, but it does 
 
 If you think you want do it yourself then you can skip this tutorial and move on.
 
-## Integrating LexActivator in your App
+## Integrating LexActivator in your app
 
 You can use any** programming language** to integrate LexActivator with any app that runs on Windows, MacOS or Linux. Following are tutorials for some commonly used programming languages:
 
@@ -32,7 +32,7 @@ You can use any** programming language** to integrate LexActivator with any app 
 
 {% page-ref page="using-lexactivator-with-python.md" %}
 
-## Minimum Requirements
+## Minimum requirements
 
 LexActivator works on Windows XP through Windows 10, MacOS 10.6+ and all Linux distributions \(minimum supported `glibc` library version is `v2.13` and `libnss3` library version is `v3.12`\).
 

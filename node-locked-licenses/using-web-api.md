@@ -7,7 +7,7 @@ description: >-
 
 # Using Web API
 
-## Adding Licensing to your App
+## Adding licensing to your app
 
 After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
 
@@ -16,13 +16,13 @@ After you've added a product for your app in the dashboard, go to the product pa
 
 RSA public key is needed to verify the signature of the activation token which you get on activating a license. Product id is the identifier of your product which is to be licensed.
 
-### License Activation
+### License activation
 
 To activate the license in your app using the license key, you need to send a POST request to the [/v3/activations](https://api.cryptlex.com/v3/docs#operation/V3ActivationsPost) API endpoint. Following is a sample request which creates a license activation:
 
 {% api-method method="post" host="https://api.cryptlex.com" path="/v3/activations" %}
 {% api-method-summary %}
-Create a License Activation
+Create a license activation
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -92,7 +92,7 @@ Unique identifier for the product.
 
 On successful activation it returns an activation token. Activation token is basically a [JWT](https://jwt.io/) and you can easily verify it's signature using any of the JWT libraries available for your language.
 
-### Verifying License Activation
+### Verifying license activation
 
 Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the signature of activation token using the RSA public key. 
 
@@ -104,7 +104,7 @@ In order to sync the client changes with the server and vice-versa you need to f
 
 {% api-method method="patch" host="https://api.cryptlex.com" path="/v3/activations/:id" %}
 {% api-method-summary %}
-Updating a License Activation
+Updating a license activation
 {% endapi-method-summary %}
 
 {% api-method-description %}

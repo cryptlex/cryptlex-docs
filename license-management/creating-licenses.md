@@ -6,11 +6,11 @@ description: >-
 
 # Creating Licenses
 
-## Creating a License
+## Creating a license
 
 A license inherits all it's properties from the license policy attached to it's product. So a license can be created by hitting the license API endpoint with an empty body - `{}` too.
 
-But you may way want to override some properties like `allowedActivations`, `validity`, add some `metadata` etc. You can check out all the properties in web API [reference page](https://api.cryptlex.com/v3/docs#operation/V3LicensesPost). Following is a sample request which you will usually make to create a license:
+But you may way want to override some properties like `allowedActivations`, `validity`, add some `metadata` etc. You can check out all the properties in the web API [reference page](https://api.cryptlex.com/v3/docs#operation/V3LicensesPost). Following is a sample request which you will usually make to create a license:
 
 {% api-method method="post" host="https://api.cryptlex.com" path="/v3/licenses" %}
 {% api-method-summary %}

@@ -6,7 +6,7 @@ Following is a sample request which creates a user with user role:
 
 {% api-method method="post" host="https://api.cryptlex.com" path="/v3/users" %}
 {% api-method-summary %}
-Creating User
+Creating user
 {% endapi-method-summary %}
 
 {% api-method-description %}
