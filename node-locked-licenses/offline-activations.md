@@ -12,7 +12,7 @@ GenerateOfflineActivationRequest();
 
 ## Generating offline activation response file
 
-Now, after getting the offline activation response file from user, go to activations page of license and click the "Offline Activation" button. You will be presented with a form, paste the contents of offline activation response file, set the validity of response and click "ACTIVATE" button. If request is valid then offline activation response file will start downloading.
+Now, after getting the offline activation request file from user, go to activations page of the license and click the "Offline Activation" button. You will be presented with a form, paste the contents of offline activation request file, set the validity of response and click "ACTIVATE" button. If request is valid then offline activation response file will start downloading.
 
 ## Activating using offline activation response file
 
@@ -22,5 +22,5 @@ To allow your users to activate using the generated offline activation response 
 ActivateLicenseOffline();
 ```
 
-In case user formats the PC, the generated offline activation response can be reused, till the validity expires, to activate your app on the user's machine.
+In case user formats the PC, the generated offline activation response can be reused to activate your app, till the response validity expires.
 
