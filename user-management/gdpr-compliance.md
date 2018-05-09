@@ -1,4 +1,0 @@
-# GDPR Compliance
-
-## Coming soon ...
-

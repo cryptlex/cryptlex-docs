@@ -13,7 +13,6 @@
   * [Roles](user-management/roles.md)
   * [Creating Users](user-management/creating-users.md)
   * [Authenticating Users](user-management/authenticating-users.md)
-  * [GDPR Compliance](user-management/gdpr-compliance.md)
 * Node Locked Licenses
   * [Using LexActivator](node-locked-licenses/using-lexactivator/README.md)
     * [Using LexActivator with C, C++ & Objective C](node-locked-licenses/using-lexactivator/using-lexactivator-with-c-c++-and-objective-c.md)
