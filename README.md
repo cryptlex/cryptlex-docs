@@ -1,7 +1,7 @@
 ---
 description: >-
   Cryptlex offers a complete software licensing solution to help you license
-  your desktop apps, mobile apps, IoT apps, on-premise software, and other
+  your desktop apps, mobile apps, on-premise software,  IoT apps, and other
   digital goods.
 ---
 
