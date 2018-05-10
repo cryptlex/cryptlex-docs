@@ -1,6 +1,6 @@
 # Using LexActivator with Delphi
 
-First of all, login to your Cryptlex account and download LexActivator library for Windows, Mac OS X or Linux:
+First of all, login to your Cryptlex account and download LexActivator library for Windows or MacOS:
 
 * ​[Download LexActivator for Windows](https://app.cryptlex.com/downloads)​
 * ​[Download LexActivator for Mac OS X](https://app.cryptlex.com/downloads)​
