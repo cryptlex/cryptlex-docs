@@ -4,15 +4,19 @@ description: Let's quickly go through some licensing terminology.
 
 # Licensing Models
 
-## Time based licensing models
+## Perpetual licensing model
 
-### Perpetual licenses
+It refers to licenses which have lifetime validity. A user buys a license and can use your product for lifetime without any need of paying again.
 
-It refers to licenses which have lifetime validity. A user buys a license and can use your product for lifetime without a need of paying again.
+## Metered licensing models
 
 ### Subscriptions
 
-It refers to licenses which expire after a certain amount of time period. You customers pay a monthly or a yearly subscription amount and if they don't renew, the license expires. 
+Licenses can be metered by time and they would expire after a certain amount of time period. Your customers would usually pay a monthly or a yearly subscription fees and when they renew, the license should also be renewed. 
+
+### Meter by usage
+
+Sometimes you want your customers to pay for what is actively used regardless of how long they possess your product. The usage can be defined as the amount of time for which your app is used, number of times it is run, number of specific operations etc. depending on your business requirements.
 
 ## Seat based licensing models
 
@@ -32,7 +36,11 @@ So if your floating license allows for 100 activations \(seats\), then at any in
 
 You will most of the time use node locked licenses which would be either perpetual or subscription based. 
 
-When licensing your product to any university or a big company which may require lot of license seats, you will usually opt for floating licenses as that is more economical for your customers.
+When licensing your product to any university or a big company which may require large number of license seats, you will usually opt for floating licenses as that is more economical for your customers.
 
 Other than this you can add some other restrictions too like usage count or implement a completely custom licensing model using metadata fields which you can add to your licenses.
+
+## Need help
+
+In case you need  help for implementing any of the above mentioned licensing models, we'll be glad to help you. You can either post your questions on our [support forum](https://cryptlex.com/forums) or can contact us through [email](mailto:support@cryptlex.com).
 
