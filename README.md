@@ -7,9 +7,9 @@ description: >-
 
 # Welcome to Cryptlex!
 
-## Cryptlex Licensing Web API
+## Cryptlex Licensing API
 
-Cryptlex web API let's you implement any software licensing model with node-locked licensing, floating licensing, perpetual licenses, subscriptions, timed trials and more supported out of the box. 
+Cryptlex licensing API let's you implement any software licensing model with node-locked licensing, floating licensing, perpetual licenses, subscriptions, timed trials and more supported out of the box. 
 
 ## Cryptlex Client Library - LexActivator 
 
