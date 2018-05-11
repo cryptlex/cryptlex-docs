@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.0.1 \(2018-05-10\)
+
+### Fixed
+
+* A network issue causing activations to fail
+
 ## 3.0.0 \(2018-05-03\)
 
 ### Added
