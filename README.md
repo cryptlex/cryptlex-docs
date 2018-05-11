@@ -11,7 +11,7 @@ description: >-
 
 Cryptlex licensing API let's you implement any software licensing model with node-locked licensing, floating licensing, perpetual licenses, subscriptions, timed trials and more supported out of the box. 
 
-## Cryptlex Client Library - LexActivator 
+## LexActivator - Cryptlex Client Library
 
 LexActivator makes it dead simple to implement any type of licensing model, including hosted floating licenses, by abstracting away HTTPS network requests, AES encryption, RSA signature verification, advanced machine fingerprinting, virtual machine detection and much more.
 
