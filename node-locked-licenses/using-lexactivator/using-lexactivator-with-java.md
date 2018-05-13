@@ -115,7 +115,7 @@ try
     } 
     else
     {
-    	System.out.println("License is not activated!");
+    	System.out.println("License is not activated: " + status);
     }
 } catch (LexActivatorException ex)
 {
