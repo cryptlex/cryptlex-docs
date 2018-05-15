@@ -69,7 +69,7 @@ The above code should be executed at the time of license activation.
 
 Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this you need to use `IsLicenseGenuine()` LexActivator API function.
 
-```python
+```go
 func main() {
 	var status C.int
 	status = C.SetProductData(C.CString("PASTE_CONTENT_OF_PRODUCT.DAT_FILE"))
