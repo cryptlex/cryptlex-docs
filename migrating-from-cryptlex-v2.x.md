@@ -12,6 +12,7 @@ Yes, it's a completely new product. Everything has been rewritten using the late
 
 * Completely [API](https://api.cryptlex.com/v3/docs) driven
 * Brand new [dashboard](https://app.cryptlex.com)
+* Customer portal for your customers
 * New beautiful [documentation](https://docs.cryptlex.com) 
 * New client libraries
 * New hosting provider \([Heroku](https://heroku.com)\)
@@ -52,11 +53,7 @@ Everything is now API driven in Cryptlex. You can even skip using LexActivator \
 
 ### User identity management
 
-We now support identity management for your customers. Along with creating licenses you can also create users and link them with the licenses. Basic features like login, password reset, profile management are supported out of the box.
-
-{% hint style="info" %}
-Customer portal where your customers can self manage their licenses is coming soon...
-{% endhint %}
+We now support identity management for your customers. Along with creating licenses you can also create users and link them with the licenses. Basic features like login, password reset, profile management are supported out of the box.  Your customers can also log into the dashboard to manage their license keys.
 
 ### License policies
 
