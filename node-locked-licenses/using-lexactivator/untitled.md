@@ -54,7 +54,7 @@ function activate() {
         process.exit(status);
     }
 
-    status = LexActivator.ActivateLicense()
+    status = LexActivator.ActivateLicense();
     if (LexStatusCodes.LA_OK == status || LexStatusCodes.LA_EXPIRED == status || LexStatusCodes.LA_SUSPENDED == status) {
         console.log("License activated successfully:", status);
     } else {
