@@ -28,7 +28,7 @@ There are three types of licenses:
 
 * **Node locked:** This is the default type which locks the license to the machine.
 * **Floating:** This type is used for created a hosted floating license.
-* **On-Premise floating: **This** **type is used for creating an on-premise floating license.
+* **On-Premise floating:** This ****type is used for creating an on-premise floating license.
 
 #### Lease duration
 
@@ -78,7 +78,7 @@ LexActivator generates a structured fingerprint of the machine which allows for 
 
 **Exact:** This strategy requires an exact match of all the hardware parts which were fingerprinted. If their is a minor change in the hardware, fingerprint will not be accepted, and machine will be treated as a different machine.
 
-**Fuzzy:  **This strategy uses fuzzy matching by comparing different hardware fingerprints and if the comparison score is greater than a minimum threshold value, the machine is accepted.
+**Fuzzy:**  This strategy uses fuzzy matching by comparing different hardware fingerprints and if the comparison score is greater than a minimum threshold value, the machine is accepted.
 
 **Loose:** This strategy is similar to fuzzy but with a much lower threshold value.
 

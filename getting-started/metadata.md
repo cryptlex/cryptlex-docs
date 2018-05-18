@@ -14,11 +14,11 @@ It can be used for many purposes, like detecting software updates in your applic
 
 ## User metadata
 
-This metadata can be added to your license users at the time of creating a user. You can store additional data like `phone_number`, `address` etc._ _in the user metadata.
+This metadata can be added to your license users at the time of creating a user. You can store additional data like `phone_number`, `address` etc. __in the user metadata.
 
 ## License metadata
 
-This metadata can be added to your licenses at the time of creating a license. You can store additional data like `order_id`_, _`customer_id` etc_. _with the license.
+This metadata can be added to your licenses at the time of creating a license. You can store additional data like `order_id`_,_ `customer_id` etc_._ with the license.
 
 This can be accessed in your application once a license is activated. It's common use case is feature detection, i.e. if you wish to restrict the features in your application based on the value of metadata fields.
 

@@ -18,7 +18,7 @@ If you think you want do it yourself then you can skip this tutorial and move on
 
 ## Integrating LexActivator in your app
 
-You can use any** programming language** to integrate LexActivator with any app that runs on Windows, MacOS or Linux. Following are tutorials for some commonly used programming languages:
+You can use any **programming language** to integrate LexActivator with any app that runs on Windows, MacOS or Linux. Following are tutorials for some commonly used programming languages:
 
 {% page-ref page="using-lexactivator-with-c-c++-and-objective-c.md" %}
 

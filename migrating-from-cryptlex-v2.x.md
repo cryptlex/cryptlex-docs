@@ -111,7 +111,7 @@ Rename the fields as per the new schema:
 
 `"key", "email", "allowedActivations", "allowedDeactivations","Custom Fields"`
 
-Each custom field should be added as a separate field, assuming you had stored order\_id_, _first\_name_,      _last\_name:
+Each custom field should be added as a separate field, assuming you had stored order\_id_,_ first\_name_,_      last\_name:
 
 `"key", "email", "allowedActivations", "allowedDeactivations","order_id", "first_name", "last_name"`
 

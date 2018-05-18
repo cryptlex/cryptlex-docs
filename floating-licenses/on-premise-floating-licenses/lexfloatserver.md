@@ -85,7 +85,7 @@ sc start LexFloatServer-xxx
 
 ### Uninstalling LexFloatServer on Windows
 
-To uninstall simply pass **"-d"** switch to deactivate the license and then** "-u"** switch to remove the service:
+To uninstall simply pass **"-d"** switch to deactivate the license and then **"-u"** switch to remove the service:
 
 ```text
 LexFloatServer -d

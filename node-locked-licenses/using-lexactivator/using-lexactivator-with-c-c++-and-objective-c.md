@@ -20,7 +20,7 @@ Product.dat contains product data which is used by LexActivator. Product id is t
 
 ### Adding library to your app
 
-LexActivator example project for C contains the **LexActivator.h** header file. In addition to that it includes **LexActivator.lib **file required in case of Windows. It contains all the LexActivator API functions needed to add licensing to your app.
+LexActivator example project for C contains the **LexActivator.h** header file. In addition to that it includes **LexActivator.lib** file required in case of Windows. It contains all the LexActivator API functions needed to add licensing to your app.
 
 Depending on the platform you are targeting **\(x86 or x64\)** you need to link the respective LexActivator.dll with your application.
 

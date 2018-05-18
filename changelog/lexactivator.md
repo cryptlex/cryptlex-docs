@@ -179,6 +179,6 @@ description: All notable changes to LexActivator are documented here.
 
 ### Added
 
-* `GetExtraActivationData() `function to get the value of the extra activation data.
+* `GetExtraActivationData()` function to get the value of the extra activation data.
 * `GetDaysLeftToExpiration()` function to get the number of remaining days after which the license expires.
 
