@@ -10,7 +10,7 @@ description: All notable changes to Web API are documented here.
 
 * Each license you create is counted as an activation irrespective of whether it is activated or not \(as before\). But if license allows more than one activation, then those are only counted when used.
 * `allowedActivations` property in license policies and licenses can now be set to `0` also, to allow unlimited activations for any license.
-* For on-premise floating licenses `allowedFloatingClients` are no more counted as activations, that means floating licenses got more cheaper
+* For on-premise floating licenses `allowedFloatingClients` are no more counted as activations, that means floating licenses got more cheaper.
 
 ### Fixed {#deleted}
 
