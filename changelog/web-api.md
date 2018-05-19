@@ -4,6 +4,12 @@ description: All notable changes to Web API are documented here.
 
 # Web API
 
+## 3.0.2 \(2018-05-19\)
+
+### Added {#changed}
+
+* `licensePolicyId` property to licenses to override the default license policy inherited through product.
+
 ## 3.0.1 \(2018-05-18\) {#3-0-0-2018-05-03}
 
 ### Changed {#changed}
