@@ -86,6 +86,10 @@ LexActivator generates a structured fingerprint of the machine which allows for 
 Sometimes machines misbehave by reporting major changes in hardware fingerprints due to many issues, in such cases you should set the strategy to **"Loose"**.
 {% endhint %}
 
+#### Required Metadata Keys
+
+List of required metadata keys which a license inheriting the policy must have.
+
 #### Allowed countries
 
 List of the allowed countries. The country name is resolved using the IP address. If none of the countries is included, this setting is ignored.
