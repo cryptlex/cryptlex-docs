@@ -9,7 +9,7 @@ description: All notable changes to Web API are documented here.
 ### Added {#changed}
 
 * `licensePolicyId` property to licenses to override the default license policy inherited through product.
-* `requiredMetadataKeys` property to license policies to make it must for a license to have required metadata keys when it is created
+* `requiredMetadataKeys` property to license policies to make it must for a license to have required metadata keys when it is created.
 
 ## 3.0.1 \(2018-05-18\) {#3-0-0-2018-05-03}
 
