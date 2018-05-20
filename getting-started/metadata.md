@@ -6,6 +6,22 @@ description: >-
 
 # Metadata
 
+## Metadata properties
+
+The metadata which can be added to products, licenses and users has following three properties:
+
+#### Key
+
+Name of the metadata key.
+
+#### Value
+
+Value of the metadata key.
+
+#### Visible
+
+Determines whether the metadata key/value is accessible in the app after trial or license activation.
+
 ## Product metadata
 
 This metadata can be added to products and can be accessed in your application once a trial or license is activated.
