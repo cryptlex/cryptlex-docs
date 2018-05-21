@@ -1,6 +1,6 @@
 # Data Processing Addendum
 
-This Cryptlex Data Processing Addendum forms part of, and is subject to the provisions of, the Cryptlex [Terms of Service](https://cryptlex.com/terms).
+This Cryptlex Data Processing Addendum forms part of, and is subject to the provisions of, the Cryptlex [Terms of Service](https://docs.cryptlex.com/legal/terms-of-service).
 
 ## 1. Definitions
 
@@ -66,7 +66,7 @@ The liability of each party under this Data Processing Addendum is subject to th
 
 ## 7**. Conflict**
 
-In the event of any conflict or inconsistency between the provisions of the Agreement and this Addendum, the provisions of this Addendum shall prevail. For avoidance of doubt and to the extent allowed by applicable law, any and all liability under this Addendum, including limitations thereof, will be governed by the relevant provisions of the Agreement. You acknowledge and agree that Cryptlex may amend this Addendum from time to time by posting the relevant amended and restated Addendum on Cryptlex’s website, available at [https://cryptlexcom/dpa](https://cryptlex.com/dpa) and such amendments to the Addendum are effective as of the date of posting. Your continued use of the Services after the amended Addendum is posted to Cryptlex’s website constitutes your agreement to, and acceptance of, the amended Addendum. If you do not agree to any changes to the Addendum, do not continue to use the Service.
+In the event of any conflict or inconsistency between the provisions of the Agreement and this Addendum, the provisions of this Addendum shall prevail. For avoidance of doubt and to the extent allowed by applicable law, any and all liability under this Addendum, including limitations thereof, will be governed by the relevant provisions of the Agreement. You acknowledge and agree that Cryptlex may amend this Addendum from time to time by posting the relevant amended and restated Addendum and such amendments to the Addendum are effective as of the date of posting. Your continued use of the Services after the amended Addendum is posted to Cryptlex’s website constitutes your agreement to, and acceptance of, the amended Addendum. If you do not agree to any changes to the Addendum, do not continue to use the Service.
 
 ## 8**. Miscellaneous.**
 

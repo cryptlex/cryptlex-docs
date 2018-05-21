@@ -1,6 +1,6 @@
 # Terms of Service
 
-By using or accessing the Services, you're agreeing to these Terms,  and our [Data Processing Addendum](https://cryptlex.com/dpa) \(collectively, this “Agreement”\). If you're using the Services for an organization, you're agreeing to this Agreement on behalf of that organization, and you represent and warrant that you can do so. 
+By using or accessing the Services, you're agreeing to these Terms,  and our [Data Processing Addendum](https://docs.cryptlex.com/legal/data-processing-addendum) \(collectively, this “Agreement”\). If you're using the Services for an organization, you're agreeing to this Agreement on behalf of that organization, and you represent and warrant that you can do so. 
 
 If you do not agree with any of these terms, you are prohibited from using or accessing our Services. Violation of any of the terms below will result in the termination of your Account.You agree to use the Service at your own risk.
 

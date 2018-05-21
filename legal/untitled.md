@@ -126,7 +126,7 @@ Cryptlex will not retain data longer than is necessary to fulfil the purposes fo
 
 ## 4. Acceptance of these conditions
 
-We assume that all visitors of our website, and users of Cryptlex’s services have carefully read this document and agree to its contents. If someone does not agree with this privacy policy, they should refrain from using our website and services. We reserve the right to change our privacy policy as necessity dictates. Continued use of Cryptlex website and services after having been informed of any such changes to these conditions implies acceptance of the revised privacy policy. This privacy policy is an integral part of Cryptlex’s [Terms of Service](https://cryptlex.com/terms).
+We assume that all visitors of our website, and users of Cryptlex’s services have carefully read this document and agree to its contents. If someone does not agree with this privacy policy, they should refrain from using our website and services. We reserve the right to change our privacy policy as necessity dictates. Continued use of Cryptlex website and services after having been informed of any such changes to these conditions implies acceptance of the revised privacy policy. This privacy policy is an integral part of Cryptlex’s [Terms of Service](https://docs.cryptlex.com/legal/terms-of-service).
 
 ## 5. Disclosure of personal information
 
