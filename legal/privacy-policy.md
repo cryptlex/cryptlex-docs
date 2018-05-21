@@ -46,7 +46,7 @@ Information in this category includes the information you provide when registeri
 
 * First name, last name, email, company name
 * Stripe customer and subscription unique identifiers
-* IP addresses for rate limiting \(stored temporarily in Redis cache\)
+* IP addresses for rate limiting \(stored temporarily\)
 
 **1.2.1.2 Personal information stored in third party services**
 
@@ -56,8 +56,8 @@ Information in this category includes the information you provide when registeri
 * Credit card information \(securely stored within Stripe\)
 * Website usage \(through Google Analytics\)
 * Geographic location \(through Google Analytics\)
+* Name, email and IP addresses in crash reports \(through Bugsnag retained for seven days\)
 * IP addresses in request logs \(through Papertrail archived for one year\)
-* IP addresses in crash reports \(through Bugsnag retained for seven days\)
 
 #### 1.2.2 Collection of User data from your customers
 
