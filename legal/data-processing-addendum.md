@@ -28,7 +28,7 @@ When Cryptlex Processes Personal Data in the course of providing the Services, C
 * **3.4.** ensure that its personnel who access the Personal Data are subject to confidentiality obligations that restrict their ability to disclose the Customer Personal Data; and
 * **3.5.** upon termination of the Agreement, Cryptlex will promptly initiate its purge process to delete or anonymize the Personal Data.
 
-## **4. Processing Roles and Activities.**
+## **4. Processing Roles and Activities**
 
 ### 4.1 **Cryptlex as Processor and You as Controller.** 
 
@@ -36,17 +36,17 @@ You are the controller and Cryptlex is the processor of Your Controlled Data.
 
 ### 4.2 **Cryptlex as Controller.** 
 
-**Cryptlex** may also be an independent controller for some personal data relating to you. Please see our [Privacy Policy](https://docs.cryptlex.com/legal/privacy-policy) and [Terms of Service](https://docs.cryptlex.com/legal/terms-of-service) for details about this personal data which we control.
+Cryptlex may also be an independent controller for some personal data relating to you. Please see our [Privacy Policy](https://docs.cryptlex.com/legal/privacy-policy) and [Terms of Service](https://docs.cryptlex.com/legal/terms-of-service) for details about this personal data which we control.
 
 ### 4.3 **Description of Processing Activities.** 
 
 We will process Your Controlled Data for the purpose of providing you with the Services, as may be used, configured or modified from within your Account \(the “Purpose”\).
 
-### 4.4 **Compliance with Laws.** 
+### 4.4 Compliance with Laws
 
 You will ensure that your instructions comply with all laws, regulations and rules applicable in relation to Your Controlled Data and that Your Controlled Data is collected lawfully by you or on your behalf and provided to us by you in accordance with such laws, rules and regulations. You will also ensure that the processing of Your Controlled Data in accordance with your instructions will not cause or result in us or you breaching any laws, rules or regulations. You are responsible for reviewing the information available from us relating to data security pursuant to the Agreement and making an independent determination as to whether the Services meet your requirements and legal obligations as well as your obligations under this Data Processing Addendum. Cryptlex will not access or use Your Controlled Data except as provided in the Agreement, as necessary to maintain or provide the Services or as necessary to comply with the law or binding order of a governmental, law enforcement or regulatory body.
 
-## **5. Our Processing Responsibilities.**
+## **5. Our Processing Responsibilities**
 
 ### 5.1 **How We Process**
 
@@ -68,7 +68,7 @@ The liability of each party under this Data Processing Addendum is subject to th
 
 In the event of any conflict or inconsistency between the provisions of the Agreement and this Addendum, the provisions of this Addendum shall prevail. For avoidance of doubt and to the extent allowed by applicable law, any and all liability under this Addendum, including limitations thereof, will be governed by the relevant provisions of the Agreement. You acknowledge and agree that Cryptlex may amend this Addendum from time to time by posting the relevant amended and restated Addendum and such amendments to the Addendum are effective as of the date of posting. Your continued use of the Services after the amended Addendum is posted to Cryptlex’s website constitutes your agreement to, and acceptance of, the amended Addendum. If you do not agree to any changes to the Addendum, do not continue to use the Service.
 
-## 8**. Miscellaneous.**
+## 8**. Miscellaneous**
 
 You are responsible for any costs and expenses arising from Cryptlex’s compliance with your instructions or requests pursuant to the Agreement \(including this Data Processing Addendum\) which fall outside the standard functionality made available by Cryptlex generally through the Services.
 
