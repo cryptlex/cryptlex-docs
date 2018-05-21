@@ -36,7 +36,7 @@ You are the controller and Cryptlex is the processor of Your Controlled Data.
 
 ### 4.2 **Cryptlex as Controller.** 
 
-**Cryptlex** may also be an independent controller for some personal data relating to you. Please see our [Privacy Policy](https://cryptlex.com/privacy) and [Terms of Service](https://cryptlex.com/terms) for details about this personal data which we control.
+**Cryptlex** may also be an independent controller for some personal data relating to you. Please see our [Privacy Policy](https://docs.cryptlex.com/legal/privacy-policy) and [Terms of Service](https://docs.cryptlex.com/legal/terms-of-service) for details about this personal data which we control.
 
 ### 4.3 **Description of Processing Activities.** 
 
