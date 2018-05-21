@@ -23,7 +23,7 @@ Email address of the user.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="password" type="string" required=true %}
-Password of the user
+Password of the user.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
