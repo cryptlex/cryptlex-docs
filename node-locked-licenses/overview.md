@@ -1,4 +1,4 @@
-# Using LexActivator
+# Overview
 
 ## Why use LexActivator
 
@@ -20,21 +20,21 @@ If you think you want do it yourself then you can skip this tutorial and move on
 
 You can use any **programming language** to integrate LexActivator with any app that runs on Windows, MacOS or Linux. Following are tutorials for some commonly used programming languages:
 
-{% page-ref page="using-lexactivator-with-c-c++-and-objective-c.md" %}
+{% page-ref page="using-lexactivator/using-lexactivator-with-c-c++-and-objective-c.md" %}
 
-{% page-ref page="using-lexactivator-with-c.md" %}
+{% page-ref page="using-lexactivator/using-lexactivator-with-c.md" %}
 
-{% page-ref page="using-lexactivator-with-vb.net.md" %}
+{% page-ref page="using-lexactivator/using-lexactivator-with-vb.net.md" %}
 
-{% page-ref page="using-lexactivator-with-java.md" %}
+{% page-ref page="using-lexactivator/using-lexactivator-with-java.md" %}
 
-{% page-ref page="using-lexactivator-with-delphi.md" %}
+{% page-ref page="using-lexactivator/using-lexactivator-with-delphi.md" %}
 
-{% page-ref page="using-lexactivator-with-python.md" %}
+{% page-ref page="using-lexactivator/using-lexactivator-with-python.md" %}
 
-{% page-ref page="using-lexactivator-with-go.md" %}
+{% page-ref page="using-lexactivator/using-lexactivator-with-go.md" %}
 
-{% page-ref page="untitled.md" %}
+{% page-ref page="using-lexactivator/untitled.md" %}
 
 ## Minimum requirements
 

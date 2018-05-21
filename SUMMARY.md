@@ -14,7 +14,8 @@
   * [Creating Users](user-management/creating-users.md)
   * [Authenticating Users](user-management/authenticating-users.md)
 * Node Locked Licenses
-  * [Using LexActivator](node-locked-licenses/using-lexactivator/README.md)
+  * [Overview](node-locked-licenses/overview.md)
+  * Using LexActivator
     * [Using LexActivator with C, C++ & Objective C](node-locked-licenses/using-lexactivator/using-lexactivator-with-c-c++-and-objective-c.md)
     * [Using LexActivator with C\#](node-locked-licenses/using-lexactivator/using-lexactivator-with-c.md)
     * [Using LexActivator with VB.NET](node-locked-licenses/using-lexactivator/using-lexactivator-with-vb.net.md)
