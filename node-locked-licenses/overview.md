@@ -1,5 +1,13 @@
 # Overview
 
+## Node locked licenses
+
+The basic concept of node locked licensing is that your application should contact an online license server, to confirm the validity of the license key provided by the user to activate the license. 
+
+At the time of license activation it should also generate a unique device fingerprint, and send it along with the license activation request. 
+
+The license server must store the device fingerprint and use it to validate the license key for further activations to prevent the usage of license key on other devices.
+
 ## Why use LexActivator
 
 LexActivator is basically a **libcurl** based HTTP client which invokes Cryptlex Web API endpoints from your application to activate your licenses and trials.
@@ -13,28 +21,6 @@ You can do this by yourself too in your app using any HTTP library, but it does 
 * Does virtual machine detection so you can prevent users from activating your license in virtual machines. Virtual machines can be cloned which may sometimes result in same fingerprint on different machines.
 * Periodically invokes the Cryptlex API endpoints in a separate thread to sync the server license data with the client.
 * Handles the offline activations.
-
-If you think you want do it yourself then you can skip this tutorial and move on.
-
-## Integrating LexActivator in your app
-
-You can use any **programming language** to integrate LexActivator with any app that runs on Windows, MacOS or Linux. Following are tutorials for some commonly used programming languages:
-
-{% page-ref page="using-lexactivator/using-lexactivator-with-c-c++-and-objective-c.md" %}
-
-{% page-ref page="using-lexactivator/using-lexactivator-with-c.md" %}
-
-{% page-ref page="using-lexactivator/using-lexactivator-with-vb.net.md" %}
-
-{% page-ref page="using-lexactivator/using-lexactivator-with-java.md" %}
-
-{% page-ref page="using-lexactivator/using-lexactivator-with-delphi.md" %}
-
-{% page-ref page="using-lexactivator/using-lexactivator-with-python.md" %}
-
-{% page-ref page="using-lexactivator/using-lexactivator-with-go.md" %}
-
-{% page-ref page="using-lexactivator/untitled.md" %}
 
 ## Minimum requirements
 
