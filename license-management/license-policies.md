@@ -4,7 +4,7 @@ description: >-
   business requirements.
 ---
 
-# License policies
+# License Policies
 
 ## Creating a license policy
 

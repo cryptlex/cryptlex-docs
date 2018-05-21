@@ -6,7 +6,7 @@
   * [Licensing Models](getting-started/licensing-models.md)
   * [Metadata](getting-started/metadata.md)
 * License Management
-  * [License policies](license-management/license-policies.md)
+  * [License Policies](license-management/license-policies.md)
   * [Creating Licenses](license-management/creating-licenses.md)
   * [Renewing Licenses](license-management/renewing-licenses.md)
 * User Management
