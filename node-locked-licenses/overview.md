@@ -8,7 +8,7 @@ At the time of license activation it should also generate a unique device finger
 
 The license server must store the device fingerprint and use it to validate the license key for further activations to prevent the usage of license key on other devices.
 
-## Why use LexActivator
+## Why is LexActivator
 
 LexActivator is basically a **libcurl** based HTTP client which invokes Cryptlex Web API endpoints from your application to activate your licenses and trials.
 
