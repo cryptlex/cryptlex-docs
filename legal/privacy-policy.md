@@ -81,8 +81,8 @@ This data is only stored within Cryptlex and is entirely owned by you. This data
 
 **1.2.2.2 Personal information stored in third party services**
 
+* Name, email and IP addresses in crash reports \(through Bugsnag retained for seven days\)
 * IP addresses in request logs \(through Papertrail archived for one year\)
-* IP addresses in crash reports \(through Bugsnag retained for seven days\)
 
 #### 1.2.3 GDPR
 
