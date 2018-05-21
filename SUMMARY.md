@@ -48,4 +48,9 @@
   * [LexActivator](changelog/lexactivator.md)
   * [LexFloatServer & Client](changelog/lexfloatserver-and-client.md)
 * [Migrating from Cryptlex v2.x](migrating-from-cryptlex-v2.x.md)
+* Legal
+  * [Terms of Service](legal/terms-of-service.md)
+  * [Privacy Policy](legal/untitled.md)
+  * [Subprocessors](legal/subprocessors.md)
+  * [Data Processing Addendum](legal/data-processing-addendum.md)
 
