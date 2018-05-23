@@ -37,5 +37,5 @@ After the license key is generated, either your payment processor will send an e
 
 ## Need more help?
 
-In case you need more help for automating your order process we'll be glad to help you. You can either post your questions on our [support forum](https://cryptlex.com/forums) or contact us through [email](mailto:support@cryptlex.com?Subject=Order%20Automation).
+In case you need more help for automating your order process we'll be glad to help you. You can either post your questions on our [support forum](https://forums.cryptlex.com) or contact us through [email](mailto:support@cryptlex.com?Subject=Order%20Automation).
 

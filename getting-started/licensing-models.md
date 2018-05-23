@@ -42,5 +42,5 @@ Other than this you can add some other restrictions too like usage count or impl
 
 ## Need help
 
-In case you need  help for implementing any of the above mentioned licensing models, we'll be glad to help you. You can either post your questions on our [support forum](https://cryptlex.com/forums) or can contact us through [email](mailto:support@cryptlex.com).
+In case you need  help for implementing any of the above mentioned licensing models, we'll be glad to help you. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com).
 
