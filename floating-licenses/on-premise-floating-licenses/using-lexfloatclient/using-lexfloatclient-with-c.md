@@ -13,7 +13,7 @@ The above download package contains the library which you will be using to add l
 After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
 
 * Note the product id for the product.
-* Download the example project from [Github](https://github.com/cryptlex/lexfloatclient-csharp)
+* Download the example project from [Github](https://github.com/cryptlex/lexfloatclient-csharp).
 
 Product id is the identifier of your product which is to be used in the code. The product id of the LexFloatServer and LexFloatClient must match.
 
@@ -128,5 +128,5 @@ The above code should be executed every time user closes the app.
 
 ## Need more help
 
-In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://cryptlex.com/forums) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
+In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
 
