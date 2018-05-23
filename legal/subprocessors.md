@@ -4,6 +4,7 @@
 
 * Amazon Web Services
 * Heroku
+* DigitalOcean
 * Google Analytics
 * Drift
 * Prosperworks
