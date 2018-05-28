@@ -78,12 +78,12 @@ LexActivator generates a structured fingerprint of the machine which allows for 
 
 **Exact:** This strategy requires an exact match of all the hardware parts which were fingerprinted. If their is a minor change in the hardware, fingerprint will not be accepted, and machine will be treated as a different machine.
 
-**Fuzzy:**  This strategy uses fuzzy matching by comparing different hardware fingerprints and if the comparison score is greater than a minimum threshold value, the machine is accepted.
+**Fuzzy:**  This strategy uses fuzzy matching by comparing different hardware fingerprints and if the comparison score is greater than a minimum threshold value, the machine is accepted. This is the **recommended** strategy.
 
 **Loose:** This strategy is similar to fuzzy but with a much lower threshold value.
 
 {% hint style="info" %}
-Sometimes machines misbehave by reporting major changes in hardware fingerprints due to many issues, in such cases you should set the strategy to **"Loose"**.
+Sometimes few machines misbehave by reporting major changes in hardware fingerprints due to many issues, in such cases you should change the strategy to **"Loose"**.
 {% endhint %}
 
 #### Required Metadata Keys
