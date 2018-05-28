@@ -4,6 +4,16 @@ description: All notable changes to Web API are documented here.
 
 # Web API
 
+## 3.2.0 \(2018-05-28\)
+
+### Added {#changed}
+
+* `/v3/me` and `/v3/me/licenses` endpoints for customer portal.
+
+### Fixed
+
+* Some minor bug fixes.
+
 ## 3.1.0 \(2018-05-21\)
 
 ### Added {#changed}
@@ -11,13 +21,9 @@ description: All notable changes to Web API are documented here.
 * `licensePolicyId` property to licenses which can be used to override the default license policy of a license, inherited through product.
 * `requiredMetadataKeys` property to license policies to make it must for a license to have required metadata keys when it is created. The metadata keys will automatically appear for licenses in the dashboard.
 
-### Changed
-
-* License activations and deactivations won't be logged in the event log as they are already available in the activation logs.
-
 ### Fixed
 
-* Some minor bug fixes.
+* Some minor bug fixes and improvements.
 
 ## 3.0.1 \(2018-05-18\) {#3-0-0-2018-05-03}
 
