@@ -50,9 +50,9 @@ Information in this category includes the information you provide when registeri
 
 **1.2.1.2 Personal information stored in third party services**
 
-* Name and email \(through Prosperworks and Drift\)
-* Company name \(through Prosperworks\)
-* Links to social media profiles \(through Prosperworks\)
+* Name and email \(through Hubspot, MailChimp and Drift\)
+* Company name \(through Hubspot\)
+* Links to social media profiles \(through Hubspot\)
 * Credit card information \(securely stored within Stripe\)
 * Website usage \(through Google Analytics\)
 * Geographic location \(through Google Analytics\)
