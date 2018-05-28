@@ -15,7 +15,7 @@ Yes, it's a completely new product. Everything has been rewritten using the late
 * Customer portal for your customers
 * New beautiful [documentation](https://docs.cryptlex.com) 
 * New client libraries
-* New hosting provider \([Heroku](https://heroku.com)\)
+* New hosting providers \([Heroku](https://heroku.com) and [AWS](https://aws.amazon.com/)\)
 * Code samples have been moved to [Github](https://github.com/cryptlex)
 * Updated [pricing plans](https://cryptlex.com/pricing)
 
@@ -25,7 +25,7 @@ Cryptlex v3.x is not backward compatible with Cryptlex v2.x.
 
 ### Can I login using my existing credentials?
 
-No, you need to create a new account for using Cryptlex v3.x.
+No, you need to create a new account for using Cryptlex v3.x. You can signup for free, no credit card required.
 
 ### How long do you plan to support Cryptlex v2.x?
 
@@ -33,7 +33,7 @@ We are planning to support it for one year \(upto May 2019\), after which you wo
 
 ### What about our existing customers who will still be using Cryptlex v2.x after one year?
 
-Don't worry updates in existing product keys, activations and deactivations will still work after one year. Cryptlex v2.x won't be retired unless we reach zero traffic on Cryptlex v2.x servers.
+Don't worry updates in existing product keys, activations and deactivations will still work after one year. Cryptlex v2.x won't be retired unless we record zero traffic on Cryptlex v2.x servers.
 
 ### Do our customers need to reactivate when we integrate LexActivator v3.x or upgrade to LexFloatServer v3.x?
 
@@ -93,7 +93,7 @@ LexActivator has gone through major upgrade and now supports a lot many new feat
 
 ### Other features
 
-To keep it short we won't be discussing all the features, if you have any queries drop an [email](mailto:support@cryptlex.com) and our team will reach out to you.
+To keep it short we won't be discussing all the features, if you have any queries drop us an [email](mailto:support@cryptlex.com) and our team will reach out to you.
 
 ## How to migrate to Cryptlex v3.x?
 
