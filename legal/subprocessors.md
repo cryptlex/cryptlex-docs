@@ -7,7 +7,8 @@
 * DigitalOcean
 * Google Analytics
 * Drift
-* Prosperworks
+* Hubspot
+* MailChimp
 * Mailgun
 * Papertrail
 * Bugsnag
