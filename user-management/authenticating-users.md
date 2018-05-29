@@ -44,7 +44,5 @@ Password of the user.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-## Customer portal
 
-Your customers can also log into the dashboard to manage their own license keys. They can view their license keys, update their profile etc.
 

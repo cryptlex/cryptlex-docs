@@ -13,6 +13,7 @@
   * [Roles](user-management/roles.md)
   * [Creating Users](user-management/creating-users.md)
   * [Authenticating Users](user-management/authenticating-users.md)
+  * [Customer Portal](user-management/customer-portal.md)
 * Node Locked Licenses
   * [Overview](node-locked-licenses/overview.md)
   * Using LexActivator
