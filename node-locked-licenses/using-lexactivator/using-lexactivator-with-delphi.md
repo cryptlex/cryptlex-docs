@@ -25,22 +25,22 @@ You need to add these files to your app in order to use LexActivator API in your
 
 ### Setting product.dat file and product Id {#setting-product.dat-file-and-product-id}
 
-The first thing you need to do is either embed the Product.dat file in your app using `SetProductData()` function or set the absolute path of the file using `SetProductFile()` function.
+The first thing you need to do is either embed the Product.dat file in your app using `LexActivator.SetProductData` function or set the absolute path of the file using `LexActivator.SetProductFile` function.
 
-The next thing you need to do is to set the product id of your application in your code using `SetProductId()` function. It sets the id of the product you will be adding licensing to.
+The next thing you need to do is to set the product id of your application in your code using `LexActivator.SetProductId` function. It sets the id of the product you will be adding licensing to.
 
-```c
-SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");
-SetProductId("PASTE_PRODUCT_ID", lfUser);
+```delphi
+SetProductData('PASTE_CONTENT_OF_PRODUCT.DAT_FILE');
+SetProductId('PASTE_PRODUCT_ID', lfUser);
 ```
 
 If your app requires admin \(root\) privileges to run \(e.g. services, daemons etc.\), instead of passing `lfUser` flag, you need to pass `lfSystem` flag.
 
 ### License activation {#license-activation}
 
-To activate the license in your app using the license key, you will use `ActivateLicense()` LexActivator API function. It invokes the `/v3/activations` Cryptlex Web API endpoint, verifies the encrypted and digitally signed response to validate the license.
+To activate the license in your app using the license key, you will use `LexActivator.ActivateLicense` LexActivator API function. It invokes the `/v3/activations` Cryptlex Web API endpoint, verifies the encrypted and digitally signed response to validate the license.
 
-```c
+```delphi
 var
   Step: string;
   Status: TLAKeyStatus;
@@ -67,21 +67,21 @@ The above code should be executed at the time of license activation, ideally on 
 
 ### Verifying license activation {#verifying-license-activation}
 
-Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this you need to use `IsLicenseGenuine()` LexActivator API function.
+Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this you need to use `LexActivator.IsLicenseGenuine` LexActivator API function.
 
-```c
+```delphi
 var
   Step: string;
   Status: TLAKeyStatus;
 begin
   try
     Step := 'SetProductData'; SetProductData('PASTE_CONTENT_OF_PRODUCT.DAT_FILE');
-    Step := 'SetProductId'; SetProductId('PASTE_PRODUCT_ID');
+    Step := 'SetProductId'; SetProductId('PASTE_PRODUCT_ID', lfUser);
     Step := 'IsLicenseGenuine'; Status := IsLicenseGenuine;
     case Status of
       lkOK: ShowMessage('License is genuinely activated!');
       lkExpired: ShowMessage('License is genuinely activated, but has validity has expired!');
-      lkGPOver: ShowMessage('License is genuinely activated, but grace period is over!');
+      lkGracePeriodOver: ShowMessage('License is genuinely activated, but grace period is over!');
     else
       ShowMessage('Error code: ' + LAKeyStatusToString(Status));
     end;
@@ -94,7 +94,7 @@ begin
 end;
 ```
 
-The above code should be executed every time user starts the app. After verifying locally, it schedules a periodic server check in a separate thread.
+The above code should be executed every time user starts the app. After verifying locally, it schedules a periodic server check in a separate thread. `LexActivator.SetLicenseCallback` can be used to set notification callback.
 
 ## Need more help {#need-more-help}
 

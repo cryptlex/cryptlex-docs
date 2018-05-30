@@ -24,30 +24,30 @@ You need to add these files to your app in order to use LexFloatClient API in yo
 
 ### Setting product id
 
-The first LexFloatClient API procedure you need to use in your code is `GetHandle()`. It sets the product id of the product you will be adding licensing to.
+The first LexFloatClient API procedure you need to use in your code is `LexFloatClient.LFGetHandle`. It sets the product id of the product you will be adding licensing to.
 
-```c
+```delphi
 var
   Handle: ILFHandle;
 begin
-  Handle := GetHandle('PASTE_PRODUCT_ID"');
+  Handle := LFGetHandle('PASTE_PRODUCT_ID');
 ```
 
 ### Requesting license lease
 
-To receive a floating license, you will use `ILFHandle.SetFloatServer()`, `ILFHandle.SetLicenseCallback()` and `ILFHandle.RequestLicense()` LexFloatClient API methods. It sets LexFloatServer address, callback for error notifications, contacts the server and receives the leased license.
+To receive a floating license, you will use `LexFloatClient.ILFHandle.SetFloatServer`, `LexFloatClient.ILFHandle.SetLicenseCallback` and `LexFloatClient.ILFHandle.RequestLicense` LexFloatClient API methods. It sets LexFloatServer address, callback for error notifications, contacts the server and receives the leased license.
 
-```c
+```delphi
 var
   Handle: ILFHandle;
   Step: string;
 begin
   try
     Step := 'GetHandle';
-    Handle := GetHandle('PASTE_PRODUCT_ID');
+    Handle := LFGetHandle('PASTE_PRODUCT_ID');
     Step := 'SetFloatServer'; Handle.SetFloatServer('localhost', 8090);
     Step := 'SetLicenseCallback';
-    Handle.SetLicenseCallback(TSimpleCallback.Execute);
+    Handle.SetLicenseCallback(SimpleCallback, False);
     Step := 'RequestLicense'; Handle.RequestLicense; WriteLn;
     Write('License leased successfully!')
   except
@@ -62,21 +62,14 @@ begin
 end;
 ```
 
-The above code can be executed every time user starts the app or needs a new license.
+The above code can be executed every time user starts the app or needs a new license. The second argument of `LexFloatClient.ILFHandle.SetLicenseCallback` is False because console applications have no message loop. In GUI applications `Synchronized` is recommended to be `True` to enforce execution in main thread.
 
 ### Renewing license lease
 
-License lease automatically renews itself in a background thread. When something goes wrong, Callback is invoked \(from background thread\). Callback can be either object method, class method or a closure \(also known as anonymous function\). Note that GUI applications cannot safely interact with GUI elements from a thread other than GUI one. `TThread.Synchronize()` method or another option must be used to avoid race conditions.
+License lease automatically renews itself in a background thread. When something goes wrong, Callback is invoked \(from background thread\). Callback can be either procedure, object method, class method or a closure \(also known as anonymous function\). Note that GUI applications cannot safely interact with GUI elements from a thread other than GUI one. `System.Classes.TThread.Synchronize` will be used if `Synchronized` was `True` when callback was set. On another hand, `Synchronized` cannot work without message loop in main thread (e.g. in console applications), so synchronization must be performed in another way then.
 
-```c
-{ callback implemented via class function }
-type
-  TSimpleCallback = class
-    class procedure Execute(const Sender: ILFHandle;
-      const Error: Exception; Event: TLFCallbackEvent);
-  end;
-
-class procedure TSimpleCallback.Execute(const Sender: ILFHandle;
+```delphi
+procedure SimpleCallback(const Sender: ILFHandle;
   const Error: Exception; Event: TLFCallbackEvent);
 begin
   WriteLn;
@@ -91,7 +84,7 @@ You would ideally request for a new license if Callback gets invoked.
 
 When your user is done using the app, the app should send a request to free the license, thereby making it available for other users. If the app doesn't, the license becomes \(zombie\) useless until lease time is over.
 
-```c
+```delphi
 Handle := nil;
 ```
 
@@ -101,7 +94,7 @@ The above code should be executed every time user closes the app.
 
 `ILFHandle` is a reference-counted object. Zombie licenses should be avoided, thus `ILFHandle` wrapper drops the license when its last reference is being released. Leaving a scope containing a local variable or destroying an object containing a field \(such as form object\) releases a reference, so in most cases `ILFHandle` will do its best to not to leave zombie licenses. Note that, however, early versions of Delphi had a bug: global variables were not finalized.
 
-Low-level details can be manipulated by `ILFHandle.Handle` and `ILFHandle.Owned properties`. `CreateLFHandleWrapper()` can be used to create wrappers manually. `FindHandle()` API is notable because this low-level API had no good mapping in higher-level API. It returns LongWord Handle, which can be wrapped then into either not owned or owned wrapper, but this would be another wrapper, and reference counters won't sum. Another owner might invalidate the handle at any moment. `ILFHandle.SetLicenseCallback` must only be used on wrappers created by `GetHandle()`, other APIs should work without problem as soon as handle is still valid.
+Low-level details can be manipulated by `LexFloatClient.ILFHandle.Handle` and `LexFloatClient.ILFHandle.Owned properties`. `LexFloatClient.CreateLFHandleWrapper` can be used to create wrappers manually. `LexFloatClient.FindHandle` API is notable because this low-level API had no good mapping in higher-level API. It returns LongWord Handle, which can be wrapped then into either not owned or owned wrapper, but this would be another wrapper, and reference counters won't sum. Another owner might invalidate the handle at any moment. `LexFloatClient.ILFHandle.SetLicenseCallback` must only be used on wrappers created by `LexFloatClient.LFGetHandle`, other APIs should work without problem as soon as handle is still valid.
 
 ## Need more help
 
