@@ -4,11 +4,17 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.0.2 \(2018-05-30\)
+
+### Fixed
+
+* A network SSL issue causing activations to fail for few proxies.
+
 ## 3.0.1 \(2018-05-10\)
 
 ### Fixed
 
-* A network issue causing activations to fail
+* A network issue causing activations to fail.
 
 ## 3.0.0 \(2018-05-03\)
 
