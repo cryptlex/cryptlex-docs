@@ -24,7 +24,7 @@
     * [Using LexActivator with Delphi](node-locked-licenses/using-lexactivator/using-lexactivator-with-delphi.md)
     * [Using LexActivator with Python](node-locked-licenses/using-lexactivator/using-lexactivator-with-python.md)
     * [Using LexActivator with Go](node-locked-licenses/using-lexactivator/using-lexactivator-with-go.md)
-    * [Using LexActivator with Node.js](node-locked-licenses/using-lexactivator/untitled.md)
+    * [Using LexActivator with Node.js](node-locked-licenses/using-lexactivator/using-lexactivator-with-node.js.md)
   * [Using Web API](node-locked-licenses/using-web-api.md)
   * [Offline Activations](node-locked-licenses/offline-activations.md)
 * Floating Licenses

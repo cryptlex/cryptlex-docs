@@ -1,7 +1,3 @@
----
-description: This is a migration guide for Cryptlex v2.x customers.
----
-
 # Migrating from Cryptlex v2.x
 
 ## FAQ

@@ -1,7 +1,3 @@
----
-description: All notable changes to Web API are documented here.
----
-
 # Web API
 
 ## 3.2.0 \(2018-05-28\)

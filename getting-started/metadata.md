@@ -1,9 +1,3 @@
----
-description: >-
-  Metadata is useful for storing additional, structured data with resources to
-  help you with customisations needed as per your licensing requirements.
----
-
 # Metadata
 
 ## Metadata properties

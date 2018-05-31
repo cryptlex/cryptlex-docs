@@ -1,7 +1,3 @@
----
-description: Let's quickly go through the terminology we use in Cryptlex.
----
-
 # Overview
 
 ## Product

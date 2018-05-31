@@ -29,7 +29,7 @@ The first thing you need to do is either embed the Product.dat file in your app 
 
 The next thing you need to do is to set the product id of your application in your code using `LexActivator.SetProductId` function. It sets the id of the product you will be adding licensing to.
 
-```delphi
+```c
 SetProductData('PASTE_CONTENT_OF_PRODUCT.DAT_FILE');
 SetProductId('PASTE_PRODUCT_ID', lfUser);
 ```
@@ -40,7 +40,7 @@ If your app requires admin \(root\) privileges to run \(e.g. services, daemons e
 
 To activate the license in your app using the license key, you will use `LexActivator.ActivateLicense` LexActivator API function. It invokes the `/v3/activations` Cryptlex Web API endpoint, verifies the encrypted and digitally signed response to validate the license.
 
-```delphi
+```c
 var
   Step: string;
   Status: TLAKeyStatus;
@@ -69,7 +69,7 @@ The above code should be executed at the time of license activation, ideally on 
 
 Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this you need to use `LexActivator.IsLicenseGenuine` LexActivator API function.
 
-```delphi
+```c
 var
   Step: string;
   Status: TLAKeyStatus;

@@ -1,7 +1,3 @@
----
-description: Let's quickly go through some licensing terminology.
----
-
 # Licensing Models
 
 ## Perpetual licensing model

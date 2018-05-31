@@ -1,9 +1,3 @@
----
-description: >-
-  License policies help you in implementing licensing models as per your
-  business requirements.
----
-
 # License Policies
 
 ## Creating a license policy

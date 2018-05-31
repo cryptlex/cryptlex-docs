@@ -1,10 +1,3 @@
----
-description: >-
-  You can directly use the web API to implement licensing in your app. We
-  recommend using web API only for platforms where LexActivator is not available
-  like Android, IOS, OpenBSD etc.
----
-
 # Using Web API
 
 ## Adding licensing to your app

@@ -1,9 +1,3 @@
----
-description: >-
-  When your customer renews the subscription, you will need to renew the license
-  too.
----
-
 # Renewing Licenses
 
 ## Understanding license expiry

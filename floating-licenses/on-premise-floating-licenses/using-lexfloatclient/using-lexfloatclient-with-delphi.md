@@ -26,7 +26,7 @@ You need to add these files to your app in order to use LexFloatClient API in yo
 
 The first LexFloatClient API procedure you need to use in your code is `LexFloatClient.LFGetHandle`. It sets the product id of the product you will be adding licensing to.
 
-```delphi
+```c
 var
   Handle: ILFHandle;
 begin
@@ -37,7 +37,7 @@ begin
 
 To receive a floating license, you will use `LexFloatClient.ILFHandle.SetFloatServer`, `LexFloatClient.ILFHandle.SetLicenseCallback` and `LexFloatClient.ILFHandle.RequestLicense` LexFloatClient API methods. It sets LexFloatServer address, callback for error notifications, contacts the server and receives the leased license.
 
-```delphi
+```c
 var
   Handle: ILFHandle;
   Step: string;
@@ -62,13 +62,13 @@ begin
 end;
 ```
 
-The above code can be executed every time user starts the app or needs a new license. The second argument of `LexFloatClient.ILFHandle.SetLicenseCallback` is False because console applications have no message loop. In GUI applications `Synchronized` is recommended to be `True` to enforce execution in main thread.
+The above code can be executed every time user starts the app or needs a new license. The second argument of `LexFloatClient.ILFHandle.SetLicenseCallback` is `False` because console applications have no message loop. In GUI applications `Synchronized` is recommended to be `True` to enforce execution in main thread.
 
 ### Renewing license lease
 
-License lease automatically renews itself in a background thread. When something goes wrong, Callback is invoked \(from background thread\). Callback can be either procedure, object method, class method or a closure \(also known as anonymous function\). Note that GUI applications cannot safely interact with GUI elements from a thread other than GUI one. `System.Classes.TThread.Synchronize` will be used if `Synchronized` was `True` when callback was set. On another hand, `Synchronized` cannot work without message loop in main thread (e.g. in console applications), so synchronization must be performed in another way then.
+License lease automatically renews itself in a background thread. When something goes wrong, Callback is invoked \(from background thread\). Callback can be either procedure, object method, class method or a closure \(also known as anonymous function\). Note that GUI applications cannot safely interact with GUI elements from a thread other than GUI one. `System.Classes.TThread.Synchronize` will be used if `Synchronized` was `True` when callback was set. On another hand, `Synchronized` cannot work without message loop in main thread \(e.g. in console applications\), so synchronization must be performed in another way then.
 
-```delphi
+```text
 procedure SimpleCallback(const Sender: ILFHandle;
   const Error: Exception; Event: TLFCallbackEvent);
 begin
@@ -84,7 +84,7 @@ You would ideally request for a new license if Callback gets invoked.
 
 When your user is done using the app, the app should send a request to free the license, thereby making it available for other users. If the app doesn't, the license becomes \(zombie\) useless until lease time is over.
 
-```delphi
+```text
 Handle := nil;
 ```
 
