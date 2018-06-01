@@ -4,7 +4,7 @@
 
 At the time of license creation you should do the following to configure the floating license:
 
-* Set the license type to **"floating".**
+* Set the license type to **"hosted-floating".**
 * Set the lease duration to the amount of time you want to lease the licenses.
 * Make sure server sync interval is less than lease duration, as server sync is responsible for licence renewal.
 
