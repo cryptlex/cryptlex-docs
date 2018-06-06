@@ -97,19 +97,19 @@ To keep it short we won't be discussing all the features, if you have any querie
 
 You can easily export the license keys in csv format from the Cryptlex v2.x dashboard. The exported csv data needs to be processed a bit before it can be imported into Cryptlex v3.x. It looks as follows:
 
-`"Key ID", "Product Key", "Email", "Status", "Expires On", "Total Activations", "Used Activations", "Total Deactivations", "Used Deactivations", "Creation Date", "Custom Fields", "Activation Location","Activation Date","Activation Extra Data","Activation OS"`
+`"Key ID", "Product Key", "Email", "Status", "Expires On", "Total Activations", "Used Activations", "Total Deactivations", "Used Deactivations", "Validity", "Creation Date", "Custom Fields", "Activation Location","Activation Date","Activation Extra Data","Activation OS"`
 
  Remove the fields which can't be imported so it will become:
 
-`"Product Key", "Email", "Total Activations", "Total Deactivations","Custom Fields"`
+`"Product Key", "Email", "Total Activations", "Total Deactivations", "Validity", "Creation Date", "Custom Fields"`
 
 Rename the fields as per the new schema:
 
-`"key", "email", "allowedActivations", "allowedDeactivations","Custom Fields"`
+`"key", "email", "allowedActivations", "allowedDeactivations", "validity", "createdAt", "Custom Fields"`
 
 Each custom field should be added as a separate field, assuming you had stored order\_id_,_ first\_name_,_      last\_name:
 
-`"key", "email", "allowedActivations", "allowedDeactivations","order_id", "first_name", "last_name"`
+`"key", "email", "allowedActivations", "allowedDeactivations", "validity", "createdAt", "order_id", "first_name", "last_name"`
 
 ### Importing CSV data into Cryptlex v3.x
 
