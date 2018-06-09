@@ -1,5 +1,15 @@
 # Web API
 
+## 3.3.0 \(2018-06-09\)
+
+### Added {#changed}
+
+* `/v3/licenses/:id/extend` endpoint to allow extension of licenses. Before this only license renewal was allowed.
+
+### Fixed
+
+* Some minor bug fixes.
+
 ## 3.2.0 \(2018-05-28\)
 
 ### Added {#changed}
