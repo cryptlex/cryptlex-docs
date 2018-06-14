@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.0.3 \(2018-06-14\)
+
+### Fixed
+
+* A bug causing insufficient system permissions error on first run on Linux.
+
 ## 3.0.2 \(2018-05-30\)
 
 ### Fixed
