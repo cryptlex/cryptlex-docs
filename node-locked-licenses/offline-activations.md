@@ -4,7 +4,7 @@ Suppose your user doesn't have access to an internet connection or may not have 
 
 ## Generating offline activation request file
 
-To allow your users to generate offline activation request file use following LexActivator API function:
+To allow your users to generate offline activation request file, after setting the license key, use following LexActivator API function:
 
 ```c
 GenerateOfflineActivationRequest();
