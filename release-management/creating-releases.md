@@ -48,6 +48,8 @@ curl -X PUT https://releases.cryptlex.com/v3/{RELEASE_ID} \
      -F "file=@/path/to/myapp.zip"
 ```
 
+The access token must have at least following two permissions: `release:read`, `release:write`.
+
 ## Publishing release
 
 Once all the changes have been finalized you can click the "**Publish**" button to freeze the release. After a release is published it becomes readonly.
