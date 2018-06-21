@@ -1,7 +1,7 @@
 ---
 description: >-
-  You can securely distribute your apps to licensed users and protect your apps
-  from unlicensed distribution.
+  Cryptlex lets you securely distribute your apps to licensed users and protect
+  your apps from unlicensed distribution.
 ---
 
 # Creating Releases
