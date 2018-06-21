@@ -6,7 +6,7 @@ You can easily create a license policy through dashboard. Go to the [license pol
 
 #### Name
 
-This name of the license policy.
+The name of the license policy.
 
 #### Validity
 
