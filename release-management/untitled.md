@@ -100,7 +100,7 @@ If an update is available it returns a 200 success response containing the downl
 
 ## Downloading latest
 
-In order to download the latest release for your product, you need to invoke the [/v3/releases/latest](https://api.cryptlex.com/v3/docs#operation/V3ReleasesLatestGet) endpoint to get the download url for the latest release.
+In order to download the latest release of your product, you need to invoke the [/v3/releases/latest](https://api.cryptlex.com/v3/docs#operation/V3ReleasesLatestGet) endpoint to get the download url for the latest release.
 
 Following sample requests fetches the latest release details.
 
