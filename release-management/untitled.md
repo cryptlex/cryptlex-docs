@@ -29,7 +29,7 @@ The license key must belong to the product for which the release was created and
 
 ## Downloading an update
 
-In order to detect whether an is available for your product, you need to invoke the [/v3/releases/update](https://api.cryptlex.com/v3/docs#operation/V3ReleasesUpdateGet) endpoint.
+In order to detect whether an update is available for your product, you need to invoke the [/v3/releases/update](https://api.cryptlex.com/v3/docs#operation/V3ReleasesUpdateGet) endpoint.
 
 Following sample requests checks whether a new release is available by comparing with the provided release version.
 
