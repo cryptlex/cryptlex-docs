@@ -32,7 +32,7 @@ The name of the file. This value is used in [Content-Disposition](https://develo
 
 #### Notes
 
-The release notes for the release. It can contain markdown or plain text.
+The release notes for the release. It also supports [markdown](https://www.markdownguide.org/basic-syntax).
 
 ## Uploading release file
 
