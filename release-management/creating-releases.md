@@ -43,7 +43,7 @@ In order to upload the file select the release in the dashboard and click the "*
 The release can also be uploaded using any command line HTTP client like **curl**. To upload the release file using **curl** execute the following command:
 
 ```bash
-curl -X PUT https://releases.cryptlex.com/v3/{RELEASE_ID} \
+curl -X PUT  \
      -H "Authorization: Bearer {ACCESS_TOKEN}" \
      -F "file=@/path/to/myapp.zip"
 ```
