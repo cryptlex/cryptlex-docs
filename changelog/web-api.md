@@ -1,10 +1,17 @@
 # Web API
 
+## 3.4.0 \(2018-06-25\)
+
+### Added {#changed}
+
+* [Distribution API](https://api.cryptlex.com/v3/docs#tag/Releases) for secure distribution of software applications and release management.
+* [/v3/users/:id/reset-password-token](https://api.cryptlex.com/v3/docs#operation/V3UsersByIdReset-password-tokenPost) endpoint to allow implementation of forgot password functionality for custom branded portals.
+
 ## 3.3.0 \(2018-06-09\)
 
 ### Added {#changed}
 
-* `/v3/licenses/:id/extend` endpoint to allow extension of licenses. Before this only license renewal was allowed.
+* [/v3/licenses/:id/extend](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdExtendPost) endpoint to allow extension of licenses. Before this only license renewal was allowed.
 
 ### Fixed
 
@@ -14,7 +21,7 @@
 
 ### Added {#changed}
 
-* `/v3/me` and `/v3/me/licenses` endpoints for customer portal.
+* [/v3/me](https://api.cryptlex.com/v3/docs#operation/V3MeGet) and [/v3/me/licenses](https://api.cryptlex.com/v3/docs#operation/V3MeLicensesGet) endpoints for customer portal.
 
 ### Fixed
 
