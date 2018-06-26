@@ -6,7 +6,7 @@
 * Automatically generate licenses on successful payments.
 * Automatically renew licenses when your customer renews the subscription.
 * Get notified of each activation, license creation, and trial activation through email or slack or any other app.
-* Integrate with your CRM and lot more
+* Integrate with your CRM and lot more.
 
 ## Zapier Integration
 
@@ -15,6 +15,10 @@ In order to use Zapier to automate workflows, you need to create a "[Personal Ac
 To create an access token for Zapier, go the "[Personal Access Tokens](https://app.cryptlex.com/api/personal-access-tokens)" section in dashboard and create an access token with following scope \(permissions\): 
 
 _`activation:read`, `license:read`, `license:write`, `licensePolicy:read`, `product:read`, `trialActivation:read`, `user:read`, `user:write`, `webhook:read`, `webhook:write`_
+
+Zapier integration is available on invite only, so please make sure you accept the invitation by clicking the following link:
+
+[https://zapier.com/platform/public-invite/4340/cd16edb4280a1c5985b53917855743bf/](https://zapier.com/platform/public-invite/4340/cd16edb4280a1c5985b53917855743bf/)
 
 ## Need more help
 
