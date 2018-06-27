@@ -39,7 +39,7 @@ Whether webhook should be triggered or not, you can use it to disable a webhook.
 Each event type has a specific payload format with the relevant event information. Additionally, the signature generated using **HMAC256** algorithm is included in **"Webhook-Signature"** header. A typical payload will have a following structure:
 
 ```javascript
-POST /payload HTTP/1.1
+POST /webhook-endpoint HTTP/1.1
 Content-Type:	application/json; charset=utf-8
 Content-Length:	661
 Webhook-Signature:	Bb3jMWkC1DOqEv5fAOsqwkKH7r57w9o8fZ3Jg72lNk0=
