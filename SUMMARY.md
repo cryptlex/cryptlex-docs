@@ -16,7 +16,7 @@
   * [Customer Portal](user-management/customer-portal.md)
 * [Release Management](release-management/README.md)
   * [Creating Releases](release-management/creating-releases.md)
-  * [Distributing Releases](release-management/untitled.md)
+  * [Distributing Releases](release-management/distributing-releases.md)
 * [Node Locked Licenses](node-locked-licenses/README.md)
   * [Overview](node-locked-licenses/overview.md)
   * [Using LexActivator](node-locked-licenses/using-lexactivator/README.md)
