@@ -34,7 +34,7 @@ The release notes for the release. It also supports [markdown](https://www.markd
 
 After the release is created you need to upload the release file which needs to be distributed securely to your licenses users.
 
-In order to upload the file select the release in the dashboard and click the "**Upload File**" button. After the successful upload you can see the the `filesize`, `checksum` \(MD5\) and `url` fields being populated for the release.
+In order to upload the file select the release in the dashboard and click the "**Upload Files**" button. After the successful upload you can see the the entry in the "**Files**" section at the bottom.
 
 The release can also be uploaded using any command line HTTP client like **curl**. To upload the release file using **curl** execute the following command:
 
