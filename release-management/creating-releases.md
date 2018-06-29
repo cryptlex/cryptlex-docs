@@ -26,10 +26,6 @@ The platform of the release. It will usually have one of the following values: w
 
 The channel of the release. The default value is **stable**. You can use it to differentiate between alpha, beta, rc, stable etc. release types.
 
-#### Filename
-
-The name of the file. This value is used in [Content-Disposition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) header when the file is downloaded.
-
 #### Notes
 
 The release notes for the release. It also supports [markdown](https://www.markdownguide.org/basic-syntax).
@@ -43,7 +39,7 @@ In order to upload the file select the release in the dashboard and click the "*
 The release can also be uploaded using any command line HTTP client like **curl**. To upload the release file using **curl** execute the following command:
 
 ```bash
-curl -X PUT https://releases.cryptlex.com/v3/{RELEASE_ID}\
+curl -X PUT https://releases.cryptlex.com/v3/{RELEASE_ID}/myapp.zip\
      -H "Authorization: Bearer {ACCESS_TOKEN}" \
      -F "file=@/path/to/myapp.zip"
 ```

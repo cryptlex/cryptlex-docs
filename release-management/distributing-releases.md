@@ -12,15 +12,10 @@ In order to download the release, the release url must contain license key as  `
 
 ```bash
 # using license key
-curl -O -J -L https://releases.cryptlex.com/v3/{RELEASE_ID}?key={LICENSE_KEY}
-#or
-curl https://releases.cryptlex.com/v3/{RELEASE_ID}?key={LICENSE_KEY} -o="myapp.zip"
+curl https://releases.cryptlex.com/v3/{RELEASE_ID}/myapp.zip?key={LICENSE_KEY} -o="myapp.zip"
 
 # using access token
-curl -O -J -L https://releases.cryptlex.com/v3/{RELEASE_ID} \
-     -H "Authorization: Bearer {ACCESS_TOKEN}"
-#or
-curl -O -J -L https://releases.cryptlex.com/v3/{RELEASE_ID} \
+curl -O -J -L https://releases.cryptlex.com/v3/{RELEASE_ID}/myapp.zip \
      -H "Authorization: Bearer {ACCESS_TOKEN}" \
      -o="myapp.zip"
 ```
@@ -74,21 +69,39 @@ License key
 {% endapi-method-response-example-description %}
 
 ```javascript
-{ 
-    "name": "MyApp v2.2", 
-    "channel": "stable", 
-    "version": "2.2", 
-    "platform": "windows", 
-    "filename": "MyApp.zip", 
-    "published": true, 
-    "url": "https://releases.cryptlex.com/v3/5b8aa7eb-d175-446d-bc40-182209fd8329", 
-    "filesize": 367660, 
-    "checksum": "ef4bbff62ed6e8a24890cb438d95c445", 
-    "productId": "3e8aa7eb-d175-446d-bc40-282209fd8360", 
-    "notes": "Added feature X", 
-    "id": "d13c8706-3dc0-42a6-89d3-6178de1c5632", 
-    "createdAt": "2018-06-21T10:17:13.050285", 
-    "updatedAt": "2018-06-21T10:17:46.777448" 
+{
+  "name": "MyApp v2.2",
+  "channel": "stable",
+  "version": "2.3",
+  "platform": "windows",
+  "published": true,
+  "productId": "3e7aa7eb-d175-446d-bc40-282209fd8360",
+  "notes": "Added feature X",
+  "files": [
+    {
+      "name": "myapp.exe",
+      "url": "https://releases.cryptlex.com/v3/155f79fc-2f28-40b2-afc5-3fcc6c63225a/myapp.exe",
+      "size": 37580,
+      "checksum": "1239d72ef6ff110ef63a803120728907",
+      "releaseId": "155f79fc-2f28-40b2-afc5-3fcc6c63225a",
+      "id": "7ca34eed-05be-4799-8b3d-f00d5440c5da",
+      "createdAt": "2018-06-29T13:11:33.852642",
+      "updatedAt": "2018-06-29T13:11:33.852643"
+    },
+    {
+      "name": "myapp.zip",
+      "url": "https://releases.cryptlex.com/v3/155f79fc-2f28-40b2-afc5-3fcc6c63225a/myapp.zip",
+      "size": 5510,
+      "checksum": "8892af7769c1147f9801c1a5aab52cce",
+      "releaseId": "155f79fc-2f28-40b2-afc5-3fcc6c63225a",
+      "id": "685eaa15-33bc-4443-89e4-baf733a6c34d",
+      "createdAt": "2018-06-29T13:08:59.175004",
+      "updatedAt": "2018-06-29T13:11:33.563872"
+    }
+  ],
+  "id": "155f79fc-2f28-40b2-afc5-3fcc6c63225a",
+  "createdAt": "2018-06-29T08:55:03.515291",
+  "updatedAt": "2018-06-29T08:55:03.515414"
 }
 ```
 {% endapi-method-response-example %}
@@ -141,21 +154,39 @@ License key
 {% endapi-method-response-example-description %}
 
 ```javascript
-{ 
-    "name": "MyApp v2.2", 
-    "channel": "stable", 
-    "version": "2.2", 
-    "platform": "windows", 
-    "filename": "MyApp.zip", 
-    "published": true, 
-    "url": "https://releases.cryptlex.com/v3/5b8aa7eb-d175-446d-bc40-182209fd8329", 
-    "filesize": 367660, 
-    "checksum": "ef4bbff62ed6e8a24890cb438d95c445", 
-    "productId": "3e8aa7eb-d175-446d-bc40-282209fd8360", 
-    "notes": "Added feature X", 
-    "id": "d13c8706-3dc0-42a6-89d3-6178de1c5632", 
-    "createdAt": "2018-06-21T10:17:13.050285", 
-    "updatedAt": "2018-06-21T10:17:46.777448" 
+{
+  "name": "MyApp v2.2",
+  "channel": "stable",
+  "version": "2.3",
+  "platform": "windows",
+  "published": true,
+  "productId": "3e7aa7eb-d175-446d-bc40-282209fd8360",
+  "notes": "Added feature X",
+  "files": [
+    {
+      "name": "myapp.exe",
+      "url": "https://releases.cryptlex.com/v3/155f79fc-2f28-40b2-afc5-3fcc6c63225a/myapp.exe",
+      "size": 37580,
+      "checksum": "1239d72ef6ff110ef63a803120728907",
+      "releaseId": "155f79fc-2f28-40b2-afc5-3fcc6c63225a",
+      "id": "7ca34eed-05be-4799-8b3d-f00d5440c5da",
+      "createdAt": "2018-06-29T13:11:33.852642",
+      "updatedAt": "2018-06-29T13:11:33.852643"
+    },
+    {
+      "name": "myapp.zip",
+      "url": "https://releases.cryptlex.com/v3/155f79fc-2f28-40b2-afc5-3fcc6c63225a/myapp.zip",
+      "size": 5510,
+      "checksum": "8892af7769c1147f9801c1a5aab52cce",
+      "releaseId": "155f79fc-2f28-40b2-afc5-3fcc6c63225a",
+      "id": "685eaa15-33bc-4443-89e4-baf733a6c34d",
+      "createdAt": "2018-06-29T13:08:59.175004",
+      "updatedAt": "2018-06-29T13:11:33.563872"
+    }
+  ],
+  "id": "155f79fc-2f28-40b2-afc5-3fcc6c63225a",
+  "createdAt": "2018-06-29T08:55:03.515291",
+  "updatedAt": "2018-06-29T08:55:03.515414"
 }
 ```
 {% endapi-method-response-example %}
