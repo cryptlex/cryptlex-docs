@@ -46,6 +46,10 @@ curl -X PUT https://releases.cryptlex.com/v3/{RELEASE_ID}/myapp.zip \
 
 The access token must have at least following two permissions: `release:read`, `release:write`.
 
+{% hint style="danger" %}
+The file name in the upload URL must only contain letters, numbers and some special characters, including  . \(period\), - \(hyphen\) and \_ \(underscore\).
+{% endhint %}
+
 ## Publishing release
 
 Once all the changes have been finalized you can click the "**Publish**" button to freeze the release. After a release is published it becomes readonly.
