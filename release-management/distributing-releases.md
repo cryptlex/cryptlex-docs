@@ -11,10 +11,11 @@ description: >-
 In order to download the release, the release url must contain license key as  `key` query parameter or access token in the header.
 
 ```bash
-# using license key
-curl https://releases.cryptlex.com/v3/{RELEASE_ID}/myapp.zip?key={LICENSE_KEY} -o="myapp.zip"
+# download file using license key
+curl https://releases.cryptlex.com/v3/{RELEASE_ID}/myapp.zip?key={LICENSE_KEY} \
+     -o="myapp.zip"
 
-# using access token
+# download file using access token
 curl -O -J -L https://releases.cryptlex.com/v3/{RELEASE_ID}/myapp.zip \
      -H "Authorization: Bearer {ACCESS_TOKEN}" \
      -o="myapp.zip"
@@ -113,7 +114,7 @@ If an update is available it returns a 200 success response containing the downl
 
 ## Downloading latest
 
-In order to download the latest release of your product, you need to invoke the [/v3/releases/latest](https://api.cryptlex.com/v3/docs#operation/V3ReleasesLatestGet) endpoint to get the download url for the latest release.
+In order to download the latest release of your product, you need to invoke the [/v3/releases/latest](https://api.cryptlex.com/v3/docs#operation/V3ReleasesLatestGet) endpoint to get the download urls for the latest release.
 
 Following sample requests fetches the latest release details.
 
@@ -194,5 +195,5 @@ License key
 {% endapi-method-spec %}
 {% endapi-method %}
 
-It returns a 200 success response containing the download url of the latest release.
+It returns a 200 success response containing the download urls of the latest release.
 

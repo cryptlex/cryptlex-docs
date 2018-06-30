@@ -32,7 +32,7 @@ The release notes for the release. It also supports [markdown](https://www.markd
 
 ## Uploading release file
 
-After the release is created you need to upload the release file which needs to be distributed securely to your licenses users.
+After the release is created you need to upload the release file which needs to be distributed securely to your licensed users.
 
 In order to upload the file select the release in the dashboard and click the "**Upload Files**" button. After the successful upload you can see the the entry in the "**Files**" section at the bottom.
 
