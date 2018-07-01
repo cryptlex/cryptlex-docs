@@ -1,3 +1,7 @@
+---
+description: Let's quickly go through some terms we use in Cryptlex.
+---
+
 # Overview
 
 ## Product
@@ -45,4 +49,8 @@ By default all activations are node-locked, it means that the machine fingerprin
 A trial activation is said to occur when your customer activates the trial in your application on his/her machine.
 
 By default all trial activations are node-locked, it means that the machine fingerprint is stored along with the trial activation details.
+
+## Release
+
+A release helps you to manage different versions of your app, and allows you to host your app on our servers for secure distribution. It also allows you to deliver software updates.
 
