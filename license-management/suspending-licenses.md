@@ -1,22 +1,18 @@
-# Renewing Licenses
+# Suspending Licenses
 
-## Understanding license expiry
+Suspending a license will cause **LexActivator** `IsLicenseGenuine()` function to return `LA_SUSPENDED` status code on the user machine, based on which you can take any action in your application.
 
-Whenever you create a license with validity say 30 days, you will see a property in the license resource named `expiresAt`. It is a read only, computed property and determines the time when license will expire.
+Allowing the license later will automatically cause **LexActivator** `IsLicenseGenuine()` function to return `LA_OK` status code. User doesn't need to reactivate the license.
 
-If the license expiration strategy for license \(or it's policy\) is set to `immediate`, `expiresAt` property will be populated with the date on which license will expire starting from the time when license was created.
+You would usually suspend a license when user doesn't pay the subscription fees.
 
-If the license expiration strategy for license \(or it's policy\) is set to `delayed`, `expiresAt` property will be `null` till license is activated, as license will start expiring after it is used.
+## Suspending a license
 
-If the license expiration strategy for license \(or it's policy\) is set to `rolling`, `expiresAt` property will always be `null` as license expiry is specific to each activation. In this case you can refer to `expiresAt` property of license activation.
+To suspend a license you need to hit the [license update endpoint](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdPatch) and set `suspended` property to `true`.
 
-## Renewing license expiry
-
-To renew the license subscription you need to hit the [license renew endpoint](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdRenewPost). It extends the license expiry by it's validity.
-
-{% api-method method="post" host="https://api.cryptlex.com" path="/v3/licenses/:id/renew" %}
+{% api-method method="patch" host="https://api.cryptlex.com" path="/v3/licenses/:id" %}
 {% api-method-summary %}
-Renewing license
+Suspending a license
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -36,6 +32,12 @@ Unique identifier for the license.
 Bearer access token.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="suspended" type="boolean" required=true %}
+Set true to suspend the license.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -48,7 +50,7 @@ Bearer access token.
 {
   "key": "0A2035-E8A2A3-4D31B7-8FF9C6-81A6CA-539E54",
   "revoked": false,
-  "suspended": false,
+  "suspended": true,
   "totalActivations": 0,
   "totalDeactivations": 0,
   "validity": 2595000,
