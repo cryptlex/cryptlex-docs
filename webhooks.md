@@ -1,3 +1,9 @@
+---
+description: >-
+  A Webhook (HTTP callback) is an HTTP POST that occurs when some event occurs
+  in your Cryptlex account; a simple event-notification via HTTP POST.
+---
+
 # Webhooks
 
 ## When to use webhooks

@@ -49,6 +49,7 @@
   * [Unverified Trials](timed-trials/unverified-trials.md)
 * [Webhooks](webhooks.md)
 * [Web Integration](web-integration/README.md)
+  * [Personal Access Tokens](web-integration/personal-access-tokens.md)
   * [Using Web API](web-integration/using-web-api.md)
   * [Using Zapier](web-integration/using-zapier.md)
 * [Changelog](changelog/README.md)
