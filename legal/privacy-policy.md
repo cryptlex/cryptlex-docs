@@ -50,7 +50,7 @@ Information in this category includes the information you provide when registeri
 
 **1.2.1.2 Personal information stored in third party services**
 
-* Name and email \(through Hubspot, MailChimp and Drift\)
+* Name and email \(through Hubspot, MailChimp and Intercom\)
 * Company name \(through Hubspot\)
 * Links to social media profiles \(through Hubspot\)
 * Credit card information \(securely stored within Stripe\)

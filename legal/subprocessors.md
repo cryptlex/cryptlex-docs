@@ -7,7 +7,7 @@
 * DigitalOcean
 * Cloudflare
 * Google Analytics
-* Drift
+* Intercom
 * Hubspot
 * MailChimp
 * Mailgun
