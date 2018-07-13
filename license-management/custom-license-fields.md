@@ -1,8 +1,10 @@
-# Metadata
+# Custom License Fields
+
+Using metadata properties you can store additional license data alongside products, licenses and users. This can include additional information about customers \(e.g. their customer id, company etc.\), additional options to enable or disable specific features in your application etc.
 
 ## Metadata properties
 
-The metadata which can be added to products, licenses and users has following three properties:
+The metadata properties which can be added to products, licenses and users has following three properties:
 
 #### Key
 
@@ -22,15 +24,19 @@ This metadata can be added to products and can be accessed in your application o
 
 It can be used for many purposes, like detecting software updates in your application, displaying some custom data which can change over time etc.
 
+## License metadata
+
+This metadata can be added to your licenses at the time of creating a license. You can store additional data like `order_id`_,_ `customer_id` , `feature1`, `feature2` etc_._ with the license.
+
+This can be accessed in your application once a license is activated. It's common use case is feature detection, i.e. if you wish to restrict the features in your application based on the value of metadata fields.
+
+{% hint style="info" %}
+In order to require licenses to have specific metadata properties, set them in license policy **requiredMetadataKeys** field**.**
+{% endhint %}
+
 ## User metadata
 
 This metadata can be added to your license users at the time of creating a user. You can store additional data like `phone_number`, `address` etc. __in the user metadata.
-
-## License metadata
-
-This metadata can be added to your licenses at the time of creating a license. You can store additional data like `order_id`_,_ `customer_id` etc_._ with the license.
-
-This can be accessed in your application once a license is activated. It's common use case is feature detection, i.e. if you wish to restrict the features in your application based on the value of metadata fields.
 
 ## Activation metadata
 
