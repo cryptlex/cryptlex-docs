@@ -1,6 +1,11 @@
-# Custom License Fields
+---
+description: >-
+  Using metadata properties you can store custom license data alongside
+  products, licenses and users. This can include additional options to enable or
+  disable specific features in your application.
+---
 
-Using metadata properties you can store additional license data alongside products, licenses and users. This can include additional information about customers \(e.g. their customer id, company etc.\), additional options to enable or disable specific features in your application etc.
+# Custom License Fields
 
 ## Metadata properties
 
