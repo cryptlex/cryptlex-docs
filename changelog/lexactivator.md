@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.0.4 \(2018-07-18\)
+
+### Fixed
+
+* A bug causing causing crash on Linux, if license is deleted server side.
+
 ## 3.0.3 \(2018-06-14\)
 
 ### Fixed
