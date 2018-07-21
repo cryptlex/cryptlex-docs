@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.0.5 \(2018-07-21\)
+
+### Fixed
+
+* A bug causing causing crash on few Windows machines, with WMIC service not running.
+
 ## 3.0.4 \(2018-07-18\)
 
 ### Fixed
