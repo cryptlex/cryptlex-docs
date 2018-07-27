@@ -25,11 +25,11 @@ No, you need to create a new account for using Cryptlex v3.x. You can signup for
 
 ### How long do you plan to support Cryptlex v2.x?
 
-We are planning to support it for one year \(upto May 2019\), after which you won't be allowed to create more products, product versions and product keys.
+We are planning to support it for one year \(**upto May 10, 2019**\), after which you won't be allowed to create more products and product versions.
 
 ### What about our existing customers who will still be using Cryptlex v2.x after one year?
 
-Don't worry updates in existing product keys, activations and deactivations will still work after one year. Cryptlex v2.x won't be retired unless we record zero traffic on Cryptlex v2.x servers.
+Don't worry updates in existing product keys, activations and deactivations will still work after one year. The tentative date for completely turning off Cryptlex v2.x API is **May 10, 2021**.
 
 ### Do our customers need to reactivate when we integrate LexActivator v3.x or upgrade to LexFloatServer v3.x?
 
