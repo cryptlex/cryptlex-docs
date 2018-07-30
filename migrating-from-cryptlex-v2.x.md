@@ -76,7 +76,7 @@ You can now easily integrate Cryptlex with third party apps and take actions whe
 Cryptlex v2.x allowed for storing custom fields with your licenses. This has been replaced with metadata which can be stored along with your products, licenses, users, activations and trial activations.
 
 {% hint style="info" %}
-You can use product metadata to easily detect software updates in your app by storing your release version. After trial or license activation product metadata can be accessed in your app.
+You can use product metadata to easily detect software updates \(if not using [Release API](https://docs.cryptlex.com/release-management)\) in your app by storing your release version. After trial or license activation product metadata can be accessed in your app.
 {% endhint %}
 
 ### Analytics
