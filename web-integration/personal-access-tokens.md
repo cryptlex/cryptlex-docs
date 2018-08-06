@@ -35,7 +35,7 @@ At any time, you can revoke any personal access token by just clicking the  "**R
 Personal access tokens can be created with one or more scopes that allow various actions that a given token can perform. You should always scope the token access to minimum required resources, by adding minimum number of permissions. The available scopes \(permissions\) are depicted in the following table.
 
 | **Scope** | **Description** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | `account:read` | Read-only access to the account details. |
 | `account:write` | Update and delete account. |
 | `activation:read` | Read-only access to all the license activations. |
