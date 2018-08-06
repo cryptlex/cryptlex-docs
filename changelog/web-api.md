@@ -1,5 +1,12 @@
 # Web API
 
+## 3.5.0 \(2018-07-06\)
+
+### Added {#changed}
+
+* `allowedClockOffset` property to license policies and licenses which can be used to allow license and trial activations on machines where system clocks run behind the network time.
+* [/v3/analytics/activations/app-version](https://api.cryptlex.com/v3/docs#operation/V3AnalyticsActivationsApp-versionGet) endpoint to retrieve activations by app version.
+
 ## 3.4.0 \(2018-06-25\)
 
 ### Added {#changed}
