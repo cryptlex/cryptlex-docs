@@ -52,7 +52,7 @@ Whenever the application starts, the server sync occurs immediately. This settin
 
 The duration for which the server sync failure due to network error is acceptable.
 
-#### Allowed Clock Offset
+#### Allowed clock offset
 
 The allowed difference between the network time and the system time. This can be used to allow license and trial activations on machines where system clocks run behind the network time.
 
