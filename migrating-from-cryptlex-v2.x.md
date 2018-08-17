@@ -125,5 +125,9 @@ The script invokes Cryptlex v3.x Web API, so you will need an access token to us
 
 In case you need more help, we'll be glad to help you make the transition. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Importing%20CSV).
 
+{% hint style="info" %}
+You can also share your exported CSV file with us, in case you want us to handle the transition.
+{% endhint %}
+
 
 

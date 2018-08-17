@@ -39,7 +39,7 @@ To receive a floating license, you will use `SetFloatServer()`, `SetLicenseCallb
 ```c
 int status;
 unsigned int handle;
-status = GetHandle(L"YOUR VERSION GUID", &handle);
+status = GetHandle(L"PASTE_PRODUCT_ID", &handle);
 if(LF_OK != status)
 {
 	// handle error
@@ -96,7 +96,7 @@ You would usually request for a new license if Callback gets invoked.
 
 ### Dropping license lease
 
-When your user is done using the app, the app should send a request to free the license, thereby making it available for other users. If the app doesn't, the license becomes \(zombie\) useless until lease time is over.
+When your user is done using the app, the app should send a request to free the license, thereby making it available for other users. If the app doesn't, the license becomes useless \(zombie\) until lease time is over.
 
 ```c
 int status;
