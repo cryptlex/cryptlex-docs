@@ -27,7 +27,6 @@ You need admin rights to run the LexFloatServer.
 LexFloatServer uses a simple key value based text file as it's config file. It is loaded at the start of the server. Any changes to the config file will be ignored until the server is restarted. Following is a sample file which would suffice for most of the cases:
 
 ```text
-
 # Port LexFloat Server should bind to
 
 port=8090
@@ -69,7 +68,7 @@ LexFloatServer -i -productfile="path/of/myproduct.dat" -config="path/of/config/f
 ```
 
 {% hint style="info" %}
-To set a custom display name in the Windows services use the **"-displayName"** switch.
+To set a custom display name in the Windows services use the **"-displayname"** switch.
 {% endhint %}
 
 After installation it is set to start with the computer and run silently in the background.
