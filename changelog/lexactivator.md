@@ -4,6 +4,16 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.2.0 \(2018-08-20\)
+
+### Added
+
+* `GetLicenseType()` function to get the license type \(node-locked or hosted-floating\).
+
+### Updated
+
+* Wrappers for languages have been updated with `GetLicenseType()` API function. Please update your wrappers using the latest code on [Github](https://github.com/cryptlex).
+
 ## 3.1.0 \(2018-08-06\)
 
 ### Added
@@ -19,7 +29,7 @@ description: All notable changes to LexActivator are documented here.
 
 ### Updated
 
-* Wrappers for languages have been updated with `LA_E_TIME_MODIFIED` status code. Please update your wrappers using the latest code on Github.
+* Wrappers for languages have been updated with `LA_E_TIME_MODIFIED` status code. Please update your wrappers using the latest code on [Github](https://github.com/cryptlex).
 
 ## 3.0.5 \(2018-07-21\)
 

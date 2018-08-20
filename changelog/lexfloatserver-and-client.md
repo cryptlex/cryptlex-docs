@@ -4,6 +4,12 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 3.0.1 \(2018-08-20\)
+
+### Added
+
+* **LexFloatServer:** Fixed a bug preventing server from running as launchd daemon on MacOS.
+
 ## 3.0.0 \(2018-05-03\)
 
 ### Added
