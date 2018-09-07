@@ -45,13 +45,13 @@ leaselength=60
 
 logfilepath=float_server.log
 
-# The amount of information to be the logged file. These are the possible levels:
+# The amount of information to be logged in the file. These are the possible levels:
 # "0" - No log
 # "1" - Only Errors
 # "2" - Errors and Warnings
 # "3" - Errors, Warnings and other info regarding when leases are created, removed, expired etc.
 
-loglevel=2
+loglevel=3
 
 # Blocked IP addresses
 
