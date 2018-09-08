@@ -8,7 +8,7 @@ Cryptlex licensing API let's you implement any software licensing model with nod
 
 Cryptlex distribution API protects your software applications from unlicensed distribution. Our secure distribution API allows you to host software applications of any size and type on our servers, implement auto updates in your application and much more.
 
-## LexActivator - Cryptlex Client Library
+## LexActivator - Cryptlex Licensing Library
 
 LexActivator makes it dead simple to implement any type of licensing model, including hosted floating licenses, by abstracting away HTTPS network requests, AES encryption, RSA signature verification, advanced machine fingerprinting, virtual machine detection and much more.
 
