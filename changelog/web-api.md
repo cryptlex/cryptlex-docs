@@ -1,5 +1,17 @@
 # Web API
 
+## 3.7.0 \(2018-09-12\)
+
+### Added {#changed}
+
+* [/v3/trial-activations/offline-activate](https://api.cryptlex.com/v3/docs#operation/V3Trial-activationsOffline-activatePost) endpoint to allow for offline trial activations.
+
+## 3.6.0 \(2018-09-09\)
+
+### Added {#changed}
+
+* Support for bank deposits through dashboard as alternative for credit cards.
+
 ## 3.5.0 \(2018-08-06\)
 
 ### Added {#changed}
