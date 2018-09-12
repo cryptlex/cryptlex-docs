@@ -4,6 +4,12 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 3.0.2 \(2018-09-10\)
+
+### Added
+
+* **LexFloatServer:** Added activation and deactivation logs to the log file.
+
 ## 3.0.1 \(2018-08-20\)
 
 ### Added
