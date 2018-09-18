@@ -4,8 +4,6 @@ Suspending a license will cause **LexActivator** `IsLicenseGenuine()` function t
 
 Allowing the license later will automatically cause **LexActivator** `IsLicenseGenuine()` function to return `LA_OK` status code. User doesn't need to reactivate the license.
 
-You would usually suspend a license when user doesn't pay the subscription fees.
-
 ## Suspending a license
 
 To suspend a license you need to hit the [license update endpoint](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdPatch) and set `suspended` property to `true`.
