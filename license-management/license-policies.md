@@ -46,7 +46,7 @@ Allowed number of deactivations for the license. This setting is ignored for flo
 
 #### Server sync interval
 
-Whenever the application starts, the server sync occurs immediately. This setting determines the interval for further server syncs if the application is not closed.
+Whenever the application starts \(and `IsProductGenuine()` is called first time\), the server sync occurs immediately in a separate thread. This setting determines the interval for further server syncs till the application is not closed.
 
 #### Server sync grace period
 
