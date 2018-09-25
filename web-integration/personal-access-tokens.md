@@ -24,7 +24,7 @@ Expiration date for the token. Leave empty for no expiry.
 
 #### **Scopes** {#token}
 
-The permissions to restrict the actions the token can perform.
+The permissions to restrict the actions the token can be used to perform.
 
 ## Revoking a personal access token 
 
