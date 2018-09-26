@@ -6,7 +6,7 @@ Renewing a license extends the license expiry by it's validity. In case you want
 
 {% api-method method="post" host="https://api.cryptlex.com" path="/v3/licenses/:id/extend" %}
 {% api-method-summary %}
-Renewing license
+Extending license
 {% endapi-method-summary %}
 
 {% api-method-description %}

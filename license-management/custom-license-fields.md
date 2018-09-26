@@ -9,7 +9,7 @@ description: >-
 
 ## Metadata properties
 
-The metadata properties which can be added to products, licenses and users has following three properties:
+The metadata which can be added to products, licenses and users has following three properties:
 
 #### Key
 
@@ -27,7 +27,7 @@ Determines whether the metadata key/value is accessible in the app after trial o
 
 This metadata can be added to products and can be accessed in your application once a trial or license is activated.
 
-It can be used for many purposes, like detecting software updates in your application, displaying some custom data which can change over time etc.
+It can be used for storing some product level information which you want to access in your app and this information can change over time.
 
 ## License metadata
 
@@ -47,11 +47,11 @@ This metadata can be added to your license users at the time of creating a user.
 
 This metadata can be added by your application at the time of activating the license.
 
-It can be used to collect additional details from the user who is activating the license.
+It can be used to collect additional details from the machine on which license is activated, e.g. number of cpu cores, any custom data provided by user etc.
 
 ## Trial activation metadata
 
 This metadata can be added by your application at the time of activating the trial.
 
-It can be used to collect additional details from the user who is activating the trial.
+It can be used to collect additional details from the machine on which trial is activated, e.g. number of cpu cores, any custom data provided by user etc.
 
