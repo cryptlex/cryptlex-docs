@@ -26,10 +26,10 @@ There are three types of licenses:
 
 #### Lease duration
 
-This option is valid for **floating** license type only. It sets the duration for which you want to lease the floating license.
+This option is valid for **hosted floating** license type only. It sets the duration for which you want to lease the floating license.
 
 {% hint style="info" %}
-If you want license lease to auto refresh, then make sure that the server sync interval is less than lease duration by a difference of more than 10 seconds.
+If you want license lease to auto refresh, then ensure that the **server sync interval is less than lease duration** by a difference of around 10 seconds.
 {% endhint %}
 
 #### Allowed floating clients
