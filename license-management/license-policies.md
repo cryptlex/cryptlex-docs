@@ -21,7 +21,7 @@ To create a **perpetual** license set the validity to zero and for **subscriptio
 There are three types of licenses:
 
 * **Node locked:** This is the default type which locks the license to the machine.
-* **Hosted Floating:** This type is used for created a hosted floating license.
+* **Hosted Floating:** This type is used for creating a hosted floating license.
 * **On-Premise floating:** This ****type is used for creating an on-premise floating license.
 
 #### Lease duration
