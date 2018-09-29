@@ -14,6 +14,10 @@ Your customers can view all their licenses and few details regarding the license
 
 Your customers can also use the portal for offline activations and deactivations. This saves you a considerable amount of time on product support.
 
+{% hint style="info" %}
+Offline trial activations can't be handled in the customer portal as it requires user authentication. But you can easily host following website on Github or your own server to automate the offline trial activation process: [https://github.com/cryptlex/offline-trial-activation-form](https://github.com/cryptlex/offline-trial-activation-form)
+{% endhint %}
+
 ## User profile
 
 Your customers can also see and update their profile details like first name, last name, email and password. 
