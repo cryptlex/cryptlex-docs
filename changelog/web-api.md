@@ -1,5 +1,11 @@
 # Web API
 
+## 3.8.0 \(2018-10-12\)
+
+### Added {#changed}
+
+* [/v3/me/2fa-secret](https://api.cryptlex.com/v3/docs#operation/V3Me2fa-secretPost) and [/v3/me/2fa-recovery-codes](https://api.cryptlex.com/v3/docs#operation/V3Me2fa-recovery-codesPost) endpoints to allow for two factor authentication.
+
 ## 3.7.0 \(2018-09-12\)
 
 ### Added {#changed}
