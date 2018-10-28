@@ -59,7 +59,7 @@ Allowed number of deactivations for the license. This setting is ignored for flo
 Whenever the application starts \(and `IsProductGenuine()` is called first time\), the server sync occurs immediately in a separate thread. This setting determines the interval for further server syncs till the application is not closed.
 
 {% hint style="info" %}
-The minimum allowed server sync interval upto STARTUP plan is 3600 seconds, and for higher plans it is 60 seconds. It is highly recommended to set it to 3600 or greater unless required.
+The minimum allowed server sync interval upto STARTUP plan is 3600 seconds, and for higher plans it is 180 seconds. It is highly recommended to set it to 3600 or greater unless required.
 {% endhint %}
 
 #### Server sync grace period

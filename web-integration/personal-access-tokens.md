@@ -14,15 +14,15 @@ Keep your access tokens secure and do not share them in publicly accessible area
 
 You can easily create personal access tokens through dashboard. Go to the "[Personal Access Tokens](https://app.cryptlex.com/api/personal-access-tokens)" section in the dashboard and click the add the button. A form with following fields will popup:
 
-#### **Name** {#name}
+#### **Name** <a id="name"></a>
 
 Name for the access token.
 
-#### **Expiration Date** {#url}
+#### **Expiration Date** <a id="url"></a>
 
 Expiration date for the token. Leave empty for no expiry.
 
-#### **Scopes** {#token}
+#### **Scopes** <a id="token"></a>
 
 The permissions to restrict the actions the token can be used to perform.
 

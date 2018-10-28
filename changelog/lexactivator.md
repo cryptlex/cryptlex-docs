@@ -10,7 +10,7 @@ description: All notable changes to LexActivator are documented here.
 
 * `GenerateOfflineTrialActivationRequest()` and `ActivateTrialOffline()` functions to allow for offline trial activations.
 
-### Updated {#updated}
+### Updated <a id="updated"></a>
 
 * Wrappers for languages have been updated with `GenerateOfflineTrialActivationRequest()` and `ActivateTrialOffline()`  API functions. Please update your wrappers using the latest code on [Github](https://github.com/cryptlex).
 

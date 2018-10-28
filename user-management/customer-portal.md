@@ -22,7 +22,7 @@ Offline trial activations can't be handled in the customer portal as it requires
 
 Your customers can also see and update their profile details like first name, last name, email and password. 
 
-## Need more features {#need-more-help}
+## Need more features <a id="need-more-help"></a>
 
 In case you need more features in the customer portal, we'll be glad to add them in the portal. You can either post your requests on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
 
