@@ -9,7 +9,7 @@ After you've added a product for your app in the dashboard, go to the product pa
 
 RSA public key is needed to verify the signature of the activation token which you get on activating a license. Product id is the identifier of your product which is to be licensed.
 
-### License activation
+### Activating the license key
 
 To activate the license in your app using the license key, you need to send a POST request to the [/v3/activations](https://api.cryptlex.com/v3/docs#operation/V3ActivationsPost) API endpoint. Following is a sample request which creates a license activation:
 
@@ -83,7 +83,7 @@ Unique identifier for the product.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-On successful activation it returns an activation token. Activation token is basically a [JWT](https://jwt.io/) and you can easily verify it's signature using any of the JWT libraries available for your language.
+On successful activation it returns an activation token. Activation token is basically a [JWT](https://jwt.io/) and you can easily verify it's signature using any of the JWT libraries available for your language. You can then parse the JWT activation token to get the license details.
 
 ### Verifying license activation
 
