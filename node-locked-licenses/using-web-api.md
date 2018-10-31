@@ -87,11 +87,15 @@ On successful activation it returns an activation token. Activation token is bas
 
 ### Verifying license activation
 
-Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the signature of activation token using the RSA public key. 
+Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the signature of the JWT activation token using the RSA public key. 
 
 {% hint style="info" %}
 It is recommended to store the JWT activation token in an encrypted form though not required unless you have any sensitive metadata information in the token.
 {% endhint %}
+
+You can then parse the JWT activation token to get the license details.
+
+### Syncing license activation
 
 In order to sync the client changes with the server and vice-versa you need to frequently sent an update request. You can decide on the update frequency as per your requirement, or use the frequency interval set for the license \(available in JWT activation token\). If you choose latter you can control it from dashboard.
 
