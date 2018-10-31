@@ -90,10 +90,10 @@ On successful activation it returns an activation token. Activation token is bas
 Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the signature of activation token using the RSA public key. 
 
 {% hint style="info" %}
-It is recommended to store the token in an encrypted form though not required unless you have any sensitive metadata information in the token.
+It is recommended to store the JWT activation token in an encrypted form though not required unless you have any sensitive metadata information in the token.
 {% endhint %}
 
-In order to sync the client changes with the server and vice-versa you need to frequently sent an update request. You can decide on the update frequency as per your requirement.
+In order to sync the client changes with the server and vice-versa you need to frequently sent an update request. You can decide on the update frequency as per your requirement, or use the frequency interval set for the license \(available in JWT activation token\). If you choose latter you can control it from dashboard.
 
 {% api-method method="patch" host="https://api.cryptlex.com" path="/v3/activations/:id" %}
 {% api-method-summary %}
