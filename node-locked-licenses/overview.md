@@ -17,7 +17,7 @@ These licensing API endpoints can be invoked using using any HTTP library, but i
 * Abstracts away HTTPS part, so you basically call simple functions like `ActivateLicense(),` `ActivateTrial()` etc. instead of sending HTTPS requests.
 * Verifies the HTTPS response signature using **2048 bit RSA** public key.
 * Stores the HTTPS response in an encrypted form on the disk using **AES 128 bit** symmetric encryption algorithm.
-* Generates multiple fingerprints of the machine, which can be used to allow for different fingerprint matching strategies.
+* Generates multiple fingerprints of the machine using an **advanced device fingerprinting algorithm**, which can be used to allow for different fingerprint matching strategies.
 * Does virtual machine detection so you can prevent users from activating your license in virtual machines. Virtual machines can be cloned which may sometimes result in same fingerprint on different machines.
 * Periodically invokes the Cryptlex API endpoints in a separate thread to sync the server license data with the client.
 * Handles the offline activations.
