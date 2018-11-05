@@ -14,7 +14,7 @@ After you've added a product for your app in the dashboard, go to the product pa
 
 * Note the product id for the product.
 * Download the Product.dat for the product.
-* Download the example project from [Github](https://github.com/cryptlex/lexactivator-nodejs).
+* Download the example project from [Github](https://github.com/cryptlex/lexactivator-ruby).
 
 Product.dat contains product data which is used by LexActivator. Product id is the identifier of your product which is to be used in the code.
 
@@ -39,7 +39,7 @@ If your app requires admin \(root\) privileges to run \(e.g. services, daemons e
 
 To activate the license in your app using the license key, you will use `ActivateLicense()` LexActivator API function. It invokes the `/v3/activations` Cryptlex Web API endpoint, verifies the encrypted and digitally signed response to validate the license.
 
-```javascript
+```ruby
 def activate()
   status = LexActivator.SetLicenseKey(LexActivator::encode_utf16("PASTE_LICENSE_KEY"))
   if LexStatusCodes::LA_OK != status
@@ -68,7 +68,7 @@ The above code should be executed at the time of license activation.
 
 Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this you need to use `IsLicenseGenuine()` LexActivator API function.
 
-```javascript
+```ruby
 def main()
   status = LexActivator.SetProductData(LexActivator::encode_utf16("PASTE_CONTENT_OF_PRODUCT.DAT_FILE"))
   if LexStatusCodes::LA_OK != status
