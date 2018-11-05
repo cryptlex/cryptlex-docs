@@ -12,7 +12,7 @@ The license server must store the device fingerprint and use it to validate the 
 
 LexActivator is basically a **libcurl** based HTTP client which invokes Cryptlex Web API endpoints from your application to activate your licenses and trials.
 
-You can do this by yourself too in your app using any HTTP library, but it does something more which can save you a lot of time:
+These licensing API endpoints can be invoked using using any HTTP library, but it does something more which can save you a lot of time:
 
 * Abstracts away HTTPS part, so you basically call simple functions like `ActivateLicense(),` `ActivateTrial()` etc. instead of sending HTTPS requests.
 * Verifies the HTTPS response signature using **2048 bit RSA** public key.
