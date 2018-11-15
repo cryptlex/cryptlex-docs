@@ -12,13 +12,26 @@ Cryptlex offers fine-grained role based access control, which can be used to lim
 
 Cryptlex maintains a number of certifications to further strengthen our trust with customers. These include:
 
-### Privacy Shield
+### EU/US Privacy Shield
 
 Under process.
 
-### GDPR
+### EU GDPR
 
-Please see our [Privacy Policy](https://docs.cryptlex.com/legal/privacy-policy) for details on how EU General Data Protection Regulation is relevant for businesses using Cryptlex.
+Cryptlex is compliant with the EU General Data Protection Regulation \(EU GDPR\). Please see our [Privacy Policy](https://docs.cryptlex.com/legal/privacy-policy) for details on how EU GDPR is relevant for businesses using Cryptlex.
+
+### PCI DSS
+
+Cryptlex's payment and credit card information is handled by Stripe, which is a certified [PCI Level 1 Service Provider](https://www.visa.com/splisting/searchGrsp.do?companyNameCriteria=stripe,%20inc), the most stringent level of certification available in the payments industry. Cryptlex does not typically receive credit card data, making it compliant with PCI DSS in most situations.
+
+### ISO 27001, ISO 27017, ISO 27018
+
+Cryptlex datacenters are compliant with ISO 27001, ISO 27017 and ISO 27018 certifications. These internationally accepted security standards cover the systems, applications, people, technology, policies, procedures and datacenters serving customers. Our hosting provider, Heroku, has achieved all three of these certificates. Heroku's [ISO 27001](https://www.heroku.com/compliance) covers the Heroku security management controls. The [ISO 27017](https://www.heroku.com/compliance)certification covers cloud security specifically for cloud service providers. [ISO 27018](https://cloud.google.com/files/GCP_ISO_27018_2017.pdf) governs protection of personally identifiable information in public cloud services.
+
+### SOC2 Type I 
+
+Cryptlex datacenters are compliant with SOC 2 certification. Our hosting provider, Heroku, has achieved [SOC 2](https://devcenter.heroku.com/articles/security-privacy-compliance#soc2-type-i-attestation-report) certification. This audit includes the examination of the fairness of presentation and the suitability of the design of controls relevant to security, availability, and confidentiality of the information processed by the Heroku.  
+
 
 ### Heroku Certifications
 
