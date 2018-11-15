@@ -63,4 +63,5 @@
   * [Privacy Policy](legal/privacy-policy.md)
   * [Subprocessors](legal/subprocessors.md)
   * [Data Processing Addendum](legal/data-processing-addendum.md)
+  * [Security, Privacy, and Compliance](legal/security-privacy-and-compliance.md)
 
