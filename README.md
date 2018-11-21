@@ -4,6 +4,10 @@
 
 Cryptlex licensing API let's you implement any software licensing model with node-locked licensing, floating licensing, perpetual licenses, subscriptions, timed trials and more supported out of the box. 
 
+## Cryptlex Identity API
+
+Cryptlex identity API provides identity management for your customers, which means you can authenticate your customers using email and password, and provide other features like profile management.
+
 ## Cryptlex Distribution API
 
 Cryptlex distribution API protects your software applications from unlicensed distribution. Our secure distribution API allows you to host software applications of any size and type on our servers, implement auto updates in your application and much more.
