@@ -52,7 +52,7 @@ Allowed number of activations \(seats\) for the license. If you allow \(say\) 10
 
 #### Allowed deactivations
 
-Allowed number of deactivations for the license. This setting is ignored for floating licenses.
+Allowed number of deactivations for the license. This setting is ignored for **hosted-floating** licenses.
 
 #### Server sync interval
 
