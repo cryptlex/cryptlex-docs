@@ -45,6 +45,7 @@
       * [Using LexFloatClient with VB.NET](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-vb.net.md)
       * [Using LexFloatClient with Java](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-java.md)
       * [Using LexFloatClient with Delphi](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-delphi.md)
+      * [Using LexFloatClient with Python](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-python.md)
 * [Timed Trials](timed-trials/README.md)
   * [Verified Trials](timed-trials/verified-trials.md)
   * [Unverified Trials](timed-trials/unverified-trials.md)

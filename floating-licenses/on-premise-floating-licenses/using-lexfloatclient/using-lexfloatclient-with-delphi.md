@@ -20,7 +20,7 @@ Product id is the identifier of your product which is to be used in the code. Th
 
 LexFloatClient example project for Delphi \(7 or newer\) contains the **LexFloatClient.pas** unit file. In addition to that it includes **LexFloatClient.DelphiFeatures.pas** unit file used internally.
 
-You need to add these files to your app in order to use LexFloatClient API in your app. Both units must be added, but only LexFloatClient unit must be added to uses list.
+You need to add these files to your app in order to use LexFloatClient API in your app. Both units must be added, but only LexFloatClient unit must be added to uses list. Depending on the OS you are targeting you need to copy the respective LexFloatClient.dll, libLexFloatClient.so or libLexFloatClient.dylib to your project.
 
 ### Setting product id
 

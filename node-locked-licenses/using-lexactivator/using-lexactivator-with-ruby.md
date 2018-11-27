@@ -20,7 +20,7 @@ Product.dat contains product data which is used by LexActivator. Product id is t
 
 ### Adding library to your app <a id="adding-library-to-your-app"></a>
 
-LexActivator example project for Ruby contains **LexActivator.rb** and **LexStatusCodes.rb** files. You will need to add these files to your Ruby project. It contains all the LexActivator API functions needed to add licensing to your app.
+LexActivator example project for Ruby contains **LexActivator.rb** and **LexStatusCodes.rb** files. You will need to add these files to your Ruby project. It contains all the LexActivator API functions needed to add licensing to your app. Depending on the OS you are targeting you need to copy the respective LexActivator.dll, libLexActivator.so or libLexActivator.dylib to your project.
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 

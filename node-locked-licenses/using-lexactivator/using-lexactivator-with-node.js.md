@@ -20,7 +20,7 @@ Product.dat contains product data which is used by LexActivator. Product id is t
 
 ### Adding library to your app <a id="adding-library-to-your-app"></a>
 
-LexActivator example project for Node.js contains **LexActivator.js** file. You will need to add this file to your Node.js project. It contains all the LexActivator API functions needed to add licensing to your app.
+LexActivator example project for Node.js contains **LexActivator.js** file. You will need to add this file to your Node.js project. It contains all the LexActivator API functions needed to add licensing to your app. Depending on the OS you are targeting you need to copy the respective LexActivator.dll, libLexActivator.so or libLexActivator.dylib to your project.
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 

@@ -21,7 +21,7 @@ Product.dat contains product data which is used by LexActivator. Product id is t
 
 LexActivator example project for Delphi \(7 or newer\) contains the **LexActivator.pas** unit file. In addition to that it includes **LexActivator.DelphiFeatures.pas** unit file used internally.
 
-You need to add these files to your app in order to use LexActivator API in your app. Both units must be added, but only LexActivator unit must be added to uses list.
+You need to add these files to your app in order to use LexActivator API in your app. Both units must be added, but only LexActivator unit must be added to uses list. Depending on the OS you are targeting you need to copy the respective LexActivator.dll, libLexActivator.so or libLexActivator.dylib to your project.
 
 ### Setting product.dat file and product Id
 
