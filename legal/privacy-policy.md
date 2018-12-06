@@ -158,7 +158,21 @@ You have the right to opt-out of certain uses and disclosures of your personal i
 
 If you receive an unwanted email from us, you can use the unsubscribe link found at the bottom of the email to opt-out of receiving future emails. We will process your request within a reasonable time after receipt. Note that you will continue to receive transaction-related emails regarding products or services you have requested. We may also send you certain non-promotional communications regarding Cryptlex and our services and you will not be able to opt-out of those communications \(e.g., communications regarding updates to our Terms or this Privacy Policy\).
 
-**WE MAINTAIN “DO-NOT-MAIL” LISTS AS MANDATED BY LAW. WE PROCESS REQUESTS TO BE PLACED ON DO-NOT-MAIL AND DO-NOT-CONTACT LISTS WITHIN 60 DAYS AFTER RECEIPT, OR SUCH SHORTER TIME AS MAY BE REQUIRED BY LAW.**
+WE MAINTAIN “DO-NOT-MAIL” LISTS AS MANDATED BY LAW. WE PROCESS REQUESTS TO BE PLACED ON DO-NOT-MAIL AND DO-NOT-CONTACT LISTS WITHIN 60 DAYS AFTER RECEIPT, OR SUCH SHORTER TIME AS MAY BE REQUIRED BY LAW.
+
+## 4. Onward **t**ransfer - Cryptlex may disclose your information
+
+#### 4.1 Information we share <a id="4-1-information-we-share"></a>
+
+We may share your information as described in this Privacy Policy \(e.g., with our Third-Party service providers; to comply with legal obligations; to protect and defend our rights and property\) or with your permission.
+
+* **We use vendors and service providers.** We may share any information we receive with vendors and service providers. The types of service providers to whom we entrust personal information include service providers for: \(i\) provision of IT and related services; \(ii\) provision of information and services you have requested; \(iii\) payment processing; \(iv\) customer service activities; and \(v\) in connection with the provision of the Site. 
+* **Privacy Shield.** With respect to onward transfers to Agents under Privacy Shield, Privacy Shield requires that Cryptlex remain liable should its Agents process personal information in a manner inconsistent with the Privacy Shield Principles.
+* **Disclosures to protect us or others \(e.g., as Required by law and similar disclosures\).** We may access, preserve, and disclose your Personal Information, other account information, and content if we believe doing so is required or appropriate to: \(i\) comply with law enforcement or national security requests and legal process, such as a court order or subpoena; \(ii\) respond to your requests; \(iii\) protect yours’, ours’ or others’ rights, property, or safety; \(iv\) to enforce Cryptlex policies or contracts; \(v\) to collect amounts owed to Cryptlex; \(vi\) when we believe disclosure is necessary or appropriate to prevent physical harm or financial loss or in connection with an investigation or prosecution of suspected or actual illegal activity; or \(vii\) if we, in good faith, believe that disclosure is otherwise necessary or advisable.
+
+  In addition, from time to time, server logs may be reviewed for security purposes – e.g., to detect unauthorized activity on the Services. In such cases, server log data containing IP addresses may be shared with law enforcement bodies in order that they may identify users in connection with their investigation of the unauthorized activities.
+
+* **Merger, sale, or other asset transfers.** If we are involved in a merger, acquisition, financing due diligence, reorganisation, bankruptcy, receivership, sale of company assets, or transition of service to another provider, then your information may be sold or transferred as part of such a transaction as permitted by law and/or contract. In such event, Cryptlex will endeavour to direct the transferee to use personal information in a manner that is consistent with the Privacy Policy in effect at the time such personal information was collected.
 
 ## 8. For further information
 
