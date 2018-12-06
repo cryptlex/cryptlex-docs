@@ -112,6 +112,16 @@ If you are our User, we process your Personal Data based on your consent, and ba
 
 Cryptlex has a “Data Protection Officer” who is responsible for matters relating to privacy and data protection. This “Data Protection Officer” can be contacted through email at [legal@cryptlex.com](mailto:legal@cryptlex.com).
 
+#### 1.2.4. Privacy Shield
+
+Cryptlex complies with the EU-U.S. Privacy Shield Framework as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal information transferred from the European Union to the United States. Cryptlex has certified to the Department of Commerce that it adheres to the Privacy Shield Principles. If there is any conflict between the terms in this privacy policy and the Privacy Shield Principles, the Privacy Shield Principles shall govern. To learn more about the Privacy Shield program, and to view our certification, please visit [https://www.privacyshield.gov/](https://www.privacyshield.gov/)
+
+Under the EU-US Privacy Shield Framework, we are responsible for the processing of information about you we receive from the EU and onward transfers to a third party acting as an agent on our behalf. We comply with the Privacy Shield Principles for such onward transfers and remain liable in accordance with the Privacy Shield Principles if third-party agents that we engage to process such information about you on our behalf do so in a manner inconsistent with the Privacy Shield Principles, unless we prove that we are not responsible for the event giving rise to the damage.
+
+In compliance with the Privacy Shield Principles, Cryptlex commits to resolve complaints about our collection or use of your personal information.  EU individuals with inquiries or complaints regarding our Privacy Shield policy should first contact Cryptlex at [legal@cryptlex.sh](mailto:legal@cryptlex.com).
+
+Cryptlex has further committed to cooperate with the panel established by the EU data protection authorities with regard to unresolved Privacy Shield complaints concerning data transferred from the EU in the context of the employment relationship.
+
 ## 2. Data security
 
 Cryptlex is committed to ensuring that your privacy and the data you share with us is protected. We use best industrial practices to secure and protect  the important business data you store within Cryptlex. 
