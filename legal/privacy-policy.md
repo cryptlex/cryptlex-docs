@@ -142,7 +142,13 @@ We assume that all visitors of our website, and users of Cryptlex’s services h
 
 We will reveal a user’s personal information without his/her prior permission only when we have reason to believe that the disclosure of this information is required to establish the identity of, to contact or to initiate legal proceedings against a person or persons who are suspected of infringing rights or property belonging to Cryptlex or to others who could be harmed by the user’s activities or of persons who could \(deliberately or otherwise\) transgress upon these rights and property. We are permitted to disclose personal information when we have good reason to believe that this is legally required.
 
-## 6. For further information
+## 6. Rights of access, rectification and erasure
+
+You may inquire as to whether Cryptlex is processing personal information about you, request access to personal information, and ask that we correct, amend or delete your personal information where it is inaccurate or if you believe that your personal information has been processed in violation of the Privacy Shield Principles. Where otherwise permitted by applicable law, you may send an email to [legal@cryptlex.com](mailto:legal@cryptlex.com) or use any of the methods set out in this Privacy Policy to request access to, receive \(port\), seek rectification, or request erasure of personal Information held about you by Cryptlex. Please include your full name, email address associated with your account, and a detailed description of your data request. Such requests will be processed in line with local laws.
+
+Although Cryptlex makes good faith efforts to provide Individuals with access to their Personal Information, there may be circumstances in which Cryptlex is unable to provide access, including but not limited to: where the information contains legal privilege, would compromise others’ privacy or other legitimate rights, where the burden or expense of providing access would be disproportionate to the risks to the Individual’s privacy in the case in question or where it is commercially proprietary. If Cryptlex determines that access should be restricted in any particular instance, we will provide you with an explanation of why that determination has been made and a contact point for any further inquiries. To protect your privacy, Cryptlex will take commercially reasonable steps to verify your identity before granting access to or making any changes to your personal information.
+
+## 7. For further information
 
 If you have any further questions regarding the data Cryptlex collects, or how we use it, then please feel free to contact us by email at: [legal@cryptlex.com](mailto:legal@cryptlex.com)
 
