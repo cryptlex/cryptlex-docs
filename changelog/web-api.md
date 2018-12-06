@@ -1,5 +1,12 @@
 # Web API
 
+## 3.9.0 \(2018-12-06\)
+
+### Added <a id="changed"></a>
+
+* Support for referrals.
+* `role` property to [users](https://api.cryptlex.com/v3/docs#operation/V3UsersPost) resource deprecating `roles` property.
+
 ## 3.8.0 \(2018-10-12\)
 
 ### Added <a id="changed"></a>
