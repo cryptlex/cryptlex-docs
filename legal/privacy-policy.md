@@ -148,7 +148,19 @@ You may inquire as to whether Cryptlex is processing personal information about 
 
 Although Cryptlex makes good faith efforts to provide Individuals with access to their Personal Information, there may be circumstances in which Cryptlex is unable to provide access, including but not limited to: where the information contains legal privilege, would compromise others’ privacy or other legitimate rights, where the burden or expense of providing access would be disproportionate to the risks to the Individual’s privacy in the case in question or where it is commercially proprietary. If Cryptlex determines that access should be restricted in any particular instance, we will provide you with an explanation of why that determination has been made and a contact point for any further inquiries. To protect your privacy, Cryptlex will take commercially reasonable steps to verify your identity before granting access to or making any changes to your personal information.
 
-## 7. For further information
+## 7. Opt-Out \(Right To Restrict Processing\)
+
+### 7.1 General
+
+You have the right to opt-out of certain uses and disclosures of your personal information. Where you have consented to Cryptlex's processing of your personal information, you may withdraw that consent at any time and opt-out to further processing by contacting us at [legal@cryptlex.com](mailto:legal@cryptlex.com). Even if you opt-out, we may still collect and use non-personal information regarding your activities on our site.
+
+### 7.2 Email communications
+
+If you receive an unwanted email from us, you can use the unsubscribe link found at the bottom of the email to opt-out of receiving future emails. We will process your request within a reasonable time after receipt. Note that you will continue to receive transaction-related emails regarding products or services you have requested. We may also send you certain non-promotional communications regarding Cryptlex and our services and you will not be able to opt-out of those communications \(e.g., communications regarding updates to our Terms or this Privacy Policy\).
+
+**WE MAINTAIN “DO-NOT-MAIL” LISTS AS MANDATED BY LAW. WE PROCESS REQUESTS TO BE PLACED ON DO-NOT-MAIL AND DO-NOT-CONTACT LISTS WITHIN 60 DAYS AFTER RECEIPT, OR SUCH SHORTER TIME AS MAY BE REQUIRED BY LAW.**
+
+## 8. For further information
 
 If you have any further questions regarding the data Cryptlex collects, or how we use it, then please feel free to contact us by email at: [legal@cryptlex.com](mailto:legal@cryptlex.com)
 
