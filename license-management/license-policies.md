@@ -32,18 +32,22 @@ There are three types of licenses:
 
 #### Lease duration
 
-This option is valid for **hosted floating** license type only. It sets the duration for which you want to lease the floating license.
+This option is valid for **hosted-floating** and **on-premise-floating** license types only. It sets the duration for which you want to lease the floating license.
 
 {% hint style="info" %}
-If you want license lease to auto refresh, then ensure that the **server sync interval is less than lease duration** by a difference of around 30 seconds.
+In case of **hosted-floating** license type,  if you want license lease to auto renew then ensure that the **server sync interval is less than lease duration** by a difference of around 30 seconds.
+{% endhint %}
+
+{% hint style="info" %}
+In case of **on-premise** license type, lease duration can be set to 0 to honour the lease duration set in LexFloatServer config file.
 {% endhint %}
 
 #### Allowed floating clients
 
-This option is valid for **on-premise** **floating** license type only. It sets the maximum number of concurrent clients which can lease the license from the server.
+This option is valid for **on-premise** **floating** license type only. It sets the maximum number of concurrent clients which can lease the floating license from the server.
 
 {% hint style="info" %}
-For hosted floating licenses, the the maximum number of concurrent clients which can lease the license from the server is determined by **allowedActivations** property
+For hosted floating licenses, the maximum number of concurrent clients which can lease the license from the server is determined by **allowedActivations** property
 {% endhint %}
 
 #### Allowed activations
