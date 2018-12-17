@@ -42,6 +42,14 @@ In case of **hosted-floating** license type,  if you want license lease to auto 
 In case of **on-premise** license type, lease duration can be set to 0 to honour the lease duration set in LexFloatServer config file.
 {% endhint %}
 
+#### Leasing Strategy
+
+This option is valid for **on-premise-floating** license type only. It allows for following strategies:
+
+**Per-Machine:** Each machine will only lease a single floating license, irrespective of the number of floating client instances being run on the machine.
+
+**Per-Instance:** Each instance of the floating client will lease a separate floating license, irrespective of whether the instances are running on a single machine or different machines.
+
 #### Allowed floating clients
 
 This option is valid for **on-premise** **floating** license type only. It sets the maximum number of concurrent clients which can lease the floating license from the server.
