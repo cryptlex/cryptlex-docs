@@ -1,5 +1,12 @@
 # Web API
 
+## 3.10.0 \(2018-12-17\)
+
+### Added <a id="changed"></a>
+
+* `leasingStrategy` property to [licenses](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdGet) resource.
+* `company` query param to [users](https://api.cryptlex.com/v3/docs#operation/V3UsersGet) resource
+
 ## 3.9.0 \(2018-12-06\)
 
 ### Added <a id="changed"></a>
@@ -89,8 +96,4 @@
 
 * Completely new REST API
 * Beautiful API [docs](https://api.cryptlex.com/v3/docs)
-
-## Previous Versions
-
-### Let's move on...
 
