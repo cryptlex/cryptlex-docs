@@ -181,7 +181,7 @@ LexFloatServer exposes a floating-licenses API endpoint which can be used to get
 
 {% api-method method="get" host="http://localhost:8090" path="/api/floating-licenses" %}
 {% api-method-summary %}
-Server stats
+List of floating licenses
 {% endapi-method-summary %}
 
 {% api-method-description %}
