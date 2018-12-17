@@ -50,8 +50,11 @@ loglevel=3
 
 # Blocked IP addresses
 #blockedips=192.168.0.7,192.168.0.8
-
 ```
+
+{% hint style="warning" %}
+`leaseduration` property in the config file is honoured only when the`leaseDuration` property of the server license is set to **0** in the Cryptlex dashboard.
+{% endhint %}
 
 ## Starting LexFloatServer in terminal
 
