@@ -101,12 +101,10 @@ class CallbackEventListener implements LicenseCallbackEvent {
 When your user is done using the app, the app should send a request to free the license, thereby making it available to other users. If the app doesn't, the license becomes \(zombie\) useless until lease time is over.
 
 ```java
-try
-{
+try {
     LexFloatClient.DropFloatingLicense();
     System.out.println("Success! License dropped successfully.");
-} catch (LexFloatClientException ex)
-{
+} catch (LexFloatClientException ex) {
     System.out.println(ex.getCode() + ": " + ex.getMessage());
 }
 ```
