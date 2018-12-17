@@ -27,89 +27,99 @@ In case you choose **AnyCPU** Platform, you will need to copy both x86 LexFloatC
 
 ### Setting product id
 
-The first LexFloatClient API function you need to use in your code is `SetProductId()`. It sets the product id of the product you will be adding licensing to. 
+The first LexFloatClient API function you need to use in your code is `SetHostProductId()`. It sets the product id of the product you will be adding licensing to. 
 
 ```c
-floatClient = New LexFloatClient()
-floatClient.SetProductId("PASTE_PRODUCT_ID")
+LexFloatClient.SetHostProductId("PASTE_PRODUCT_ID");
 ```
 
 ### Requesting license lease
 
-To receive a floating license, you will use `SetFloatServer()`, `SetLicenseCallback()` and `RequestLicense()`LexFloatClient API methods. It sets LexFloatServer address, callback for status notifications, contacts the server and receives the leased license.
+To receive a floating license, you will use `SetHostUrl()`, `SetFloatingLicenseCallback()` and `RequestFloatingLicense()`LexFloatClient API methods. It sets LexFloatServer address, callback for status notifications, contacts the server and receives the floating license.
 
 ```csharp
 Private Sub leaseBtn_Click(sender As Object, e As EventArgs) Handles leaseBtn.Click
+    If LexFloatClient.HasLicense() = LexFloatClient.StatusCodes.LF_OK Then
+        Return
+    End If
+
     Dim status As Integer
-    floatClient = New LexFloatClient()
-    status = floatClient.SetProductId("PASTE_PRODUCT_ID")
+    status = LexFloatClient.SetHostProductId("PASTE_YOUR_PRODUCT_ID")
+
     If status <> LexFloatClient.StatusCodes.LF_OK Then
-        Me.statusLabel.Text = "Error setting version GUID: " + status.ToString()
+        Me.statusLabel.Text = "Error setting product id: " & status.ToString()
         Return
     End If
-    status = floatClient.SetFloatServer("localhost", 8090)
+
+    status = LexFloatClient.SetHostUrl("http://localhost:8090")
+
     If status <> LexFloatClient.StatusCodes.LF_OK Then
-        Me.statusLabel.Text = "Error Setting Host Address: " + status.ToString()
+        Me.statusLabel.Text = "Error setting host url: " & status.ToString()
         Return
     End If
-    status = floatClient.SetLicenseCallback(AddressOf LicenceRefreshCallback)
+
+    status = LexFloatClient.SetFloatingLicenseCallback(LicenceRenewCallback)
+
     If status <> LexFloatClient.StatusCodes.LF_OK Then
-        Me.statusLabel.Text = "Error Setting Callback Function: " + status.ToString()
+        Me.statusLabel.Text = "Error setting callback function: " & status.ToString()
         Return
     End If
-    status = floatClient.RequestLicense()
+
+    status = LexFloatClient.RequestFloatingLicense()
+
     If status <> LexFloatClient.StatusCodes.LF_OK Then
-        Me.statusLabel.Text = "Error Requesting License: " + status.ToString()
+        Me.statusLabel.Text = "Error requesting license: " & status.ToString()
         Return
     End If
+
     Me.statusLabel.Text = "License leased successfully!"
 End Sub
 ```
 
 The above code can be executed every time user starts the app or needs a new license.
 
-### Renewing license lease
+### Renewing floating license
 
-License lease automatically renews itself in a background thread. When something goes wrong, Callback is invoked \(from background thread\).
+License lease automatically renews itself in a background thread. When license is renewed or it fails to renew, Callback is invoked \(from background thread\).
 
 ```csharp
-Private Sub LicenceRefreshCallback(status As UInteger)
+Private Sub LicenceRenewCallback(ByVal status As UInteger)
     Select Case status
-        Case LexFloatClient.StatusCodes.LF_E_LICENSE_EXPIRED
-            Me.statusLabel.Text = "The lease expired before it could be renewed."
+        Case LexFloatClient.StatusCodes.LF_OK
+            Me.statusLabel.Text = "The license lease has renewed successfully."
+            Exit Select
+        Case LexFloatClient.StatusCodes.LF_E_LICENSE_NOT_FOUND
+            Me.statusLabel.Text = "The license expired before it could be renewed."
             Exit Select
         Case LexFloatClient.StatusCodes.LF_E_LICENSE_EXPIRED_INET
-            Me.statusLabel.Text = "The lease expired due to network connection failure."
-            Exit Select
-        Case LexFloatClient.StatusCodes.LF_E_SERVER_TIME
-            Me.statusLabel.Text = "The lease expired because Server System time was modified."
-            Exit Select
-        Case LexFloatClient.StatusCodes.LF_E_TIME
-            Me.statusLabel.Text = "The lease expired because Client System time was modified."
+            Me.statusLabel.Text = "The license expired due to network connection failure."
             Exit Select
         Case Else
-            Me.statusLabel.Text = "The lease expired due to some other reason."
+            Me.statusLabel.Text = "The license renew failed due to other reason. Error code: " & status.ToString()
             Exit Select
     End Select
 End Sub
 ```
 
-You would usually request for a new license if callback gets invoked.
+### Dropping floating license
 
-### Dropping license lease
-
-When your user is done using the app, the app should send a request to free the license, thereby making it available for other users. If the app doesn't, the license becomes \(zombie\) useless until lease time is over.
+When your user is done using the app, the app should send a request to free the license, thereby making it available to other users. If the app doesn't, the license becomes \(zombie\) useless until lease time is over.
 
 ```csharp
 Private Sub dropBtn_Click(sender As Object, e As EventArgs) Handles dropBtn.Click
+    If LexFloatClient.HasLicense() <> LexFloatClient.StatusCodes.LF_OK Then
+        Return
+    End If
+
     Dim status As Integer
-    status = floatClient.DropLicense()
+    status = LexFloatClient.DropLicense()
+
     If status <> LexFloatClient.StatusCodes.LF_OK Then
-        Me.statusLabel.Text = "Error Dropping License: " + status.ToString()
-	Else
-		Me.statusLabel.Text = "License dropped successfully!"
-	End If
-    LexFloatClient.GlobalCleanUp()
+        Me.statusLabel.Text = "Error dropping license: " & status.ToString()
+        Return
+    End If
+
+    Me.statusLabel.Text = "License dropped successfully!"
 End Sub
 ```
 
@@ -117,5 +127,5 @@ The above code should be executed every time user closes the app.
 
 ## Need more help
 
-In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
+In case you need more help for adding LexFloatClient to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
 

@@ -25,36 +25,34 @@ Depending on the platform you are targeting **\(x86 or x64\)** you need to link 
 
 ### Setting product id
 
-The first LexFloatClient API function you need to use in your code is `GetHandle()`. It sets the product id of the product you will be adding licensing to. 
+The first LexFloatClient API function you need to use in your code is `SetHostProductId()`. It sets the product id of the product you will be adding licensing to. 
 
 ```c
-unsigned int handle;
-GetHandle("PASTE_PRODUCT_ID", &handle);
+SetHostProductId("PASTE_PRODUCT_ID");
 ```
 
-### Requesting license lease
+### Requesting floating license
 
-To receive a floating license, you will use `SetFloatServer()`, `SetLicenseCallback()` and `RequestLicense()`LexFloatClient API methods. It sets LexFloatServer address, callback for status notifications, contacts the server and receives the leased license.
+To receive a floating license, you will use `SetHostUrl()`, `SetFloatingLicenseCallback()` and `RequestFloatingLicense()`LexFloatClient API methods. It sets LexFloatServer address, callback for status notifications, contacts the server and receives the floating license.
 
 ```c
 int status;
-unsigned int handle;
-status = GetHandle(L"PASTE_PRODUCT_ID", &handle);
+status = SetHostProductId(L"PASTE_PRODUCT_ID");
 if(LF_OK != status)
 {
 	// handle error
 }
-status = SetFloatServer(handle, "localhost",8090);
+status = SetHostUrl("http://localhost:8090");
 if(LF_OK != status)
 {
 	// handle error
 }
-status = SetLicenseCallback(handle, LicenceRefreshCallback);
+status = SetFloatingLicenseCallback(LicenceRenewCallback);
 if(LF_OK != status)
 {
 	// handle error
 }
-status = RequestLicense(handle);
+status = RequestFloatingLicense();
 if(LF_OK != status)
 {
 	// handle error
@@ -64,43 +62,38 @@ printf("License leased successfully!");
 
 The above code can be executed every time user starts the app or needs a new license.
 
-### Renewing license lease
+### Renewing floating license
 
-License lease automatically renews itself in a background thread. When something goes wrong, Callback is invoked \(from background thread\).
+License lease automatically renews itself in a background thread. When license is renewed or it fails to renew, Callback is invoked \(from background thread\).
 
 ```c
-void LF_CC LicenceRefreshCallback(uint32_t status)
+void LF_CC LicenceRenewCallback(uint32_t status)
 {
     switch (status)
-    {
-		case LF_E_LICENSE_EXPIRED:
-			printf("The lease expired before it could be renewed.\n");
-			break;
-		case LF_E_LICENSE_EXPIRED_INET:
-			printf("The lease expired due to network connection failure.\n");
-			break;
-		case LF_E_SERVER_TIME:
-			printf("The lease expired because Server System time was modified.\n");
-			break;
-		case LF_E_TIME:
-			printf("The lease expired because Client System time was modified.\n");
-			break;
-		default:
-		    printf("The lease expired due to some other reason.\n");
-			break;
-    }
+	{
+	case LF_OK:
+		printf("The license lease has renewed successfully.\n");
+		break;
+	case LF_E_LICENSE_NOT_FOUND:
+		printf("The license expired before it could be renewed.\n");
+		break;
+	case LF_E_LICENSE_EXPIRED_INET:
+		printf("The license expired due to network connection failure.\n");
+		break;
+	default:
+		printf("The license renew failed due to other reason. Error code: %d\n", status);
+		break;
+	}
 }
 ```
 
-You would usually request for a new license if Callback gets invoked.
+### Dropping floating license
 
-### Dropping license lease
-
-When your user is done using the app, the app should send a request to free the license, thereby making it available for other users. If the app doesn't, the license becomes useless \(zombie\) until lease time is over.
+When your user is done using the app, the app should send a request to free the license, thereby making it available to other users. If the app doesn't, the license becomes useless \(zombie\) until lease time is over.
 
 ```c
 int status;
-status = DropLicense(handle);
+status = DropFloatingLicense();
 if(LF_OK != status) 
 {
 	// handle error
@@ -109,12 +102,11 @@ else
 {
     printf("Success! License dropped.");
 }
-GlobalCleanUp();
 ```
 
 The above code should be executed every time user closes the app.
 
 ## Need more help
 
-In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
+In case you need more help for adding LexFloatClient to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
 

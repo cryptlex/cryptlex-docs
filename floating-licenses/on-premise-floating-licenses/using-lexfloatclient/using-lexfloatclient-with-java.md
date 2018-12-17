@@ -42,79 +42,69 @@ In case you are creating platform specific installers, you only need to include 
 
 ### Setting product id
 
-The first LexFloatClient API function you need to use in your code is `SetProductId()`. It sets the product id of the product you will be adding licensing to. 
+The first LexFloatClient API function you need to use in your code is `SetHostProductId()`. It sets the product id of the product you will be adding licensing to. 
 
-```csharp
-LexFloatClient floatClient = new LexFloatClient();
-floatClient.SetProductId("PASTE_PRODUCT_ID");
+```java
+LexFloatClient.SetHostProductId("PASTE_PRODUCT_ID");
 ```
 
 ### Requesting license lease
 
-To receive a floating license, you will use `SetFloatServer()`, `SetLicenseCallback()` and `RequestLicense()`LexFloatClient API methods. It sets LexFloatServer address, callback for status notifications, contacts the server and receives the leased license.
+To receive a floating license, you will use `SetHostUrl()`, `SetFloatingLicenseCallback()` and `RequestFloatingLicense()`LexFloatClient API methods. It sets LexFloatServer address, callback for status notifications, contacts the server and receives the floating license.
 
 ```java
-try
-{
+try {
     CallbackEventListener eventListener = new CallbackEventListener();
-    LexFloatClient floatClient = new LexFloatClient();
-    floatClient.SetProductId("PASTE_PRODUCT_ID");
-    floatClient.SetFloatServer("localhost", (short) 8090);
-    floatClient.AddLicenseCallbackListener(eventListener);
-    floatClient.RequestLicense();
-    System.out.println("Success! License Acquired");
-} catch (LexFloatClientException ex)
-{
+    LexFloatClient.SetHostProductId("PASTE_PRODUCT_ID");
+    LexFloatClient.SetHostUrl("http://localhost:8090");
+    LexFloatClient.AddLicenseCallbackListener(eventListener);
+
+    LexFloatClient.RequestFloatingLicense();
+    System.out.println("Success! License acquired.");
+} catch (LexFloatClientException ex) {
     System.out.println(ex.getCode() + ": " + ex.getMessage());
+} catch (IOException ex) {
+    System.out.println(ex.getMessage());
 }
 ```
 
 The above code can be executed every time user starts the app or needs a new license.
 
-### Renewing license lease
+### Renewing floating license
 
-License lease automatically renews itself in a background thread. When something goes wrong, Callback is invoked \(from background thread\).
+License lease automatically renews itself in a background thread. When license is renewed or it fails to renew, Callback is invoked \(from background thread\).
 
 ```java
-class CallbackEventListener implements LicenseCallbackEvent
-{
+class CallbackEventListener implements LicenseCallbackEvent {
     @Override
-    public void LicenseCallback(int status)
-    {
-        switch (status)
-        {
-            case LexFloatClientException.LF_E_LICENSE_EXPIRED:
-                System.out.println("The lease expired before it could be renewed.");
-                break;
-            case LexFloatClientException.LF_E_LICENSE_EXPIRED_INET:
-                System.out.println("The lease expired due to network connection failure.");
-                break;
-            case LexFloatClientException.LF_E_SERVER_TIME:
-                System.out.println("The lease expired because Server System time was modified.");
-                break;
-            case LexFloatClientException.LF_E_TIME:
-                System.out.println("The lease expired because Client System time was modified.");
-                break;
-            default:
-                System.out.println("The lease expired due to some other reason.");
-                break;
+    public void LicenseCallback(int status) {
+        switch (status) {
+        case LexFloatClient.LF_OK:
+            System.out.println("The license lease has renewed successfully.");
+            break;
+        case LexFloatClientException.LF_E_LICENSE_NOT_FOUND:
+            System.out.println("The license expired before it could be renewed.");
+            break;
+        case LexFloatClientException.LF_E_LICENSE_EXPIRED_INET:
+            System.out.println("The license expired due to network connection failure.");
+            break;
+        default:
+            System.out.println("The license renew failed due to other reason. Error code: " + Integer.toString(status));
+            break;
         }
     }
 }
 ```
 
-You would usually request for a new license if callback gets invoked.
+### Dropping floating license
 
-### Dropping license lease
-
-When your user is done using the app, the app should send a request to free the license, thereby making it available for other users. If the app doesn't, the license becomes \(zombie\) useless until lease time is over.
+When your user is done using the app, the app should send a request to free the license, thereby making it available to other users. If the app doesn't, the license becomes \(zombie\) useless until lease time is over.
 
 ```java
 try
 {
-    floatClient.DropLicense();
-    System.out.println("Success! License Dropped");
-    LexFloatClient.GlobalCleanUp();
+    LexFloatClient.DropFloatingLicense();
+    System.out.println("Success! License dropped successfully.");
 } catch (LexFloatClientException ex)
 {
     System.out.println(ex.getCode() + ": " + ex.getMessage());
@@ -125,5 +115,5 @@ The above code should be executed every time user closes the app.
 
 ## Need more help
 
-In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
+In case you need more help for adding LexFloatClient to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
 

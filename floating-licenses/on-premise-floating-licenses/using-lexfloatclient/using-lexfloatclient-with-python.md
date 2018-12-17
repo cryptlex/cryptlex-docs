@@ -23,29 +23,27 @@ LexFloatClient example project for Python contains **LexFloatClient.py** file. Y
 
 ### Setting product id
 
-The first LexFloatClient API function you need to use in your code is `GetHandle()`. It sets the product id of the product you will be adding licensing to. 
-
-```cpp
-handle = ctypes.c_uint()
-status = LexFloatClient.GetHandle("PASTE_PRODUCT_ID", ctypes.byref(handle))
-```
-
-### Requesting license lease
-
-To receive a floating license, you will use `SetFloatServer()`, `SetLicenseCallback()` and `RequestLicense()`LexFloatClient API methods. It sets LexFloatServer address, callback for status notifications, contacts the server and receives the leased license.
+The first LexFloatClient API function you need to use in your code is `SetHostProductId()`. It sets the product id of the product you will be adding licensing to. 
 
 ```python
-handle = ctypes.c_uint()
-status = LexFloatClient.GetHandle("PASTE_PRODUCT_ID", ctypes.byref(handle))
+LexFloatClient.SetHostProductId("PASTE_PRODUCT_ID");
+```
+
+### Requesting floating license
+
+To receive a floating license, you will use `SetHostUrl()`, `SetFloatingLicenseCallback()` and `RequestFloatingLicense()`LexFloatClient API methods. It sets LexFloatServer address, callback for status notifications, contacts the server and receives the floating license.
+
+```python
+status = LexFloatClient.SetHostProductId("PASTE_PRODUCT_ID")
 if LexFloatClient.StatusCodes.LF_OK != status:
     # handle error
-status = LexFloatClient.SetFloatServer(handle.value, "localhost", 8090)
+status = LexFloatClient.SetHostUrl("http://localhost:8090")
 if LexFloatClient.StatusCodes.LF_OK != status:
     # handle error
-status = LexFloatClient.SetLicenseCallback(handle.value, licence_callback_fn)
+status = LexFloatClient.SetFloatingLicenseCallback(licence_callback_fn)
 if LexFloatClient.StatusCodes.LF_OK != status:
     # handle error
-status = LexFloatClient.RequestLicense(handle.value)
+status = LexFloatClient.RequestFloatingLicense()
 if LexFloatClient.StatusCodes.LF_OK != status:
     # handle error
 print("License leased successfully!")
@@ -53,41 +51,36 @@ print("License leased successfully!")
 
 The above code can be executed every time user starts the app or needs a new license.
 
-### Renewing license lease
+### Renewing floating license
 
-License lease automatically renews itself in a background thread. When something goes wrong, Callback is invoked \(from background thread\).
+License lease automatically renews itself in a background thread. When license is renewed or it fails to renew, Callback is invoked \(from background thread\).
 
 ```python
 def licence_callback(status):
-    if LexFloatClient.StatusCodes.LF_E_LICENSE_EXPIRED == status:
-        print("The lease expired before it could be renewed.")
+    if LexFloatClient.StatusCodes.LF_OK == status:
+        print("The license lease has renewed successfully.")
+    elif LexFloatClient.StatusCodes.LF_E_LICENSE_NOT_FOUND == status:
+        print("The license expired before it could be renewed.")
     elif LexFloatClient.StatusCodes.LF_E_LICENSE_EXPIRED_INET == status:
-        print("The lease expired due to network connection failure.")
-    elif LexFloatClient.StatusCodes.LF_E_SERVER_TIME == status:
-        print("The lease expired because Server System time was modified.")
-    elif LexFloatClient.StatusCodes.LF_E_TIME == status:
-        print("The lease expired because Client System time was modified.")
+        print("The license expired due to network connection failure.")
     else:
-        print("The lease expired due to some other reason: ", status)
-
+        print("The license renew failed due to other reason. Error code: ", status)
 ```
 
-You would usually request for a new license if Callback gets invoked.
+### Dropping floating license
 
-### Dropping license lease
-
-When your user is done using the app, the app should send a request to free the license, thereby making it available for other users. If the app doesn't, the license becomes useless \(zombie\) until lease time is over.
+When your user is done using the app, the app should send a request to free the license, thereby making it available to other users. If the app doesn't, the license becomes useless \(zombie\) until lease time is over.
 
 ```python
+status = LexFloatClient.DropFloatingLicense()
 if LexFloatClient.StatusCodes.LF_OK != status:
     # handle error
 print("Success! License dropped.")
-LexFloatClient.GlobalCleanUp()
 ```
 
 The above code should be executed every time user closes the app.
 
 ## Need more help
 
-In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
+In case you need more help for adding LexFloatClient to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
 
