@@ -12,7 +12,7 @@ The complete process of adding licensing to your software app has three steps:
 
 Log in to the Cryptlex [dashboard](https://app.cryptlex.com/). Click the "Products" link in the sidebar and add your first product. You will need to create a default [license policy](https://docs.cryptlex.com/license-management/license-policies) too for the product. After creating the product select the "Licenses" link in the the products table and create your first license key.
 
-### Step 2. Adding LexActivator to your Product
+### Step 2. Adding LexActivator to your software app
 
 LexActivator is the Cryptlex client library which you will use to add licensing to your product. Using this library you can easily validate the license key in your software app. It is a shared library available for all the major platforms - Windows, Mac OS X and Linux. The library can be used with almost all the programming languages. To learn more refer to:
 
