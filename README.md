@@ -1,6 +1,8 @@
 # Welcome to Cryptlex!
 
-Cryptlex lets you license your software apps effortlessly. You can easily generate license keys using our [REST API](https://api.cryptlex.com/v3/docs) or through [dashboard](https://app.cryptlex.com/) and validate the license keys in your software apps using [LexActivator](https://docs.cryptlex.com/node-locked-licenses/overview) \(Cryptlex client library\).
+Cryptlex lets you license your software apps effortlessly. You can easily generate license keys using our [REST API](https://api.cryptlex.com/v3/docs) or through [dashboard](https://app.cryptlex.com/) and validate the license keys in your software apps using [LexActivator](https://docs.cryptlex.com/node-locked-licenses/overview) \(Cryptlex client library\). 
+
+The license keys can't be shared by your users \(customers\) because they are node-locked \(locked to the machine where they are activated\), hence preventing casual piracy.
 
 ## Quick start
 
