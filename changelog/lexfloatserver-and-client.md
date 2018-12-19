@@ -4,6 +4,37 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.0.0 \(2018-12-17\) <a id="3-0-0-2018-05-03"></a>
+
+### Added <a id="added-2"></a>
+
+* **LexFloatServer:** New [/api/floating-licenses](https://docs.cryptlex.com/floating-licenses/on-premise-floating-licenses/lexfloatserver#getting-list-of-floating-licenses) endpoint to get the list of leased floating licenses.
+* **LexFloatServer**: [Leasing strategy](https://docs.cryptlex.com/license-management/license-policies#leasing-strategy) can be set for the server to configure the behaviour of leasing floating licenses.
+* **LexFloatServer**: [Lease duration](https://docs.cryptlex.com/license-management/license-policies#lease-duration) in the config can be overridden using `leaseDuration` property of license.
+* **LexFloatServer:** Improved error and request logging.
+* **LexFloatServer**: Server error codes like server license expired, suspended, grace period over etc. are now sent to clients too.
+* **LexFloatServer**: Lot of bug fixes and core improvements.
+* **LexFloatClient:** `SetFloatingClientMetadata()` and `GetHostLicenseExpiryDate()` API functions
+
+### Changed <a id="changed"></a>
+
+* **LexFloatServer:** Updated stats API endpoint, for details check [docs](https://docs.cryptlex.com/floating-licenses/on-premise-floating-licenses/lexfloatserver#getting-server-stats)​
+* **LexFloatServer:** Minimum supported LexFloatClient version is `v4.0.0.`
+* **LexFloatClient:** All status codes have been updated.
+* **LexFloatClient**: Header file and samples for all languages on Github have been updated.
+* **LexFloatClient:** Renamed`GetHandle()` function to `SetHostProductId()`
+* **LexFloatClient:** Renamed `SetFloatingServer()` function to `SetHostUrl()`
+* **LexFloatClient:** Renamed `SetLicenseCallback()` function to `SetFloatingLicenseCallback()`
+* **LexFloatClient:** Renamed `GetLicenseMetadata()` function to `GetHostLicenseMetadata()`
+* **LexFloatClient:** Renamed `RequestLicense()` function to `RequestFloatingLicense()`
+* **LexFloatClient:** Renamed `DropLicense()` function to `DropFloatingLicense()`
+* **LexFloatClient:** Renamed `HasLicense()` function to `HasFloatingLicense()`
+
+### Deleted <a id="deleted"></a>
+
+* **LexFloatClient:** `FindHandle()` function
+* **LexFloatClient:** `GlobalCleanup()` function
+
 ## 3.0.2 \(2018-09-10\)
 
 ### Added

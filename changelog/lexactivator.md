@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.3.1 \(2018-12-17\)
+
+### Fixed
+
+* A bug preventing changing of permission flag from LA\_SYSTEM to LA\_USER when former is set first.
+
 ## 3.3.0 \(2018-09-12\)
 
 ### Added
