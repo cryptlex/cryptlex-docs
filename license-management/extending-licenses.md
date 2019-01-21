@@ -1,22 +1,12 @@
-# Renewing Licenses
+# Extending Licenses
 
-## Understanding license expiry
+## Extending license expiry
 
-Whenever you create a license with validity say 30 days, you will see a property in the license resource named `expiresAt`. It is a read only, computed property and determines the time when license will expire.
+Renewing a license extends the license expiry by it's validity. In case you want to extend the license expiry by some other duration you need to hit the [license extend endpoint](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdExtendPost). It extends the license expiry by provided extension length.
 
-If the license expiration strategy for license \(or it's policy\) is set to `immediate`, `expiresAt` property will be populated with the date on which license will expire starting from the time when license was created.
-
-If the license expiration strategy for license \(or it's policy\) is set to `delayed`, `expiresAt` property will be `null` till license is activated, as license will start expiring after it is used.
-
-If the license expiration strategy for license \(or it's policy\) is set to `rolling`, `expiresAt` property will always be `null` as license expiry is specific to each activation. In this case you can refer to `expiresAt` property of license activation.
-
-## Renewing license expiry
-
-To renew the license subscription you need to hit the [license renew endpoint](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdRenewPost). It extends the license expiry by it's validity.
-
-{% api-method method="post" host="https://api.cryptlex.com" path="/v3/licenses/:id/renew" %}
+{% api-method method="post" host="https://api.cryptlex.com" path="/v3/licenses/:id/extend" %}
 {% api-method-summary %}
-Renewing license
+Extending license
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -36,6 +26,12 @@ Unique identifier for the license.
 Bearer access token.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="extensionLength" type="string" required=true %}
+License extension duration to extend the license expiry.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}

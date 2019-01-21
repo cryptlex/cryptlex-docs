@@ -1,4 +1,4 @@
-# Using LexFloatClient with C, C++ & Objective C
+# Using LexFloatClient with Python
 
 First of all, login to your Cryptlex account and download LexFloatClient library for Windows, MacOS or Linux:
 
@@ -6,58 +6,47 @@ First of all, login to your Cryptlex account and download LexFloatClient library
 * [Download LexFloatClient for MacOS](https://app.cryptlex.com/downloads)
 * [Download LexFloatClient for Linux](https://app.cryptlex.com/downloads)
 
-The above download package contains the library \(shared as well as static\) which you will be using to add licensing to your app.
+The above download package contains the library which you will be using to add licensing to your app.
 
 ## Adding licensing to your app
 
 After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
 
 * Note the product id for the product.
-* Download the example project from [Github](https://github.com/cryptlex/lexfloatclient-c).
+* Download the example project from [Github](https://github.com/cryptlex/lexfloatclient-python)
 
 Product id is the identifier of your product which is to be used in the code. The product id of the LexFloatServer and LexFloatClient must match.
 
 ### Adding library to your app
 
-LexFloatClient example project for C contains the **LexFloatClient.h** header file. In addition to that it includes **LexFloatClient.lib** file required in case of Windows. It contains all the LexFloatClient API functions needed to add licensing to your app.
-
-Depending on the platform you are targeting **\(x86 or x64\)** you need to link the respective LexFloatClient.dll with your application.
+LexFloatClient example project for Python contains **LexFloatClient.py** file. You will need to add this file to your Python project. It contains all the LexFloatClient API functions needed to add licensing to your app. Depending on the OS you are targeting you need to copy the respective LexFloatClient.dll, libLexFloatClient.so or libLexFloatClient.dylib to your project.
 
 ### Setting product id
 
 The first LexFloatClient API function you need to use in your code is `SetHostProductId()`. It sets the product id of the product you will be adding licensing to. 
 
-```c
-SetHostProductId("PASTE_PRODUCT_ID");
+```python
+LexFloatClient.SetHostProductId("PASTE_PRODUCT_ID");
 ```
 
 ### Requesting floating license
 
 To receive a floating license, you will use `SetHostUrl()`, `SetFloatingLicenseCallback()` and `RequestFloatingLicense()`LexFloatClient API methods. It sets LexFloatServer address, callback for status notifications, contacts the server and receives the floating license.
 
-```c
-int status;
-status = SetHostProductId(L"PASTE_PRODUCT_ID");
-if(LF_OK != status)
-{
-	// handle error
-}
-status = SetHostUrl("http://localhost:8090");
-if(LF_OK != status)
-{
-	// handle error
-}
-status = SetFloatingLicenseCallback(LicenceRenewCallback);
-if(LF_OK != status)
-{
-	// handle error
-}
-status = RequestFloatingLicense();
-if(LF_OK != status)
-{
-	// handle error
-}
-printf("License leased successfully!");
+```python
+status = LexFloatClient.SetHostProductId("PASTE_PRODUCT_ID")
+if LexFloatClient.StatusCodes.LF_OK != status:
+    # handle error
+status = LexFloatClient.SetHostUrl("http://localhost:8090")
+if LexFloatClient.StatusCodes.LF_OK != status:
+    # handle error
+status = LexFloatClient.SetFloatingLicenseCallback(licence_callback_fn)
+if LexFloatClient.StatusCodes.LF_OK != status:
+    # handle error
+status = LexFloatClient.RequestFloatingLicense()
+if LexFloatClient.StatusCodes.LF_OK != status:
+    # handle error
+print("License leased successfully!")
 ```
 
 The above code can be executed every time user starts the app or needs a new license.
@@ -66,42 +55,27 @@ The above code can be executed every time user starts the app or needs a new lic
 
 License lease automatically renews itself in a background thread. When license is renewed or it fails to renew, Callback is invoked \(from background thread\).
 
-```c
-void LF_CC LicenceRenewCallback(uint32_t status)
-{
-    switch (status)
-	{
-	case LF_OK:
-		printf("The license lease has renewed successfully.\n");
-		break;
-	case LF_E_LICENSE_NOT_FOUND:
-		printf("The license expired before it could be renewed.\n");
-		break;
-	case LF_E_LICENSE_EXPIRED_INET:
-		printf("The license expired due to network connection failure.\n");
-		break;
-	default:
-		printf("The license renew failed due to other reason. Error code: %d\n", status);
-		break;
-	}
-}
+```python
+def licence_callback(status):
+    if LexFloatClient.StatusCodes.LF_OK == status:
+        print("The license lease has renewed successfully.")
+    elif LexFloatClient.StatusCodes.LF_E_LICENSE_NOT_FOUND == status:
+        print("The license expired before it could be renewed.")
+    elif LexFloatClient.StatusCodes.LF_E_LICENSE_EXPIRED_INET == status:
+        print("The license expired due to network connection failure.")
+    else:
+        print("The license renew failed due to other reason. Error code: ", status)
 ```
 
 ### Dropping floating license
 
 When your user is done using the app, the app should send a request to free the license, thereby making it available to other users. If the app doesn't, the license becomes useless \(zombie\) until lease time is over.
 
-```c
-int status;
-status = DropFloatingLicense();
-if(LF_OK != status) 
-{
-	// handle error
-}
-else 
-{
-    printf("Success! License dropped.");
-}
+```python
+status = LexFloatClient.DropFloatingLicense()
+if LexFloatClient.StatusCodes.LF_OK != status:
+    # handle error
+print("Success! License dropped.")
 ```
 
 The above code should be executed every time user closes the app.

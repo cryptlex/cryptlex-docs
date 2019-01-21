@@ -4,6 +4,67 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.3.1 \(2018-12-17\)
+
+### Fixed
+
+* A bug preventing changing of permission flag from LA\_SYSTEM to LA\_USER when former is set first.
+
+## 3.3.0 \(2018-09-12\)
+
+### Added
+
+* `GenerateOfflineTrialActivationRequest()` and `ActivateTrialOffline()` functions to allow for offline trial activations.
+
+### Updated <a id="updated"></a>
+
+* Wrappers for languages have been updated with `GenerateOfflineTrialActivationRequest()` and `ActivateTrialOffline()`  API functions. Please update your wrappers using the latest code on [Github](https://github.com/cryptlex).
+
+## 3.2.0 \(2018-08-20\)
+
+### Added
+
+* `GetLicenseType()` function to get the license type \(node-locked or hosted-floating\).
+
+### Updated
+
+* Wrappers for languages have been updated with `GetLicenseType()` API function. Please update your wrappers using the latest code on [Github](https://github.com/cryptlex).
+
+## 3.1.0 \(2018-08-06\)
+
+### Added
+
+* Support for clock offset property set for the licenses in the dashboard, which can be used to allow license and trial activations on machines where system clocks run behind the network time.
+
+### Changed
+
+* Time tampering detection threshold has been increased to around one hour to allow for daylight savings and minor changes in the system time.
+* On time tampering detection instead of returning `LA_E_TIME` it now returns `LA_E_TIME_MODIFIED`. 
+
+  Now `LA_E_TIME` is returned only when the system time is behind the network time by more than the allowed clock offset.
+
+### Updated
+
+* Wrappers for languages have been updated with `LA_E_TIME_MODIFIED` status code. Please update your wrappers using the latest code on [Github](https://github.com/cryptlex).
+
+## 3.0.5 \(2018-07-21\)
+
+### Fixed
+
+* A bug causing causing crash on few Windows machines, with WMIC service not running.
+
+## 3.0.4 \(2018-07-18\)
+
+### Fixed
+
+* A bug causing causing crash on Linux, if license is deleted server side.
+
+## 3.0.3 \(2018-06-14\)
+
+### Fixed
+
+* A bug causing insufficient system permissions error on first run on Linux.
+
 ## 3.0.2 \(2018-05-30\)
 
 ### Fixed

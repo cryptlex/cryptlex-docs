@@ -1,16 +1,14 @@
----
-description: >-
-  You can easily create licenses through dashboard but it will be most of the
-  times done using the web API, when your customer makes the purchase.
----
-
 # Creating Licenses
 
 ## Creating a license
 
-A license inherits all it's properties from the license policy attached to it's product. So a license can be created by hitting the license API endpoint with an empty body - `{}` too.
+A license inherits all it's properties from the default license policy attached to it's product. But you may way want to override some properties like `allowedActivations`, `validity`, add some `metadata` etc. You can check out all the properties in the web API [reference page](https://api.cryptlex.com/v3/docs#operation/V3LicensesPost). 
 
-But you may way want to override some properties like `allowedActivations`, `validity`, add some `metadata` etc. You can check out all the properties in the web API [reference page](https://api.cryptlex.com/v3/docs#operation/V3LicensesPost). Following is a sample request which you will usually make to create a license:
+{% hint style="info" %}
+You can also override the default license policy by providing the `licensePolicyId` at the time of creating a license.
+{% endhint %}
+
+Following is a sample request which you will usually make to create a license:
 
 {% api-method method="post" host="https://api.cryptlex.com" path="/v3/licenses" %}
 {% api-method-summary %}

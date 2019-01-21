@@ -1,7 +1,3 @@
----
-description: This is a migration guide for Cryptlex v2.x customers.
----
-
 # Migrating from Cryptlex v2.x
 
 ## FAQ
@@ -29,11 +25,11 @@ No, you need to create a new account for using Cryptlex v3.x. You can signup for
 
 ### How long do you plan to support Cryptlex v2.x?
 
-We are planning to support it for one year \(upto May 2019\), after which you won't be allowed to create more products, product versions and product keys.
+We are planning to support it for one year \(**upto May 10, 2019**\), after which you won't be allowed to create more products and product versions.
 
 ### What about our existing customers who will still be using Cryptlex v2.x after one year?
 
-Don't worry updates in existing product keys, activations and deactivations will still work after one year. Cryptlex v2.x won't be retired unless we record zero traffic on Cryptlex v2.x servers.
+Don't worry updates in existing product keys, activations and deactivations will still work after one year. The tentative date for completely turning off Cryptlex v2.x API is **May 10, 2021**.
 
 ### Do our customers need to reactivate when we integrate LexActivator v3.x or upgrade to LexFloatServer v3.x?
 
@@ -80,7 +76,7 @@ You can now easily integrate Cryptlex with third party apps and take actions whe
 Cryptlex v2.x allowed for storing custom fields with your licenses. This has been replaced with metadata which can be stored along with your products, licenses, users, activations and trial activations.
 
 {% hint style="info" %}
-You can use product metadata to easily detect software updates in your app by storing your release version. After trial or license activation product metadata can be accessed in your app.
+You can use product metadata to easily detect software updates \(if not using [Release API](https://docs.cryptlex.com/release-management)\) in your app by storing your release version. After trial or license activation product metadata can be accessed in your app.
 {% endhint %}
 
 ### Analytics
@@ -101,19 +97,21 @@ To keep it short we won't be discussing all the features, if you have any querie
 
 You can easily export the license keys in csv format from the Cryptlex v2.x dashboard. The exported csv data needs to be processed a bit before it can be imported into Cryptlex v3.x. It looks as follows:
 
-`"Key ID", "Product Key", "Email", "Status", "Expires On", "Total Activations", "Used Activations", "Total Deactivations", "Used Deactivations", "Creation Date", "Custom Fields", "Activation Location","Activation Date","Activation Extra Data","Activation OS"`
+`"Key ID", "Product Key", "Email", "Status", "Expires On", "Total Activations", "Used Activations", "Total Deactivations", "Used Deactivations", "Validity", "Creation Date", "Custom Fields", "Activation Location","Activation Date","Activation Extra Data","Activation OS"`
 
  Remove the fields which can't be imported so it will become:
 
-`"Product Key", "Email", "Total Activations", "Total Deactivations","Custom Fields"`
+`"Product Key", "Email", "Total Activations", "Total Deactivations", "Validity", "Creation Date", "Custom Fields"`
 
 Rename the fields as per the new schema:
 
-`"key", "email", "allowedActivations", "allowedDeactivations","Custom Fields"`
+`"key", "email", "allowedActivations", "allowedDeactivations", "validity", "createdAt", "Custom Fields"`
 
-Each custom field should be added as a separate field, assuming you had stored order\_id_,_ first\_name_,_      last\_name:
+Multiply each entry in `validity` column by `86500` to convert it to seconds.
 
-`"key", "email", "allowedActivations", "allowedDeactivations","order_id", "first_name", "last_name"`
+Each **custom field** should be added as a separate field, assuming you had stored `order_id`_,_ `first_name`_,_  `last_name`:
+
+`"key", "email", "allowedActivations", "allowedDeactivations", "validity", "createdAt", "order_id", "first_name", "last_name"`
 
 ### Importing CSV data into Cryptlex v3.x
 
@@ -126,6 +124,10 @@ The script invokes Cryptlex v3.x Web API, so you will need an access token to us
 `license:read`, `license:write`, `user:read`, `user:write`
 
 In case you need more help, we'll be glad to help you make the transition. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Importing%20CSV).
+
+{% hint style="info" %}
+You can also share your exported CSV file with us, in case you want us to handle the transition.
+{% endhint %}
 
 
 

@@ -1,8 +1,7 @@
 ---
 description: >-
-  Using webhooks you can subscribe to events, that happen within your Cryptlex
-  account. When one of those events is triggered, we'll send an HTTP POST
-  payload to the webhook's configured URL.
+  A Webhook (HTTP callback) is an HTTP POST that occurs when some event occurs
+  in your Cryptlex account; a simple event-notification via HTTP POST.
 ---
 
 # Webhooks
@@ -46,10 +45,10 @@ Whether webhook should be triggered or not, you can use it to disable a webhook.
 Each event type has a specific payload format with the relevant event information. Additionally, the signature generated using **HMAC256** algorithm is included in **"Webhook-Signature"** header. A typical payload will have a following structure:
 
 ```javascript
-POST /payload HTTP/1.1
-Content-Type:	application/json; charset=utf-8
-Content-Length:	661
-Webhook-Signature:	Bb3jMWkC1DOqEv5fAOsqwkKH7r57w9o8fZ3Jg72lNk0=
+POST /webhook-endpoint HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Content-Length: 661
+Webhook-Signature: Bb3jMWkC1DOqEv5fAOsqwkKH7r57w9o8fZ3Jg72lNk0=
 
 {
   "event": "license.created",

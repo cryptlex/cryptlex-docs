@@ -6,7 +6,7 @@ First of all, login to your Cryptlex account and download LexActivator library f
 
 The above download package contains the library which you will be using to add licensing to your app.
 
-## Adding licensing to your app {#adding-licensing-to-your-app}
+## Adding licensing to your app <a id="adding-licensing-to-your-app"></a>
 
 After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
 
@@ -16,7 +16,7 @@ After you've added a product for your app in the dashboard, go to the product pa
 
 Product.dat contains product data which is used by LexActivator. Product id is the identifier of your product which is to be used in the code.
 
-### Adding library to your app {#adding-library-to-your-app}
+### Adding library to your app <a id="adding-library-to-your-app"></a>
 
 LexActivator example project for VB.NET contains **LexActivator.vb** file. You will need to add this file to your VB.NET project. It contains all the LexActivator API functions needed to add licensing to your app.
 
@@ -26,7 +26,7 @@ Depending on the platform you are targeting **\(x86, x64 or AnyCPU\)** you need 
 In case you choose **AnyCPU** Platform, you will need to copy both x86 LexActivator.dll and x64 LexActivator.dll \(renamed as LexActivator64.dll\) to your project. Additionally, you will have to add \(uncomment\) `LA_ANY_CPU = 1` custom constant in **LexActivator.vb** file.
 {% endhint %}
 
-### Setting product.dat file and product Id {#setting-product.dat-file-and-product-id}
+### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 
 The first thing you need to do is either embed the Product.dat file in your app using `SetProductData()` function or set the absolute path of the file using `SetProductFile()` function.
 
@@ -39,7 +39,7 @@ LexActivator.SetProductId("PASTE_PRODUCT_ID", LexActivator.PermissionFlags.LA_US
 
 If your app requires admin \(root\) privileges to run \(e.g. services, daemons etc.\), instead of passing   `LexActivator.PermissionFlags.LA_USER` flag, you need to pass `LexActivator.PermissionFlags.LA_SYSTEM` flag.
 
-### License activation {#license-activation}
+### License activation <a id="license-activation"></a>
 
 To activate the license in your app using the license key, you will use `ActivateLicense()` LexActivator API function. It invokes the `/v3/activations` Cryptlex Web API endpoint, verifies the encrypted and digitally signed response to validate the license.
 
@@ -67,7 +67,7 @@ End Sub
 
 The above code should be executed at the time of license activation.
 
-### Verifying license activation {#verifying-license-activation}
+### Verifying license activation <a id="verifying-license-activation"></a>
 
 Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this you need to use `IsLicenseGenuine()` LexActivator API function.
 
@@ -98,7 +98,7 @@ End Sub
 
 The above code should be executed every time user starts the app. After verifying locally, it schedules a periodic server check in a separate thread.
 
-## Need more help {#need-more-help}
+## Need more help <a id="need-more-help"></a>
 
 In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
 

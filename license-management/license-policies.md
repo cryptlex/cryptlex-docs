@@ -1,7 +1,7 @@
 ---
 description: >-
-  License policies help you in implementing licensing models as per your
-  business requirements.
+  License policies act as templates for the licenses you create for your
+  products.
 ---
 
 # License Policies
@@ -12,7 +12,7 @@ You can easily create a license policy through dashboard. Go to the [license pol
 
 #### Name
 
-This name of the license policy.
+The name of the license policy.
 
 #### Validity
 
@@ -27,19 +27,35 @@ To create a **perpetual** license set the validity to zero and for **subscriptio
 There are three types of licenses:
 
 * **Node locked:** This is the default type which locks the license to the machine.
-* **Floating:** This type is used for created a hosted floating license.
+* **Hosted Floating:** This type is used for creating a hosted floating license.
 * **On-Premise floating:** This ****type is used for creating an on-premise floating license.
 
 #### Lease duration
 
-This option is valid for **floating** license type only. It sets the duration for which you want to lease the floating license.
+This option is valid for **hosted-floating** and **on-premise-floating** license types only. It sets the duration for which you want to lease the floating license.
+
+{% hint style="info" %}
+In case of **hosted-floating** license type,  if you want license lease to auto renew then ensure that the **server sync interval is less than lease duration** by a difference of around 30 seconds.
+{% endhint %}
+
+{% hint style="info" %}
+In case of **on-premise** license type, lease duration can be set to 0 to honour the lease duration set in LexFloatServer config file.
+{% endhint %}
+
+#### Leasing Strategy
+
+This option is valid for **on-premise-floating** license type only. It allows for following strategies:
+
+**Per-Machine:** Each machine will only lease a single floating license, irrespective of the number of floating client instances being run on the machine.
+
+**Per-Instance:** Each instance of the floating client will lease a separate floating license, irrespective of whether the instances are running on a single machine or different machines.
 
 #### Allowed floating clients
 
-This option is valid for **on-premise** **floating** license type only. It sets the maximum number of concurrent clients which can lease the license from the server.
+This option is valid for **on-premise** **floating** license type only. It sets the maximum number of concurrent clients which can lease the floating license from the server.
 
 {% hint style="info" %}
-For hosted floating licenses, the the maximum number of concurrent clients which can lease the license from the server is determined by **allowedActivations** property
+For hosted floating licenses, the maximum number of concurrent clients which can lease the license from the server is determined by **allowedActivations** property
 {% endhint %}
 
 #### Allowed activations
@@ -48,15 +64,23 @@ Allowed number of activations \(seats\) for the license. If you allow \(say\) 10
 
 #### Allowed deactivations
 
-Allowed number of deactivations for the license. This setting is ignored for floating licenses.
+Allowed number of deactivations for the license. This setting is ignored for **hosted-floating** licenses.
 
 #### Server sync interval
 
-Whenever the application starts, the server sync occurs immediately. This setting determines the interval for further server syncs if the application is not closed.
+Whenever the application starts \(and `IsProductGenuine()` is called first time\), the server sync occurs immediately in a separate thread. This setting determines the interval for further server syncs till the application is not closed.
+
+{% hint style="info" %}
+The minimum allowed server sync interval upto STARTUP plan is 3600 seconds, and for higher plans it is 180 seconds. It is highly recommended to set it to 3600 or greater unless required.
+{% endhint %}
 
 #### Server sync grace period
 
 The duration for which the server sync failure due to network error is acceptable.
+
+#### Allowed clock offset
+
+The allowed difference between the network time and the system time. This can be used to allow license activations on machines where system clocks run behind the network time.
 
 #### Expiration strategy
 

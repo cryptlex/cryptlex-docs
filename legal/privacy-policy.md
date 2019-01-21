@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Cryptlex \(Cryptlex, LLC\) provides a software licensing service through a Software as a Service \(SaaS\) model. This privacy policy explains how Cryptlex processes and protects information that can be used to directly or indirectly identify an individual \(“Personal Data”\) collected through use of all the products and services offered by Cryptlex.
+Cryptlex \(Cryptlex, LLC\) provides a software licensing service through a Software as a  Service \(SaaS\) model. This privacy policy explains how Cryptlex processes and protects information that can be used to directly or indirectly identify an individual \(“Personal Data”\) collected through use of all the products and services offered by Cryptlex.
 
 For the purposes of this policy, Cryptlex defines the term “User” as an entity who registers for our services through our website or an individual whose data you \(our customer\) collect and store using our services and the term “Visitor” as an individual that visits our website \(e.g. https://cryptlex.com\).
 
@@ -50,7 +50,7 @@ Information in this category includes the information you provide when registeri
 
 **1.2.1.2 Personal information stored in third party services**
 
-* Name and email \(through Hubspot, MailChimp and Drift\)
+* Name and email \(through Hubspot, MailChimp and Intercom\)
 * Company name \(through Hubspot\)
 * Links to social media profiles \(through Hubspot\)
 * Credit card information \(securely stored within Stripe\)
@@ -112,6 +112,16 @@ If you are our User, we process your Personal Data based on your consent, and ba
 
 Cryptlex has a “Data Protection Officer” who is responsible for matters relating to privacy and data protection. This “Data Protection Officer” can be contacted through email at [legal@cryptlex.com](mailto:legal@cryptlex.com).
 
+#### 1
+
+Chttps
+
+​
+
+I
+
+Cryptlex
+
 ## 2. Data security
 
 Cryptlex is committed to ensuring that your privacy and the data you share with us is protected. We use best industrial practices to secure and protect  the important business data you store within Cryptlex. 
@@ -132,7 +142,39 @@ We assume that all visitors of our website, and users of Cryptlex’s services h
 
 We will reveal a user’s personal information without his/her prior permission only when we have reason to believe that the disclosure of this information is required to establish the identity of, to contact or to initiate legal proceedings against a person or persons who are suspected of infringing rights or property belonging to Cryptlex or to others who could be harmed by the user’s activities or of persons who could \(deliberately or otherwise\) transgress upon these rights and property. We are permitted to disclose personal information when we have good reason to believe that this is legally required.
 
-## 6. For further information
+## 6. Rights of access, rectification and erasure
+
+You may inquire as to whether Cryptlex is processing personal information about you, request access to personal information, and ask that we correct, amend or delete your personal information where it is inaccurate or if you believe that your personal information has been processed in violation of the Privacy Shield Principles. Where otherwise permitted by applicable law, you may send an email to [legal@cryptlex.com](mailto:legal@cryptlex.com) or use any of the methods set out in this Privacy Policy to request access to, receive \(port\), seek rectification, or request erasure of personal Information held about you by Cryptlex. Please include your full name, email address associated with your account, and a detailed description of your data request. Such requests will be processed in line with local laws.
+
+Although Cryptlex makes good faith efforts to provide Individuals with access to their Personal Information, there may be circumstances in which Cryptlex is unable to provide access, including but not limited to: where the information contains legal privilege, would compromise others’ privacy or other legitimate rights, where the burden or expense of providing access would be disproportionate to the risks to the Individual’s privacy in the case in question or where it is commercially proprietary. If Cryptlex determines that access should be restricted in any particular instance, we will provide you with an explanation of why that determination has been made and a contact point for any further inquiries. To protect your privacy, Cryptlex will take commercially reasonable steps to verify your identity before granting access to or making any changes to your personal information.
+
+## 7. Opt-Out \(Right To Restrict Processing\)
+
+### 7.1 General
+
+You have the right to opt-out of certain uses and disclosures of your personal information. Where you have consented to Cryptlex's processing of your personal information, you may withdraw that consent at any time and opt-out to further processing by contacting us at [legal@cryptlex.com](mailto:legal@cryptlex.com). Even if you opt-out, we may still collect and use non-personal information regarding your activities on our site.
+
+### 7.2 Email communications
+
+If you receive an unwanted email from us, you can use the unsubscribe link found at the bottom of the email to opt-out of receiving future emails. We will process your request within a reasonable time after receipt. Note that you will continue to receive transaction-related emails regarding products or services you have requested. We may also send you certain non-promotional communications regarding Cryptlex and our services and you will not be able to opt-out of those communications \(e.g., communications regarding updates to our Terms or this Privacy Policy\).
+
+WE MAINTAIN “DO-NOT-MAIL” LISTS AS MANDATED BY LAW. WE PROCESS REQUESTS TO BE PLACED ON DO-NOT-MAIL AND DO-NOT-CONTACT LISTS WITHIN 60 DAYS AFTER RECEIPT, OR SUCH SHORTER TIME AS MAY BE REQUIRED BY LAW.
+
+## 4. Onward **t**ransfer - Cryptlex may disclose your information
+
+#### 4.1 Information we share <a id="4-1-information-we-share"></a>
+
+We may share your information as described in this Privacy Policy \(e.g., with our Third-Party service providers; to comply with legal obligations; to protect and defend our rights and property\) or with your permission.
+
+* **We use vendors and service providers.** We may share any information we receive with vendors and service providers. The types of service providers to whom we entrust personal information include service providers for: \(i\) provision of IT and related services; \(ii\) provision of information and services you have requested; \(iii\) payment processing; \(iv\) customer service activities; and \(v\) in connection with the provision of the Site. 
+* **Privacy Shield.** With respect to onward transfers to Agents under Privacy Shield, Privacy Shield requires that Cryptlex remain liable should its Agents process personal information in a manner inconsistent with the Privacy Shield Principles.
+* **Disclosures to protect us or others \(e.g., as Required by law and similar disclosures\).** We may access, preserve, and disclose your Personal Information, other account information, and content if we believe doing so is required or appropriate to: \(i\) comply with law enforcement or national security requests and legal process, such as a court order or subpoena; \(ii\) respond to your requests; \(iii\) protect yours’, ours’ or others’ rights, property, or safety; \(iv\) to enforce Cryptlex policies or contracts; \(v\) to collect amounts owed to Cryptlex; \(vi\) when we believe disclosure is necessary or appropriate to prevent physical harm or financial loss or in connection with an investigation or prosecution of suspected or actual illegal activity; or \(vii\) if we, in good faith, believe that disclosure is otherwise necessary or advisable.
+
+  In addition, from time to time, server logs may be reviewed for security purposes – e.g., to detect unauthorized activity on the Services. In such cases, server log data containing IP addresses may be shared with law enforcement bodies in order that they may identify users in connection with their investigation of the unauthorized activities.
+
+* **Merger, sale, or other asset transfers.** If we are involved in a merger, acquisition, financing due diligence, reorganisation, bankruptcy, receivership, sale of company assets, or transition of service to another provider, then your information may be sold or transferred as part of such a transaction as permitted by law and/or contract. In such event, Cryptlex will endeavour to direct the transferee to use personal information in a manner that is consistent with the Privacy Policy in effect at the time such personal information was collected.
+
+## 8. For further information
 
 If you have any further questions regarding the data Cryptlex collects, or how we use it, then please feel free to contact us by email at: [legal@cryptlex.com](mailto:legal@cryptlex.com)
 

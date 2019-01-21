@@ -1,0 +1,2 @@
+# Node Locked Licenses
+

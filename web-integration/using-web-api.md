@@ -1,9 +1,3 @@
----
-description: >-
-  Easily integrate Cryptlex Web API with your payment processors and other third
-  party apps.
----
-
 # Using Web API
 
 ## Order automation 
