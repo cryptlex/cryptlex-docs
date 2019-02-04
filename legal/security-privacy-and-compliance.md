@@ -14,7 +14,7 @@ Cryptlex maintains a number of certifications to further strengthen our trust wi
 
 ### EU/US Privacy Shield
 
-Under process.
+Cryptlex complies with the EU/U.S. Privacy Shield Framework as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal information transferred from the European Union to the United States. Cryptlex has certified to the Department of Commerce that it adheres to the Privacy Shield Principles. Please see our [Privacy Policy](https://docs.cryptlex.com/legal/privacy-policy#1-2-4-privacy-shield) for details.
 
 ### EU GDPR
 
