@@ -1,9 +1,3 @@
----
-description: >-
-  Each release gets it's own unique download link which is secured using license
-  key or access token.
----
-
 # Distributing Releases
 
 ## Downloading a release

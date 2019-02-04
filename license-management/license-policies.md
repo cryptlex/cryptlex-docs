@@ -1,9 +1,3 @@
----
-description: >-
-  License policies act as templates for the licenses you create for your
-  products.
----
-
 # License Policies
 
 ## Creating a license policy

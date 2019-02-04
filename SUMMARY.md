@@ -65,4 +65,11 @@
   * [Subprocessors](legal/subprocessors.md)
   * [Data Processing Addendum](legal/data-processing-addendum.md)
   * [Security, Privacy, and Compliance](legal/security-privacy-and-compliance.md)
+* [Cryptlex On-premise](cryptlex-on-premise/README.md)
+  * [Overview](cryptlex-on-premise/overview.md)
+  * [Installation Guide](cryptlex-on-premise/installation-guide.md)
+  * [System Requirements](cryptlex-on-premise/system-requirements.md)
+  * [Configuring Client Libraries](cryptlex-on-premise/configuring-client-libraries.md)
+  * [Monitoring and Error Reporting](cryptlex-on-premise/monitoring-your-instance.md)
+  * [SSL Termination](cryptlex-on-premise/ssl-termination.md)
 
