@@ -6,7 +6,7 @@ At the time of license creation you should do the following to configure the flo
 
 * Set the license type to **"hosted-floating".**
 * Set the lease duration to the amount of time you want to lease the licenses.
-* Make sure server sync interval is less than lease duration, as server sync is responsible for licence renewal.
+* Make sure server sync interval is less than lease duration, as server sync is responsible for license renewal.
 
 ## Adding floating licensing to your app
 
