@@ -2,7 +2,7 @@
 
 Cryptlex lets you license your software apps effortlessly. You can easily generate license keys using our [REST API](https://api.cryptlex.com/v3/docs) or through [dashboard](https://app.cryptlex.com/) and validate the license keys in your software apps using [LexActivator](https://docs.cryptlex.com/node-locked-licenses/overview) \(Cryptlex client library\). 
 
-The license keys can't be shared by your users \(customers\) because they are node-locked \(locked to the machine where they are activated\), hence preventing casual piracy.
+The license keys can't be shared by your customers because they are node-locked \(locked to the machine where they are activated\), hence preventing casual piracy.
 
 ## Quick start
 
@@ -10,7 +10,7 @@ The complete process of adding licensing to your software app has three steps:
 
 ### Step 1. Add a product in Cryptlex
 
-Log in to the Cryptlex [dashboard](https://app.cryptlex.com/). Click the "Products" link in the sidebar and add your first product. You will need to create a default [license policy](https://docs.cryptlex.com/license-management/license-policies) too for the product. After creating the product select the "Licenses" link in the the products table and create your first license key.
+Log in to the Cryptlex [dashboard](https://app.cryptlex.com/). Click the "Products" link in the sidebar and add your first product. You will need to create a default [license policy](https://docs.cryptlex.com/license-management/license-policies) too for the product. After creating the product select the "Licenses" link in the products table and create your first license key.
 
 ### Step 2. Adding LexActivator to your software app
 
