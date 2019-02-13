@@ -8,7 +8,7 @@ description: Connect your applications to Cryptlex On-premise.
 
 By default, LexActivator will send license and trial activation requests to **api.cryptlex.com**_._
 
-You’ll need to configure your applications to send license and trial activation requests to your On-premise installation, at the hostname/port you configured for the Cryptlex Web API server endpoint.
+You’ll need to configure your applications to send license and trial activation requests to your On-premise installation, at the hostname:port you configured for the Cryptlex Web API server endpoint.
 
 For example, in C/C++ applications:
 
@@ -35,7 +35,7 @@ Similarly you can use the `SetCryptlexHost()` LexActivator API function for othe
 
 ## LexFloatServer
 
-By default, LexFloatServer will send it's own license activation request to **api.cryptlex.com**_._ 
+By default, LexFloatServer will send its own license activation request to **api.cryptlex.com**_._ 
 
 In __order to configure LexFloatServer to send license activation requests to your On-premise installation, you should pass the "**-cryptlexhost"** option along with the other options.
 
