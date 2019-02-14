@@ -34,6 +34,7 @@
     * [Using LexActivator with Ruby](node-locked-licenses/using-lexactivator/using-lexactivator-with-ruby.md)
   * [Using Web API](node-locked-licenses/using-web-api.md)
   * [Offline Activations](node-locked-licenses/offline-activations.md)
+  * [Proxies and Firewall](node-locked-licenses/proxies-and-firewall.md)
 * [Floating Licenses](floating-licenses/README.md)
   * [Overview](floating-licenses/overview.md)
   * [Hosted Floating License Server](floating-licenses/hosted-floating-license-server.md)

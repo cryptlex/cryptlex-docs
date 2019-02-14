@@ -6,9 +6,9 @@ description: >-
 
 # Cloud Platforms
 
-## Hosting web API
+## Hosting Cryptlex Web API
 
-Cryptlex web API and GeoIP servers can be easily hosted on cloud computing platforms with Docker runtimes. The docker images are available on DockerHub:
+Cryptlex web API and GeoIP servers can be easily hosted on any cloud computing platforms with Docker runtimes. The docker images are available on DockerHub:
 
 * [Cryptlex Web API Server](https://hub.docker.com/r/cryptlex/cryptlex-web-api-enterprise) \(private\)
 * [Cryptlex GeoIP Server](https://hub.docker.com/r/cryptlex/freegeoip)
@@ -40,11 +40,23 @@ Just follow the guide of your cloud computing platform to run Docker apps and en
 
 Other than SMTP, Cryptlex also supports MailGun and SendGrid for sending password reset email. So instead of setting SMTP environment variables you can set `MAILGUN_APIKEY` and  `MAILGUN_DOMAIN` environment variables to enable MailGun or set `SENDGRID_APIKEY` environment variable to enable SendGrid.
 
-## Hosting dashboard
+## Hosting Cryptlex dashboard
 
-The Cryptlex dashboard should ideally be hosted on third party services like [Netlify](https://www.netlify.com/) or [Github](https://pages.github.com/)  which provide globally load balanced, static website servers free of cost.
+The dashboard should ideally be hosted on third party services like [Netlify](https://www.netlify.com/) or [Github](https://pages.github.com/)  which provide globally load balanced, static website servers free of cost.
 
-### Downloading Cryptlex dashboard
+### Downloading dashboard
+
+The latest or specific version of the dashboard can be downloaded from the following locations:
+
+```bash
+# download specific version
+curl https://dl.cryptlex.com/downloads/dashboard/{version}/cryptlex-dashboard.zip \
+     -o="cryptlex-dashboard.zip"
+
+# download latest version
+curl https://dl.cryptlex.com/downloads/dashboard/latest/cryptlex-dashboard.zip \
+     -o="cryptlex-dashboard.zip"
+```
 
 ### Updating config
 
@@ -65,13 +77,15 @@ window.Cryptlex = {
 
 ### Deploying dashboard
 
+Pleasing follow the static website hosting guidelines for [Netlify](https://www.netlify.com/), [Github](https://pages.github.com/), [S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) or other hosting providers.
+
 ## Using third-party GeoIP service
 
 Instead of using [cryptlex/freegeoip](https://hub.docker.com/r/cryptlex/freegeoip) server for getting location information from the IP address, Cryptlex also supports [ipstack](https://ipstack.com/) and [ipdata](https://ipdata.co/) third-party GeoIP services. 
 
 ### Configuring ipstack
 
-To configure the ipstack you need to set following environment variables in the `webapi` service section:
+To configure the ipstack you need to set following environment variables:
 
 ```text
 GEOIPSERVER_URL: https://api.ipstack.com
@@ -80,7 +94,7 @@ GEOIPSERVER_APIKEY: ${IPSTACK_ACCESS_KEY}
 
 ### Configuring ipdata
 
-To configure the ipdata you need to set following environment variables in the `webapi` service section:
+To configure the ipdata you need to set following environment variables:
 
 ```text
 GEOIPSERVER_URL: https://api.ipdata.co
