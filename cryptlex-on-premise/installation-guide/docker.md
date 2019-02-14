@@ -1,4 +1,4 @@
-# Installation Guide
+# Docker
 
 ## Docker Compose
 
@@ -136,7 +136,7 @@ This service is used to get location information from the IP address of the user
 
 At a minimum, you must set the following environment variables present in the `webapi.env` file:
 
-* `RSA_PASSPHRASE`: Use a 16 character random secret. This is used to encrypt the RSA private key generated for each product you create in the dashboard.
+* `RSA_PASSPHRASE`: Use 16 characters long random secret. This is used to encrypt the RSA private key generated for each product you create in the dashboard.
 * `JWT_SECRETKEY`: Use at least 32 ASCII characters long random secret. This secret if compromised can be used to compromise the whole account.
 * `APPLICATION_LICENSE_KEY`: The license key which you get after you purchase the license for the Cryptlex On-Premise server.
 
@@ -152,51 +152,19 @@ To configure the dashboard you need to set following environment variables in th
 
 * `COMPANY_NAME`: This shows up in the browser title.
 * `COMPANY_WEBSITE`: Your company website.
+* `COMPANY_LOGO_URL`: Logo to be displayed in the dashboard.
+* `COMPANY_WHITE_LOGO_URL`: White coloured version of your company logo.
 * `GOOGLE_ANALYTICS_KEY`: Google analytics key.
 
 The dashboard can be accessed at following URL: http://${WEB\_DOMAIN}:4200
 
 #### Load balancer service
 
-It's an Nginx and LetsEncrypt docker image which acts as a reverse proxy and automatically generates and renews the SSL certificate for the WEB\_DOMAIN.
+It's an Nginx and LetsEncrypt docker image which acts as a reverse proxy and automatically generates and renews the SSL certificate for the `WEB_DOMAIN`.
 
 To configure the load balancer service, set the `EMAIL` environment variable in the `loadbalancer` service section and `WEB_DOMAIN` environment variable in `.env` file.
 
 {% hint style="warning" %}
 `WEB_DOMAIN` environment variable must be set to a valid domain which can be accessed over the internet.
 {% endhint %}
-
-## Hosting dashboard
-
-The Cryptlex dashboard should ideally be hosted on third party services like [Netlify](https://www.netlify.com/) or [Github](https://pages.github.com/)  which provide globally load balanced, static website servers free of cost.
-
-## Using third-party GeoIP service
-
-Instead of using [cryptlex/freegeoip](https://hub.docker.com/r/cryptlex/freegeoip) server for getting location information from the IP address, Cryptlex also supports [ipstack](https://ipstack.com/) and [ipdata](https://ipdata.co/) third-party GeoIP services. 
-
-### Configuring ipstack
-
-To configure the ipstack you need to set following environment variables in the `webapi` service section:
-
-```text
-webapi:
-    ...
-    environment:
-      ...
-      GEOIPSERVER_URL: https://api.ipstack.com
-      GEOIPSERVER_APIKEY: ${IPSTACK_ACCESS_KEY}
-```
-
-### Configuring ipdata
-
-To configure the ipdata you need to set following environment variables in the `webapi` service section:
-
-```text
-webapi:
-    ...
-    environment:
-      ...
-      GEOIPSERVER_URL: https://api.ipdata.co
-      GEOIPSERVER_APIKEY: ${IPDATA_API_KEY}
-```
 
