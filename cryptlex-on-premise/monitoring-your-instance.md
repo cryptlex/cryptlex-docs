@@ -4,13 +4,13 @@ Cryptlex integrates with [New Relic](https://newrelic.com/) and [Bugsnag](https:
 
 ### Setting up New Relic <a id="starting-with-grafana"></a>
 
-In order to monitor the Cryptlex instance you will need to create a New Relic account. The free plan offered by New Relic would suffice.
+In order to monitor the Cryptlex web API server instance you will need to create a New Relic account. The free plan offered by New Relic would suffice.
 
 To enable New Relic monitoring just set the `NEW_RELIC_LICENSE_KEY` environment variable to the license key provided by New Relic for ASP.NET project.
 
 ### Setting up Bugsnag <a id="settings-up-notifications"></a>
 
-In order to receive notifications when an error occurs you will need to create a Bugsnag account. The free plan offered by Bugsnag would suffice.
+In order to receive notifications when any error occurs in the Cryptlex web API server instance, you will need to create a Bugsnag account. The free plan offered by Bugsnag would suffice.
 
 To enable Bugsnag error reporting just set the `BUGSNAG_APIKEY` environment variable to the Bugsnag API key.
 

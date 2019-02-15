@@ -1,3 +1,7 @@
+---
+description: Easily install Cryptlex on any machine using Docker Compose.
+---
+
 # Docker
 
 ## Docker Compose
@@ -56,7 +60,7 @@ services:
     restart: unless-stopped
 
   geoip:
-    image: cryptlex/freegeoip:3.5.0
+    image: cryptlex/freegeoip:3.6.0
     ports:
       - 8080
     networks:
@@ -121,7 +125,7 @@ volumes:
 
 ### Docker services <a id="docker-services"></a>
 
-In the above example configuration you will find a database, cache, GeoIP,  Cryptlex web API, dashboard and load balancer services. Read below to better understand how each service is configured.
+In the above example configuration you will find a db, cache, geoip,  webapi, dashboard and load balancer services. Read below to better understand how each service is configured.
 
 #### Database service <a id="database-service"></a>
 

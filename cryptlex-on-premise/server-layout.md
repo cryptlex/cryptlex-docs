@@ -2,7 +2,7 @@
 
 To help you determine the best server layout, look over the diagrams below and determine which layout works best for your dev, staging and production environments.
 
-Each layout will require Cryptlex Web API server, GeoIP server, Postgres, Redis and Nginx web server hosting Cryptlex Web App \(Dashboard\).
+Each layout will require Cryptlex Web API server, GeoIP server, Postgres, Redis and Nginx web server hosting Cryptlex dashboard.
 
 The Cryptlex services are separated because as you will see in the diagrams below they may not all run on the same server, and each component can be horizontally scaled separately. 
 
@@ -13,7 +13,6 @@ The Cryptlex services are separated because as you will see in the diagrams belo
 This configuration uses a single server to host all of the components for Cryptlex including the web dashboard. In this deployment model there is no service redundancy and there is a risk of resource contention. For this reason this model should be limited to the following purposes:
 
 * Development servers or workstations
-* QA / Staging environments
 * Small production deployments
 
 ## Multiple servers with external database
