@@ -6,16 +6,21 @@ All of the Cryptlex Docker images may be found on [Docker Hub](https://hub.docke
 
 ```bash
 git clone https://github.com/cryptlex/cryptlex-on-premise
+# update the .env, webapi.env and dashboard.env files
+# on first run server may take upto 2 minutes to generate certificates
 docker-compose up
 ```
 
-The stock `.env` file contains the following values, you will want to modify the `POSTGRES_DB` and ensure the `POSTGRES_USER` and `POSTGRES_PASSWORD` values are correct. You may also override any of these values using environment variables.
+The following is an example and it may not be the most recent version. Refer to the following link in [GitHub](https://github.com/cryptlex/cryptlex-on-premise) to find the latest version. The stock `.env` file contains the following values, you will want to modify the `POSTGRES_DB` and ensure the `POSTGRES_USER` , `POSTGRES_PASSWORD`, `EMAIL` and `WEB_DOMAIN` values are correct. You may also override any of these values using environment variables.
 
 ```text
+# postgres
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 POSTGRES_DB=cryptlex
 
+# LetsEncrypt SSL certificate
+EMAIL=joe.doe@mycompany.com
 WEB_DOMAIN=cryptlex.mycompany.com
 ```
 
@@ -63,7 +68,7 @@ services:
     volumes:
       - ./config:/config
     environment:
-      - EMAIL=joe.doe@mycompany.com
+      - EMAIL=${EMAIL}
       - URL=${WEB_DOMAIN}
     depends_on:
       - webapi
@@ -91,15 +96,13 @@ services:
     ports:
       - 5000
 
-  webapp:
-    image: cryptlex/cryptlex-web-app-enterprise:3.0.0
+  dashboard:
+    image: cryptlex/cryptlex-web-dashboard:3.0.6
     depends_on:
       - webapi
+    env_file: dashboard.env
     environment:
-      COMPANY_NAME: "My Company"
-      COMPANY_WEBSITE: https://mycompany.com
       WEB_API_BASE_URL: https://${WEB_DOMAIN}
-      GOOGLE_ANALYTICS_KEY: UA-XXXXXXXX-X
     networks:
       - frontend
     restart: unless-stopped
@@ -118,7 +121,7 @@ volumes:
 
 ### Docker services <a id="docker-services"></a>
 
-In the above example configuration you will find a database, cache, GeoIP,  Cryptlex web API and dashboard and load balancer services. Read below to better understand how each service is configured.
+In the above example configuration you will find a database, cache, GeoIP,  Cryptlex web API, dashboard and load balancer services. Read below to better understand how each service is configured.
 
 #### Database service <a id="database-service"></a>
 
@@ -148,7 +151,7 @@ The web API can be accessed at following URL: https://${WEB\_DOMAIN}/v3/status
 
 It hosts the Cryptlex web dashboard at port 4200. It is a single page application and should ideally be hosted on Github, Netlify or S3.
 
-To configure the dashboard you need to set following environment variables in the `dashboard` service section:
+To configure the dashboard you need to set following environment variables in the `dashboard.env` file:
 
 * `COMPANY_NAME`: This shows up in the browser title.
 * `COMPANY_WEBSITE`: Your company website.
@@ -162,7 +165,7 @@ The dashboard can be accessed at following URL: http://${WEB\_DOMAIN}:4200
 
 It's an Nginx and LetsEncrypt docker image which acts as a reverse proxy and automatically generates and renews the SSL certificate for the `WEB_DOMAIN`.
 
-To configure the load balancer service, set the `EMAIL` environment variable in the `loadbalancer` service section and `WEB_DOMAIN` environment variable in `.env` file.
+To configure the load balancer service, set the `EMAIL` and `WEB_DOMAIN` environment variables in the `.env` file.
 
 {% hint style="warning" %}
 `WEB_DOMAIN` environment variable must be set to a valid domain which can be accessed over the internet.

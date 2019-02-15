@@ -66,7 +66,7 @@
   * [Subprocessors](legal/subprocessors.md)
   * [Data Processing Addendum](legal/data-processing-addendum.md)
   * [Security, Privacy, and Compliance](legal/security-privacy-and-compliance.md)
-* [Cryptlex On-premise](cryptlex-on-premise/README.md)
+* [Cryptlex On-Premise](cryptlex-on-premise/README.md)
   * [Overview](cryptlex-on-premise/overview.md)
   * [System Requirements](cryptlex-on-premise/system-requirements.md)
   * [Server Layout](cryptlex-on-premise/server-layout.md)

@@ -23,7 +23,7 @@ Just follow the guide of your cloud computing platform to run Docker apps and en
 | :--- | :--- |
 | `PORT` | The server port for web API server. Set this to 5000 or some other value and use an HTTPS enabled load balancer to forward the traffic to this server. |
 | `DATABASE_URL` | The database URL for Postgres database with following format:  postgres://{user}:{password}@{hostname}:{port}/{database-name} |
-| `REDIS_URL` | The database URL for Redis database with following format: redis://{user}:{password}@{hostname}:{port} |
+| `REDIS_URL` | **Redis is optional**. The database URL for Redis database with following format: redis://{user}:{password}@{hostname}:{port} |
 | `GEOIPSERVER_URL` | The URL of the GeoIP server. |
 | `RSA_PASSPHRASE` | Use 16 characters long random secret. This is used to encrypt the RSA private key generated for each product you create in the dashboard. |
 | `JWT_AUDIENCE` | The public url of the web API server \(or load balancer\). For example https://cryptlex.mycompany.com |
@@ -37,6 +37,8 @@ Just follow the guide of your cloud computing platform to run Docker apps and en
 | `SMTP_ENABLESSL` | Set this to `true` to enable SSL. |
 | `SMTP_USERNAME` | SMTP username. |
 | `SMTP_PASSWORD` | SMTP password. |
+
+
 
 Other than SMTP, Cryptlex also supports MailGun and SendGrid for sending password reset email. So instead of setting SMTP environment variables you can set `MAILGUN_APIKEY` and  `MAILGUN_DOMAIN` environment variables to enable MailGun or set `SENDGRID_APIKEY` environment variable to enable SendGrid.
 
