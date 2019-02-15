@@ -4,7 +4,22 @@ description: Easily install Cryptlex on any machine using Docker Compose.
 
 # Docker
 
-## Docker Compose
+## Before installation
+
+To get started with your Cryptlex On-premise installation, you’ll need the following things prepared in advance:
+
+* If this is your first time installing Cryptlex On-premise, you’ll need to [contact us](mailto:support@cryptlex.com) to schedule a guided installation. We’ll get you set up with a license key, and walk you through the installation process.
+* A server meeting the [minimum system requirements](https://docs.cryptlex.com/cryptlex-on-premise/system-requirements).
+
+## Installation
+
+Cryptlex On-premise uses [Docker Compose](https://docs.docker.com/compose/) to perform and manage installations. To install Cryptlex On-premise we first need to install and configure Docker Compose.
+
+### Install Docker Compose
+
+Please refer to following installation guide: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+
+### Using Docker Compose
 
 All of the Cryptlex Docker images may be found on [Docker Hub](https://hub.docker.com/u/cryptlex). If you’re looking for a complete configuration to get up and running quickly, use our Docker Compose example.
 
