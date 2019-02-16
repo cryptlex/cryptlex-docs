@@ -70,8 +70,7 @@ After unzipping the dashboard web app, open the `config.js` file and set the fol
 window.Cryptlex = {
     title : "COMPANY_NAME",
     website: "COMPANY_WEBSITE",
-    companyLogoUrl: "COMPANY_LOGO_URL",
-    companyWhiteLogoUrl: "COMPANY_WHITE_LOGO_URL",
+    companyLogoUrl: "COMPANY_LOGO_URL_WITH_TRANSPARENT_BACKGROUND",
     googleAnalyticsKey : "GOOGLE_ANALYTICS_KEY",
     apiBaseUrl : "WEB_API_BASE_URL"
 }

@@ -174,8 +174,7 @@ To configure the dashboard you need to set following environment variables in th
 
 * `COMPANY_NAME`: This shows up in the browser title.
 * `COMPANY_WEBSITE`: Your company website.
-* `COMPANY_LOGO_URL`: Logo to be displayed in the dashboard.
-* `COMPANY_WHITE_LOGO_URL`: White coloured version of your company logo.
+* `COMPANY_LOGO_URL`: Logo to be displayed. It must have a transparent background.
 * `GOOGLE_ANALYTICS_KEY`: Google analytics key.
 
 The dashboard can be accessed at following URL: http://${WEB\_DOMAIN}:4200
