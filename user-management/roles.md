@@ -12,7 +12,7 @@ Has full access to all functions of the account. There can be only one super-adm
 
 ## Admin role
 
-Admin role gives your users **\(employees\)** complete control in the account except account deletion and changing user roles. The users with this role require **companyId** along with email and password for login.
+Admin role gives your users **\(employees\)** complete control in the account except account deletion, deleting another user with admin role and changing user roles. The users with this role require **companyId** along with email and password for login.
 
 {% hint style="info" %}
 Any user with **admin** **role** is counted against the admins in your plan.
