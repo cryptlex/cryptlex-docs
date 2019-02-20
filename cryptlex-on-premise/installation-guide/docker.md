@@ -45,9 +45,6 @@ Next you need to login to your Linux server machine and clone the `cryptlex-on-p
 git clone https://github.com/cryptlex/cryptlex-on-premise
 cd cryptlex-on-premise
 chmod 0600 acme.json
-# update the .env, webapi.env and dashboard.env files
-# on first run server may take upto 2 minutes to generate certificates
-docker-compose up
 ```
 
 The `acme.json` will store the SSL certificates , which will be generated for the above two sub-domains.
@@ -56,7 +53,7 @@ The `acme.json` will store the SSL certificates , which will be generated for th
 
 The `cryptlex-on-premise` folder contains the following three files with environment variables which need to be updated with the correct values. 
 
-**Updating `.env` file**
+**Update `.env` file**
 
 The `.env` file contains the following environment variables which you may need to update:
 
@@ -64,13 +61,13 @@ The `.env` file contains the following environment variables which you may need 
 | :--- | :--- |
 | `POSTGRES_DB` | Name of the database. |
 | `POSTGRES_USER` | Username of the database user. |
-| `POSTGRES_PASSWORD` | Password of the database user |
+| `POSTGRES_PASSWORD` | Password of the database user. |
 | `EMAIL` | Email required for SSL certificate notifications. |
 | `WEB_API_DOMAIN` | The domain of the the web API server. In this case: `cryptlex-api.mycompany.com` |
 | `DASHBOARD_DOMAIN` | The domain of the the web dashboard. In this case: `cryptlex-app.mycompany.com` |
 | `TRAEFIK_BASIC_AUTH` | [Traefik](https://traefik.io/) is the reverse proxy. You can set the basic auth credentials for the Traefik dashboard. |
 
-**Updating `webapi.env` file**
+**Update `webapi.env` file**
 
 The `webapi.env` file contains the following environment variables which you **must** update:
 
@@ -82,7 +79,7 @@ The `webapi.env` file contains the following environment variables which you **m
 
 Other than the above three you need to set environment variables for the email provider \(MailGun, SendGrid or SMTP\) and additionally you can configure other monitoring and error reporting services.
 
-**Updating `dashboard.env` file**
+**Update `dashboard.env` file**
 
 The `dashboard.env` file contains the following environment variables which you may need to update:
 
@@ -93,7 +90,7 @@ The `dashboard.env` file contains the following environment variables which you 
 | `COMPANY_LOGO_URL` | Logo to be displayed. It must have a transparent background. |
 | `GOOGLE_ANALYTICS_KEY` | Google analytics key. |
 
-#### Step 3: Run Docker Compose
+#### Step 4: Run Docker Compose
 
 Execute the following commands to start the server:
 
@@ -113,7 +110,7 @@ docker-compose up -d
 
 The [Traefik](https://traefik.io/) reverse proxy server configured in the `docker-compose.yml` file will automatically generate SSL certificates for the above two domains and store them in `acme.json`. Additionally, it will route the traffic to respective containers.
 
-#### Step 4: Signup for the Cryptlex account
+#### Step 5: Signup for the Cryptlex account
 
 Next you need to open the dashboard in the browser, which can be accessed at following url: [**https://cryptlex-app.mycompany.com**](https://cryptlex-app.mycompany.com)\*\*\*\*
 
@@ -125,9 +122,9 @@ Only one Cryptlex account can be created in the on-premise version.
 
 ### Docker Compose file details
 
-In the [docker-compose.yml](https://github.com/cryptlex/cryptlex-on-premise/blob/master/docker-compose.yml) file you will find a db, cache, geoip, webapi, dashboard and reverse proxy services. Read below to better understand how each service is configured.
+In the [docker-compose.yml](https://github.com/cryptlex/cryptlex-on-premise/blob/master/docker-compose.yml) file you will find the `db`, `cache`, `geoip`, `webapi`, `dashboard` and `reverseproxy` services. Read below to better understand how each service is configured.
 
-#### Database service <a id="database-service"></a>
+#### Database \(db\) service <a id="database-service"></a>
 
 It contains Postgres database server, which is used to store all the Cryptlex data.
 
@@ -145,9 +142,15 @@ It is the core service which runs the Cryptlex web API server.
 
 #### Dashboard service
 
-It hosts the Cryptlex web dashboard. It is a single page progressive web application hosted.
+It hosts the Cryptlex web dashboard. It is a single page progressive web application.
 
 #### Reverse proxy service
 
 It's uses Traefik reverse proxy server to route the traffic and automatically generates and renews the SSL certificates for the `WEB_API_DOMAIN` and `DASHBOARD_DOMAIN`.
+
+### Traefik admin dashboard
+
+Traefik provides a dashboard which can be used to monitor the health and status of the Cryptlex on-Premise instance. You can access the Traefik dashboard at the following url: [**https://cryptlex-app.mycompany.com/traefik**](https://cryptlex-app.mycompany.com/traefik)\*\*\*\*
+
+You will need to put in the credentials set in the `.env` file to access the dashboard.
 
