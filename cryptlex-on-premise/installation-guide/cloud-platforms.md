@@ -27,7 +27,7 @@ Just follow the guide of your cloud computing platform to run Docker apps and en
 | `GEOIPSERVER_URL` | The URL of the GeoIP server. |
 | `RSA_PASSPHRASE` | Use 16 characters long random secret. This is used to encrypt the RSA private key generated for each product you create in the dashboard. |
 | `JWT_AUDIENCE` | The public url of the web API server \(or load balancer\). For example https://cryptlex.mycompany.com |
-| `JWT_SECRETKEY` | Use at least 32 ASCII characters long random secret. This secret if compromised can be used to compromise the whole account. |
+| `JWT_SECRETKEY` | Use at least 32 ASCII characters long random secret. **This secret if compromised, can be used to gain access to the whole account.** |
 | `APPLICATION_LICENSE_KEY` | The license key which you get after you purchase the license for the Cryptlex On-Premise server. |
 | `FORCEHTTPS` | You must set this to `true` to prevent response for non-https requests, if load balancer is listening on port 80 too. |
 | `EMAIL_FROMNAME` | From name which should appear for password reset email. |
