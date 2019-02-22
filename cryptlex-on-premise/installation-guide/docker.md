@@ -88,6 +88,7 @@ The `dashboard.env` file contains the following environment variables which you 
 | `COMPANY_NAME` | This shows up in the browser title. |
 | `COMPANY_WEBSITE` | Your company website. |
 | `COMPANY_LOGO_URL` | Logo to be displayed. It must have a transparent background. |
+| `COMPANY_FAVICON_URL` | Favicon URL. |
 | `GOOGLE_ANALYTICS_KEY` | Google analytics key. |
 
 #### Step 4: Run Docker Compose
