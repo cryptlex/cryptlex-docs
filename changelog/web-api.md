@@ -1,11 +1,25 @@
 # Web API
 
+## 3.12.0 \(2019-02-23\)
+
+### Added <a id="changed"></a>
+
+* `displayName` to [products](https://api.cryptlex.com/v3/docs#operation/V3ProductsGet) resource.
+
+## 3.11.0 \(2019-02-20\)
+
+### Added <a id="changed"></a>
+
+* [/v3/status](https://api.cryptlex.com/v3/status) health check endpoint.
+* Dynamic origin for password reset mails.
+* `customDomain`, `website`, `logoUrl`, `faviconUrl` to [accounts](https://api.cryptlex.com/v3/docs#operation/V3AccountsByIdGet) resource.
+
 ## 3.10.0 \(2018-12-17\)
 
 ### Added <a id="changed"></a>
 
 * `leasingStrategy` property to [licenses](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdGet) resource.
-* `company` query param to [users](https://api.cryptlex.com/v3/docs#operation/V3UsersGet) resource
+* `company` query param to [users](https://api.cryptlex.com/v3/docs#operation/V3UsersGet) resource.
 
 ## 3.9.0 \(2018-12-06\)
 
