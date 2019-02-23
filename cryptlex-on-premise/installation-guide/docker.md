@@ -98,18 +98,13 @@ Execute the following commands to start the server:
 ```bash
 # ensure you have access to Cryptlex Docker images
 docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-# execute docker-compose command without -d option to check the logs
-docker-compose up
-```
-
-If everything goes fine, as will be evident from the console logs, you should stop the server and run the server again with `-d` option so that it runs in the background.
-
-```bash
-docker-compose stop
+# start the Cryptlex services
 docker-compose up -d
+# execute the following command to check the logs for any error
+docker-compose logs -t -f
 ```
 
-The [Traefik](https://traefik.io/) reverse proxy server configured in the `docker-compose.yml` file will automatically generate SSL certificates for the above two domains and store them in `acme.json`. Additionally, it will route the traffic to respective containers.
+The [Traefik](https://traefik.io/) reverse proxy server configured in the `docker-compose.yml` file will automatically generate SSL certificates for the above mentioned domains and store them in `acme.json`. Additionally, it will automatically route the traffic to the respective containers.
 
 #### Step 5: Signup for the Cryptlex account
 

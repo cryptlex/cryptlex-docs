@@ -74,6 +74,7 @@
   * [Installation Guide](cryptlex-on-premise/installation-guide/README.md)
     * [Docker](cryptlex-on-premise/installation-guide/docker.md)
     * [Cloud Platforms](cryptlex-on-premise/installation-guide/cloud-platforms.md)
+  * [Upgrade Guide](cryptlex-on-premise/upgrade-guide.md)
   * [Configuring Client Libraries](cryptlex-on-premise/configuring-client-libraries.md)
   * [Monitoring and Error Reporting](cryptlex-on-premise/monitoring-your-instance.md)
 
