@@ -73,7 +73,8 @@ window.Cryptlex = {
     logoUrl: "COMPANY_LOGO_URL_WITH_TRANSPARENT_BACKGROUND",
     faviconUrl: "COMPANY_FAVICON_URL",
     googleAnalyticsKey : "GOOGLE_ANALYTICS_KEY",
-    apiBaseUrl : "WEB_API_BASE_URL"
+    apiBaseUrl : "WEB_API_BASE_URL",
+    releasesApiBaseUrl : "RELEASES_API_BASE_URL"
 }
 ```
 
