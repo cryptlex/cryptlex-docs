@@ -155,3 +155,17 @@ Traefik provides a dashboard which can be used to monitor the health and status 
 
 You will need to put in the credentials set in the `.env` file to access the dashboard.
 
+### Checking logs
+
+Docker compose writes the **stdout** and **stderr** logs of each container in a JSON file located in `/var/lib/docker/containers/[container-id]/[container-id]-json.log.`
+
+To prevent logs from taking up the whole disk space, `10MB` limit has been applied to all the containers in the `docker-compose.yml` file. You can change that as per your requirements.
+
+To view the logs in realtime you can execute the following command:
+
+```bash
+docker-compose logs -t -f
+```
+
+
+
