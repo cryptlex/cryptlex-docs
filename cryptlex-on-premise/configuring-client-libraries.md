@@ -1,5 +1,5 @@
 ---
-description: Connect your applications to Cryptlex On-premise.
+description: Connect your applications to Cryptlex On-Premise.
 ---
 
 # Configuring Client Libraries
@@ -37,11 +37,11 @@ Similarly you can use the `SetCryptlexHost()` LexActivator API function for othe
 
 By default, LexFloatServer will send its own license activation request to **api.cryptlex.com**_._ 
 
-In __order to configure LexFloatServer to send license activation requests to your On-premise installation, you should pass the "**-cryptlexhost"** option along with the other options.
+In __order to configure LexFloatServer to send the license activation requests to your On-Premise installation, you should add **cryptlexhost** property in the LexFloatServer config file:
 
 ```bash
-LexFloatServer -a -licensekey=LICENSE_KEY -cryptlexhost="https://cryptlex-api.mycompany.com" -config="path/of/config" -productfile="path/of/myproduct.dat"
+...
+# Cryptlex host
+cryptlexhost=https://cryptlex-api.mycompany.com
 ```
-
-**Note:** The "**-cryptlexhost"** option must always be passed even when starting, installing, deactivating or uninstalling the server.
 
