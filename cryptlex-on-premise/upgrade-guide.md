@@ -14,7 +14,7 @@ docker-compose logs -t -f
 ```
 
 {% hint style="info" %}
-**Note:** The average downtime during upgrade is less than 2 minutes.
+**Note:** The average downtime during update is less than 2 minutes.
 {% endhint %}
 
 ## Third-party cloud platforms
