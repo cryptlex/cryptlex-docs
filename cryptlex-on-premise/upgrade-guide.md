@@ -7,8 +7,8 @@ First login to your Linux server machine where Cryptlex is deployed and go to th
 ```bash
 # get the latest changes
 git pull
-# execute the upgrade script
-./upgrade.sh
+# execute the update script
+./update.sh
 # execute the following command to check the logs for any error
 docker-compose logs -t -f
 ```
