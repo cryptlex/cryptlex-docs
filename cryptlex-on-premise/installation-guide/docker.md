@@ -21,21 +21,23 @@ Please refer to following installation guide: [https://docs.docker.com/compose/i
 
 ### Using Docker Compose
 
-All of the Cryptlex Docker images may be found on [Docker Hub](https://hub.docker.com/u/cryptlex). If you’re looking for a complete configuration to get up and running quickly, use our [Docker Compose](https://github.com/cryptlex/cryptlex-on-premise) example and follow the steps below.
+All of the Cryptlex Docker images are available on [Docker Hub](https://hub.docker.com/u/cryptlex). If you’re looking for a complete configuration to get up and running quickly, use our [Docker Compose](https://github.com/cryptlex/cryptlex-on-premise) example and follow the steps below.
 
 #### Step 1: Create custom A or CNAME records
 
-You will need to create two A or CNAME records for the server machine where you will be deploying Cryptlex, one for the Cryptlex Web API Server and other for the dashboard.. For this tutorial we will choose following two sub-domains:
+You will need to create three A or CNAME records for the server machine where you will be deploying Cryptlex. For this tutorial we will choose following three sub-domains:
 
 `cryptlex-api.mycompany.com` for the web API server
 
 `cryptlex-app.mycompany.com` for the web dashboard
 
+`cryptlex-releases.mycompany.com` for the release server
+
 Now to create the records:
 
 * Go to your DNS provider’s website \(e.g. [GoDaddy](https://ie.godaddy.com/help/add-a-cname-record-19236) or [Cloudflare](https://www.cloudflare.com/dns/)\).
 * Create A or CNAME records for the above custom domains.
-* Point both of them at the same IP address or hostname of your server respectively.
+* Point all of them at the same IP address or hostname of your server respectively.
 
 #### Step 2: Clone the [cryptlex-on-premise](https://github.com/cryptlex/cryptlex-on-premise) respository
 
@@ -47,11 +49,11 @@ cd cryptlex-on-premise
 chmod 0600 acme.json
 ```
 
-The `acme.json` will store the SSL certificates , which will be generated for the above two sub-domains.
+The `acme.json` will store the SSL certificates , which will be generated for the above three sub-domains.
 
 #### Step 3: Update the environment variables
 
-The `cryptlex-on-premise` folder contains the following three files with environment variables which need to be updated with the correct values. 
+The `cryptlex-on-premise` folder contains the following four files with environment variables which need to be updated with the correct values. 
 
 **Update `.env` file**
 
@@ -64,7 +66,10 @@ The `.env` file contains the following environment variables which you may need 
 | `POSTGRES_PASSWORD` | Password of the database user. |
 | `EMAIL` | Email required for SSL certificate notifications. |
 | `WEB_API_DOMAIN` | The domain of the the web API server. In this case: `cryptlex-api.mycompany.com` |
-| `DASHBOARD_DOMAIN` | The domain of the the web dashboard. In this case: `cryptlex-app.mycompany.com` |
+| `DASHBOARD_DOMAIN` | The domain of the web dashboard. In this case: `cryptlex-app.mycompany.com` |
+| `RELEASE_SERVER_DOMAIN` | The domain of the release server. In this case: `cryptlex-releases.mycompany.com` |
+| `FILE_STORE_ACCESS_KEY` | Access key for the file store. |
+| `FILE_STORE_SECRET_KEY` | Secret key for the file store. |
 | `TRAEFIK_BASIC_AUTH` | [Traefik](https://traefik.io/) is the reverse proxy. You can set the basic auth credentials for the Traefik dashboard. |
 
 **Update `webapi.env` file**
@@ -91,6 +96,16 @@ The `dashboard.env` file contains the following environment variables which you 
 | `COMPANY_FAVICON_URL` | Favicon URL. |
 | `GOOGLE_ANALYTICS_KEY` | Google analytics key. |
 
+**Update `release-server.env` file**
+
+The `release-server.env` file contains the following environment variables which you may need to update:
+
+| Environment Variables | Description |
+| :--- | :--- |
+| `FILE_STORE_BUCKET` | Name of the bucket \(folder\) where you want to store all your files. |
+| `FILE_STORE_REGION` | This is required in case you are using AWS S3 file store, otherwise leave the default value as such. |
+| `FILE_STORE_USE_SSL` | This should be set to true in case you are using AWS S3. |
+
 #### Step 4: Run Docker Compose
 
 Execute the following commands to start the server:
@@ -108,9 +123,7 @@ The [Traefik](https://traefik.io/) reverse proxy server configured in the `docke
 
 #### Step 5: Signup for the Cryptlex account
 
-Next you need to open the dashboard in the browser, which can be accessed at following url: [**https://cryptlex-app.mycompany.com**](https://cryptlex-app.mycompany.com)\*\*\*\*
-
-You ****will be redirected to the login page. Click the signup link at the bottom of the login page and create your account.
+Next you need to open the dashboard in the browser, and create your Cryptlex account, which can be done at following url: [**https://cryptlex-app.mycompany.com/auth/signup**](https://cryptlex-app.mycompany.com/auth/signup)**.**
 
 {% hint style="info" %}
 Only one Cryptlex account can be created in the on-premise version.
@@ -118,7 +131,7 @@ Only one Cryptlex account can be created in the on-premise version.
 
 ### Docker Compose file details
 
-In the [docker-compose.yml](https://github.com/cryptlex/cryptlex-on-premise/blob/master/docker-compose.yml) file you will find the `db`, `cache`, `geoip`, `webapi`, `dashboard` and `reverseproxy` services. Read below to better understand how each service is configured.
+In the [docker-compose.yml](https://github.com/cryptlex/cryptlex-on-premise/blob/master/docker-compose.yml) file you will find the `database`, `filestore` `cache`, `geoip`, `web-api`, `dashboard`, `release-server`, and `reverseproxy` services. Read below to better understand how each service is configured.
 
 #### Database \(db\) service <a id="database-service"></a>
 
