@@ -14,12 +14,12 @@ docker-compose logs -t -f
 ```
 
 {% hint style="info" %}
-**Note:** The average downtime during update is less than 2 minutes.
+**Note:** The average downtime during update is less than 1 minute.
 {% endhint %}
 
 ## Third-party cloud platforms
 
 In case you have hosted Cryptlex on cloud computing platforms like AWS, GCE, Azure etc. you need to setup your own CD \(continuous deployment\) process to automate the deployment of the new versions. That would depend on the CD tools your company is already using.
 
-In case you need help for setting up the CD process for deploying upgrades we'll be glad to help you. You can contact us through email at: [support@cryptlex.com](mailto:support@cryptlex.com).
+In case you need help for setting up the CD process for deploying updates, we'll be glad to help you. You can contact us through email at: [support@cryptlex.com](mailto:support@cryptlex.com).
 
