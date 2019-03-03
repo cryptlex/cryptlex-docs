@@ -28,15 +28,15 @@ Cryptlex requires at least version 17.06.0-ce of Docker.
 
 ### Database <a id="database"></a>
 
-PostgreSQL 9.5 or newer.
+Cryptlex requires PostgreSQL 10.x  for storing all the data.
 
-### Redis
+### Cache
 
-Redis is not a core requirement for Cryptlex. It's only used for storing IP rate limiting data. If no Redis database is provided it defaults to memory.
+Cryptlex uses Redis for storing IP rate limiting data. If no Redis database is provided it defaults to memory.
 
-### GeoIP Server
+### Filestore
 
-GeoIP server is required to get location information from the IP address of the user. `cryptlex/freegeoip` server which is available as a docker image can be used for this purpose.
+It uses [Minio](https://www.minio.io/), which is an Amazon S3 compatible object storage server, for storing release files. In case you don't want to use Cryptlex [release management](https://docs.cryptlex.com/release-management) API, this is not required.
 
 
 
