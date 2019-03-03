@@ -37,11 +37,11 @@ Now to create the records:
 
 * Go to your DNS provider’s website \(e.g. [GoDaddy](https://ie.godaddy.com/help/add-a-cname-record-19236) or [Cloudflare](https://www.cloudflare.com/dns/)\).
 * Create A or CNAME records for the above custom domains.
-* Point all of them at the same IP address or hostname of your server respectively.
+* Point all of them to the same IP address or hostname of your server.
 
-#### Step 2: Clone the [cryptlex-on-premise](https://github.com/cryptlex/cryptlex-on-premise) respository
+#### Step 2: Clone the cryptlex-on-premise respository
 
-Next you need to login to your Linux server machine and clone the `cryptlex-on-premise` repository inside any folder and execute following commands:
+Next you need to login to your Linux server machine and clone the [cryptlex-on-premise](https://github.com/cryptlex/cryptlex-on-premise) repository inside any folder and execute following commands:
 
 ```bash
 git clone https://github.com/cryptlex/cryptlex-on-premise
@@ -49,7 +49,7 @@ cd cryptlex-on-premise
 chmod 0600 acme.json
 ```
 
-The `acme.json` will store the SSL certificates , which will be generated for the above three sub-domains.
+The `acme.json` will store the SSL certificates, which will be generated for the above three sub-domains.
 
 #### Step 3: Update the environment variables
 
@@ -104,7 +104,7 @@ The `release-server.env` file contains the following environment variables which
 | :--- | :--- |
 | `FILE_STORE_BUCKET` | Name of the bucket \(folder\) where you want to store all your files. |
 | `FILE_STORE_REGION` | This is required in case you are using AWS S3 file store, otherwise leave the default value as such. |
-| `FILE_STORE_USE_SSL` | This should be set to true in case you are using AWS S3. |
+| `FILE_STORE_USE_SSL` | This should only be set to true in case you are using AWS S3. |
 
 #### Step 4: Run Docker Compose
 
@@ -131,15 +131,19 @@ Only one Cryptlex account can be created in the on-premise version.
 
 ### Docker Compose file details
 
-In the [docker-compose.yml](https://github.com/cryptlex/cryptlex-on-premise/blob/master/docker-compose.yml) file you will find the `database`, `filestore` `cache`, `geoip`, `web-api`, `dashboard`, `release-server`, and `reverseproxy` services. Read below to better understand how each service is configured.
+In the [docker-compose.yml](https://github.com/cryptlex/cryptlex-on-premise/blob/master/docker-compose.yml) file you will find the `database`, `filestore`, `cache`, `geoip`, `web-api`, `dashboard`, `release-server`, and `reverseproxy` services. Read below to better understand how each service is configured.
 
-#### Database \(db\) service <a id="database-service"></a>
+#### Database service <a id="database-service"></a>
 
 It contains Postgres database server, which is used to store all the Cryptlex data.
 
 #### Cache service \(optional\) <a id="search-service"></a>
 
-It uses Redis for storing IP rate limiting data. If no Redis database is provided it defaults to memory.
+It uses [Redis](https://redis.io/) for storing IP rate limiting data. If no Redis database is provided it defaults to memory.
+
+#### Filestore service  <a id="search-service"></a>
+
+It uses [Minio](https://www.minio.io/), which is an Amazon S3 compatible object storage server, for storing release files. In case you don't want to use Cryptlex [release management](https://docs.cryptlex.com/release-management) API, this service can be commented out in the `docker-compose.yml` file.
 
 #### GeoIP service <a id="search-service"></a>
 
@@ -153,9 +157,13 @@ It is the core service which runs the Cryptlex web API server.
 
 It hosts the Cryptlex web dashboard. It is a single page progressive web application.
 
+#### Release server service  <a id="search-service"></a>
+
+It handles the upload and download of releases you create in Cryptlex. In case you don't want to use Cryptlex [release management](https://docs.cryptlex.com/release-management) API, this service can be commented out in the `docker-compose.yml` file.
+
 #### Reverse proxy service
 
-It's uses Traefik reverse proxy server to route the traffic and automatically generates and renews the SSL certificates for the `WEB_API_DOMAIN` and `DASHBOARD_DOMAIN`.
+It's uses [Traefik](https://traefik.io/) reverse proxy server to route the traffic and automatically generates and renews the SSL certificates for the `WEB_API_DOMAIN` , `RELEASE_SERVER_DOMAIN` and`DASHBOARD_DOMAIN`.
 
 ### Traefik admin dashboard
 
@@ -167,7 +175,7 @@ You will need to put in the credentials set in the `.env` file to access the das
 
 Docker compose writes the **stdout** and **stderr** logs of each container in a JSON file located in `/var/lib/docker/containers/[container-id]/[container-id]-json.log.`
 
-To prevent logs from taking up the whole disk space, `10MB` limit has been applied to all the containers in the `docker-compose.yml` file. You can change that as per your requirements.
+To prevent logs from taking up the whole disk space, `20MB` limit has been applied to all the containers in the `docker-compose.yml` file. You can change that as per your requirements.
 
 To view the logs in realtime you can execute the following command:
 
