@@ -1,10 +1,18 @@
 # Web API
 
-## 3.12.0 \(2019-02-23\)
+## 3.13.0 \(2019-03-05\)
 
 ### Added <a id="changed"></a>
 
 * `displayName` to [products](https://api.cryptlex.com/v3/docs#operation/V3ProductsGet) resource.
+
+## 3.12.0 \(2019-02-23\)
+
+### Added <a id="changed"></a>
+
+* `license.expired` and `license.expiring-soon` events to webhooks.
+* `account.logged-in` event to event log.
+* Partial version comparison in [update](https://docs.cryptlex.com/release-management/distributing-releases#downloading-an-update) API endpoint for ignoring patch and build updates.
 
 ## 3.11.0 \(2019-02-20\)
 
