@@ -10,7 +10,13 @@ The name of the release. This can be a user friendly name to identify the releas
 
 #### Version
 
-The version of the release. Only following three formats are allowed `x.x`, `x.x.x`, `x.x.x.x`. It must only contain dot separated digits e.g. 1.2, 1.2.3, 1.2.3.4 etc.
+The version of the release. Only following three formats are allowed:
+
+* `x.x` - `MAJOR.MINOR`
+* `x.x.x` - `MAJOR.MINOR.PATCH`
+* `x.x.x.x` - `MAJOR.MINOR.PATCH.BUILD`
+
+ It must only contain dot separated digits e.g. 1.2, 1.2.3, 1.2.3.4 etc.
 
 #### Platform
 
