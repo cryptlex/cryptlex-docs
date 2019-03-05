@@ -104,7 +104,22 @@ License key
 {% endapi-method-spec %}
 {% endapi-method %}
 
-If an update is available it returns a 200 success response containing the download url, else it will return a 204 empty response.
+If an update is available it returns a **`200`** success response containing the download url, else it will return a **`204`** empty response.
+
+### Ignoring PATCH and BUILD updates
+
+The version format syntax in Cryptlex is **`$MAJOR.$MINOR.$PATCH.$BUILD`.** In case you want to ignore **`$PATCH`** and **`$BUILD`** releases in the update API endpoint you can pass the partial version too. 
+
+Following table summarises the expected response by update API endpoint if it is invoked with **`version`** query param set to the values in the first column:
+
+| Version \(Query Param\) | Latest Version | Response |
+| :--- | :--- | :--- |
+| 1.2.3.5 | 1.2.3.5 | 204 |
+| 1.2.3.4 | 1.2.3.5 | 200 |
+| 1.2.3 | 1.2.3.4 | 204 |
+| 1.2 | 1.2.3.4 | 204 |
+
+Suppose your latest release version is **`1.2.3.4`** and you invoke the update API endpoint with `version` query param having value **`1.2.3`**, then it will return **`204`** status code indicating no update.
 
 ## Downloading latest
 
@@ -189,5 +204,5 @@ License key
 {% endapi-method-spec %}
 {% endapi-method %}
 
-It returns a 200 success response containing the download urls of the latest release.
+It returns a **`200`** success response containing the download urls of the latest release.
 

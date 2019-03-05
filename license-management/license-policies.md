@@ -1,5 +1,9 @@
 # License Policies
 
+A license policy acts as a template \(blueprint\) for the licenses you create for your customers. Before you start creating licenses, you need to create a license policy which would contain the default values for the fields of any license.
+
+While creating a license from any license policy, you can override all the properties of the license policy. License policy provides you with defaults values for all the properties of a license, so you don't have to provide them every time you create a new license.
+
 ## Creating a license policy
 
 You can easily create a license policy through dashboard. Go to the [license policies](https://app.cryptlex.com/license-policies) section in the dashboard and click the add the button. A license policy form with following fields will popup: 

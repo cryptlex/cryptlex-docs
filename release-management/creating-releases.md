@@ -1,5 +1,7 @@
 # Creating Releases
 
+Whenever you release a new version of your software, you will need to create a new release in the Cryptlex dashboard \(or through Web API\). After you create the release, you have to upload your software bundle through the **`Upload`** button available for the release.
+
 ## Creating a release
 
 You can easily create a release through dashboard. Go to the releases option in the dashboard under products section and click the add the button. A release form with following fields will popup: 
@@ -10,11 +12,11 @@ The name of the release. This can be a user friendly name to identify the releas
 
 #### Version
 
-The version of the release. Only following three formats are allowed:
+The version format syntax in Cryptlex is **`$MAJOR.$MINOR.$PATCH.$BUILD`.** So, only following three formats are allowed:
 
-* `x.x` - `MAJOR.MINOR`
-* `x.x.x` - `MAJOR.MINOR.PATCH`
-* `x.x.x.x` - `MAJOR.MINOR.PATCH.BUILD`
+* x.x - **`$MAJOR.$MINOR`**
+* x.x.x - **`$MAJOR.$MINOR.$PATCH`**
+* x.x.x.x - **`$MAJOR.$MINOR.$PATCH.$BUILD`**
 
  It must only contain dot separated digits e.g. 1.2, 1.2.3, 1.2.3.4 etc.
 
@@ -52,5 +54,5 @@ The file name in the upload URL must only contain letters, numbers and some spec
 
 ## Publishing release
 
-Once all the changes have been finalized you can click the "**Publish**" button to freeze the release. After a release is published it becomes readonly.
+Once all the changes have been finalised you can click the **`Publish`** button to freeze the release. After a release is published it becomes readonly.
 
