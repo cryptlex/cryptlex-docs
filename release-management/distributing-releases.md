@@ -2,7 +2,7 @@
 
 ## Downloading a release
 
-In order to download the release, the release url must contain license key as  `key` query parameter or access token in the header.
+In order to download the release, the release url must contain license key as  **`key`** query parameter or **`access token`** in the header.
 
 ```bash
 # download file using license key
