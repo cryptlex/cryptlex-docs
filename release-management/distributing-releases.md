@@ -112,14 +112,14 @@ The version format syntax in Cryptlex is **`$MAJOR.$MINOR.$PATCH.$BUILD`.** In c
 
 Following table summarises the expected response by update API endpoint if it is invoked with **`version`** query param set to the values in the first column:
 
-| Version \(Query Param\) | Latest Version | Response |
+| Version \(Query Param\) | Latest Version | Response \(Status Code\) |
 | :--- | :--- | :--- |
 | 1.2.3.5 | 1.2.3.5 | 204 |
 | 1.2.3.4 | 1.2.3.5 | 200 |
 | 1.2.3 | 1.2.3.4 | 204 |
 | 1.2 | 1.2.3.4 | 204 |
 
-Suppose your latest release version is **`1.2.3.4`** and you invoke the update API endpoint with `version` query param having value **`1.2.3`**, then it will return **`204`** status code indicating no update.
+Suppose your latest release version is **`1.2.3.4`** and you invoke the update API endpoint with **`version`** query param having value **`1.2.3`**, then it will return **`204`** status code indicating no update.
 
 ## Downloading latest
 
