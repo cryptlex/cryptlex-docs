@@ -8,7 +8,7 @@ Floating licenses are usually more economical than purchasing individual node-lo
 
 ## Hosted vs On-Premise floating license server
 
-Cryptlex offers both hosted as well as on-premise floating license server. In the former case you can simply use the LexActivator library and in the later you will use the LexFloatServer and LexFloatClient library to implement floating license model.
+Cryptlex offers both hosted as well as on-premise floating license server. In the former case you can simply use the LexActivator library and Cryptlex Web API server will act as floating license server and in the later you will use the on-premise LexFloatServer and LexFloatClient library to implement floating license model.
 
 ## How does floating license work?
 
