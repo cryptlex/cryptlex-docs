@@ -4,6 +4,18 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.0.2 \(2019-03-25\) <a id="3-0-0-2018-05-03"></a>
+
+### Added <a id="added-2"></a>
+
+* **LexFloatServer:** Support for detecting Dockers to prevent running of LexFloatServer inside a Docker container. 
+
+## 4.0.1 \(2019-02-24\) <a id="3-0-0-2018-05-03"></a>
+
+### Added <a id="added-2"></a>
+
+* **LexFloatServer:**  New command line parameter `-cryptlexhost` to allowing setting a custom host.
+
 ## 4.0.0 \(2018-12-17\) <a id="3-0-0-2018-05-03"></a>
 
 ### Added <a id="added-2"></a>

@@ -1,5 +1,11 @@
 # Web API
 
+## 3.15.0 \(2019-03-25\)
+
+### Added <a id="changed"></a>
+
+* Support for [per-instance](https://docs.cryptlex.com/license-management/license-policies#leasing-strategy) leasing strategy for hosted-floating license type.
+
 ## 3.14.0 \(2019-03-14\)
 
 ### Added <a id="changed"></a>

@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.4.0 \(2019-03-25\)
+
+### Added
+
+* `LA_IN_MEMORY` flag to add support for in-memory license activations, which stores license activation data in memory only instead of disk.
+
 ## 3.3.1 \(2018-12-17\)
 
 ### Fixed
