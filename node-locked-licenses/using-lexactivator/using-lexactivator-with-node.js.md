@@ -35,6 +35,10 @@ LexActivator.SetProductId("PASTE_PRODUCT_ID", PermissionFlags.LA_USER);
 
 If your app requires admin \(root\) privileges to run \(e.g. services, daemons etc.\), instead of passing   `PermissionFlags.LA_USER` flag, you need to pass `PermissionFlags.LA_SYSTEM` flag.
 
+{% hint style="info" %}
+In case your app doesn't have write access to the disk, you can use `PermissionFlags.LA_IN_MEMORY` flag instead, which causes all the data to be stored in the memory. But this would require you to activate the license every time you restart the app.
+{% endhint %}
+
 ### License activation <a id="license-activation"></a>
 
 To activate the license in your app using the license key, you will use `ActivateLicense()` LexActivator API function. It invokes the `/v3/activations` Cryptlex Web API endpoint, verifies the encrypted and digitally signed response to validate the license.
