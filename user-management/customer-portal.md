@@ -6,6 +6,10 @@ The customer portal can be accessed at following URL:
 
 `https://{{companyId}}.cryptlex.app`
 
+{% hint style="info" %}
+You can find your customer portal URL on the [settings](https://app.cryptlex.com/settings) page in the dashboard.
+{% endhint %}
+
 ## Managing licenses
 
 Your customers can view all their licenses and few details regarding the licenses like total activations and deactivations, allowed activations and deactivations, validity, status etc.
@@ -18,9 +22,17 @@ Your customers can also use the portal for offline activations and deactivations
 Offline trial activations can't be handled in the customer portal as it requires user authentication. But you can easily host following website on Github or your own server to automate the offline trial activation process: [https://github.com/cryptlex/offline-trial-activation-form](https://github.com/cryptlex/offline-trial-activation-form)
 {% endhint %}
 
+## Downloading releases
+
+Your customers can also download releases of your software app from the customer portal.
+
 ## User profile
 
 Your customers can also see and update their profile details like first name, last name, email and password. 
+
+## Customizing customer portal <a id="need-more-help"></a>
+
+You can easily change the logo in the customer portal, by setting the same in the dashboard settings. You can also setup a custom domain for your portal, by setting the custom domain in the dashboard settings page and pointing a CNAME record to **hosting.cryptlex.app.**
 
 ## Need more features <a id="need-more-help"></a>
 

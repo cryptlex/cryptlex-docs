@@ -1,5 +1,11 @@
 # Web API
 
+## 3.14.0 \(2019-03-14\)
+
+### Added <a id="changed"></a>
+
+* [/v3/me/releases](https://api.cryptlex.com/v3/docs#operation/V3MeReleasesGet) endpoint to display releases in the dashboard.
+
 ## 3.13.0 \(2019-03-05\)
 
 ### Added <a id="changed"></a>
