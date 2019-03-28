@@ -1,7 +1,6 @@
 # Service Level Agreement
 
-This Service Level Agreement \(“SLA”\) is a policy governing the use of Cryptlex’s \(the Service Provider \) cloud-based services under the terms of the Cryptlex Terms of Service \(the “Terms of Service”\) between Cryptlex LLC, and users of Cryptlex’s cloud-based services \(“Customer”\). This SLA applies separately to each account using Cryptlex’s cloud-based services. Unless otherwise provided herein, this SLA is subject to the terms of the Terms of Service. Service Provider and Customer hereby agree as follows:  
-
+This Service Level Agreement \(“SLA”\) is a policy governing the use of Cryptlex’s \(the Service Provider \) cloud-based services under the terms of the Cryptlex Terms of Service \(the “Terms of Service”\) between Cryptlex LLC, and users of Cryptlex’s cloud-based services \(“Customer”\). This SLA applies separately to each account using Cryptlex’s cloud-based services. Unless otherwise provided herein, this SLA is subject to the terms of the Terms of Service. Service Provider and Customer hereby agree as follows:
 
 ## 1. Service Commitment
 
@@ -23,9 +22,9 @@ Credits are issued as a financial reimbursement if Service Provider does not mee
 
 | Monthly Uptime Percentage | Service Credit |
 | :--- | :--- |
-| Less than 99.9% but &gt;= 99.0% | 5% of the monthly fee |
-| Less than 99.0% but &gt;= 98.0% | 10% of the monthly fee |
-| Less than 98.0% | 20% of the monthly fee |
+| Less than 99.9% but &gt;= 99.0% | 10% of the monthly fee |
+| Less than 99.0% but &gt;= 98.0% | 20% of the monthly fee |
+| Less than 98.0% | 30% of the monthly fee |
 
 We will apply any Service Credits only against future payments otherwise due from you. Service Credits will not entitle the Customer to any refund or other payment from Service Provider. A Service Credit will be applicable and issued only if the credit amount for the applicable monthly billing cycle is greater than $1USD. Service Credits may not be transferred or applied to any other account. Unless otherwise provided in the Terms of Service, Customer's sole and exclusive remedy for any unavailability, non-performance, or other failure by Service provider to provide Service Provider’s cloud-based services is the receipt of a Service Credit \(if eligible\) in accordance with the terms of this SLA.
 
@@ -33,8 +32,8 @@ We will apply any Service Credits only against future payments otherwise due fro
 
 To receive a Service Credit, the Customer must submit a claim by sending an email to [support@cryptlex.com](mailto:support@cryptlex.com). To be eligible, the credit request must be received by us by the end of the second billing cycle after which the incident occurred and must include the following information:
 
-* Customer name, email address and company id;
-* The name of the service to which the claim relates;
+* Customer name, registered email address and company id.
+* The name of the service to which the claim relates.
 * Information supporting each claim of Downtime, including date, time, and a description of the incident and affected service, all of which must fall within the billing cycle for which you are submitting a claim.
 
 If the Monthly Uptime Percentage of such request is confirmed by us and is less than the Service Commitment, then we will issue the Service Credit to you within one billing cycle following the month in which your request is confirmed by us. Your failure to provide the request and other information as required above will disqualify you from receiving a Service Credit.
