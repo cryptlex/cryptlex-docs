@@ -26,7 +26,7 @@ Credits are issued as a financial reimbursement if Service Provider does not mee
 | Less than 99.0% but &gt;= 98.0% | 20% of the monthly fee |
 | Less than 98.0% | 30% of the monthly fee |
 
-We will apply any Service Credits only against future payments otherwise due from you. Service Credits will not entitle the Customer to any refund or other payment from Service Provider. A Service Credit will be applicable and issued only if the credit amount for the applicable monthly billing cycle is greater than $1USD. Service Credits may not be transferred or applied to any other account. Unless otherwise provided in the Terms of Service, Customer's sole and exclusive remedy for any unavailability, non-performance, or other failure by Service provider to provide Service Provider’s cloud-based services is the receipt of a Service Credit \(if eligible\) in accordance with the terms of this SLA.
+We will apply any Service Credits only against future payments otherwise due from you. Service Credits will not entitle the Customer to any refund or other payment from Service Provider. A Service Credit will be applicable and issued only if the credit amount for the applicable monthly billing cycle is greater than $1USD. Service Credits may not be transferred or applied to any other account. Unless otherwise provided in the Terms of Service, Customer's sole and exclusive remedy for any unavailability, non-performance, or other failures by Service provider to provide Service Provider’s cloud-based services is the receipt of a Service Credit \(if eligible\) in accordance with the terms of this SLA.
 
 ## **4. Claim Procedure**
 
