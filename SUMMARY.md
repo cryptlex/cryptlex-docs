@@ -67,6 +67,7 @@
   * [Privacy Policy](legal/privacy-policy.md)
   * [Subprocessors](legal/subprocessors.md)
   * [Data Processing Addendum](legal/data-processing-addendum.md)
+  * [Service Level Agreement](legal/service-level-agreement.md)
   * [Security, Privacy, and Compliance](legal/security-privacy-and-compliance.md)
 * [Cryptlex On-Premise](cryptlex-on-premise/README.md)
   * [Overview](cryptlex-on-premise/overview.md)
