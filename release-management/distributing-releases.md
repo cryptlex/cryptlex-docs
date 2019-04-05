@@ -19,7 +19,9 @@ The license key must belong to the product for which the release was created and
 
 ## Downloading an update
 
-In order to detect whether an update is available for your product, you need to invoke the [/v3/releases/update](https://api.cryptlex.com/v3/docs#operation/V3ReleasesUpdateGet) endpoint.
+In order to detect whether an update is available for your product, you can either invoke the [/v3/releases/update](https://api.cryptlex.com/v3/docs#operation/V3ReleasesUpdateGet) Web API endpoint or use `CheckForReleaseUpdate()` LexActivator function.
+
+### Using Web API
 
 Following sample requests checks whether a new release is available by comparing with the provided release version.
 
@@ -105,6 +107,55 @@ License key
 {% endapi-method %}
 
 If an update is available it returns a **`200`** success response containing the download url, else it will return a **`204`** empty response.
+
+### Using LexActivator
+
+The sample code for checking the release update is available on Github for all the languages in their sample files. Following sample code demonstrates it for C++.
+
+```cpp
+void LA_CC SoftwareReleaseUpdateCallback(uint32_t status)
+{
+	switch (status)
+	{
+	case LA_RELEASE_UPDATE_AVAILABLE:
+		printf("A new update is available for the app.\n");
+		break;
+
+	case LA_RELEASE_NO_UPDATE_AVAILABLE:
+		printf("Current version is already latest.\n");
+		break;
+
+	default:
+		printf("Error code: %d\n", status);
+	}
+}
+
+int main()
+{
+	int status;
+	status = SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");
+	if (LA_OK != status)
+	{
+		// handle error
+	}
+	status = SetProductId("PASTE_PRODUCT_ID", LA_USER);
+	if (LA_OK != status)
+	{
+		// handle error
+	}
+	status = SetLicenseKey("PASTE_LICENCE_KEY");
+	if (LA_OK != status)
+	{
+		// handle error
+	}
+	status = CheckForReleaseUpdate("windows", "1.0.0", "stable", SoftwareReleaseUpdateCallback);
+	if (LA_OK != status)
+	{
+		printf("Error checking for software release update: %d", status);
+	}
+}
+
+```
 
 ### Ignoring PATCH and BUILD updates
 
