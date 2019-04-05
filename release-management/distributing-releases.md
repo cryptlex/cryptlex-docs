@@ -23,7 +23,7 @@ In order to detect whether an update is available for your product, you can eith
 
 ### Using Web API
 
-Following sample requests checks whether a new release is available by comparing with the provided release version.
+Following sample request checks whether a new release is available by comparing with the provided release version.
 
 {% api-method method="get" host="https://api.cryptlex.com" path="/v3/releases/update" %}
 {% api-method-summary %}
@@ -110,7 +110,7 @@ If an update is available it returns a **`200`** success response containing the
 
 ### Using LexActivator
 
-The sample code for checking the release update is available on Github for all the languages in their sample files. Following sample code demonstrates it for C++.
+The sample code for checking the release update is available on Github for all the languages in their sample files. Following sample code demonstrates it for C/C++.
 
 ```cpp
 void LA_CC SoftwareReleaseUpdateCallback(uint32_t status)
