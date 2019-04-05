@@ -19,7 +19,7 @@ The license key must belong to the product for which the release was created and
 
 ## Downloading an update
 
-In order to detect whether an update is available for your product, you can either invoke the [/v3/releases/update](https://api.cryptlex.com/v3/docs#operation/V3ReleasesUpdateGet) Web API endpoint or use `CheckForReleaseUpdate()` LexActivator function.
+In order to detect whether an update is available for your product, you can either invoke the [/v3/releases/update](https://api.cryptlex.com/v3/docs#operation/V3ReleasesUpdateGet) Web API endpoint or use **`CheckForReleaseUpdate()`** LexActivator function.
 
 ### Using Web API
 
