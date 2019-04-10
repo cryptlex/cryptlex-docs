@@ -1,5 +1,11 @@
 # Web API
 
+## 3.16.0 \(2019-04-10\)
+
+### Added <a id="changed"></a>
+
+* [/v3/accounts/login-google](https://api.cryptlex.com/v3/docs#operation/V3AccountsLoginPost) endpoint to enable login using Google SSO.
+
 ## 3.15.0 \(2019-03-25\)
 
 ### Added <a id="changed"></a>
