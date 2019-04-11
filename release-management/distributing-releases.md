@@ -17,6 +17,10 @@ curl -O -J -L https://releases.cryptlex.com/v3/{RELEASE_ID}/myapp.zip \
 
 The license key must belong to the product for which the release was created and access token must belong to any user who is associated with the license key of the product.
 
+{% hint style="danger" %}
+The external release files are not secured and hence don't require**`key`** query parameter for download.
+{% endhint %}
+
 ## Downloading an update
 
 In order to detect whether an update is available for your product, you can either invoke the [/v3/releases/update](https://api.cryptlex.com/v3/docs#operation/V3ReleasesUpdateGet) Web API endpoint or use **`CheckForReleaseUpdate()`** LexActivator function.

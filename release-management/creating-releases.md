@@ -1,6 +1,8 @@
 # Creating Releases
 
-Whenever you release a new version of your software, you will need to create a new release in the Cryptlex dashboard \(or through Web API\). After you create the release, you have to upload your software bundle through the **`Upload`** button available for the release.
+Whenever you release a new version of your software, you will need to create a new release in the Cryptlex dashboard \(or through Web API\). After you create the release, you have to upload your software bundle through the **`Upload`** button available for the release. 
+
+In case you want to host the software bundle on your own server then you need to click the **`Add External File`** button to add the details of your files to the release.
 
 ## Creating a release
 
@@ -36,7 +38,7 @@ The release notes for the release. It also supports [markdown](https://www.markd
 
 After the release is created you need to upload the release file which needs to be distributed securely to your licensed users.
 
-In order to upload the file select the release in the dashboard and click the "**Upload Files**" button. After the successful upload you can see the the entry in the "**Files**" section at the bottom.
+In order to upload the file select the release in the dashboard and click the **`Upload Files`** button. After the successful upload you can see the the entry in the **`Files`** section at the bottom.
 
 The release can also be uploaded using any command line HTTP client like **curl**. To upload the release file using **curl** execute the following command:
 
@@ -51,6 +53,12 @@ The access token must have at least following two permissions: `release:read`, `
 {% hint style="danger" %}
 The file name in the upload URL must only contain letters, numbers and some special characters, including  . \(period\), - \(hyphen\) and \_ \(underscore\).
 {% endhint %}
+
+## Adding external release file
+
+Instead of uploading release files to our server, you can also add the release files hosted on your server.
+
+In order to add the external release files select the release in the dashboard and click the **`Add External File`** button. Put in the details of your external release file in the form and click the **`Create`** button. After that you can see the the entry in the **`Files`** section at the bottom.
 
 ## Publishing release
 
