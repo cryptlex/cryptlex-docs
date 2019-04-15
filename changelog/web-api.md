@@ -1,5 +1,11 @@
 # Web API
 
+## 3.17.0 \(2019-04-12\)
+
+### Added <a id="changed"></a>
+
+* [/v3/docs\#tag/ReleaseFiles](https://api.cryptlex.com/v3/docs#tag/ReleaseFiles) endpoints to add support for external files in the releases.
+
 ## 3.16.0 \(2019-04-10\)
 
 ### Added <a id="changed"></a>

@@ -60,6 +60,7 @@ Just follow the guide of your cloud computing platform to run Docker apps and en
 | `JWT_SECRETKEY` | Use at least 32 ASCII characters long random secret. **This secret if compromised, can be used to gain access to the whole account.** |
 | `APPLICATION_LICENSE_KEY` | The license key which you get after you purchase the license for the Cryptlex On-Premise server. |
 | `FORCEHTTPS` | You must set this to `true` to prevent response for non-https requests, if load balancer is listening on port 80 too. |
+| `GOOGLE_CLIENT_ID` | This is needed in case you want to enable Google SSO. |
 | `EMAIL_FROMNAME` | From name which should appear for password reset email. |
 | `EMAIL_FROMADDRESS` | From email for password reset email. |
 | `SMTP_HOST` | SMTP host for sending password reset email. |
@@ -152,6 +153,7 @@ window.Cryptlex = {
     logoUrl: "COMPANY_LOGO_URL_WITH_TRANSPARENT_BACKGROUND",
     faviconUrl: "COMPANY_FAVICON_URL",
     googleAnalyticsKey : "GOOGLE_ANALYTICS_KEY",
+    googleClientId : "GOOGLE_CLIENT_ID",
     apiBaseUrl : "WEB_API_BASE_URL",
     releaseServerBaseUrl : "RELEASE_SERVER_BASE_URL"
 }
@@ -177,6 +179,7 @@ Just follow the guide of your cloud computing platform to run Docker apps and en
 | `COMPANY_WEBSITE` | Your company website. |
 | `COMPANY_LOGO_URL` | Logo to be displayed. It must have a transparent background. |
 | `COMPANY_FAVICON_URL` | Favicon URL. |
+| `GOOGLE_CLIENT_ID` | This is needed in case you want to enable Google SSO. |
 | `GOOGLE_ANALYTICS_KEY` | Google analytics key. |
 
 

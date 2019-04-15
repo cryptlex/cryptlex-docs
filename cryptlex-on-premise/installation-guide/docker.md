@@ -70,6 +70,7 @@ The `.env` file contains the following environment variables which you may need 
 | `RELEASE_SERVER_DOMAIN` | The domain of the release server. In this case: `cryptlex-releases.mycompany.com` |
 | `FILE_STORE_ACCESS_KEY` | Access key for the file store. |
 | `FILE_STORE_SECRET_KEY` | Secret key for the file store. |
+| `GOOGLE_CLIENT_ID` | This is needed in case you want to enable Google SSO. |
 | `TRAEFIK_BASIC_AUTH` | [Traefik](https://traefik.io/) is the reverse proxy. You can set the basic auth credentials for the Traefik dashboard. |
 
 **Update `webapi.env` file**

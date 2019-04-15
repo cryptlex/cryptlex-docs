@@ -14,4 +14,5 @@
 * Papertrail
 * Bugsnag
 * Stripe
+* Zendesk
 
