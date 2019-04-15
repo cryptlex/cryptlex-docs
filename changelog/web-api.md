@@ -1,5 +1,12 @@
 # Web API
 
+## 3.18.0 \(2019-04-15\)
+
+### Added <a id="changed"></a>
+
+* `resellerId` to the license resource.
+* `tags` to the user resource.
+
 ## 3.17.0 \(2019-04-12\)
 
 ### Added <a id="changed"></a>
