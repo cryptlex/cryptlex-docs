@@ -4,6 +4,14 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.5.0 \(2018-04-04\)
+
+### Added
+
+* `GetLicenseUserCompany()` and `GetLicenseUserMetadata()`  functions to fetch user company and user metadata.
+* `GetServerSyncGracePeriodExpiryDate()` function to get the grace period expiry date for server sync.
+* `CheckForReleaseUpdate()` function to easily detect the [software updates](https://docs.cryptlex.com/release-management/distributing-releases#using-lexactivator) in your app.
+
 ## 3.4.0 \(2019-03-25\)
 
 ### Added
