@@ -107,7 +107,7 @@ Rename the fields as per the new schema:
 
 `"key", "email", "allowedActivations", "allowedDeactivations", "validity", "createdAt", "Custom Fields"`
 
-Multiply each entry in `validity` column by `86500` to convert it to seconds.
+Multiply each entry in `validity` column by `86400` to convert it to seconds.
 
 Each **custom field** should be added as a separate field, assuming you had stored `order_id`_,_ `first_name`_,_  `last_name`:
 
