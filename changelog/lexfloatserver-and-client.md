@@ -14,7 +14,7 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 ### Added <a id="added-2"></a>
 
-* **LexFloatServer:**  New command line parameter `-cryptlexhost` to allowing setting a custom host.
+* **LexFloatServer:**  New command line parameter `-cryptlexhost` to allow setting a custom host.
 
 ## 4.0.0 \(2018-12-17\) <a id="3-0-0-2018-05-03"></a>
 
