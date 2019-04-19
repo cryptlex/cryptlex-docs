@@ -53,7 +53,7 @@ The `acme.json` will store the SSL certificates, which will be generated for the
 
 #### Step 3: Generate a 2048 bit RSA key pair
 
-The RSA key is required to sign and verify the JWT access tokens for authentication purpose. The key pair will be stored in an environment variable and passed to the Web API and Release server. To generate the RSA key pair execute the following commands in the terminal:
+The RSA key is required to sign and verify the JWT access tokens for authentication purpose. The key pair will be stored in an environment variable and passed to the Web API server. To generate the RSA key pair execute the following commands in the terminal:
 
 ```bash
 # execute the following command and type the passphrase
