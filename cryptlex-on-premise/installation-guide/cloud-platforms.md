@@ -55,11 +55,10 @@ Just follow the guide of your cloud computing platform to run Docker apps and en
 | `DATABASE_URL` | The database URL for Postgres database with following format:  postgres://{user}:{password}@{hostname}:{port}/{database-name} |
 | `REDIS_URL` | **Redis is optional**. The database URL for Redis database with following format: redis://{user}:{password}@{hostname}:{port} |
 | `GEOIPSERVER_URL` | The URL of the GeoIP server. |
-| `RSA_PASSPHRASE` | Use 16 characters long random secret. This is used to encrypt the RSA private key generated for each product you create in the dashboard. |
 | `JWT_AUDIENCE` | The public url of the web API server \(or load balancer\). For example https://cryptlex.mycompany.com |
-| `JWT_SECRETKEY` | Use at least 32 ASCII characters long random secret. **This secret if compromised, can be used to gain access to the whole account.** |
-| `APPLICATION_LICENSE_KEY` | The license key which you get after you purchase the license for the Cryptlex On-Premise server. |
-| `FORCEHTTPS` | You must set this to `true` to prevent response for non-https requests, if load balancer is listening on port 80 too. |
+| `RSA_PASSPHRASE` | Random secret used to encrypt the private key.  |
+| `JWT_RSA_PRIVATEKEY` | Use the single line private key. **This key if compromised, can be used to** **gain access to the whole account.** |
+| `JWT_RSA_PUBLICKEY` | Use the single line public key. |
 | `GOOGLE_CLIENT_ID` | This is needed in case you want to enable Google SSO. |
 | `EMAIL_FROMNAME` | From name which should appear for password reset email. |
 | `EMAIL_FROMADDRESS` | From email for password reset email. |

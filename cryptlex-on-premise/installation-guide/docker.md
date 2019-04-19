@@ -27,11 +27,11 @@ All of the Cryptlex Docker images are available on [Docker Hub](https://hub.dock
 
 You will need to create three A or CNAME records for the server machine where you will be deploying Cryptlex. For this tutorial we will choose following three sub-domains:
 
-`cryptlex-api.mycompany.com` for the web API server
+`cryptlex-api.mycompany.com` for the Web API Server
 
-`cryptlex-app.mycompany.com` for the web dashboard
+`cryptlex-app.mycompany.com` for the Web Dashboard
 
-`cryptlex-releases.mycompany.com` for the release server
+`cryptlex-releases.mycompany.com` for the Release Server
 
 Now to create the records:
 
@@ -51,7 +51,25 @@ chmod 0600 acme.json
 
 The `acme.json` will store the SSL certificates, which will be generated for the above three sub-domains.
 
-#### Step 3: Update the environment variables
+#### Step 3: Generate a 2048 bit RSA key pair
+
+The RSA key is required to sign and verify the JWT access tokens for authentication purpose. The key pair will be stored in an environment variable and passed to the Web API and Release server. To generate the RSA key pair execute the following commands in the terminal:
+
+```bash
+# execute the following command and type the passphrase
+openssl genrsa -aes128 -passout stdin -out private.pem 2048
+# extract the public key
+openssl rsa -in private.pem -outform PEM -pubout -out public.pem
+```
+
+The above commands will generate the multi-line keys in the `private.pem` and `public.pem` files. In order to pass them as environment variables they need to be converted to the single line string. To get the single line strings from the above the files, execute following commands:
+
+```bash
+awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' private.pem
+awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' public.pem
+```
+
+#### Step 4: Update the environment variables
 
 The `cryptlex-on-premise` folder contains the following four files with environment variables which need to be updated with the correct values. 
 
@@ -79,8 +97,9 @@ The `webapi.env` file contains the following environment variables which you **m
 
 | Environment Variables | Description |
 | :--- | :--- |
-| `RSA_PASSPHRASE` | Use 16 characters long random secret. This is used to encrypt the RSA private key generated for each product you create in the dashboard. |
-| `JWT_SECRETKEY` | Use at least 32 ASCII characters long random secret. **This secret if compromised, can be used to** **gain access to the whole account.** |
+| `RSA_PASSPHRASE` | Use the random secret used in step 3 above to encrypt the private key.  |
+| `JWT_RSA_PRIVATEKEY` | Use the single line private key generated in step 3. **This key if compromised, can be used to** **gain access to the whole account.** |
+| `JWT_RSA_PUBLICKEY` | Use the single line public key generated in step 3. |
 | `APPLICATION_LICENSE_KEY` | The license key which you get after you purchase the license for the Cryptlex On-Premise server. |
 
 Other than the above three you need to set environment variables for the email provider \(MailGun, SendGrid or SMTP\) and additionally you can configure other monitoring and error reporting services.
@@ -107,7 +126,7 @@ The `release-server.env` file contains the following environment variables which
 | `FILE_STORE_REGION` | This is required in case you are using AWS S3 file store, otherwise leave the default value as such. |
 | `FILE_STORE_USE_SSL` | This should only be set to true in case you are using AWS S3. |
 
-#### Step 4: Run Docker Compose
+#### Step 5: Run Docker Compose
 
 Execute the following commands to start the server:
 
@@ -122,7 +141,7 @@ docker-compose logs -t -f
 
 The [Traefik](https://traefik.io/) reverse proxy server configured in the `docker-compose.yml` file will automatically generate SSL certificates for the above mentioned domains and store them in `acme.json`. Additionally, it will automatically route the traffic to the respective containers.
 
-#### Step 5: Signup for the Cryptlex account
+#### Step 6: Signup for the Cryptlex account
 
 Next you need to open the dashboard in the browser, and create your Cryptlex account, which can be done at following url: [**https://cryptlex-app.mycompany.com/auth/signup**](https://cryptlex-app.mycompany.com/auth/signup)**.**
 
