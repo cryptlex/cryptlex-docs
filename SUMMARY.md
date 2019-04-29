@@ -6,6 +6,7 @@
   * [Licensing Models](getting-started/licensing-models.md)
 * [License Management](license-management/README.md)
   * [License Policies](license-management/license-policies.md)
+  * [Implementing License Models](license-management/implementing-license-models.md)
   * [Custom License Fields](license-management/custom-license-fields.md)
   * [Creating Licenses](license-management/creating-licenses.md)
   * [Renewing Licenses](license-management/renewing-licenses.md)

@@ -156,3 +156,7 @@ Whether to allow an activation inside a virtual machine. Cloned virtual machines
 
 It prevents multiple users inside an OS from using the same license key. If enabled, each user will consume a license activation from the allowed number of activations for a license.
 
+### Require Authentication
+
+In case you want to enforce user authentication for license activation in addition to license key, you can set this property to `true`.
+
