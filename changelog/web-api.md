@@ -1,11 +1,17 @@
 # Web API
 
+## 3.19.0 \(2019-04-30\)
+
+### Added <a id="changed"></a>
+
+* `requireAuthentication` property to the license resource, to enforce user authentication for license activation.
+
 ## 3.18.0 \(2019-04-15\)
 
 ### Added <a id="changed"></a>
 
-* `resellerId` to the license resource.
-* `tags` to the user resource.
+* `resellerId` property to the license resource.
+* `tags` property to the user resource.
 
 ## 3.17.0 \(2019-04-12\)
 
