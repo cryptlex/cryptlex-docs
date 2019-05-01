@@ -4,13 +4,13 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
-## 3.6.0 \(2018-30-04\)
+## 3.6.0 \(2019-04-30\)
 
 ### Added
 
 * `SetLicenseUserCredential()`  function for user authentication. If `requireAuthentication` property of license is set to `true` then this function must be called before invoking `ActivateLicense()` or `IsLicenseGenuine()` function.
 
-## 3.5.0 \(2018-04-04\)
+## 3.5.0 \(2019-04-04\)
 
 ### Added
 
