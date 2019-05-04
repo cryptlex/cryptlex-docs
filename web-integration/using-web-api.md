@@ -11,7 +11,7 @@ Following are the steps to automate the process:
 
 ### Step 1. Configuring notification API
 
-Each payment processor \(like Paypal, Stripe, 2Checkout, Authorize.net etc.\) has its own notification API. You can configure any server script \(php, node.js etc.\) URL endpoint, which the notification API invokes on successful payment, and passes along other user data. 
+Each payment processor \(like Paypal, FastSpring, Stripe, 2Checkout, Authorize.net etc.\) has its own notification API. You can configure any server script \(PHP, Node.js etc.\) URL endpoint, which the notification API invokes on successful payment, and passes along other user data. 
 
 So depending on your payment processor you need to set the path for the same. Lets call the script `generate-license.php`. So the sample path would look like:
 
