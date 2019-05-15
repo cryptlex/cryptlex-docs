@@ -1,5 +1,12 @@
 # Web API
 
+## 3.20.0 \(2019-05-15\)
+
+### Added <a id="changed"></a>
+
+* `requiredMeterAttributes` property to the license policy resource, to enforce meter attributes schema for the licenses.
+* `meterAttributes` property to the license resource.
+
 ## 3.19.0 \(2019-04-30\)
 
 ### Added <a id="changed"></a>

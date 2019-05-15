@@ -4,6 +4,16 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.7.0 \(2019-05-15\)
+
+### Added
+
+* `GetActivationMeterAttributeUses()`, `IncrementActivationMeterAttributeUses()`, `DecrementActivationMeterAttributeUses()`, `ResetActivationMeterAttributeUses()` and `GetLicenseMeterAttribute()` functions to add support for meter attributes.
+
+### Updated
+
+* LexActivator wrappers for all the languages have been updated with above mentioned API function. Please update your wrappers using the latest code on [Github](https://github.com/cryptlex).
+
 ## 3.6.0 \(2019-04-30\)
 
 ### Added
