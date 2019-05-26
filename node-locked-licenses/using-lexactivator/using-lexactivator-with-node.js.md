@@ -14,13 +14,23 @@ After you've added a product for your app in the dashboard, go to the product pa
 
 * Note the product id for the product.
 * Download the Product.dat for the product.
-* Download the example project from [Github](https://github.com/cryptlex/lexactivator-nodejs).
+* Download the example project from [Github](https://github.com/cryptlex/lexactivator-js/tree/master/examples).
 
 Product.dat contains product data which is used by LexActivator. Product id is the identifier of your product which is to be used in the code.
 
+{% hint style="info" %}
+In order to package your Node.js project into an executable, check out [pkg](https://github.com/zeit/pkg) project.
+{% endhint %}
+
 ### Adding library to your app <a id="adding-library-to-your-app"></a>
 
-LexActivator example project for Node.js contains **LexActivator.js** file. You will need to add this file to your Node.js project. It contains all the LexActivator API functions needed to add licensing to your app. Depending on the OS you are targeting you need to copy the respective LexActivator.dll, libLexActivator.so or libLexActivator.dylib to your project.
+LexActivator wrapper for Node.js can be easily installed through [npm](https://www.npmjs.com/package/@cryptlex/lexactivator):
+
+```bash
+npm i @cryptlex/lexactivator 
+```
+
+Depending on the OS you are targeting you need to copy the respective **LexActivator.dll**, **libLexActivator.so** or **libLexActivator.dylib** to your project.
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 
@@ -45,24 +55,19 @@ To activate the license in your app using the license key, you will use `Activat
 
 ```javascript
 function activate() {
-    let status;
-    status = LexActivator.SetLicenseKey("PASTE_LICENCE_KEY");
-    if (LexStatusCodes.LA_OK != status) {
-        console.log("Error Code:", status);
-        process.exit(status);
-    }
-
-    status = LexActivator.SetActivationMetadata("key1", "value1");
-    if (LexStatusCodes.LA_OK != status) {
-        console.log("Error Code:", status);
-        process.exit(status);
-    }
-
-    status = LexActivator.ActivateLicense();
-    if (LexStatusCodes.LA_OK == status || LexStatusCodes.LA_EXPIRED == status || LexStatusCodes.LA_SUSPENDED == status) {
-        console.log("License activated successfully:", status);
-    } else {
-        console.log("License activation failed:", status);
+    try {
+        LexActivator.SetLicenseKey('PASTE_LICENCE_KEY');
+	    LexActivator.SetActivationMetadata('key1', 'value1');
+	    const status = LexActivator.ActivateLicense();
+	    if (LexStatusCodes.LA_OK == status) {
+		    console.log('License activated successfully!');
+	    } else if (LexStatusCodes.LA_EXPIRED == status) {
+		    console.log('License activated successfully but has expired!');
+	    } else if (LexStatusCodes.LA_SUSPENDED == status) {
+		    console.log('License activated successfully but has been suspended!');
+	    }
+    } catch(error) {
+        console.log('License activated failed:', error.code, error.message);
     }
 }
 ```
@@ -75,28 +80,24 @@ Each time, your app starts, you need to verify whether your license is already a
 
 ```javascript
 function main() {
-    let status;
-    status = LexActivator.SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");
-    if (LexStatusCodes.LA_OK != status) {
-        console.log("Error Code:", status);
-        process.exit(status);
-    }
-    status = LexActivator.SetProductId("PASTE_PRODUCT_ID", PermissionFlags.LA_USER);
-    if (LexStatusCodes.LA_OK != status) {
-        console.log("Error Code:", status);
-        process.exit(status);
-    }
-    status = LexActivator.IsLicenseGenuine();
-    if (LexStatusCodes.LA_OK == status) {
-        console.log("License is genuinely activated!");
-    } else if (LexStatusCodes.LA_EXPIRED == status) {
-        console.log("License is genuinely activated but has expired!");
-    } else if (LexStatusCodes.LA_SUSPENDED == status) {
-        console.log("License is genuinely activated but has been suspended!");
-    } else if (LexStatusCodes.LA_GRACE_PERIOD_OVER == status) {
-        console.log("License is genuinely activated but grace period is over!");
-    } else {
-         console.log("License is not activated:", status);
+    try {
+        LexActivator.SetProductData('PASTE_CONTENT_OF_PRODUCT.DAT_FILE');
+	    LexActivator.SetProductId('PASTE_PRODUCT_ID', PermissionFlags.LA_USER);
+	    LexActivator.SetAppVersion('PASTE_YOUR_APP_VERION');
+	    const status = LexActivator.IsLicenseGenuine();
+        if (LexStatusCodes.LA_OK == status) {
+            console.log("License is genuinely activated!");
+        } else if (LexStatusCodes.LA_EXPIRED == status) {
+            console.log("License is genuinely activated but has expired!");
+        } else if (LexStatusCodes.LA_SUSPENDED == status) {
+            console.log("License is genuinely activated but has been suspended!");
+        } else if (LexStatusCodes.LA_GRACE_PERIOD_OVER == status) {
+            console.log("License is genuinely activated but grace period is over!");
+        } else {
+             console.log("License is not activated:", status);
+        }
+    } catch (error) {
+        console.log('Error:', error.code, error.message);
     }
 }
 ```
