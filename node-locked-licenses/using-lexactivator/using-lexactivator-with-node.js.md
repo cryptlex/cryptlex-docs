@@ -32,6 +32,10 @@ npm i @cryptlex/lexactivator
 
 Depending on the OS you are targeting you need to copy the respective **LexActivator.dll**, **libLexActivator.so** or **libLexActivator.dylib** to your project.
 
+{% hint style="danger" %}
+In the `package.json` file make sure the **`^`** is replaced by **`~`** for the `@cryptlex/lexactivator` module.
+{% endhint %}
+
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 
 The first thing you need to do is either embed the Product.dat file in your app using `SetProductData()` function or set the absolute path of the file using `SetProductFile()` function.
