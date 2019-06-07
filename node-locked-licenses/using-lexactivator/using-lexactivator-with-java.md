@@ -113,10 +113,6 @@ try
     {
         System.out.println("License is genuinely activated but has been suspended!");
     } 
-    else if (LexActivator.LA_USAGE_LIMIT_REACHED == status)
-    {
-        System.out.println("License is genuinely activated but has reached it's usage limit!");
-    } 
     else
     {
     	System.out.println("License is not activated: " + status);
