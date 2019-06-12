@@ -69,7 +69,7 @@ try
     LexActivator.SetLicenseKey("PASTE_LICENSE_KEY");
     LexActivator.SetActivationMetadata("key1", "value1");
     status = LexActivator.ActivateLicense();
-    if (LexActivator.LA_OK == status || LexActivator.LA_EXPIRED == status || LexActivator.LA_SUSPENDED == status || LexActivator.LA_USAGE_LIMIT_REACHED == status)
+    if (LexActivator.LA_OK == status || LexActivator.LA_EXPIRED == status || LexActivator.LA_SUSPENDED == status)
     {
         System.out.println("License activated successfully: " + status);
     } 
