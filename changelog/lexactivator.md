@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.7.1 \(2019-07-02\)
+
+### Fixed
+
+* Minor bug fixes.
+
 ## 3.7.0 \(2019-05-15\)
 
 ### Added

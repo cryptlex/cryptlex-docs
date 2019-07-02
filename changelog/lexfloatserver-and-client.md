@@ -4,6 +4,13 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.1.0 \(2019-07-02\) <a id="3-0-0-2018-05-03"></a>
+
+### Added <a id="added-2"></a>
+
+* **LexFloatServer:** Support for meter attributes.
+* **LexFloatClient:** `GetHostLicenseMeterAttribute()`, `GetFloatingClientMeterAttributeUses()`, `IncrementFloatingClientMeterAttributeUses()`, `DecrementFloatingClientMeterAttributeUses()` and `ResetFloatingClientMeterAttributeUses()` API functions.
+
 ## 4.0.2 \(2019-03-25\) <a id="3-0-0-2018-05-03"></a>
 
 ### Added <a id="added-2"></a>
@@ -26,7 +33,7 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 * **LexFloatServer:** Improved error and request logging.
 * **LexFloatServer**: Server error codes like server license expired, suspended, grace period over etc. are now sent to clients too.
 * **LexFloatServer**: Lot of bug fixes and core improvements.
-* **LexFloatClient:** `SetFloatingClientMetadata()` and `GetHostLicenseExpiryDate()` API functions
+* **LexFloatClient:** `SetFloatingClientMetadata()` and `GetHostLicenseExpiryDate()` API functions.
 
 ### Changed <a id="changed"></a>
 
