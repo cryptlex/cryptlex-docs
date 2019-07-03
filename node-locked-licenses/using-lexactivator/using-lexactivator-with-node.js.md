@@ -1,16 +1,8 @@
 # Using LexActivator with Node.js
 
-First of all, login to your Cryptlex account and download LexActivator library for Windows, MacOS or Linux:
-
-* ​[Download LexActivator for Windows](https://app.cryptlex.com/downloads)​
-* ​[Download LexActivator for MacOS](https://app.cryptlex.com/downloads)
-* ​[Download LexActivator for Linux](https://app.cryptlex.com/downloads)​
-
-The above download package contains the library which you will be using to add licensing to your app.
-
 ## Adding licensing to your app <a id="adding-licensing-to-your-app"></a>
 
-After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
+After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do three things:
 
 * Note the product id for the product.
 * Download the Product.dat for the product.
@@ -30,11 +22,11 @@ LexActivator wrapper for Node.js can be easily installed through [npm](https://w
 npm i @cryptlex/lexactivator 
 ```
 
-Depending on the OS you are targeting you need to copy the respective **LexActivator.dll**, **libLexActivator.so** or **libLexActivator.dylib** to your project.
+**Note:** On Windows make sure you install the windows-build-tools package first:
 
-{% hint style="danger" %}
-In the `package.json` file make sure the **`^`** is replaced by **`~`** for the `@cryptlex/lexactivator` module.
-{% endhint %}
+```bash
+npm install --global windows-build-tools --vs2015
+```
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 
