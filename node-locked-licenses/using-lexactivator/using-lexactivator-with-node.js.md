@@ -22,11 +22,15 @@ LexActivator wrapper for Node.js can be easily installed through [npm](https://w
 npm i @cryptlex/lexactivator 
 ```
 
-**Note:** On Windows make sure you install the windows-build-tools package first:
+**Note:** On Windows make sure you install the `windows-build-tools` package on the machine where you will build your app:
 
 ```bash
 npm install --global windows-build-tools --vs2015
 ```
+
+LexActivator has dependency on `VS2015` runtime on Windows. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link below:
+
+[https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 
