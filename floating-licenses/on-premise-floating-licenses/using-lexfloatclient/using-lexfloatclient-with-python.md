@@ -11,7 +11,7 @@ Product id is the identifier of your product which is to be used in the code. Th
 
 ### Adding library to your app
 
-LexFloatClient wrapper for Python can be easily installed through [pip](https://pypi.org/project/cryptlex.lexactivator/):
+LexFloatClient wrapper for Python can be easily installed through [pip](https://pypi.org/project/cryptlex.lexfloatclient/):
 
 ```bash
 pip install cryptlex.lexfloatclient
