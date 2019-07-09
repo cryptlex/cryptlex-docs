@@ -1,26 +1,26 @@
 # Using LexActivator with Python
 
-First of all, login to your Cryptlex account and download LexActivator library for Windows, MacOS or Linux:
-
-* ​[Download LexActivator for Windows](https://app.cryptlex.com/downloads)​
-* ​[Download LexActivator for MacOS](https://app.cryptlex.com/downloads)
-* ​[Download LexActivator for Linux](https://app.cryptlex.com/downloads)​
-
-The above download package contains the library which you will be using to add licensing to your app.
-
 ## Adding licensing to your app <a id="adding-licensing-to-your-app"></a>
 
-After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
+After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do three things:
 
 * Note the product id for the product.
 * Download the Product.dat for the product.
-* Download the example project from [Github](https://github.com/cryptlex/lexactivator-python)
+* Download the example project from [Github](https://github.com/cryptlex/lexactivator-python/tree/master/examples)
 
 Product.dat contains product data which is used by LexActivator. Product id is the identifier of your product which is to be used in the code.
 
 ### Adding library to your app <a id="adding-library-to-your-app"></a>
 
-LexActivator example project for Python contains **LexActivator.py** file. You will need to add this file to your Python project. It contains all the LexActivator API functions needed to add licensing to your app. Depending on the OS you are targeting you need to copy the respective LexActivator.dll, libLexActivator.so or libLexActivator.dylib to your project.
+LexActivator wrapper for Python can be easily installed through [pip](https://pypi.org/project/cryptlex.lexactivator/):
+
+```bash
+pip install cryptlex.lexactivator
+```
+
+LexActivator has dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+
+LexActivator has dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 
@@ -30,13 +30,13 @@ The next thing you need to do is to set the product id of your application in yo
 
 ```csharp
 LexActivator.SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");
-LexActivator.SetProductId("PASTE_PRODUCT_ID", LexActivator.PermissionFlags.LA_USER);
+LexActivator.SetProductId("PASTE_PRODUCT_ID", PermissionFlags.LA_USER);
 ```
 
-If your app requires admin \(root\) privileges to run \(e.g. services, daemons etc.\), instead of passing   `LexActivator.PermissionFlags.LA_USER` flag, you need to pass `LexActivator.PermissionFlags.LA_SYSTEM` flag.
+If your app requires admin \(root\) privileges to run \(e.g. services, daemons etc.\), instead of passing   `PermissionFlags.LA_USER` flag, you need to pass `PermissionFlags.LA_SYSTEM` flag.
 
 {% hint style="info" %}
-In case your app doesn't have write access to the disk, you can use `LexActivator.PermissionFlags.LA_IN_MEMORY` flag instead, which causes all the data to be stored in the memory. But this would require you to activate the license every time you restart the app.
+In case your app doesn't have write access to the disk, you can use `PermissionFlags.LA_IN_MEMORY` flag instead, which causes all the data to be stored in the memory. But this would require you to activate the license every time you restart the app.
 {% endhint %}
 
 ### License activation <a id="license-activation"></a>
@@ -45,20 +45,16 @@ To activate the license in your app using the license key, you will use `Activat
 
 ```python
 def activate():
-    status = LexActivator.SetLicenseKey("PASTE_LICENCE_KEY")
-    if LexActivator.StatusCodes.LA_OK != status:
-        # handle error
-
-    status = LexActivator.SetActivationMetadata("key1", "value1")
-    if LexActivator.StatusCodes.LA_OK != status:
-        # handle error
-
-    status = LexActivator.ActivateLicense()
-    if LexActivator.StatusCodes.LA_OK == status | LexActivator.StatusCodes.LA_EXPIRED == status | LexActivator.StatusCodes.LA_SUSPENDED == status:
-        print("License activated successfully: ", status)
-    else:
-        print("License activation failed: ", status)
-    return
+    try:
+        LexActivator.SetLicenseKey("PASTE_LICENCE_KEY")
+        LexActivator.SetActivationMetadata("key1", "value1")
+        status = LexActivator.ActivateLicense()
+        if LexStatusCodes.LA_OK == status or LexStatusCodes.LA_EXPIRED == status or LexStatusCodes.LA_SUSPENDED == status:
+            print("License activated successfully: ", status)
+        else:
+            print("License activation failed: ", status)
+    except LexActivatorException as exception:
+        print('Error code:', exception.code, exception.message)
 ```
 
 The above code should be executed at the time of license activation.
@@ -69,38 +65,22 @@ Each time, your app starts, you need to verify whether your license is already a
 
 ```python
 def main():
-    status = LexActivator.SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE")
-    if LexActivator.StatusCodes.LA_OK != status:
-        print("Error code: ", status)
-        sys.exit(status)
-
-    status = LexActivator.SetProductId("PASTE_PRODUCT_ID",
-                                       LexActivator.PermissionFlags.LA_USER)
-    if LexActivator.StatusCodes.LA_OK != status:
-        print("Error code: ", status)
-        sys.exit(status)
-
-    status = LexActivator.SetAppVersion("PASTE_YOUR_APP_VERION")
-    if LexActivator.StatusCodes.LA_OK != status:
-        print("Error code: ", status)
-        sys.exit(status)
-    
-    status = LexActivator.IsLicenseGenuine()
-    if LexActivator.StatusCodes.LA_OK == status:
-        expiryDate = ctypes.c_uint()
-        LexActivator.GetLicenseExpiryDate(ctypes.byref(expiryDate))
-        daysLeft = (expiryDate.value - time.time()) / 86500
-        print("Days left: ", daysLeft)
-        print("License is genuinely activated!")
-    elif LexActivator.StatusCodes.LA_EXPIRED == status:
-        print("License is genuinely activated but has expired!")
-    elif LexActivator.StatusCodes.LA_SUSPENDED == status:
-        print("License is genuinely activated but has been suspended!")
-    elif LexActivator.StatusCodes.LA_GRACE_PERIOD_OVER == status:
-        print("License is genuinely activated but grace period is over!")
-    else:
-        print("License is not activated: ",status)
-    return
+    try:
+        LexActivator.SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE")
+        LexActivator.SetProductId("PASTE_PRODUCT_ID", PermissionFlags.LA_USER)
+        status = LexActivator.IsLicenseGenuine()
+        if LexStatusCodes.LA_OK == status:
+            print("License is genuinely activated!")
+        elif LexStatusCodes.LA_EXPIRED == status:
+            print("License is genuinely activated but has expired!")
+        elif LexStatusCodes.LA_SUSPENDED == status:
+            print("License is genuinely activated but has been suspended!")
+        elif LexStatusCodes.LA_GRACE_PERIOD_OVER == status:
+            print("License is genuinely activated but grace period is over!")
+        else:
+            print("License is not activated: ", status)
+    except LexActivatorException as exception:
+        print('Error code:', exception.code, exception.message)
 ```
 
 The above code should be executed every time user starts the app. After verifying locally, it schedules a periodic server check in a separate thread.
