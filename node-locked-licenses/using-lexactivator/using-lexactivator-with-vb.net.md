@@ -1,30 +1,26 @@
 # Using LexActivator with VB.NET
 
-First of all, login to your Cryptlex account and download LexActivator library for Windows:
-
-* ​[Download LexActivator for Windows](https://app.cryptlex.com/downloads)​
-
-The above download package contains the library which you will be using to add licensing to your app.
-
 ## Adding licensing to your app <a id="adding-licensing-to-your-app"></a>
 
-After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
+After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do three things:
 
 * Note the product id for the product.
 * Download the Product.dat for the product.
-* Download the example project from [Github](https://github.com/cryptlex/lexactivator-vb.net)
+* Download the example project from [Github](https://github.com/cryptlex/lexactivator-dotnet/tree/master/examples)
 
 Product.dat contains product data which is used by LexActivator. Product id is the identifier of your product which is to be used in the code.
 
 ### Adding library to your app <a id="adding-library-to-your-app"></a>
 
-LexActivator example project for VB.NET contains **LexActivator.vb** file. You will need to add this file to your VB.NET project. It contains all the LexActivator API functions needed to add licensing to your app.
+LexActivator wrapper for VB.NET can be easily installed through [nuget](https://www.nuget.org/packages/Cryptlex.LexActivator/):
 
-Depending on the platform you are targeting **\(x86, x64 or AnyCPU\)** you need to copy the respective LexActivator.dll to the Debug and Release folders of your project.
+```bash
+Install-Package Cryptlex.LexActivator
+```
 
-{% hint style="info" %}
-In case you choose **AnyCPU** Platform, you will need to copy both x86 LexActivator.dll and x64 LexActivator.dll \(renamed as LexActivator64.dll\) to your project. Additionally, you will have to add \(uncomment\) `LA_ANY_CPU = 1` custom constant in **LexActivator.vb** file.
-{% endhint %}
+LexActivator has dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+
+LexActivator \(`.NET Core`\) has dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 
@@ -49,23 +45,21 @@ To activate the license in your app using the license key, you will use `Activat
 
 ```csharp
 Private Sub activateLicenseBtn_Click(ByVal sender As Object, ByVal e As EventArgs)
-    Dim status As Integer
-    status = LexActivator.SetLicenseKey(productKeyBox.Text)
-    If status <> LexActivator.StatusCodes.LA_OK Then
-        ' handle error
-    End If
-
-    status = LexActivator.SetActivationMetadata("key1", "value1")
-    If status <> LexActivator.StatusCodes.LA_OK Then
-        ' handle error
-    End If
-
-    status = LexActivator.ActivateLicense()
-    If status = LexActivator.StatusCodes.LA_OK OrElse status = LexActivator.StatusCodes.LA_EXPIRED OrElse status = LexActivator.StatusCodes.LA_SUSPENDED Then
-        ' activation successful
-    Else
-        ' activation failed
-    End If
+    Try
+        Dim status As Integer
+        LexActivator.SetLicenseKey(productKeyBox.Text)
+        LexActivator.SetActivationMetadata("key1", "value1")
+        status = LexActivator.ActivateLicense()
+        If status = LexStatusCodes.LA_OK OrElse status = LexStatusCodes.LA_EXPIRED OrElse status = LexStatusCodes.LA_SUSPENDED Then
+            Me.statusLabel.Text = "Activation Successful :" & status.ToString()
+            Me.activateBtn.Text = "Deactivate"
+            Me.activateTrialBtn.Enabled = False
+        Else
+            Me.statusLabel.Text = "Error activating the license: " & status.ToString()
+        End If
+    Catch ex As LexActivatorException
+        Me.statusLabel.Text = "Error code: " & ex.Code.ToString() & " Error message: " + ex.Message
+    End Try
 End Sub
 ```
 
@@ -78,25 +72,18 @@ Each time, your app starts, you need to verify whether your license is already a
 ```csharp
 Public Sub New()
     InitializeComponent()
-    Dim status As Integer
-    status = LexActivator.SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE")
-    If status <> LexActivator.StatusCodes.LA_OK Then
-        Me.statusLabel.Text = "Error setting product data: " & status.ToString()
-        Return
-    End If
-
-    status = LexActivator.SetProductId("PASTE_PRODUCT_ID", LexActivator.PermissionFlags.LA_USER)
-    If status <> LexActivator.StatusCodes.LA_OK Then
-        Me.statusLabel.Text = "Error setting product id: " & status.ToString()
-        Return
-    End If
-
-    status = LexActivator.IsLicenseGenuine()
-    If status = LexActivator.StatusCodes.LA_OK OrElse status = LexActivator.StatusCodes.LA_EXPIRED OrElse status = LexActivator.StatusCodes.LA_SUSPENDED OrElse status = LexActivator.StatusCodes.LA_GRACE_PERIOD_OVER Then
-        Me.statusLabel.Text = "License is activated: " & status.ToString()
-    Else
-        Me.statusLabel.Text = "License is not activated: " & status.ToString()
-    End If
+    Try
+        LexActivator.SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE")
+        LexActivator.SetProductId("PASTE_PRODUCT_ID", LexActivator.PermissionFlags.LA_USER)
+        Dim status As Integer = LexActivator.IsLicenseGenuine()
+        If status = LexStatusCodes.LA_OK OrElse status = LexStatusCodes.LA_EXPIRED OrElse status = LexStatusCodes.LA_SUSPENDED OrElse status = LexStatusCodes.LA_GRACE_PERIOD_OVER Then
+            Me.statusLabel.Text = "License genuinely activated! Activation Status: " & status.ToString()
+        Else
+            Me.statusLabel.Text = "License is not activated: " & status.ToString()
+        End If
+    Catch ex As LexActivatorException
+        Me.statusLabel.Text = "Error code: " & ex.Code.ToString() & " Error message: " + ex.Message
+    End Try
 End Sub
 ```
 

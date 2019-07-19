@@ -1,31 +1,27 @@
 # Using LexFloatClient with C\#
 
-First of all, login to your Cryptlex account and download LexFloatClient library for Windows, MacOS or Linux:
-
-* [Download LexFloatClient for Windows](https://app.cryptlex.com/downloads)
-* [Download LexFloatClient for MacOS](https://app.cryptlex.com/downloads)
-* [Download LexFloatClient for Linux](https://app.cryptlex.com/downloads)
-
-The above download package contains the library which you will be using to add licensing to your app.
-
 ## Adding licensing to your app
 
 After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
 
 * Note the product id for the product.
-* Download the example project from [Github](https://github.com/cryptlex/lexfloatclient-csharp).
+* Download the example project from [Github](https://github.com/cryptlex/lexfloatclient-dotnet/tree/master/examples).
 
 Product id is the identifier of your product which is to be used in the code. The product id of the LexFloatServer and LexFloatClient must match.
 
 ### Adding library to your app
 
-LexFloatClient example project for C\# contains **LexFloatClient.cs** file. You will need to add this file to your C\# project. It contains all the LexFloatClient API functions needed to add licensing to your app.
+LexFloatClient wrapper for C\# can be easily installed through [nuget](https://www.nuget.org/packages/Cryptlex.LexFloatClient):
 
-Depending on the platform you are targeting **\(x86, x64 or AnyCPU\)** you need to copy the respective LexFloatClient.dll to the Debug and Release folders of your project.
+```bash
+Install-Package Cryptlex.LexFloatClient
+# or
+dotnet add package Cryptlex.LexFloatClient
+```
 
-{% hint style="info" %}
-In case you choose **AnyCPU** Platform, you will need to copy both x86 LexFloatClient.dll and x64 LexFloatClient.dll \(renamed as LexFloatClient64.dll\) to your project. Additionally, you will have to add `LF_ANY_CPU` conditional compilation symbol in your project properties.
-{% endhint %}
+LexFloatClient has dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+
+LexFloatClient \(`.NET Core`\) has dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product id
 
@@ -42,36 +38,18 @@ To receive a floating license, you will use `SetHostUrl()`, `SetFloatingLicenseC
 ```csharp
 private void leaseBtn_Click(object sender, EventArgs e)
 {
-    if (LexFloatClient.HasLicense() == LexFloatClient.StatusCodes.LF_OK)
+    try
     {
-        return;
+        LexFloatClient.SetHostProductId("PASTE_YOUR_PRODUCT_ID");
+        LexFloatClient.SetHostUrl("http://localhost:8090");
+        LexFloatClient.SetFloatingLicenseCallback(LicenceRenewCallback);
+        LexFloatClient.RequestFloatingLicense();
+        this.statusLabel.Text = "License leased successfully!";
     }
-    int status;
-    status = LexFloatClient.SetHostProductId("PASTE_YOUR_PRODUCT_ID");
-    if (status != LexFloatClient.StatusCodes.LF_OK)
+    catch (LexFloatClientException ex)
     {
-        this.statusLabel.Text = "Error setting product id: " + status.ToString();
-        return;
+        this.statusLabel.Text = "Error code: " + ex.Code.ToString() + " Error message: " + ex.Message;
     }
-    status = LexFloatClient.SetHostUrl("http://localhost:8090");
-    if (status != LexFloatClient.StatusCodes.LF_OK)
-    {
-        this.statusLabel.Text = "Error setting host url: " + status.ToString();
-        return;
-    }
-    status = LexFloatClient.SetFloatingLicenseCallback(LicenceRenewCallback);
-    if (status != LexFloatClient.StatusCodes.LF_OK)
-    {
-        this.statusLabel.Text = "Error setting callback function: " + status.ToString();
-        return;
-    }
-    status = LexFloatClient.RequestFloatingLicense();
-    if (status != LexFloatClient.StatusCodes.LF_OK)
-    {
-        this.statusLabel.Text = "Error requesting license: " + status.ToString();
-        return;
-    }
-    this.statusLabel.Text = "License leased successfully!";
 }
 ```
 
@@ -86,13 +64,13 @@ private void LicenceRenewCallback(uint status)
 {
     switch (status)
     {
-        case LexFloatClient.StatusCodes.LF_OK:
+        case LexFloatStatusCodes.LF_OK:
             this.statusLabel.Text = "The license lease has renewed successfully.";
             break;
-        case LexFloatClient.StatusCodes.LF_E_LICENSE_NOT_FOUND:
+        case LexFloatStatusCodes.LF_E_LICENSE_NOT_FOUND:
             this.statusLabel.Text = "The license expired before it could be renewed.";
             break;
-        case LexFloatClient.StatusCodes.LF_E_LICENSE_EXPIRED_INET:
+        case LexFloatStatusCodes.LF_E_LICENSE_EXPIRED_INET:
             this.statusLabel.Text = "The license expired due to network connection failure.";
             break;
         default:
@@ -109,18 +87,19 @@ When your user is done using the app, the app should send a request to free the 
 ```csharp
 private void dropBtn_Click(object sender, EventArgs e)
 {
-    if (LexFloatClient.HasLicense() != LexFloatClient.StatusCodes.LF_OK)
+    try
     {
-        return;
+        if (!LexFloatClient.HasFloatingLicense())
+        {
+            return;
+        }
+        LexFloatClient.DropFloatingLicense();
+        this.statusLabel.Text = "License dropped successfully!";
     }
-    int status;
-    status = LexFloatClient.DropLicense();
-    if (status != LexFloatClient.StatusCodes.LF_OK)
+    catch (LexFloatClientException ex)
     {
-        this.statusLabel.Text = "Error dropping license: " + status.ToString();
-        return;
+        this.statusLabel.Text = "Error code: " + ex.Code.ToString() + " Error message: " + ex.Message;
     }
-    this.statusLabel.Text = "License dropped successfully!";
 }
 ```
 

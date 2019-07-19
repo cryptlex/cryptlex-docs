@@ -1,29 +1,25 @@
 # Using LexFloatClient with VB.NET
 
-First of all, login to your Cryptlex account and download LexFloatClient library for Windows:
-
-* [Download LexFloatClient for Windows](https://app.cryptlex.com/downloads)
-
-The above download package contains the library which you will be using to add licensing to your app.
-
 ## Adding licensing to your app
 
 After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
 
 * Note the product id for the product.
-* Download the example project from [Github](https://github.com/cryptlex/lexfloatclient-vb.net)
+* Download the example project from [Github](https://github.com/cryptlex/lexfloatclient-dotnet/tree/master/examples)
 
 Product id is the identifier of your product which is to be used in the code. The product id of the LexFloatServer and LexFloatClient must match.
 
 ### Adding library to your app
 
-LexFloatClient example project for VB.NET contains **LexFloatClient.vb** file. You will need to add this file to your VB.NET project. It contains all the LexFloatClient API functions needed to add licensing to your app.
+LexFloatClient wrapper for VB.NET can be easily installed through [nuget](https://www.nuget.org/packages/Cryptlex.LexFloatClient):
 
-Depending on the platform you are targeting **\(x86, x64 or AnyCPU\)** you need to copy the respective LexFloatClient.dll to the Debug and Release folders of your project.
+```bash
+Install-Package Cryptlex.LexFloatClient
+```
 
-{% hint style="info" %}
-In case you choose **AnyCPU** Platform, you will need to copy both x86 LexFloatClient.dll and x64 LexFloatClient.dll \(renamed as LexFloatClient64.dll\) to your project. Additionally, you will have to add \(uncomment\) `LF_ANY_CPU = 1`custom constant in **LexFloatClient.vb** file.
-{% endhint %}
+LexFloatClient has dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+
+LexFloatClient \(`.NET Core`\) has dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product id
 
@@ -39,40 +35,15 @@ To receive a floating license, you will use `SetHostUrl()`, `SetFloatingLicenseC
 
 ```csharp
 Private Sub leaseBtn_Click(sender As Object, e As EventArgs) Handles leaseBtn.Click
-    If LexFloatClient.HasLicense() = LexFloatClient.StatusCodes.LF_OK Then
-        Return
-    End If
-
-    Dim status As Integer
-    status = LexFloatClient.SetHostProductId("PASTE_YOUR_PRODUCT_ID")
-
-    If status <> LexFloatClient.StatusCodes.LF_OK Then
-        Me.statusLabel.Text = "Error setting product id: " & status.ToString()
-        Return
-    End If
-
-    status = LexFloatClient.SetHostUrl("http://localhost:8090")
-
-    If status <> LexFloatClient.StatusCodes.LF_OK Then
-        Me.statusLabel.Text = "Error setting host url: " & status.ToString()
-        Return
-    End If
-
-    status = LexFloatClient.SetFloatingLicenseCallback(LicenceRenewCallback)
-
-    If status <> LexFloatClient.StatusCodes.LF_OK Then
-        Me.statusLabel.Text = "Error setting callback function: " & status.ToString()
-        Return
-    End If
-
-    status = LexFloatClient.RequestFloatingLicense()
-
-    If status <> LexFloatClient.StatusCodes.LF_OK Then
-        Me.statusLabel.Text = "Error requesting license: " & status.ToString()
-        Return
-    End If
-
-    Me.statusLabel.Text = "License leased successfully!"
+    Try
+        LexFloatClient.SetHostProductId("PASTE_YOUR_PRODUCT_ID")
+        LexFloatClient.SetHostUrl("http://localhost:8090")
+        LexFloatClient.SetFloatingLicenseCallback(AddressOf LicenceRenewCallback)
+        LexFloatClient.RequestFloatingLicense()
+        Me.statusLabel.Text = "License leased successfully!"
+    Catch ex As LexFloatClientException
+        Me.statusLabel.Text = "Error code: " & ex.Code.ToString() & " Error message: " + ex.Message
+    End Try
 End Sub
 ```
 
@@ -85,13 +56,13 @@ License lease automatically renews itself in a background thread. When license i
 ```csharp
 Private Sub LicenceRenewCallback(ByVal status As UInteger)
     Select Case status
-        Case LexFloatClient.StatusCodes.LF_OK
+        Case LexFloatStatusCodes.LF_OK
             Me.statusLabel.Text = "The license lease has renewed successfully."
             Exit Select
-        Case LexFloatClient.StatusCodes.LF_E_LICENSE_NOT_FOUND
+        Case LexFloatStatusCodes.LF_E_LICENSE_NOT_FOUND
             Me.statusLabel.Text = "The license expired before it could be renewed."
             Exit Select
-        Case LexFloatClient.StatusCodes.LF_E_LICENSE_EXPIRED_INET
+        Case LexFloatStatusCodes.LF_E_LICENSE_EXPIRED_INET
             Me.statusLabel.Text = "The license expired due to network connection failure."
             Exit Select
         Case Else
@@ -107,19 +78,15 @@ When your user is done using the app, the app should send a request to free the 
 
 ```csharp
 Private Sub dropBtn_Click(sender As Object, e As EventArgs) Handles dropBtn.Click
-    If LexFloatClient.HasLicense() <> LexFloatClient.StatusCodes.LF_OK Then
-        Return
-    End If
-
-    Dim status As Integer
-    status = LexFloatClient.DropLicense()
-
-    If status <> LexFloatClient.StatusCodes.LF_OK Then
-        Me.statusLabel.Text = "Error dropping license: " & status.ToString()
-        Return
-    End If
-
-    Me.statusLabel.Text = "License dropped successfully!"
+    Try
+        If Not LexFloatClient.HasFloatingLicense() Then
+            Return
+        End If
+        LexFloatClient.DropFloatingLicense()
+        Me.statusLabel.Text = "License dropped successfully!"
+    Catch ex As LexFloatClientException
+        Me.statusLabel.Text = "Error code: " & ex.Code.ToString() & " Error message: " + ex.Message
+    End Try
 End Sub
 ```
 
