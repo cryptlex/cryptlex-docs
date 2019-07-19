@@ -1,32 +1,28 @@
 # Using LexActivator with C\#
 
-First of all, login to your Cryptlex account and download LexActivator library for Windows, MacOS or Linux:
-
-* ​[Download LexActivator for Windows](https://app.cryptlex.com/downloads)​
-* ​[Download LexActivator for MacOS](https://app.cryptlex.com/downloads)
-* ​[Download LexActivator for Linux](https://app.cryptlex.com/downloads)​
-
-The above download package contains the library which you will be using to add licensing to your app.
-
 ## Adding licensing to your app <a id="adding-licensing-to-your-app"></a>
 
-After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
+After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do three things:
 
 * Note the product id for the product.
 * Download the Product.dat for the product.
-* Download the example project from [Github](https://github.com/cryptlex/lexactivator-csharp).
+* Download the example project from [Github](https://github.com/cryptlex/lexactivator-dotnet/tree/master/examples).
 
 Product.dat contains product data which is used by LexActivator. Product id is the identifier of your product which is to be used in the code.
 
 ### Adding library to your app <a id="adding-library-to-your-app"></a>
 
-LexActivator example project for C\# contains **LexActivator.cs** file. You will need to add this file to your C\# project. It contains all the LexActivator API functions needed to add licensing to your app.
+LexActivator wrapper for C\# can be easily installed through [nuget](https://www.nuget.org/packages/Cryptlex.LexActivator/):
 
-Depending on the platform you are targeting **\(x86, x64 or AnyCPU\)** you need to copy the respective LexActivator.dll to the Debug and Release folders of your project.
+```bash
+Install-Package Cryptlex.LexActivator
+# or
+dotnet add package Cryptlex.LexActivator
+```
 
-{% hint style="info" %}
-In case you choose **AnyCPU** Platform, you will need to copy both x86 LexActivator.dll and x64 LexActivator.dll \(renamed as LexActivator64.dll\) to your project. Additionally, you will have to add `LA_ANY_CPU` conditional compilation symbol in your project properties.
-{% endhint %}
+LexActivator has dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+
+LexActivator \(`.NET Core`\) has dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 
@@ -52,25 +48,23 @@ To activate the license in your app using the license key, you will use `Activat
 ```csharp
 private void activateLicenseBtn_Click(object sender, EventArgs e)
 {
-    int status;
-    status = LexActivator.SetLicenseKey(productKeyBox.Text);
-    if (status != LexActivator.StatusCodes.LA_OK)
+    try
+    {
+        int status;
+        LexActivator.SetLicenseKey(productKeyBox.Text);
+        status = LexActivator.ActivateLicense();
+        if (status == LexStatusCodes.LA_OK || status == LexStatusCodes.LA_EXPIRED || status == LexStatusCodes.LA_SUSPENDED)
+        {
+            // Activation successful
+        }
+        else
+        {
+             // Activation failed
+        }
+    }
+    catch (LexActivatorException ex)
     {
         // handle error
-    }
-    status = LexActivator.SetActivationMetadata("key1", "value1");
-    if (status != LexActivator.StatusCodes.LA_OK)
-    {
-         // handle error
-    }
-    status = LexActivator.ActivateLicense();
-    if (status == LexActivator.StatusCodes.LA_OK || status == LexActivator.StatusCodes.LA_EXPIRED || status == LexActivator.StatusCodes.LA_SUSPENDED)
-    {
-        // Activation successful
-    }
-    else
-    {
-        // Activation failed
     }
 }
 ```
@@ -85,27 +79,23 @@ Each time, your app starts, you need to verify whether your license is already a
 public ActivationForm()
 {
     InitializeComponent();
-    int status;
-    status = LexActivator.SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");
-    if (status != LexActivator.StatusCodes.LA_OK)
+    try
     {
-        this.statusLabel.Text = "Error setting product data: " + status.ToString();
-        return;
+        LexActivator.SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");
+        LexActivator.SetProductId("PASTE_PRODUCT_ID", LexActivator.PermissionFlags.LA_USER);
+        int status = LexActivator.IsLicenseGenuine();
+        if (status == LexStatusCodes.LA_OK || status == LexStatusCodes.LA_EXPIRED || status == LexStatusCodes.LA_SUSPENDED || status == LexStatusCodes.LA_GRACE_PERIOD_OVER)
+        {
+            this.statusLabel.Text = "License is activated: " + status.ToString();
+        }
+        else
+        {
+            this.statusLabel.Text = "License is not activated: " + status.ToString();
+        }
     }
-    status = LexActivator.SetProductId("PASTE_PRODUCT_ID", LexActivator.PermissionFlags.LA_USER);
-    if (status != LexActivator.StatusCodes.LA_OK)
+    catch (LexActivatorException ex)
     {
-        this.statusLabel.Text = "Error setting product id: " + status.ToString();
-        return;
-    }
-    status = LexActivator.IsLicenseGenuine();
-    if(status == LexActivator.StatusCodes.LA_OK || status == LexActivator.StatusCodes.LA_EXPIRED || status == LexActivator.StatusCodes.LA_SUSPENDED || status == LexActivator.StatusCodes.LA_GRACE_PERIOD_OVER)
-    {
-        this.statusLabel.Text = "License is activated: " + status.ToString();
-    }
-    else
-    {
-        this.statusLabel.Text = "License is not activated: " + status.ToString();
+        this.statusLabel.Text = "Error code: " + ex.Code.ToString() + " Error message: " + ex.Message;
     }
 }
 ```
