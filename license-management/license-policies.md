@@ -40,7 +40,7 @@ In case of **hosted-floating** license type,  if you want license lease to auto 
 In case of **on-premise** license type, lease duration can be set to 0 to honour the lease duration set in LexFloatServer config file.
 {% endhint %}
 
-### Leasing Strategy
+### Leasing strategy
 
 This option is valid for **on-premise-floating** and **hosted-floating** license types only. It allows for following strategies:
 
@@ -128,9 +128,13 @@ This strategy is similar to fuzzy but with a much lower threshold value.
 Sometimes few machines misbehave by reporting major changes in hardware fingerprints due to many issues, in such cases you should change the strategy to **"Loose"**.
 {% endhint %}
 
-### Required Metadata Keys
+### Required metadata keys
 
 List of required metadata keys which a license inheriting the policy must have.
+
+### Required meter attributes
+
+List of required meter attributes which a license inheriting the policy must have.
 
 ### Allowed countries
 
@@ -156,7 +160,11 @@ Whether to allow an activation inside a virtual machine. Cloned virtual machines
 
 It prevents multiple users inside an OS from using the same license key. If enabled, each user will consume a license activation from the allowed number of activations for a license.
 
-### Require Authentication
+### Require authentication
 
 In case you want to enforce user authentication for license activation in addition to license key, you can set this property to `true`.
+
+### Disable geolocation
+
+In case you don't want to store IP address and location of the license activation, you can set this property to `true`.
 
