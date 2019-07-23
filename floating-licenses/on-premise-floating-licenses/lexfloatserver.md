@@ -28,16 +28,13 @@ LexFloatServer uses a simple key value based text file as it's config file. It i
 
 ```text
 # Port LexFloatServer should bind to
-
 port=8090
 
 # Determines how long a license lease should last. The time is in seconds. 
 # 15 minutes (900 seconds) is recommended. 30 seconds is minimum allowed time.
-
 leaseduration=900
 
 # Path of log file to write errors, warnings, and any other information
-
 logfilepath=float_server.log
 
 # The amount of information to be logged in the file. These are the possible levels:
@@ -45,8 +42,10 @@ logfilepath=float_server.log
 # "1" - Only Errors
 # "2" - Errors and Warnings
 # "3" - Errors, Warnings and other info regarding when leases are created, removed, expired etc.
-
 loglevel=3
+
+# Allows for a time lag (in secs) between LexFloatServer and client machines.
+allowedclockoffset=60
 
 # Blocked IP addresses
 #blockedips=192.168.0.7,192.168.0.8
