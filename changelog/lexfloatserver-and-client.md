@@ -4,6 +4,12 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.2.0 \(2019-07-23\) <a id="3-0-0-2018-05-03"></a>
+
+### Added <a id="added-2"></a>
+
+* **LexFloatServer:** `allowedclockoffset` config file param.
+
 ## 4.1.0 \(2019-07-02\) <a id="3-0-0-2018-05-03"></a>
 
 ### Added <a id="added-2"></a>
