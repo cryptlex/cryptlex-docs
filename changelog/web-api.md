@@ -1,5 +1,12 @@
 # Web API
 
+## 3.21.0 \(2019-07-23\)
+
+### Added <a id="changed"></a>
+
+* `disableGeoLocation` property to the license policy, trial policy and license resources, to prevent storing IP and location data.
+* `downloads` property to the release file resource, to track number of downloads.
+
 ## 3.20.0 \(2019-05-15\)
 
 ### Added <a id="changed"></a>
