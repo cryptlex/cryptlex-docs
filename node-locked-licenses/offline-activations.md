@@ -7,6 +7,7 @@ Suppose your user doesn't have access to an internet connection or may not have 
 To allow your users to generate offline activation request file, after setting the license key, use following LexActivator API function:
 
 ```c
+SetLicenseKey("PASTE_LICENCE_KEY");
 GenerateOfflineActivationRequest();
 ```
 
