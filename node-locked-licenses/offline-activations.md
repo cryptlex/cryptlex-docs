@@ -13,7 +13,11 @@ GenerateOfflineActivationRequest();
 
 ## Generating offline activation response file
 
-Now, after getting the offline activation request file from user, go to activations page of the license and click the "Offline Activation" button. You will be presented with a form, paste the contents of offline activation request file, set the validity of response and click "ACTIVATE" button. If request is valid then offline activation response file will start downloading.
+Now, after getting the offline activation request file from user, go to activations page of the license and click the **`OFFLINE ACTIVATION`** button. You will be presented with a form, paste the contents of offline activation request file, set the validity for the response file and click **`ACTIVATE`** button. If request is valid then offline activation response file will start downloading.
+
+{% hint style="info" %}
+Your customers can also log into the customer portal, to download the offline activation response file by themselves, saving you a considerable amount of time on product support.
+{% endhint %}
 
 ## Activating using offline activation response file
 
