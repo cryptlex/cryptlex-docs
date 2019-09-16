@@ -1,5 +1,11 @@
 # Web API
 
+## 3.22.0 \(2019-09-16\)
+
+### Added <a id="changed"></a>
+
+* `product.displayName` property to the user release resource.
+
 ## 3.21.0 \(2019-07-23\)
 
 ### Added <a id="changed"></a>
