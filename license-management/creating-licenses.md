@@ -2,7 +2,7 @@
 
 ## Creating a license
 
-A license inherits all it's properties from the default license policy attached to it's product. But you may way want to override some properties like `allowedActivations`, `validity`, add some `metadata` etc. You can check out all the properties in the web API [reference page](https://api.cryptlex.com/v3/docs#operation/V3LicensesPost). 
+A license inherits all it's properties from the default license policy attached to it's product. But you may way want to override some properties like `allowedActivations`, `validity`, add some `metadata` etc. You can check out all the properties in the web API [reference page](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses). 
 
 {% hint style="info" %}
 You can also override the default license policy by providing the `licensePolicyId` at the time of creating a license.

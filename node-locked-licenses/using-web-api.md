@@ -11,7 +11,7 @@ RSA public key is needed to verify the signature of the activation token which y
 
 ### Activating the license key
 
-To activate the license in your app using the license key, you need to send a POST request to the [/v3/activations](https://api.cryptlex.com/v3/docs#operation/V3ActivationsPost) API endpoint. Following is a sample request which creates a license activation:
+To activate the license in your app using the license key, you need to send a POST request to the [/v3/activations](https://api.cryptlex.com/v3/docs#operation/post/v3/activations) API endpoint. Following is a sample request which creates a license activation:
 
 {% api-method method="post" host="https://api.cryptlex.com" path="/v3/activations" %}
 {% api-method-summary %}

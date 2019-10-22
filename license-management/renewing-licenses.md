@@ -12,7 +12,7 @@ If the license expiration strategy for license \(or it's policy\) is set to `rol
 
 ## Renewing license expiry
 
-To renew the license subscription you need to hit the [license renew endpoint](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdRenewPost). It extends the license expiry by it's validity.
+To renew the license subscription you need to hit the [license renew endpoint](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses/{id}/renew). It extends the license expiry by it's validity.
 
 {% api-method method="post" host="https://api.cryptlex.com" path="/v3/licenses/:id/renew" %}
 {% api-method-summary %}

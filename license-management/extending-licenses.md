@@ -2,7 +2,7 @@
 
 ## Extending license expiry
 
-Renewing a license extends the license expiry by it's validity. In case you want to extend the license expiry by some other duration you need to hit the [license extend endpoint](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdExtendPost). It extends the license expiry by provided extension length.
+Renewing a license extends the license expiry by it's validity. In case you want to extend the license expiry by some other duration you need to hit the [license extend endpoint](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses/{id}/extend). It extends the license expiry by provided extension length.
 
 {% api-method method="post" host="https://api.cryptlex.com" path="/v3/licenses/:id/extend" %}
 {% api-method-summary %}

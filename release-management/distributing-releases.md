@@ -23,7 +23,7 @@ The external release files are not secured and hence don't require**`key`** quer
 
 ## Downloading an update
 
-In order to detect whether an update is available for your product, you can either invoke the [/v3/releases/update](https://api.cryptlex.com/v3/docs#operation/V3ReleasesUpdateGet) Web API endpoint or use **`CheckForReleaseUpdate()`** LexActivator function.
+In order to detect whether an update is available for your product, you can either invoke the [/v3/releases/update](https://api.cryptlex.com/v3/docs#operation/get/v3/releases/update) Web API endpoint or use **`CheckForReleaseUpdate()`** LexActivator function.
 
 ### Using Web API
 
@@ -178,7 +178,7 @@ Suppose your latest release version is **`1.2.3.4`** and you invoke the update A
 
 ## Downloading latest
 
-In order to download the latest release of your product, you need to invoke the [/v3/releases/latest](https://api.cryptlex.com/v3/docs#operation/V3ReleasesLatestGet) endpoint to get the download urls for the latest release.
+In order to download the latest release of your product, you need to invoke the [/v3/releases/latest](https://api.cryptlex.com/v3/docs#operation/get/v3/releases/latest) endpoint to get the download urls for the latest release.
 
 Following sample requests fetches the latest release details.
 

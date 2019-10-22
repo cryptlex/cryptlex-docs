@@ -55,7 +55,7 @@
 
 ### Added <a id="changed"></a>
 
-* [/v3/me/releases](https://api.cryptlex.com/v3/docs#operation/V3MeReleasesGet) endpoint to display releases in the dashboard.
+* [/v3/me/releases](https://api.cryptlex.com/v3/docs#operation/get/v3/me/releases) endpoint to display releases in the dashboard.
 
 ## 3.13.0 \(2019-03-05\)
 

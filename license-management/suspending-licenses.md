@@ -6,7 +6,7 @@ Allowing the license later will automatically cause **LexActivator** `IsLicenseG
 
 ## Suspending a license
 
-To suspend a license you need to hit the [license update endpoint](https://api.cryptlex.com/v3/docs#operation/V3LicensesByIdPatch) and set `suspended` property to `true`.
+To suspend a license you need to hit the [license update endpoint](https://api.cryptlex.com/v3/docs#operation/patch/v3/licenses/{id}) and set `suspended` property to `true`.
 
 {% api-method method="patch" host="https://api.cryptlex.com" path="/v3/licenses/:id" %}
 {% api-method-summary %}
