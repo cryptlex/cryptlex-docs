@@ -5,22 +5,198 @@ LexFloatServer is the server software that leases floating license to your app w
 LexFloatServer is designed to be robust, low memory and very fast. Hence, it can even be installed on any old machine connected to the local network.
 
 {% hint style="info" %}
+You need admin rights to run the LexFloatServer. 
+{% endhint %}
+
+{% hint style="info" %}
 LexFloatServer has **libnss3** dependency on Linux. Make sure dependency is installed before running the server.
 {% endhint %}
 
 ## Activating the LexFloatServer
 
-LexFloatServer needs to be activated using a license key of type **"on-premise-floating"**, before it can be used. To activate use **"-a"** switch along with the license key and product file path:
+LexFloatServer needs to be activated using a license key of type **"on-premise-floating"**, before it can be used. 
+
+### Using command line options
+
+#### Online activation
+
+To activate use **"-a"** switch along with the license key and product file path:
 
 ```bash
 LexFloatServer -a -licensekey=LICENSE_KEY -config="path/of/config" -productfile="path/of/myproduct.dat"
 ```
 
+#### Offline activation
+
+To activate offline use **"-g"** switch to generate the offline activation request:
+
+```bash
+LexFloatServer -g -licensekey=LICENSE_KEY -offlinerequest=FILEPATH -config="path/of/config" -productfile="path/of/myproduct.dat"
+```
+
+After generating the offline response from the admin dashboard, pass it along with **"-a"** switch to activate the server:
+
+```text
+LexFloatServer -a -licensekey=LICENSE_KEY -offlineresponse=FILEPATH -config="path/of/config" -productfile="path/of/myproduct.dat"
+```
+
 You can also pass other options. To check all the command line options use the **"-help"** switch.
 
-{% hint style="info" %}
-You need admin rights to run the LexFloatServer. 
-{% endhint %}
+### Using Web API
+
+LexFloatServer exposes few API endpoints which can also be used to activate the server.
+
+#### Online activation
+
+Send a POST request to the **/api/server/activate** API endpoint with JSON request body containing the license key and optionally the activation metadata.
+
+{% api-method method="post" host="http://localhost:8090" path="/api/server/activate" %}
+{% api-method-summary %}
+Activate server
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="licenseKey" type="string" required=true %}
+License key to activate the server.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="metadata" type="array" required=false %}
+Activation metadata.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "message": "Server license activation successful!",
+  "code": "SERVER_LICENSE_ACTIVATED"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "message": "Server license activation failed!",
+  "code": "SERVER_INVALID_LICENSE_KEY"
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Offline activation
+
+Send a POST request to the **/api/server/offline-activation-request** API endpoint with JSON request body containing the license key and optionally the activation metadata.
+
+{% api-method method="post" host="http://localhost:8090" path="/api/server/offline-activation-request" %}
+{% api-method-summary %}
+Generate offline activation request
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="licenseKey" type="string" required=true %}
+License key to activate the server.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="metadata" type="array" required=false %}
+Activation metadata.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "offlineRequest": "U7l69tNy8..."
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+After generating the offline response from the admin dashboard, send a POST request to the **/api/server/offline-activate** API endpoint with JSON request body containing the license key and the offline response.
+
+{% api-method method="post" host="http://localhost:8090" path="/api/server/offline-activate" %}
+{% api-method-summary %}
+Activate server offline
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="licenseKey" type="string" required=true %}
+License key to activate the server.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="offlineResponse" type="string" required=true %}
+Offline activation response.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "message": "Server offline license activation successful!",
+  "code": "SERVER_LICENSE_ACTIVATED"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+  "message": "Server offline license activation failed!",
+  "code": "SERVER_INVALID_LICENSE_KEY"
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 ## Configuring the LexFloatServer
 
@@ -36,6 +212,10 @@ leaseduration=900
 
 # Path of log file to write errors, warnings, and any other information
 logfilepath=float_server.log
+
+# Log rotation will create a new log file every day. To disable
+# log rotation set it to "0".
+dailylogrotation=1
 
 # The amount of information to be logged in the file. These are the possible levels:
 # "0" - No log

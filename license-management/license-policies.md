@@ -2,7 +2,7 @@
 
 A license policy acts as a template \(blueprint\) for the licenses you create for your customers. Before you start creating licenses, you need to create a license policy which would contain the default values for the fields of any license.
 
-While creating a license from any license policy, you can override all the properties of the license policy. License policy provides you with defaults values for all the properties of a license, so you don't have to provide them every time you create a new license.
+While creating a license from any license policy, you can override all the properties of the license policy. License policy provides you with default values for all the properties of a license, so you don't have to provide them every time you create a new license.
 
 ## Creating a license policy
 
