@@ -1,5 +1,11 @@
 # Web API
 
+## 3.23.0 \(2019-10-20\)
+
+### Fixed <a id="changed"></a>
+
+* Some minor bug fixes and improvements.
+
 ## 3.22.0 \(2019-09-16\)
 
 ### Added <a id="changed"></a>

@@ -4,6 +4,13 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.3.0 \(2019-10-28\) <a id="3-0-0-2018-05-03"></a>
+
+### Added <a id="added-2"></a>
+
+* **LexFloatServer:** `dailylogrotation` config file param.
+* **LexFloatServer:** New [/api/server/activate](https://docs.cryptlex.com/floating-licenses/on-premise-floating-licenses/lexfloatserver#online-activation-1), [/api/server/offline-activation-request](https://docs.cryptlex.com/floating-licenses/on-premise-floating-licenses/lexfloatserver#offline-activation-1) and [/api/server/offline-activate](https://docs.cryptlex.com/floating-licenses/on-premise-floating-licenses/lexfloatserver#offline-activation-1) endpoints.
+
 ## 4.2.0 \(2019-07-23\) <a id="3-0-0-2018-05-03"></a>
 
 ### Added <a id="added-2"></a>
