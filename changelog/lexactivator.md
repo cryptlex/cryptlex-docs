@@ -4,6 +4,16 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.8.0 \(2019-11-18\)
+
+### Added
+
+* `SetOfflineActivationRequestMeterAttributeUses()`  function to support meter attributes for offline activations.
+
+### Fixed
+
+* Minor bug fixes.
+
 ## 3.7.2 \(2019-10-02\)
 
 ### Fixed
