@@ -1,5 +1,12 @@
 # Web API
 
+## 3.24.0 \(2019-11-18\)
+
+### Added <a id="changed"></a>
+
+* `grossUses` property to the license meter attributes.
+* `metadataKey` and `metadataValue` query params to the /v3/users endpoint.
+
 ## 3.23.0 \(2019-10-20\)
 
 ### Fixed <a id="changed"></a>
