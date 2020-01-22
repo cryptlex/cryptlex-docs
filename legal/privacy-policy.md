@@ -120,7 +120,7 @@ Under the EU-US Privacy Shield Framework, we are responsible for the processing 
 
 In compliance with the Privacy Shield Principles, Cryptlex commits to resolve complaints about our collection or use of your personal information.  EU individuals with inquiries or complaints regarding our Privacy Shield policy should first contact Cryptlex at [legal@cryptlex.com](mailto:legal@cryptlex.com).
 
-Cryptlex has further committed to cooperate with the panel established by the EU data protection authorities with regard to unresolved Privacy Shield complaints concerning data transferred from the EU in the context of the employment relationship. The Federal Trade Commission has jurisdiction over Cryptlex’s compliance with the Privacy Shield.
+Cryptlex has further committed to cooperate with the panel established by the EU data protection authorities with regard to unresolved Privacy Shield complaints concerning data transferred from the EU. The Federal Trade Commission has jurisdiction over Cryptlex’s compliance with the Privacy Shield.
 
 An individual has the possibility, under certain conditions, to invoke binding arbitration for complaints regarding Privacy Shield compliance not resolved by any of the other Privacy Shield mechanisms. For additional information please refer to [Annex I](https://www.privacyshield.gov/article?id=ANNEX-I-introduction).
 
