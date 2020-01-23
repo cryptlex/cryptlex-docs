@@ -180,3 +180,5 @@ We may share your information as described in this Privacy Policy \(e.g., with o
 
 If you have any further questions regarding the data Cryptlex collects, or how we use it, then please feel free to contact us by email at: [legal@cryptlex.com](mailto:legal@cryptlex.com)
 
+**Effective Date:** January 23, 2020
+
