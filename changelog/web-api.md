@@ -1,5 +1,11 @@
 # Web API
 
+## 3.25.0 \(2020-01-25\)
+
+### Added <a id="changed"></a>
+
+* `keyPattern` property to the license policy resource.
+
 ## 3.24.0 \(2019-11-18\)
 
 ### Added <a id="changed"></a>
