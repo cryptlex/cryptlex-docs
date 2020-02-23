@@ -82,7 +82,7 @@ The minimum allowed server sync interval upto STARTUP plan is 3600 seconds, and 
 
 ### Server sync grace period
 
-The duration for which the server sync failure due to network error is acceptable.
+The duration for which the server sync failure due to network error is acceptable. In order to allow infinite grace period, this property can be set to "0".
 
 ### Allowed clock offset
 
