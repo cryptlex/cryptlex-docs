@@ -81,7 +81,7 @@ Each time, your app starts, you need to verify whether your license is already a
 ```javascript
 function main() {
     try {
-        LexActivator.SetProductData('PASTE_CONTENT_OF_PRODUCT.DAT_FILE');
+      LexActivator.SetProductData('PASTE_CONTENT_OF_PRODUCT.DAT_FILE');
 	    LexActivator.SetProductId('PASTE_PRODUCT_ID', PermissionFlags.LA_USER);
 	    LexActivator.SetAppVersion('PASTE_YOUR_APP_VERION');
 	    const status = LexActivator.IsLicenseGenuine();
