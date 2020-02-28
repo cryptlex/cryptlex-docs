@@ -56,7 +56,7 @@ To activate the license in your app using the license key, you will use `Activat
 ```javascript
 function activate() {
     try {
-        LexActivator.SetLicenseKey('PASTE_LICENCE_KEY');
+      LexActivator.SetLicenseKey('PASTE_LICENCE_KEY');
 	    LexActivator.SetActivationMetadata('key1', 'value1');
 	    const status = LexActivator.ActivateLicense();
 	    if (LexStatusCodes.LA_OK == status) {
