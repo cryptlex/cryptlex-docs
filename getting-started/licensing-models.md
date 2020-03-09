@@ -28,7 +28,7 @@ A floating license is temporarily bound to a machine for a specific amount of ti
 
 So if your floating license allows for 100 activations \(seats\), then at any instant of time no more than 100 machines can use your application.
 
-## What to should I choose?
+## Which licensing model should I choose?
 
 You will most of the time use node locked licenses which would be either perpetual or subscription based. 
 

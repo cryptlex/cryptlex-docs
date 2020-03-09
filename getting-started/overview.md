@@ -50,13 +50,11 @@ By default all trial activations are node-locked, it means that the machine fing
 
 A release helps you to manage different versions of your app, and allows you to host your app on our servers for secure distribution. It also allows you to deliver software updates.
 
-## Cryptlex Licensing API
+## Cryptlex Web API
 
-Cryptlex licensing API let's you implement any software licensing model with node-locked licensing, floating licensing, perpetual licenses, subscriptions, timed trials and more supported out of the box. 
+Cryptlex web API let's you implement any software licensing model with node-locked licensing, floating licensing, perpetual licenses, subscriptions, timed trials and more supported out of the box. 
 
-## Cryptlex Identity API
-
-Cryptlex identity API provides identity management for your customers, which means you can authenticate your customers using email and password, and provide other features like profile management.
+It also provides identity management for your customers, which means you can authenticate your customers using email and password, and provide other features like profile management.
 
 ## Cryptlex Distribution API
 
