@@ -138,15 +138,15 @@ List of required meter attributes which a license inheriting the policy must hav
 
 ### Allowed countries
 
-List of the allowed countries. The country name is resolved using the IP address. If none of the countries is included, this setting is ignored.
+List of the allowed countries. The country name is resolved using the IP address. If none of the countries is selected, then all the countries are allowed.
 
 ### Disallowed countries
 
-List of the disallowed countries. The country name is resolved using the IP address. If none of the countries is included, this setting is ignored.
+List of the disallowed countries. The country name is resolved using the IP address. If none of the countries is selected, this setting is ignored.
 
 ### Allowed IP addresses
 
-List of the allowed IP addresses. If none of the IP addresses is included, this setting is ignored.
+List of the allowed IP addresses. If none of the IP addresses is included, then all the IP addresses are allowed.
 
 ### Disallowed IP addresses
 
