@@ -27,7 +27,9 @@ The `generate-license.php`  generates license key for your customer and returns 
 
 ### Step 3. Email license key to your customer
 
-After the license key is generated, either your payment processor will send an email or you can send the license key to your customer by writing a simple mail script or by using any third party mailing service like SendGrid, MailGun etc.
+After the license key is generated, either your payment processor will send an email or you can create an [email template](../email-templates.md) to send the license key to your customer. 
+
+Alternatively, you can also use [webhooks](../webhooks.md) to send the email by writing a simple mail script or by using any third party mailing service like SendGrid, MailGun etc.
 
 ## Need more help?
 
