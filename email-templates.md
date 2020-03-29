@@ -101,3 +101,23 @@ If you don’t add the domain verification record, Cryptlex sends emails using *
 
 After your domain is verified, leave the domain verification TXT record in-place.
 
+### Setting up an SPF record
+
+Sender Policy Framework \(SPF\) is a domain level email authorization protocol that allows you to declare which IP addresses are allowed to send email as if it originated from your domain.
+
+When an email client receives a message, it performs an SPF check on the sending domain to verify that the email came from who it says it did. If this check fails, or there isn't a DNS record that says that Cryptlex is a permitted sender, some receivers might consider that email spam or a phishing attempt, and flag it as untrustworthy or not display it to your customers at all.
+
+To create or edit an SPF record to reference Cryptlex, edit your domain's DNS settings to add a TXT record. The steps vary depending on your domain registrar. Cryptlex recommends using the following SPF record:
+
+```text
+v=spf1 include:mail.cryptlex.com ?all
+```
+
+If you've already set up an SPF record for another purpose, you can simply add a reference of Cryptlex to it. The SPF specification requires that you only have one SPF record on your domain, if you have multiple records, it may cause issues, and cause rejections of your email.
+
+For example, instead of having two separate records, such as `v=spf1 include:_spf.google.com ~all` and `v=spf1 include:mail.cryptlex.com ~all`, you can combine them into one, like this:
+
+```text
+v=spf1 include:_spf.google.com include:mail.cryptlex.com ~all
+```
+
