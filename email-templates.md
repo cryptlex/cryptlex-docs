@@ -27,7 +27,7 @@ The from name which should appear for the email.
 The email address to be used for sending the email.
 
 {% hint style="info" %}
-By default this is set to **noreply@cryptlex.com**. The can be set to a custom email address in case you are subscribed to `SMALL BUSINESS` or a higher plan.
+The from email address will only be used if you have verified your domain, otherwise it will default to **noreply@cryptlex.com**.
 {% endhint %}
 
 #### Subject
@@ -81,4 +81,23 @@ The MyCompany HelpDesk</p>
 ## Sending test emails
 
 After you have created the email template, click the email template in the email templates table. On the email template page you will find a **`Send Test Email`** button on the right top. You can use this to test your email template by providing the sample data.
+
+## Verifying email domain
+
+In order for Cryptlex to send emails on your behalf using your **From Email** address, you must verify that you own the domain. This is done by adding a TXT record \(a domain verification record\) to your DNS server that Cryptlex will check. The domain verification record is unique for each Cryptlex account.
+
+If you don’t add the domain verification record, Cryptlex sends emails using **noreply@cryptlex.com** email address. If you want to give your customers a white label experience, hiding all Cryptlex branding, you must add this record.
+
+### **To verify that a domain belongs to you**
+
+1. Select the email template in the dashboard and click on the **`Verify Email Domain`** button.
+2. Edit your domain's DNS settings and add this TXT record:
+
+   | Type | Name | Value | TTL |
+   | :--- | :--- | :--- | :--- |
+   | TXT | cryptlex-verification-code | &lt;your unique value found verify email domain dialog&gt; | 3600 or use default |
+
+3. After you add the TXT record, click the **`Verify`** button to confirm that all of your records are now valid.
+
+After your domain is verified, leave the domain verification TXT record in-place.
 
