@@ -95,7 +95,7 @@ If you don’t add the domain verification record, Cryptlex sends emails using *
 
    | Type | Name | Value | TTL |
    | :--- | :--- | :--- | :--- |
-   | TXT | cryptlex-verification-code | &lt;your unique value found verify email domain dialog&gt; | 3600 or use default |
+   | TXT | cryptlex-verification-code | &lt;your unique value found in the verify email domain dialog&gt; | 3600 or use default |
 
 3. After you add the TXT record, click the **`Verify`** button to confirm that all of your records are now valid.
 
