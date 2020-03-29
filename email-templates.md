@@ -32,7 +32,7 @@ By default this is set to **noreply@cryptlex.com**. The can be set to a custom e
 
 #### Subject
 
-The subject of the email.
+The subject of the email. This can contain data placeholders too.
 
 #### **ReplyTo**
 
@@ -56,7 +56,7 @@ By default your email body will be automatically wrapped in a responsive HTML em
 
 ## Data placeholders
 
-All the properties of [user](https://api.cryptlex.com/v3/docs#operation/get/v3/users/{id}), [license](https://api.cryptlex.com/v3/docs#operation/get/v3/licenses/{id}) and [product](https://api.cryptlex.com/v3/docs#operation/get/v3/products/{id}) resources can be accessed in the body of the email template. The general syntax is **`resource.propertName`**. Following is a sample email template body:
+All the properties of [user](https://api.cryptlex.com/v3/docs#operation/get/v3/users/{id}), [license](https://api.cryptlex.com/v3/docs#operation/get/v3/licenses/{id}) and [product](https://api.cryptlex.com/v3/docs#operation/get/v3/products/{id}) resources can be accessed in the **body** and the **subject** of the email template. The general syntax is **`resource.propertName`**. Following is a sample email template body:
 
 ```markup
 <p>Dear {{user.firstName}},</p>
