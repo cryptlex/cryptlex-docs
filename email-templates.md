@@ -14,6 +14,10 @@ Email templates can be used to automatically send emails to your customers when 
 
 You can easily create an email template through dashboard. Go to the [email templates](https://app.cryptlex.com/email-templates) section in the dashboard and click the add the button. An email template form with following fields will popup: 
 
+{% hint style="info" %}
+After creating the email template, make sure you link it with product.
+{% endhint %}
+
 #### **Name**
 
 Name of the email template.
