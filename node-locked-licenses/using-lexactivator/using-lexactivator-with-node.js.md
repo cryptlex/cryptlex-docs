@@ -22,11 +22,16 @@ LexActivator wrapper for Node.js can be easily installed through [npm](https://w
 npm i @cryptlex/lexactivator 
 ```
 
-**Note:** On Windows make sure you install the `windows-build-tools` package on the machine where you will build your app:
+**Note:** In case you are building a cross platform **Electron** app, you can install LexActivator for other targeted platforms as follows:
 
-```bash
-npm install --global windows-build-tools --vs2015
+```text
+npm install @cryptlex/lexactivator --target_arch=ia32 --target_platform=win32 --target_libc=unknown
+npm install @cryptlex/lexactivator --target_arch=x64 --target_platform=win32 --target_libc=unknown
+npm install @cryptlex/lexactivator --target_arch=x64 --target_platform=darwin --target_libc=unknown
+npm install @cryptlex/lexactivator --target_arch=x64 --target_platform=linux --target_libc=glibc
 ```
+
+This would install the precompiled binaries for the targeted platforms.
 
 LexActivator has dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
 
