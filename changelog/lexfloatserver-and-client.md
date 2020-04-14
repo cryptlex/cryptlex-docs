@@ -4,6 +4,12 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.3.5 \(2020-04-14\)
+
+### Fixed
+
+* **LexFloatServer:** Bug preventing the detection of Hyper-V on some Windows 10 machines.
+
 ## 4.3.4 \(2020-03-20\)
 
 ### Fixed

@@ -4,6 +4,22 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.9.1 \(2020-04-14\)
+
+### Fixed
+
+* Bug preventing the detection of Hyper-V on some Windows 10 machines.
+
+## 3.9.0 \(2020-03-28\)
+
+### Added
+
+* LexActivator functions are now thread safe.
+
+### Fixed
+
+* Minor bug fixes
+
 ## 3.8.0 \(2019-11-18\)
 
 ### Added
