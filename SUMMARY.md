@@ -8,6 +8,7 @@
   * [License Policies](license-management/license-policies.md)
   * [Implementing License Models](license-management/implementing-license-models.md)
   * [Custom License Fields](license-management/custom-license-fields.md)
+  * [Feature Detection](license-management/feature-detection.md)
   * [Meter Attributes](license-management/meter-attributes.md)
   * [Creating Licenses](license-management/creating-licenses.md)
   * [Renewing Licenses](license-management/renewing-licenses.md)
