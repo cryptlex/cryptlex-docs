@@ -144,6 +144,10 @@ List of the allowed countries. The country name is resolved using the IP address
 
 List of the disallowed countries. The country name is resolved using the IP address. If none of the countries is selected, this setting is ignored.
 
+### Allowed IP range
+
+IP address range in CIDR notation e.g. **196.210.135.105/24**. If no range is specified, then all the IP addresses are allowed.
+
 ### Allowed IP addresses
 
 List of the allowed IP addresses. If none of the IP addresses is included, then all the IP addresses are allowed.
