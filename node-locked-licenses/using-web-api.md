@@ -1,9 +1,5 @@
 # Using Web API
 
-{% hint style="info" %}
-We **strongly** recommend using LexActivator library for license activation. Web API should **only be used** for license activation, in case LexActivator library is not available for your OS e.g. Android and iOS. 
-{% endhint %}
-
 ## Adding licensing to your app
 
 After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
