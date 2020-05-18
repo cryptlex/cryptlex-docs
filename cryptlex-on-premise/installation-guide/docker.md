@@ -2,7 +2,7 @@
 description: Easily install Cryptlex on any machine using Docker Compose.
 ---
 
-# Docker
+# Docker Compose
 
 ## Before installation
 
