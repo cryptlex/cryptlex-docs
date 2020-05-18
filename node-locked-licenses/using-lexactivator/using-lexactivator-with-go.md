@@ -1,13 +1,5 @@
 # Using LexActivator with Go
 
-First of all, login to your Cryptlex account and download LexActivator library for Windows, MacOS or Linux:
-
-* ​[Download LexActivator for Windows](https://app.cryptlex.com/downloads)​
-* ​[Download LexActivator for MacOS](https://app.cryptlex.com/downloads)
-* ​[Download LexActivator for Linux](https://app.cryptlex.com/downloads)​
-
-The above download package contains the library which you will be using to add licensing to your app.
-
 ## Adding licensing to your app <a id="adding-licensing-to-your-app"></a>
 
 After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
@@ -20,7 +12,23 @@ Product.dat contains product data which is used by LexActivator. Product id is t
 
 ### Adding library to your app <a id="adding-library-to-your-app"></a>
 
-LexActivator example project for Go contains **LexActivator.h** file. You will need to add this file to your Go  project. It contains all the LexActivator API functions needed to add licensing to your app. Depending on the OS you are targeting you need to copy the respective LexActivator.dll, libLexActivator.so or libLexActivator.dylib to your project.
+LexActivator wrapper for Go can be easily installed using the **go get** command:
+
+```bash
+go get -u github.com/cryptlex/lexactivator-go
+```
+
+**Note:** In case you are using Windows, execute the following command after installation:
+
+```text
+xcopy %USERPROFILE%\go\src\github.com\cryptlex\lexactivator-go\libs\windows_amd64\LexActivator.dll
+```
+
+This would copy the LexActivator.dll to your project directory.
+
+LexActivator has dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+
+LexActivator has dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 
@@ -29,14 +37,14 @@ The first thing you need to do is either embed the Product.dat file in your app 
 The next thing you need to do is to set the product id of your application in your code using `SetProductId()` function. It sets the id of the product you will be adding licensing to.
 
 ```go
-C.SetProductData(C.CString("PASTE_CONTENT_OF_PRODUCT.DAT_FILE"))
-C.SetProductId(C.CString("PASTE_PRODUCT_ID", C.LA_USER))
+lexactivator.SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE")
+lexactivator.SetProductId("PASTE_PRODUCT_ID", lexactivator.LA_USER))
 ```
 
-If your app requires admin \(root\) privileges to run \(e.g. services, daemons etc.\), instead of passing   `C.LA_USER` flag, you need to pass `C.LA_SYSTEM` flag.
+If your app requires admin \(root\) privileges to run \(e.g. services, daemons etc.\), instead of passing   `lexactivator.LA_USER` flag, you need to pass `lexactivator.LA_SYSTEM` flag.
 
 {% hint style="info" %}
-In case your app doesn't have write access to the disk, you can use `C.LA_IN_MEMORY` flag instead, which causes all the data to be stored in the memory. But this would require you to activate the license every time you restart the app.
+In case your app doesn't have write access to the disk, you can use `lexactiavtor.LA_IN_MEMORY` flag instead, which causes all the data to be stored in the memory. But this would require you to activate the license every time you restart the app.
 {% endhint %}
 
 ### License activation <a id="license-activation"></a>
@@ -45,21 +53,27 @@ To activate the license in your app using the license key, you will use `Activat
 
 ```go
 func activate() {
-	var status C.int
-	status = C.SetLicenseKey(C.CString("PASTE_LICENCE_KEY"))
-	if C.LA_OK != status {
+	var status int
+	status = lexactivator.SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE")
+	if lexactivator.LA_OK != status {
 		fmt.Println("Error Code:", status)
 		os.Exit(1)
 	}
 
-	status = C.SetActivationMetadata(C.CString("key1"), C.CString("value1"))
-	if C.LA_OK != status {
+	status = lexactivator.SetProductId("PASTE_PRODUCT_ID", lexactivator.LA_USER)
+	if lexactivator.LA_OK != status {
 		fmt.Println("Error Code:", status)
 		os.Exit(1)
 	}
 
-	status = C.ActivateLicense()
-	if C.LA_OK == status || C.LA_EXPIRED == status || C.LA_SUSPENDED == status {
+	status = lexactivator.SetLicenseKey("PASTE_LICENSE_KEY")
+	if lexactivator.LA_OK != status {
+		fmt.Println("Error Code:", status)
+		os.Exit(1)
+	}
+
+	status = lexactivator.ActivateLicense()
+	if lexactivator.LA_OK == status || lexactivator.LA_EXPIRED == status || lexactivator.LA_SUSPENDED == status {
 		fmt.Println("License activated successfully:", status)
 	} else {
 		fmt.Println("License activation failed:", status)
@@ -76,29 +90,32 @@ Each time, your app starts, you need to verify whether your license is already a
 ```go
 func main() {
 	var status C.int
-	status = C.SetProductData(C.CString("PASTE_CONTENT_OF_PRODUCT.DAT_FILE"))
-	if C.LA_OK != status {
+	status = lexactivator.SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE")
+	if lexactivator.LA_OK != status {
 		fmt.Println("Error Code:", status)
 		os.Exit(1)
 	}
-	status = C.SetProductId(C.CString("PASTE_PRODUCT_ID"), C.LA_USER)
-	if C.LA_OK != status {
+	
+	status = lexactivator.SetProductId("PASTE_PRODUCT_ID", lexactivator.LA_USER)
+	if lexactivator.LA_OK != status {
 		fmt.Println("Error Code:", status)
 		os.Exit(1)
 	}
-	status = C.SetAppVersion(C.CString("PASTE_YOUR_APP_VERION"))
-	if C.LA_OK != status {
+	
+	status = lexactivator.SetAppVersion("PASTE_YOUR_APP_VERION")
+	if lexactivator.LA_OK != status {
 		fmt.Println("Error Code:", status)
 		os.Exit(1)
 	}
-	status = C.IsLicenseGenuine()
-	if C.LA_OK == status {
+	
+	status = lexactivator.IsLicenseGenuine()
+	if lexactivator.LA_OK == status {
 		fmt.Println("License is genuinely activated!")
-	} else if C.LA_EXPIRED == status {
+	} else if lexactivator.LA_EXPIRED == status {
 		fmt.Println("License is genuinely activated but has expired!")
-	} else if C.LA_SUSPENDED == status {
+	} else if lexactivator.LA_SUSPENDED == status {
 		fmt.Println("License is genuinely activated but has been suspended!")
-	} else if C.LA_GRACE_PERIOD_OVER == status {
+	} else if lexactivator.LA_GRACE_PERIOD_OVER == status {
 		fmt.Println("License is genuinely activated but grace period is over!")
 	} else {
 		 fmt.Println("License is not activated:", status)
