@@ -1,5 +1,23 @@
 # Web API
 
+## 3.28.0 \(2020-05-05\)
+
+### Added <a id="changed"></a>
+
+* `metadataKey` and `metadataValue` query params to [/v3/activations](https://api.cryptlex.com/v3/docs#operation/get/v3/activations) endpoint.
+
+## 3.27.0 \(2020-04-21\)
+
+### Added <a id="changed"></a>
+
+* `allowedIpRange` property to the license resource.
+
+## 3.26.0 \(2020-03-28\)
+
+### Added <a id="changed"></a>
+
+* [/v3/email-templates](https://api.cryptlex.com/v3/docs#tag/EmailTemplates) endpoint to add support for [email templates](../email-templates.md).
+
 ## 3.25.0 \(2020-01-25\)
 
 ### Added <a id="changed"></a>

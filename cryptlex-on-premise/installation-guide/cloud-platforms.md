@@ -31,7 +31,7 @@ In order to run Cryptlex on any cloud computing platform, you would require foll
 
 ### Filestore
 
-Any AWS S3 compatibly file store is required for storing releases. In case you don't want to use Cryptlex [release management](https://docs.cryptlex.com/release-management) API, this service is not required. Currently following file stores are supported:
+Any AWS S3 compatible file store is required for storing releases. In case you don't want to use Cryptlex [release management](https://docs.cryptlex.com/release-management) API, this service is not required. Currently following file stores are supported:
 
 * [Amazon S3](https://aws.amazon.com/s3/)
 * [Google Cloud Storage](https://cloud.google.com/storage/)

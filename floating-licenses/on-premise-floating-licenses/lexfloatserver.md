@@ -9,8 +9,16 @@ You need admin rights to run the LexFloatServer.
 {% endhint %}
 
 {% hint style="info" %}
-LexFloatServer has **libnss3** dependency on Linux. Make sure dependency is installed before running the server.
+LexFloatServer has [`VS2015 runtime`](https://www.microsoft.com/en-in/download/details.aspx?id=48145)  dependency on Windows and **`libnss3`** dependency on Linux. Make sure dependency is installed before running the server.
 {% endhint %}
+
+## Downloading the LexFloatServer
+
+LexFloatServer can be downloaded from the downloads page in the dashboard. Simply login to your Cryptlex account and download LexFloatServer binary for Windows, Mac OS or Linux:
+
+* ​[Download LexFloatServer for Windows](https://app.cryptlex.com/downloads)​
+* ​[Download LexFloatServer for Mac OS](https://app.cryptlex.com/downloads)
+* ​[Download LexFloatServer for Linux](https://app.cryptlex.com/downloads)​
 
 ## Activating the LexFloatServer
 

@@ -2,7 +2,7 @@
 description: Easily install Cryptlex on any machine using Docker Compose.
 ---
 
-# Docker
+# Docker Compose
 
 ## Before installation
 
@@ -203,5 +203,20 @@ To view the logs in realtime you can execute the following command:
 docker-compose logs -t -f
 ```
 
+## Upgrading
 
+First login to your Linux server machine where Cryptlex is deployed and go to the directory where the `cryptlex-on-premise` repository was initially cloned. Then execute the following commands:
+
+```bash
+# get the latest changes
+git pull
+# execute the update script
+./update.sh
+# execute the following command to check the logs for any error
+docker-compose logs -t -f
+```
+
+{% hint style="info" %}
+**Note:** The average downtime during update is less than 1 minute.
+{% endhint %}
 
