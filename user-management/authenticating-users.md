@@ -2,7 +2,7 @@
 
 You can authenticate your users to get the access token of the user which can further be used to get the user profile and list of user licenses.
 
-{% api-method method="post" host="https://api.cryptlex.com" path="/v3/accounts/login" %}
+{% api-method method="post" host="https://api.cryptlex.com" path="/v3/account/login" %}
 {% api-method-summary %}
 Authenticate user
 {% endapi-method-summary %}

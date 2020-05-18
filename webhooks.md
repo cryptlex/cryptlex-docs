@@ -1,9 +1,3 @@
----
-description: >-
-  Webhooks are basically user defined HTTP callbacks which are triggered by
-  specific events.
----
-
 # Webhooks
 
 ## When to use webhooks

@@ -17,16 +17,11 @@ LexFloatClient wrapper for Node.js can be easily installed through [npm](https:/
 npm i @cryptlex/lexfloatclient 
 ```
 
-**Note:** In case you are building a cross platform **Electron** app, you can install LexFloatClient for other targeted platforms as follows:
+**Note:** On Windows make sure you install the `windows-build-tools` package on the machine where you will build your app:
 
-```text
-npm install @cryptlex/lexfloatclient --target_arch=ia32 --target_platform=win32 --target_libc=unknown
-npm install @cryptlex/lexfloatclient --target_arch=x64 --target_platform=win32 --target_libc=unknown
-npm install @cryptlex/lexfloatclient --target_arch=x64 --target_platform=darwin --target_libc=unknown
-npm install @cryptlex/lexfloatclient --target_arch=x64 --target_platform=linux --target_libc=glibc
+```bash
+npm install --global windows-build-tools --vs2015
 ```
-
-This would install the precompiled binaries for the targeted platforms.
 
 LexFloatClient has dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
 

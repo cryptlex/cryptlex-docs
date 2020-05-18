@@ -63,7 +63,7 @@ Now to create the records:
 
 ### Step 3 — Installing the Cryptlex Enterprise Kubernetes application
 
-In this section you will deploy a Hello World app called [`hello-kubernetes`](https://hub.docker.com/r/paulbouwer/hello-kubernetes/) to have some Services to which you’ll route the traffic. To confirm that the Nginx Ingress works properly in the next steps, you’ll deploy it twice, each time with a different welcome message that will be shown when you access it from your browser.
+In this section you will deploy the Cryptlex Enterprise Kubernetes application in your Kubernetes cluster.
 
 #### Step 3.1 —  Generate a 2048 bit RSA key pair
 
