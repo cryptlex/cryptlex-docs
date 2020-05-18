@@ -123,48 +123,7 @@ Just follow the guide of your cloud computing platform to run Docker apps and en
 
 ### Cryptlex Dashboard
 
-The dashboard should ideally be hosted on third party services like [Netlify](https://www.netlify.com/) or [Github](https://pages.github.com/) which provide globally load balanced, static website servers free of cost.
-
-#### Downloading dashboard
-
-The latest or specific version of the dashboard can be downloaded from the following locations:
-
-```bash
-# download specific version
-curl https://dl.cryptlex.com/downloads/dashboard/{version}/cryptlex-dashboard.zip \
-     -o="cryptlex-dashboard.zip"
-
-# download latest version
-curl https://dl.cryptlex.com/downloads/dashboard/latest/cryptlex-dashboard.zip \
-     -o="cryptlex-dashboard.zip"
-```
-
-#### Updating config
-
-After unzipping the dashboard web app, open the `assets/custom/config.js` file and set the following values:
-
-```javascript
-'use strict';
-
-window.Cryptlex = {
-    title : "COMPANY_NAME",
-    website: "COMPANY_WEBSITE",
-    logoUrl: "COMPANY_LOGO_URL_WITH_TRANSPARENT_BACKGROUND",
-    faviconUrl: "COMPANY_FAVICON_URL",
-    googleAnalyticsKey : "GOOGLE_ANALYTICS_KEY",
-    googleClientId : "GOOGLE_CLIENT_ID",
-    apiBaseUrl : "WEB_API_BASE_URL",
-    releaseServerBaseUrl : "RELEASE_SERVER_BASE_URL"
-}
-```
-
-#### Deploying dashboard
-
-Pleasing follow the static website hosting guidelines for [Netlify](https://www.netlify.com/), [Github](https://pages.github.com/), [S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) or other hosting providers.
-
-#### Using Docker
-
-You can also use the Docker, which uses Nginx to host the dashboard on port **4200**. The docker image is available on DockerHub:
+You can use the Docker, which uses Nginx to host the dashboard. The docker image is available on DockerHub:
 
 * [Cryptlex Web Dashboard](https://hub.docker.com/r/cryptlex/cryptlex-web-dashboard)
 
@@ -172,6 +131,7 @@ Just follow the guide of your cloud computing platform to run Docker apps and en
 
 | Environment Variables | Description |
 | :--- | :--- |
+| `PORT` | Default port is 4200. |
 | `RELEASE_SERVER_BASE_URL` | The  public URL of Release server e.g. https://cryptlex-releases.mycompany.com |
 | `WEB_API_BASE_URL` | The  public URL of Web API server e.g. https://cryptlex-api.mycompany.com |
 | `COMPANY_NAME` | This shows up in the browser title. |
