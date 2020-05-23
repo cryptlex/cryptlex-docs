@@ -336,7 +336,7 @@ In order to upgrade the apps just execute the following commands:
 helm repo update
 
 # Upgrade the Nginx Ingress
-helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx --set controller.publishService.enabled=true,controller.service.externalTrafficPolicy=Local
+helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx --values ingress.yaml
 
 # Upgrade the staging Cryptlex Enterprise app
 helm upgrade --install cryptlex-enterprise-stg --values staging.yaml --namespace cryptlex-stg cryptlex/cryptlex-enterprise
