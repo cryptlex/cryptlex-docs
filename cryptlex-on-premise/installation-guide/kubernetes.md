@@ -22,13 +22,31 @@ In this guide, you’ll install the Cryptlex Enterprise Kubernetes application u
 
 You will first need to install the Kubernetes-maintained [Nginx Ingress Controller](https://github.com/kubernetes/ingress-nginx) using Helm. 
 
-This Service is of type LoadBalancer, and because you are deploying it to a Kubernetes cluster, the cluster will automatically create a Load Balancer, through which all external traffic will flow to the appropriate back-end services.. 
+This Service is of type LoadBalancer, and because you are deploying it to a Kubernetes cluster, the cluster will automatically create a Load Balancer, through which all external traffic will flow to the appropriate back-end services.
+
+The Nginx Ingress Helm chart uses an `ingress.yaml` file for setting the configuration. You need to download this file to your local machine.
+
+{% code title="ingress.yaml" %}
+```yaml
+# nginx configuration
+
+controller:
+  publishService:
+    enabled: true
+  service:
+    enabled: true
+    externalTrafficPolicy: "Local"
+  config:
+    ssl-ciphers: "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-SHA256:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:DES-CBC3-SHA"
+    ssl-protocols: "TLSv1 TLSv1.1 TLSv1.2 TLSv1.3"
+```
+{% endcode %}
 
 To install the Nginx Ingress Controller to your cluster, run the following commands:
 
 ```text
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx --set controller.publishService.enabled=true,controller.service.externalTrafficPolicy=Local
+helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx --values ingress.yaml
 ```
 
 You can watch the Load Balancer become available by running:
