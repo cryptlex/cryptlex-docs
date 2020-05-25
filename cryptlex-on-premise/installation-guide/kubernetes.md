@@ -57,9 +57,9 @@ kubectl get services -o wide -w ingress-nginx-controller
 
 You’ve installed the Nginx Ingress maintained by the Kubernetes community. It will route HTTP and HTTPS traffic from the Load Balancer to appropriate back-end Services, configured in Ingress Resources.
 
-### Step 2 — Create custom A records
+### Step 2 — Create custom A/CNAME records
 
-You will need to create three A records for the external IP address of the Nginx Ingress installed in the previous step. For this tutorial we will choose following three sub-domains:
+You will need to create three A/CNAME records for the external IP address of the Nginx Ingress installed in the previous step. For this tutorial we will choose following three sub-domains:
 
 `license-api.mycompany.com` for the Web API Server
 
@@ -79,11 +79,23 @@ Now to create the records:
 * Create A records for the above custom domains.
 * Point all of them to the same IP address.
 
-### Step 3 — Installing the Cryptlex Enterprise Kubernetes application
+### Step 3 — Securing the Nginx Ingress using Cert-Manager
+
+To secure your Ingress Resources, you need to install the [Cert-Manager](https://cert-manager.io/docs/installation/kubernetes/). Once installed and configured, your app will be running behind HTTPS.
+
+To install the Cert-Manager to your cluster, run the following commands:
+
+```text
+kubectl create namespace cert-manager
+helm repo add jetstack https://charts.jetstack.io
+helm upgrade --install cert-manager jetstack/cert-manager --version v0.15.0 --namespace cert-manager --set installCRDs=true
+```
+
+### Step 4 — Installing the Cryptlex Enterprise Kubernetes application
 
 In this section you will deploy the Cryptlex Enterprise Kubernetes application in your Kubernetes cluster.
 
-#### Step 3.1 —  Generate a 2048 bit RSA key pair
+#### Step 4.1 —  Generate a 2048 bit RSA key pair
 
 The RSA key pair is required to sign and verify the JWT access tokens used for authentication purpose. To generate the RSA key pair execute the following commands in the terminal:
 
@@ -104,17 +116,17 @@ awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' public.pem
 
 The above generated keys would be used in the next steps.
 
-#### Step 3.2 —  Choosing database
+#### Step 4.2 —  Choosing database
 
 Postgres database is required for storing all Cryptlex data. The Cryptlex Enterprise Kubernetes app will automatically spin up a Postgres database instance and will use the persistent volume claim for requesting the storage disk. This option may be good for staging/testing environments, but for production environment we recommend using a third party Postgres database service.
 
-#### Step 3.3 —  Choosing file store
+#### Step 4.3 —  Choosing file store
 
 Any AWS S3 compatible file store is required for storing releases. In case you don't want to use Cryptlex [release management](https://docs.cryptlex.com/release-management) API, this service is not required. 
 
 The Cryptlex Enterprise Kubernetes app will automatically spin up a [Minio](https://min.io/) instance and will use the persistent volume claim for requesting the storage disk. This option may be good for staging/testing environments, but for production environment we recommend using a third party AWS S3 compatible file store service.
 
-#### Step 3.4 —  Download and update the Helm values file
+#### Step 4.4 —  Download and update the Helm values file
 
 The Cryptlex Enterprise Helm chart uses a `values.yaml` file for setting the configuration. You need to download this file to your local machine and update this file for each environment.
 
@@ -267,7 +279,7 @@ sso:
 
 You need to update this file for each environment. You should also generate separate RSA keys for each environment.
 
-#### Step 3.5 —  Installing the Cryptlex Enterprise Helm chart
+#### Step 4.5 —  Installing the Cryptlex Enterprise Helm chart
 
 After you have updated the `values.yaml` \(in this case `production.yaml` and `staging.yaml`\) file for each environment, execute following commands to install the Cryptlex Enterprise Helm chart for each environment:
 
@@ -283,37 +295,6 @@ kubectl create namespace cryptlex
 helm upgrade --install cryptlex-enterprise --values production.yaml --namespace cryptlex cryptlex/cryptlex-enterprise
 
 ```
-
-### Step 4 — Securing the Nginx Ingress using Cert-Manager
-
-To secure your Ingress Resources, you need to install the [Cert-Manager](https://cert-manager.io/docs/installation/kubernetes/). Once installed and configured, your app will be running behind HTTPS.
-
-To install the Cert-Manager to your cluster, run the following commands:
-
-```text
-kubectl create namespace cert-manager
-helm repo add jetstack https://charts.jetstack.io
-helm upgrade --install cert-manager jetstack/cert-manager --version v0.15.0 --namespace cert-manager --set installCRDs=true
-```
-
-You’ll need to wait a few minutes for the Let’s Encrypt servers to issue a certificate for your domains. In the meantime, you can track its progress by inspecting the output of the following command:
-
-```text
-kubectl describe certificate -n cert-manager
-```
-
-The end of the output will look similar to this:
-
-```text
-OutputEvents:
-  Type    Reason        Age   From          Message
-  ----    ------        ----  ----          -------
-  Normal  GeneratedKey  48s   cert-manager  Generated a new private key
-  Normal  Requested     48s   cert-manager  Created new CertificateRequest resource "hello-kubernetes-tls-4208342520"
-  Normal  Issued        21s   cert-manager  Certificate issued successfully
-```
-
-Navigate to one of your domains in your browser to test. You’ll see the padlock to the left of the address bar in your browser, signifying that your connection is secure.
 
 ### Step 5 — Signup for the Cryptlex account
 
