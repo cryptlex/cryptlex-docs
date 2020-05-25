@@ -76,7 +76,7 @@ kubectl get services -o wide -w ingress-nginx-controller
 Now to create the records:
 
 * Go to your DNS provider’s website \(e.g. [GoDaddy](https://ie.godaddy.com/help/add-a-cname-record-19236) or [Cloudflare](https://www.cloudflare.com/dns/)\).
-* Create A records for the above custom domains.
+* Create A/CNAME records for the above custom domains.
 * Point all of them to the same IP address.
 
 ### Step 3 — Securing the Nginx Ingress using Cert-Manager
