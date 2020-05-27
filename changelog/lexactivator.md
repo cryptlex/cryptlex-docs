@@ -4,6 +4,18 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.9.3 \(2020-05-14\)
+
+### Fixed
+
+* Bug causing crash in multi-threaded use.
+
+## 3.9.2 \(2020-04-20\)
+
+### Fixed
+
+* Minor bug fixes.
+
 ## 3.9.1 \(2020-04-14\)
 
 ### Fixed
