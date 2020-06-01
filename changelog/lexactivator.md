@@ -4,6 +4,16 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.10.0 \(2020-06-01\)
+
+### Added
+
+* Improved device fingerprinting of devices running Linux.
+
+### Fixed
+
+* Bug preventing auto-detection of system proxy.
+
 ## 3.9.3 \(2020-05-14\)
 
 ### Fixed

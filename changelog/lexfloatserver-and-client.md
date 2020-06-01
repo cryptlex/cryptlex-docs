@@ -4,6 +4,12 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.3.6 \(2020-05-01\)
+
+### Added
+
+* **LexFloatServer:**  Improved device fingerprinting of devices running Linux.
+
 ## 4.3.5 \(2020-04-14\)
 
 ### Fixed
