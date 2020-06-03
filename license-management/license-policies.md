@@ -136,6 +136,14 @@ List of required metadata keys which a license inheriting the policy must have.
 
 List of required meter attributes which a license inheriting the policy must have.
 
+### Expiring soon event offset
+
+The number of seconds to wait before license expiration date to trigger the `license.expiring-soon` webhook event.
+
+### Key pattern
+
+Regex for the license key format. The default regex is `^([A-F0-9]{6}-){5}[A-F0-9]{6}$`  which generates the license keys in the format:`XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX`
+
 ### Allowed countries
 
 List of the allowed countries. The country name is resolved using the IP address. If none of the countries is selected, then all the countries are allowed.
