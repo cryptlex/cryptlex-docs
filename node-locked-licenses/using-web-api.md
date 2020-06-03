@@ -1,5 +1,9 @@
 # Using Web API
 
+{% hint style="info" %}
+We **strongly** recommend using LexActivator library for license activation. Web API should **only be used** for license activation, in case LexActivator library is not available for your OS e.g. Android and iOS. 
+{% endhint %}
+
 ## Adding licensing to your app
 
 After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
@@ -8,6 +12,10 @@ After you've added a product for your app in the dashboard, go to the product pa
 * Download the 2048-bit RSA public key for the product.
 
 RSA public key is needed to verify the signature of the activation token which you get on activating a license. Product id is the identifier of your product which is to be licensed.
+
+{% hint style="info" %}
+In the license policies make sure [`fingerprintMatchingStrategy`](https://docs.cryptlex.com/license-management/license-policies#fingerprint-matching-strategy) is set to `"exact"` as you will be using a custom fingerprint.
+{% endhint %}
 
 ### Activating the license key
 
