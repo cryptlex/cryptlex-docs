@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.10.1 \(2020-06-12\)
+
+### Added
+
+* Improved device fingerprinting of devices running Linux.
+
 ## 3.10.0 \(2020-06-01\)
 
 ### Added

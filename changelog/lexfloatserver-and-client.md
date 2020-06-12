@@ -4,7 +4,13 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
-## 4.3.6 \(2020-05-01\)
+## 4.3.7 \(2020-06-12\)
+
+### Fixed
+
+* **LexFloatServer:** Minor bug fixes.
+
+## 4.3.6 \(2020-06-01\)
 
 ### Added
 
