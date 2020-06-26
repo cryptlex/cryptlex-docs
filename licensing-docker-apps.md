@@ -1,4 +1,4 @@
-# Docker Apps
+# Licensing Docker Apps
 
 ## Licensing Docker apps
 
