@@ -56,6 +56,7 @@
 * [Timed Trials](timed-trials/README.md)
   * [Verified Trials](timed-trials/verified-trials.md)
   * [Unverified Trials](timed-trials/unverified-trials.md)
+* [Docker Apps](docker-apps.md)
 * [Webhooks](webhooks.md)
 * [Email Templates](email-templates.md)
 * [Web Integration](web-integration/README.md)
