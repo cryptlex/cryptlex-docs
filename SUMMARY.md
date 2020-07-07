@@ -21,6 +21,7 @@
   * [Authenticating Users](user-management/authenticating-users.md)
   * [Customer Portal](user-management/customer-portal.md)
   * [Google SSO](user-management/google-sso.md)
+  * [SAML SSO](user-management/saml-sso.md)
 * [Release Management](release-management/README.md)
   * [Overview](release-management/overview.md)
   * [Creating Releases](release-management/creating-releases.md)
