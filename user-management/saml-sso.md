@@ -49,7 +49,7 @@ Cryptlex looks for the last name in the following attributes \(case-insensitive\
 
 ### Role
 
-If your identity provider supports custom attributes, you can set the Role attribute to automatically provision users with roles created in Cryptlex This can be set to any valid role on your Cryptlex account. Cryptlex looks for the role in the following attributes \(case-insensitive\):
+If your identity provider supports custom attributes, you can set the Role attribute to automatically provision users with roles created in Cryptlex. Cryptlex looks for the role in the following attributes \(case-insensitive\):
 
 * [http://schemas.microsoft.com/ws/2008/06/identity/claims/role](http://schemas.microsoft.com/ws/2008/06/identity/claims/role)
 * Role
