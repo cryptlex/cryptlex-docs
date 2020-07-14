@@ -11,7 +11,7 @@ description: All notable changes to LexActivator are documented here.
 * `SetCustomDeviceFingerprint()`  function to allow setting a custom device fingerprint.
 * `GetLicenseAllowedActivations()`  function to get the allowed activations of the license.
 * `GetLicenseTotalActivations()`  function to get the total activations of the license.
-* `GetLibraryVersionn()` function to get the library version.
+* `GetLibraryVersion()` function to get the library version.
 
 ### Updated
 
