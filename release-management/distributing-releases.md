@@ -2,7 +2,7 @@
 
 ## Downloading a release
 
-In order to download the release, the release url must contain license key as  **`key`** query parameter or **`access token`** in the header.
+In order to download the release, the release URL must contain license key as  **`key`** query parameter or **`access token`** in the header.
 
 ```bash
 # download file using license key
@@ -15,7 +15,7 @@ curl -O -J -L https://releases.cryptlex.com/v3/{RELEASE_ID}/myapp.zip \
      -o="myapp.zip"
 ```
 
-The license key must belong to the product for which the release was created and access token must belong to any user who is associated with the license key of the product.
+The license key must belong to the product for which the release was created and the access token must belong to any user who is associated with the license key of the product.
 
 {% hint style="danger" %}
 The external release files are not secured and hence don't require**`key`** query parameter for download.
@@ -27,7 +27,7 @@ In order to detect whether an update is available for your product, you can eith
 
 ### Using Web API
 
-Following sample request checks whether a new release is available by comparing with the provided release version.
+Following sample request checks whether a new release is available by comparing it with the provided release version.
 
 {% api-method method="get" host="https://api.cryptlex.com" path="/v3/releases/update" %}
 {% api-method-summary %}
@@ -114,7 +114,7 @@ If an update is available it returns a **`200`** success response containing the
 
 ### Using LexActivator
 
-The sample code for checking the release update is available on Github for all the languages in their sample files. Following sample code demonstrates it for C/C++.
+The sample code for checking the release update is available on Github for all the languages in their sample files. The following sample code demonstrates it for C/C++.
 
 ```cpp
 void LA_CC SoftwareReleaseUpdateCallback(uint32_t status)
@@ -174,13 +174,13 @@ Following table summarises the expected response by update API endpoint if it is
 | 1.2.3 | 1.2.3.4 | 204 |
 | 1.2 | 1.2.3.4 | 204 |
 
-Suppose your latest release version is **`1.2.3.4`** and you invoke the update API endpoint with **`version`** query param having value **`1.2.3`**, then it will return **`204`** status code indicating no update.
+Suppose your latest release version is **`1.2.3.4`** and you invoke the update API endpoint with **`version`** query param having a value **`1.2.3`**, then it will return **`204`** status code indicating no update.
 
 ## Downloading latest
 
-In order to download the latest release of your product, you need to invoke the [/v3/releases/latest](https://api.cryptlex.com/v3/docs#operation/get/v3/releases/latest) endpoint to get the download urls for the latest release.
+In order to download the latest release of your product, you need to invoke the [/v3/releases/latest](https://api.cryptlex.com/v3/docs#operation/get/v3/releases/latest) endpoint to get the download URLs for the latest release.
 
-Following sample requests fetches the latest release details.
+The following sample request fetches the latest release details.
 
 {% api-method method="get" host="https://api.cryptlex.com" path="/v3/releases/latest" %}
 {% api-method-summary %}
@@ -259,5 +259,5 @@ License key
 {% endapi-method-spec %}
 {% endapi-method %}
 
-It returns a **`200`** success response containing the download urls of the latest release.
+It returns a **`200`** success response containing the download URLs of the latest release.
 
