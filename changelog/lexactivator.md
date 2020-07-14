@@ -4,6 +4,23 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.11.0 \(2020-07-14\)
+
+### Added
+
+* `SetCustomDeviceFingerprint()`  function to allow setting a custom device fingerprint.
+* `GetLicenseAllowedActivations()`  function to get the allowed activations of the license.
+* `GetLicenseTotalActivations()`  function to get the total activations of the license.
+* `GetLibraryVersionn()` function to get the library version.
+
+### Updated
+
+* `GetLicenseMeterAttribute()`  function to return gross uses of the meter attribute.
+
+### Fixed
+
+* Bug causing fingerprint mismatch error in Dockers
+
 ## 3.10.1 \(2020-06-12\)
 
 ### Added
@@ -42,7 +59,7 @@ description: All notable changes to LexActivator are documented here.
 
 ### Added
 
-* LexActivator functions are now thread safe.
+* LexActivator functions are now thread-safe.
 
 ### Fixed
 
