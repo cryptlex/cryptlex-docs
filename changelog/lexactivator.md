@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.11.1 \(2020-08-18\)
+
+### Fixed
+
+* Bug causing the cache to return incorrect status code.
+
 ## 3.11.0 \(2020-07-14\)
 
 ### Added

@@ -4,6 +4,12 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.3.8 \(2020-08-18\)
+
+### Fixed
+
+* **LexFloatServer:** Bug causing the cache to return incorrect status code.
+
 ## 4.3.7 \(2020-06-12\)
 
 ### Fixed
