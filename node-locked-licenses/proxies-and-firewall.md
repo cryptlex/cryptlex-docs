@@ -32,8 +32,8 @@ Whitelist Cryptlex IP addresses to enable LexActivator license and trial activat
 
 If your customer's policy denies access from external IP addresses and websites, you will need to whitelist the IP addresses below. A whitelist provides access to designated IP addresses and sites that would otherwise be prevented by your security policy.
 
-* `104.28.6.103`
-* `104.28.7.103`
+* `104.31.76.187`
+* `104.31.77.187`
 
 Alternatively, you can also whitelist Cryptlex web API URL:
 
