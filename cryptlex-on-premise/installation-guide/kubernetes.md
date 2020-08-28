@@ -88,7 +88,7 @@ To install the Cert-Manager to your cluster, run the following commands:
 ```text
 kubectl create namespace cert-manager
 helm repo add jetstack https://charts.jetstack.io
-helm upgrade --install cert-manager jetstack/cert-manager --version v0.15.0 --namespace cert-manager --set installCRDs=true
+helm upgrade --install cert-manager jetstack/cert-manager --version v0.16.1 --namespace cert-manager --set installCRDs=true
 ```
 
 ### Step 4 — Installing the Cryptlex Enterprise Kubernetes application
