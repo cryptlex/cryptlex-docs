@@ -32,7 +32,7 @@ We will apply any Service Credits only against future payments otherwise due fro
 
 To receive a Service Credit, the Customer must submit a claim by sending an email to [support@cryptlex.com](mailto:support@cryptlex.com). To be eligible, the credit request must be received by us by the end of the second billing cycle after which the incident occurred and must include the following information:
 
-* Customer name, registered email address and company id.
+* Customer name, registered email address, and company id.
 * The name of the service to which the claim relates.
 * Information supporting each claim of Downtime, including date, time, and a description of the incident and affected service, all of which must fall within the billing cycle for which you are submitting a claim.
 
@@ -42,13 +42,13 @@ If the Monthly Uptime Percentage of such request is confirmed by us and is less 
 
 The following are not counted as Downtime for the purpose of calculating Monthly Uptime Percentage:
 
-Service unavailability caused by scheduled maintenance of the platform used to provide the applicable service \(Service Provider will endeavour to provide seven days’ advance notice of service-affecting scheduled maintenance\).
+Service unavailability caused by scheduled maintenance of the platform used to provide the applicable service \(Service Provider will endeavor to provide seven days’ advance notice of service-affecting scheduled maintenance\).
 
 Service unavailability caused by events outside of the direct control of Service Provider or its subcontractor\(s\), including any force majeure event, the failure or unavailability of Customer’s systems, the Internet, and the failure of any other technology or equipment used to connect to or access the service.
 
 Service unavailability that resulted from any actions or inactions of Customer or any third party \(other than the Service Providers direct hosting subcontractor\);
 
-Service unavailability that resulted from Customer's equipment, software or other technology and/or third party equipment, software or other technology \(other than third party equipment within our direct control\);
+Service unavailability that resulted from Customer's equipment, software or other technology and/or third-party equipment, software or other technology \(other than third party equipment within our direct control\);
 
 Service unavailability arising from our suspension and termination of Customer's right to use Service Provider’s cloud-based services in connection with any breach by you of the Terms of Service or otherwise in accordance with the Terms of Service. If availability is impacted by factors other than those used in our Monthly Uptime Percentage calculation, then we may issue a Service Credit considering such factors at our discretion.
 

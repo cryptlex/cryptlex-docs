@@ -50,14 +50,13 @@ Information in this category includes the information you provide when registeri
 
 **1.2.1.2 Personal information stored in third party services**
 
-* Name and email \(through Hubspot, MailChimp and Intercom\)
-* Company name \(through Hubspot\)
+* Name and email \(through Stripe, Hubspot and Intercom\)
+* Company name \(through Stripe, Hubspot and Intercom\)
 * Links to social media profiles \(through Hubspot\)
 * Credit card information \(securely stored within Stripe\)
 * Website usage \(through Google Analytics\)
 * Geographic location \(through Google Analytics\)
 * Name, email and IP addresses in crash reports \(through Bugsnag retained for seven days\)
-* IP addresses in request logs \(through Papertrail archived for one year\)
 
 #### 1.2.2 Collection of User data from your customers
 
@@ -82,7 +81,6 @@ This data is only stored within Cryptlex and is entirely owned by you. This data
 **1.2.2.2 Personal information stored in third party services**
 
 * Name, email and IP addresses in crash reports \(through Bugsnag retained for seven days\)
-* IP addresses in request logs \(through Papertrail archived for one year\)
 
 #### 1.2.3 GDPR
 

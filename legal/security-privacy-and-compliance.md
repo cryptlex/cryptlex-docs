@@ -18,7 +18,7 @@ Cryptlex complies with the EU/U.S. Privacy Shield Framework as set forth by the 
 
 ### EU GDPR
 
-Cryptlex is compliant with the EU General Data Protection Regulation \(EU GDPR\). Please see our [Privacy Policy](https://docs.cryptlex.com/legal/privacy-policy) for details on how EU GDPR is relevant for businesses using Cryptlex.
+Cryptlex tries it's best to be compliant with the EU General Data Protection Regulation \(EU GDPR\). Please see our [Privacy Policy](https://docs.cryptlex.com/legal/privacy-policy) for details on how EU GDPR is relevant for businesses using Cryptlex.
 
 ### PCI DSS
 
@@ -26,11 +26,11 @@ Cryptlex's payment and credit card information is handled by Stripe, which is a 
 
 ### ISO 27001, ISO 27017, ISO 27018
 
-Cryptlex datacenters are compliant with ISO 27001, ISO 27017 and ISO 27018 certifications. These internationally accepted security standards cover the systems, applications, people, technology, policies, procedures and datacenters serving customers. Our hosting provider, Heroku, has achieved all three of these certificates. Heroku's [ISO 27001](https://www.heroku.com/compliance) covers the Heroku security management controls. The [ISO 27017](https://www.heroku.com/compliance) certification covers cloud security specifically for cloud service providers. [ISO 27018](https://cloud.google.com/files/GCP_ISO_27018_2017.pdf) governs protection of personally identifiable information in public cloud services.
+Cryptlex datacenters are compliant with ISO 27001, ISO 27017 and ISO 27018 certifications. These internationally accepted security standards cover the systems, applications, people, technology, policies, procedures and datacenters serving customers. Our hosting provider, AWS \(Amazon Web Services\), has achieved [ISO 27001](https://aws.amazon.com/compliance/iso-27001-faqs/), [ISO 27017](https://aws.amazon.com/compliance/iso-27017-faqs/) and [ISO 27018](https://aws.amazon.com/compliance/iso-27018-faqs/) certifications.
 
-### SOC2 Type I 
+### SOC 1, SOC 2, SOC 3 
 
-Cryptlex datacenters are compliant with SOC 2 certification. Our hosting provider, Heroku, has achieved [SOC 2](https://devcenter.heroku.com/articles/security-privacy-compliance#soc2-type-i-attestation-report) certification. This audit includes the examination of the fairness of presentation and the suitability of the design of controls relevant to security, availability, and confidentiality of the information processed by the Heroku.
+Cryptlex datacenters are compliant with SOC 1, SOC 2 and SOC 3 certification. Our hosting provider, AWS \(Amazon Web Services\) has achieved [SOC1, SOC 2 and SOC3 certifications](https://aws.amazon.com/compliance/soc-faqs/).
 
 ## Cryptlex security features
 
@@ -50,10 +50,7 @@ Cryptlex offers basic security features for your accounts, including:
 Additional features to protect and secure your data such as:
 
 * Best in class, secure, battle-tested and DDoS protected infrastructure
-* Postgres \(database\) encryption at rest 
-* Postgres \(database\) transport security via TLS/SSL
-* Postgres \(database\) logical and physical backups and rollback
-* Postgres \(database\) auto-rotation of credentials
+* Highly available and fully secured [database](https://aws.amazon.com/rds/aurora/postgresql-features/)
 * Two-factor authentication enabled for all cloud hosting providers
 * Only authorised personnel have access to data with two-factor authentication being mandatory
 
