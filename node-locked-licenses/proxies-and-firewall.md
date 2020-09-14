@@ -2,9 +2,9 @@
 
 ## Proxies
 
-LexActivator automatically detects the proxy settings of the machine. So, in most of the cases you don't need to care whether your user is behind a proxy server or not.
+LexActivator automatically detects the proxy settings of the machine. So, in most cases, you don't need to care whether your user is behind a proxy server or not.
 
-To detect proxy settings, it uses standard methods available for each operating system. On Windows it checks the system proxy settings, on Mac OS X it reads proxy settings from the system internet settings and on Linux it reads proxy settings from the environment variable http\_proxy.
+To detect proxy settings, it uses standard methods available for each operating system. On Windows, it checks the system proxy settings, on macOS, it reads proxy settings from the system internet settings, and on Linux, it reads proxy settings from the environment variable `http_proxy`.
 
 ### Custom proxy settings
 
@@ -32,10 +32,17 @@ Whitelist Cryptlex IP addresses to enable LexActivator license and trial activat
 
 If your customer's policy denies access from external IP addresses and websites, you will need to whitelist the IP addresses below. A whitelist provides access to designated IP addresses and sites that would otherwise be prevented by your security policy.
 
+* `54.147.158.222`
+* `54.147.163.93`
+* `54.144.124.187`
+* `54.144.46.201`
+
+Alternatively, you can also whitelist Cryptlex Web API URL:
+
+`htt:/api.cryptlex.com:443`
+
+In case you are still using Cryptlex v2 \(legacy\), then the following IP addresses should be whitelisted:
+
 * `104.31.76.187`
 * `104.31.77.187`
-
-Alternatively, you can also whitelist Cryptlex web API URL:
-
-`https://api.cryptlex.com:443`
 
