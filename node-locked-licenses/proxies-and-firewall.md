@@ -26,7 +26,7 @@ Following are some examples of the valid proxy strings:
 
 ## Firewall whitelisting
 
-Whitelist Cryptlex IP addresses to enable LexActivator license and trial activations.
+Whitelist Cryptlex IP addresses to enable LexActivator license and trial activations through the firewall.
 
 ### Access through firewall <a id="access-through-firewall"></a>
 
@@ -39,10 +39,5 @@ If your customer's policy denies access from external IP addresses and websites,
 
 Alternatively, you can also whitelist Cryptlex Web API URL:
 
-`htt:/api.cryptlex.com:443`
-
-In case you are still using Cryptlex v2 \(legacy\), then the following IP addresses should be whitelisted:
-
-* `104.31.76.187`
-* `104.31.77.187`
+`https:/api.cryptlex.com:443`
 
