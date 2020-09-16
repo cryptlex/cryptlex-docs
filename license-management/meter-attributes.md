@@ -4,7 +4,7 @@ Sometimes you want your customers to pay for what is actively used regardless of
 
 ## Meter attribute properties
 
-The meter attributes can be added to licenses and has following three properties:
+The meter attributes can be added to licenses and have the following properties:
 
 #### Name
 
@@ -16,7 +16,11 @@ The maximum allowed uses for the attribute.
 
 #### Total Uses
 
-The current uses for the attribute. It's value can be incremented or decremented in your app using LexActivator functions. 
+The current uses for the attribute. Its value can be incremented, decremented, or reset in your app using LexActivator functions.
+
+#### Gross Uses
+
+This property keeps track of lifetime usage of the meter attribute. When a license activation is deleted, the uses consumed by the activation are automatically decremented from the license total uses. So, this property can be used to keep track of gross uses even if activations are deleted.
 
 ## Enforcing meter attributes schema
 
