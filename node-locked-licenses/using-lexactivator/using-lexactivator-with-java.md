@@ -1,12 +1,12 @@
 # Using LexActivator with Java
 
-First of all, login to your Cryptlex account and download LexActivator library for Windows, Mac OS X or Linux:
+First of all, login to your Cryptlex account and download the LexActivator library for Windows, macOS or Linux:
 
 * ​[Download LexActivator for Windows](https://app.cryptlex.com/downloads)​
 * ​[Download LexActivator for Mac OS X](https://app.cryptlex.com/downloads)​
 * ​[Download LexActivator for Linux](https://app.cryptlex.com/downloads)​
 
-The above download package contains the library  which you will be using to add licensing to your app.
+The above download package contains the library which you will be using to add licensing to your app.
 
 ## Adding licensing to your app <a id="adding-licensing-to-your-app"></a>
 
@@ -22,7 +22,7 @@ Product.dat contains product data which is used by LexActivator. Product id is t
 
 LexActivator example project \(Netbeans\) for Java contains the LexActivator package and [JNA](https://github.com/java-native-access/jna) jar file. You will need to add these files to your project. It contains all the LexActivator API functions needed to add licensing to your app.
 
-LexActivator is compiled as a native binary, so you will need to include the LexActivator binaries for every platform you want to support. It looks for the native platform libraries in the folder "lexactivator" relative to your jar file. The folder structure should be as follows:
+LexActivator is compiled as a native binary, so you will need to include the LexActivator binaries for every platform you want to support. It looks for the native platform libraries in the folder `lexactivator` relative to your jar file. The folder structure should be as follows:
 
 ```text
 myapp.jar
@@ -39,7 +39,11 @@ lexactivator/
           libLexActivator.so
 ```
 
-In case you are creating platform specific installers, you only need to include the versions of LexActivator applicable to that platform.
+In case you are creating platform-specific installers, you only need to include the versions of LexActivator applicable to that platform.
+
+LexActivator has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+
+LexActivator has a dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 

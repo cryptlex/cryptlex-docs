@@ -1,6 +1,6 @@
 # Using LexFloatClient with C, C++ & Objective C
 
-First of all, login to your Cryptlex account and download LexFloatClient library for Windows, MacOS or Linux:
+First of all, login to your Cryptlex account and download the LexFloatClient library for Windows, macOS, or Linux:
 
 * [Download LexFloatClient for Windows](https://app.cryptlex.com/downloads)
 * [Download LexFloatClient for MacOS](https://app.cryptlex.com/downloads)
@@ -19,9 +19,13 @@ Product id is the identifier of your product which is to be used in the code. Th
 
 ### Adding library to your app
 
-LexFloatClient example project for C contains the **LexFloatClient.h** header file. In addition to that it includes **LexFloatClient.lib** file required in case of Windows. It contains all the LexFloatClient API functions needed to add licensing to your app.
+LexFloatClient example project for C contains the **LexFloatClient.h** header file. In addition to that, it includes the **LexFloatClient.lib** file required in the case of Windows. It contains all the LexFloatClient API functions needed to add licensing to your app.
 
 Depending on the platform you are targeting **\(x86 or x64\)** you need to link the respective LexFloatClient.dll with your application.
+
+LexFloatClient has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+
+LexFloatClient has a dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product id
 

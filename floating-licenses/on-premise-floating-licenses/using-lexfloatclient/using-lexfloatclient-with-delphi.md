@@ -17,9 +17,13 @@ Product id is the identifier of your product which is to be used in the code. Th
 
 ### Adding library to your app
 
-LexFloatClient example project for Delphi \(7 or newer\) contains the **LexFloatClient.pas** unit file. In addition to that it includes **LexFloatClient.DelphiFeatures.pas** unit file used internally.
+LexFloatClient example project for Delphi \(7 or newer\) contains the **LexFloatClient.pas** unit file. In addition to that, it includes **LexFloatClient.DelphiFeatures.pas** unit file used internally.
 
-You need to add these files to your app in order to use LexFloatClient API in your app. Both units must be added, but only LexFloatClient unit must be added to uses list.
+You need to add these files to your app in order to use LexFloatClient API in your app. Both units must be added, but only the LexFloatClient unit must be added to the uses list.
+
+LexFloatClient has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+
+LexFloatClient has a dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product id
 

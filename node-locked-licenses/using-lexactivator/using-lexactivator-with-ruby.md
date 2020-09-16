@@ -1,6 +1,6 @@
 # Using LexActivator with Ruby
 
-First of all, login to your Cryptlex account and download LexActivator library for Windows, MacOS or Linux:
+First of all, login to your Cryptlex account and download the LexActivator library for Windows, macOS, or Linux:
 
 * ​[Download LexActivator for Windows](https://app.cryptlex.com/downloads)​
 * ​[Download LexActivator for MacOS](https://app.cryptlex.com/downloads)
@@ -20,7 +20,11 @@ Product.dat contains product data which is used by LexActivator. Product id is t
 
 ### Adding library to your app <a id="adding-library-to-your-app"></a>
 
-LexActivator example project for Ruby contains **LexActivator.rb** and **LexStatusCodes.rb** files. You will need to add these files to your Ruby project. It contains all the LexActivator API functions needed to add licensing to your app. Depending on the OS you are targeting you need to copy the respective LexActivator.dll, libLexActivator.so or libLexActivator.dylib to your project.
+LexActivator example project for Ruby contains **LexActivator.rb** and **LexStatusCodes.rb** files. You will need to add these files to your Ruby project. It contains all the LexActivator API functions needed to add licensing to your app. Depending on the OS you are targeting you need to copy the respective LexActivator.dll, libLexActivator.so, or libLexActivator.dylib to your project.
+
+LexActivator has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+
+LexActivator has a dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 
