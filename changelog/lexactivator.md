@@ -4,6 +4,16 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.12.0 \(2020-09-16\)
+
+### Added
+
+* Support for bypassing system proxy settings. Just add `api.cryptlex.com` to the bypass proxy hosts list in the system proxy settings.
+
+### Updated
+
+* `DeactivateLicense()`  function doesn't reset the license key in case of `hosted-floating` license type.
+
 ## 3.11.1 \(2020-08-18\)
 
 ### Fixed

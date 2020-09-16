@@ -4,6 +4,12 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.3.10 \(2020-09-16\)
+
+### Added
+
+* **LexFloatServer:** Support for bypassing system proxy settings. Just add `api.cryptlex.com` to the bypass proxy hosts list in the system proxy settings.
+
 ## 4.3.8 \(2020-08-18\)
 
 ### Fixed
