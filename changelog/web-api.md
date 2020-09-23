@@ -1,5 +1,23 @@
 # Web API
 
+## 3.32.0 \(2020-09-23\)
+
+### Added <a id="changed"></a>
+
+* `allowedIpRanges` property to the license resource.
+
+## 3.31.0 \(2020-07-07\)
+
+### Added <a id="changed"></a>
+
+* SAML SSO support.
+
+## 3.30.0 \(2020-06-06\)
+
+### Added <a id="changed"></a>
+
+* `cc` and `bcc` properties to the email templates.
+
 ## 3.29.0 \(2020-06-02\)
 
 ### Added <a id="changed"></a>
