@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.12.1 \(2020-10-23\)
+
+### Fixed
+
+* Issue causing LexActivator to be flagged as a malicious file by anti-viruses on Windows.
+
 ## 3.12.0 \(2020-09-16\)
 
 ### Added
