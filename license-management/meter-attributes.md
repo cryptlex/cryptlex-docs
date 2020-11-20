@@ -20,7 +20,11 @@ The current uses for the attribute. Its value can be incremented, decremented, o
 
 #### Gross Uses
 
-This property keeps track of lifetime usage of the meter attribute. When a license activation is deleted, the uses consumed by the activation are automatically decremented from the license total uses. So, this property can be used to keep track of gross uses even if activations are deleted.
+This property keeps track of the lifetime usage of the meter attribute. When a license activation is deleted, the uses consumed by the activation are automatically decremented from the license total uses. So, this property can be used to keep track of gross uses even if activations are deleted.
+
+#### Visible
+
+If set to true then this meter attribute will be visible to users in the customer portal.
 
 ## Enforcing meter attributes schema
 

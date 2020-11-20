@@ -1,5 +1,11 @@
 # Web API
 
+## 3.33.0 \(2020-11-20\)
+
+### Added <a id="changed"></a>
+
+* `visible` property to the meter attribute resource.
+
 ## 3.32.0 \(2020-09-23\)
 
 ### Added <a id="changed"></a>
