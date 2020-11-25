@@ -4,12 +4,6 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
-## 3.12.2 \(2020-11-25\)
-
-### Fixed
-
-* Caching issue causing IsLicenseGenuine\(\) function to return LA\_FAIL when multiple instances of the app are run on the same machine.
-
 ## 3.12.1 \(2020-10-23\)
 
 ### Fixed
