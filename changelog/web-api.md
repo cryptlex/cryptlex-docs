@@ -1,5 +1,23 @@
 # Web API
 
+## 3.36.0 \(2020-12-29\)
+
+### Added <a id="changed"></a>
+
+* `floating` property to the meter attribute resource.
+
+## 3.35.0 \(2020-12-22\)
+
+### Added <a id="changed"></a>
+
+* Support for caching to improve performance.
+
+## 3.34.0 \(2020-12-01\)
+
+### Updated <a id="changed"></a>
+
+* Meter attributes are now persistent by default.
+
 ## 3.33.0 \(2020-11-20\)
 
 ### Added <a id="changed"></a>
