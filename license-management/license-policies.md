@@ -166,7 +166,11 @@ List of the disallowed IP addresses. If none of the IP addresses is included, th
 
 ### Allow VM activations
 
-Whether to allow an activation inside a virtual machine. Cloned virtual machines may report a same fingerprint.
+Whether to allow an activation inside a virtual machine. Cloned virtual machines may report the same fingerprint.
+
+### Allow Container activations
+
+Whether to allow an activation inside a container. This must never be set to `true` for an **on-premise floating** license. 
 
 ### User locked
 
