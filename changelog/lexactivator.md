@@ -4,11 +4,17 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.13.1 \(2020-12-28\)
+
+### Fixed
+
+* Intermittent crashes on high concurrent usage.
+
 ## 3.13.0 \(2020-12-03\)
 
 ### Updated
 
-* Updated internal implementation of incrementing meter attributes resulting in increased performance and better concurrency support.
+* Internal implementation of incrementing meter attributes resulting in increased performance and better concurrency support.
 
 ## 3.12.2 \(2020-11-25\)
 
