@@ -12,7 +12,7 @@ In this guide, you’ll install the Cryptlex Enterprise Kubernetes application u
 
 ## Prerequisites
 
-* A Kubernetes 1.15+ cluster with your connection configuration configured as the `kubectl` default.
+* A Kubernetes 1.16+ cluster with your connection configuration configured as the `kubectl` default.
 * The Helm 3 package manager installed on your local machine.
 * A fully registered domain name with three available A records. This tutorial will use `license-api.mycompany.com`, `license-portal.mycompany.com` and  `releases.mycompany.com`throughout.
 
@@ -36,9 +36,9 @@ controller:
   service:
     enabled: true
     externalTrafficPolicy: "Local"
-  config:
-    ssl-ciphers: "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-SHA256:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:DES-CBC3-SHA"
-    ssl-protocols: "TLSv1 TLSv1.1 TLSv1.2 TLSv1.3"
+  #config:
+    #ssl-ciphers: "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-SHA256:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:DES-CBC3-SHA"
+    #ssl-protocols: "TLSv1 TLSv1.1 TLSv1.2 TLSv1.3"
 ```
 {% endcode %}
 
@@ -88,7 +88,7 @@ To install the Cert-Manager to your cluster, run the following commands:
 ```text
 kubectl create namespace cert-manager
 helm repo add jetstack https://charts.jetstack.io
-helm upgrade --install cert-manager jetstack/cert-manager --version v0.16.1 --namespace cert-manager --set installCRDs=true
+helm upgrade --install cert-manager jetstack/cert-manager --version v1.1.0 --namespace cert-manager --set installCRDs=true
 ```
 
 ### Step 4 — Installing the Cryptlex Enterprise Kubernetes application
@@ -97,7 +97,7 @@ In this section, you will deploy the Cryptlex Enterprise Kubernetes application 
 
 #### Step 4.1 —  Choosing the database
 
-Postgres database is required for storing all Cryptlex data. The Cryptlex Enterprise Kubernetes app will automatically spin up a Postgres database instance and will use the persistent volume claim for requesting the storage disk. This option may be good for staging/testing environments, but for the production environment, we recommend using a third party Postgres database service.
+Postgres database is required for storing all Cryptlex data. The Cryptlex Enterprise Kubernetes app will automatically spin up a Postgres database instance and will use the persistent volume claim for requesting the storage disk. This option may be good for staging/testing environments, but for the production environment, we recommend using a third-party Postgres database service.
 
 #### Step 4.2 —  Choosing the file store
 
@@ -117,7 +117,7 @@ You need to update this file for each environment.
 
 #### Step 4.4 —  Installing the Cryptlex Enterprise Helm chart
 
-After you have updated the `values.yaml` \(in this case `production.yaml` and `staging.yaml`\) file for each environment, execute following commands to install the Cryptlex Enterprise Helm chart for each environment:
+After you have updated the `values.yaml` \(in this case `production.yaml` and `staging.yaml`\) file for each environment, execute the following commands to install the Cryptlex Enterprise Helm chart for each environment:
 
 ```bash
 helm repo add cryptlex https://cryptlex.github.io/helm-charts
@@ -134,7 +134,7 @@ helm upgrade --install cryptlex-enterprise --values production.yaml --namespace 
 
 ### Step 5 — Signup for the Cryptlex account
 
-Next, you need to open the dashboard in the browser, and create your Cryptlex account, which can be done at following URL: 
+Next, you need to open the dashboard in the browser, and create your Cryptlex account, which can be done at the following URL: 
 
 **https://license-portal.mycompany.com/auth/signup**
 
