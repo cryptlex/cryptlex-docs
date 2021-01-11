@@ -28,11 +28,11 @@ Cryptlex requires at least version 18.06.0-ce of Docker.
 
 ### Database <a id="database"></a>
 
-Cryptlex requires PostgreSQL 10.x \(or higher\) for storing all the data.
+Cryptlex requires PostgreSQL 10.x  for storing all the data.
 
 ### Cache
 
-Cryptlex uses Redis for storing the cache data. If no Redis database is provided it defaults to memory.
+Cryptlex uses Redis for storing IP rate limiting data. If no Redis database is provided it defaults to memory.
 
 ### Filestore
 

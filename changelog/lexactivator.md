@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.14.0 \(2021-01-11\)
+
+### Added
+
+*  Support for preventing running the apps inside the container.
+
 ## 3.13.1 \(2020-12-28\)
 
 ### Fixed
