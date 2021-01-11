@@ -22,7 +22,7 @@ In order to run Cryptlex on any cloud computing platform, you would require the 
 
 ### Cache
 
-**Redis** is required for storing IP rate limiting data. If no Redis database is provided it defaults to memory. Following are some of the cloud computing platforms which provide Redis database service:
+**Redis** is required for storing the cache data. Following are some of the cloud computing platforms which provide Redis database service:
 
 * [Amazon ElastiCache](https://aws.amazon.com/elasticache/)
 * [Google Cloud Memorystore](https://cloud.google.com/memorystore/)
@@ -47,7 +47,7 @@ Cryptlex Web API server can be easily hosted on any cloud computing platform wit
 The Cryptlex Web API server must not be exposed publicly on the internet. Instead, you must use an HTTPS-enabled reverse proxy server \(load balancer\) to forward the traffic to the server.
 {% endhint %}
 
-Just follow the guidelines of your cloud computing platform to run Docker apps and ensure following environment variables are set for the Web API server:
+Just follow the guidelines of your cloud computing platform to run Docker apps and ensure the following environment variables are set for the Web API server:
 
 | Environment Variables | Description |
 | :--- | :--- |

@@ -1,10 +1,17 @@
 # Web API
 
-## 3.36.0 \(2020-12-29\)
+## 3.37.0 \(2020-01-06\)
+
+### Added <a id="changed"></a>
+
+* `appVersion` property to the activation log resource.
+
+## 3.36.0 \(2020-12-28\)
 
 ### Added <a id="changed"></a>
 
 * `floating` property to the meter attribute resource.
+* `allowContainerActivation` property to the license and trial policy resources.
 
 ## 3.35.0 \(2020-12-22\)
 

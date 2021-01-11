@@ -139,7 +139,7 @@ It contains the Postgres database server, which is used to store all the Cryptle
 
 #### Cache service <a id="search-service"></a>
 
-It uses [Redis](https://redis.io/) for storing IP rate limiting data. If no Redis database is provided it defaults to memory.
+It uses [Redis](https://redis.io/) for storing the cache data. If no Redis database is provided it defaults to memory.
 
 #### Filestore service  <a id="search-service"></a>
 

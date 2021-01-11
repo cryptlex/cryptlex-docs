@@ -4,6 +4,12 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.4.0 \(2021-01-11\)
+
+### Added
+
+* **LexFloatServer:** Support for running the server inside a container for testing purposes. The server must never be allowed to be run inside a container. 
+
 ## 4.3.10 \(2020-09-16\)
 
 ### Added
