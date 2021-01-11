@@ -8,7 +8,7 @@ description: All notable changes to LexActivator are documented here.
 
 ### Added
 
-*  Support for preventing running the apps inside the container.
+*  Support for preventing activation of license inside the container.
 
 ## 3.13.1 \(2020-12-28\)
 
