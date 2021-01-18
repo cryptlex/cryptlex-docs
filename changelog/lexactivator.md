@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.14.1 \(2021-01-18\)
+
+### Fixed
+
+* Buffer overflow issues causing activation verification to fail.
+
 ## 3.14.0 \(2021-01-11\)
 
 ### Added

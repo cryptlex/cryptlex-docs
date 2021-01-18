@@ -4,6 +4,12 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.4.1 \(2021-01-18\)
+
+### Fixed
+
+* **LexFloatServer:** Buffer overflow issues causing activation verification to fail.
+
 ## 4.4.0 \(2021-01-11\)
 
 ### Added
