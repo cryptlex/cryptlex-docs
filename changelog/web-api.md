@@ -1,5 +1,13 @@
 # Web API
 
+## 3.38.0 \(2021-01-28\)
+
+### Added <a id="changed"></a>
+
+* [/v3/licenses/meter-attributes/{id}/reset](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses/meter-attributes/{id}/reset) endpoint to add support for resetting the meter attributes.
+* [/v3/licenses/meter-attributes/{id}](https://api.cryptlex.com/v3/docs#operation/delete/v3/licenses/meter-attributes/{id}) endpoint to add support for deleting the meter attributes.
+* [/v3/licenses/metadata/{id}](https://api.cryptlex.com/v3/docs#operation/delete/v3/licenses/metadata/{id}) endpoint to add support for deleting the metadata fields.
+
 ## 3.37.0 \(2021-01-06\)
 
 ### Added <a id="changed"></a>
