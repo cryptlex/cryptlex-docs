@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.14.2 \(2021-01-25\)
+
+### Fixed
+
+* Intermittent crashes in multi-threaded usage.
+
 ## 3.14.1 \(2021-01-18\)
 
 ### Fixed
