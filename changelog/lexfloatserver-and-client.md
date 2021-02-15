@@ -4,6 +4,12 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.4.2 \(2021-02-08\)
+
+### Fixed
+
+* **LexFloatServer:** Issue causing offline activation to fail when the number of meter attributes is very large.
+
 ## 4.4.1 \(2021-01-18\)
 
 ### Fixed

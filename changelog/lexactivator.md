@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.14.3 \(2021-02-12\)
+
+### Fixed
+
+* Improved performance of incrementing meter attributes in `LA_IN_MEMORY` mode.
+
 ## 3.14.2 \(2021-01-25\)
 
 ### Fixed
