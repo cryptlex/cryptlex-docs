@@ -4,6 +4,13 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.4.3 \(2021-02-25\)
+
+### Fixed
+
+* **LexFloatServer:** Some performance-related issues.
+* **LexFloatClient:** Intermittent crashes in multi-threaded usage.
+
 ## 4.4.2 \(2021-02-08\)
 
 ### Fixed
