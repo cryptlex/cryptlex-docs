@@ -1,5 +1,18 @@
 # Web API
 
+## 3.41.0 \(2021-03-18\)
+
+### Added <a id="changed"></a>
+
+* `offline` property to the activation resource.
+
+## 3.40.0 \(2021-03-10\)
+
+### Added <a id="changed"></a>
+
+* [/v3/users/export](https://api.cryptlex.com/v3/docs#operation/get/v3/users/export) endpoint to add support for exporting the users in CSV format.
+* [/v3/trial-activations/export](https://api.cryptlex.com/v3/docs#operation/get/v3/trial-activations/export) endpoint to add support for exporting the trial activations in the CSV format.
+
 ## 3.39.0 \(2021-02-10\)
 
 ### Added <a id="changed"></a>
