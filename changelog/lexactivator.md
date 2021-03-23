@@ -4,7 +4,19 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
-## 3.14.4 \(2021-02-25\)
+## 3.14.6 \(2021-03-24\)
+
+### Fixed
+
+* Issue in offline activation when offline response file of some other machine is used for activation.
+
+## 3.14.5 \(2021-02-25\)
+
+### Fixed
+
+* Issue causing license callback of deactivated activation to trigger in the case when license deactivation fails.
+
+## 3.14.4 \(2021-02-24\)
 
 ### Fixed
 

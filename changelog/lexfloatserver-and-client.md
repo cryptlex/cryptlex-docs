@@ -4,6 +4,14 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.5.0 \(2021-03-23\)
+
+### Added
+
+* **LexFloatServer:** Support for persistent meter attributes \(non-floating\). 
+* **LexFloatServer:** Support for offline syncing of meter attributes \(non-floating\) during offline activation. 
+* **LexFloatClient:** Support for getting grossUses of meter attributes.
+
 ## 4.4.3 \(2021-02-25\)
 
 ### Fixed
