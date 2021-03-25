@@ -54,6 +54,7 @@
       * [Using LexFloatClient with Delphi](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-delphi.md)
       * [Using LexFloatClient with Python](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-python.md)
       * [Using LexFloatClient with Node.js](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-node.js.md)
+      * [Using LexFloatClient with Go](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-go.md)
 * [Timed Trials](timed-trials/README.md)
   * [Verified Trials](timed-trials/verified-trials.md)
   * [Unverified Trials](timed-trials/unverified-trials.md)
