@@ -4,6 +4,16 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.14.7 \(2021-04-22\)
+
+### Fixed
+
+* Issue causing license callback to get invoked even after the license was deactivated.
+
+### Updated
+
+* Dropped dependency on `libnss3` for Linux.
+
 ## 3.14.6 \(2021-03-24\)
 
 ### Fixed
