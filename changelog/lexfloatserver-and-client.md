@@ -6,8 +6,6 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 ## 4.5.2 \(2021-04-22\)
 
-
-
 ### Updated
 
 * **LexFloatServer:** Dropped dependency on `libnss3` for Linux.
