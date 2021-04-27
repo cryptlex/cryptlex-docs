@@ -18,7 +18,7 @@ After you've added a product for your app in the dashboard, go to the product pa
 
 Product.dat contains product data that is used by LexActivator. The product id is the identifier of your product that is to be used in the code.
 
-### Adding library to your app <a id="adding-library-to-your-app"></a>
+### Adding the library to your app <a id="adding-library-to-your-app"></a>
 
 LexActivator example project \(Netbeans\) for Java contains the LexActivator package and [JNA](https://github.com/java-native-access/jna) jar file. You will need to add these files to your project. It contains all the LexActivator API functions needed to add licensing to your app.
 

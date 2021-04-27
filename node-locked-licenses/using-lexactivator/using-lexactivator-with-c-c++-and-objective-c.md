@@ -18,7 +18,7 @@ After you've added a product for your app in the dashboard, go to the product pa
 
 Product.dat contains product data that is used by LexActivator. The product id is the identifier of your product that is to be used in the code.
 
-### Adding library to your app
+### Adding the library to your app
 
 LexActivator example project for C contains the **LexActivator.h** header file. In addition to that, it includes the **LexActivator.lib** file required in the case of Windows. It contains all the LexActivator API functions needed to add licensing to your app.
 

@@ -14,7 +14,7 @@ Product.dat contains product data that is used by LexActivator. The product id i
 In order to package your Node.js project into an executable, check out [pkg](https://github.com/zeit/pkg) project.
 {% endhint %}
 
-### Adding library to your app <a id="adding-library-to-your-app"></a>
+### Adding the library to your app <a id="adding-library-to-your-app"></a>
 
 LexActivator wrapper for Node.js can be easily installed through [npm](https://www.npmjs.com/package/@cryptlex/lexactivator):
 

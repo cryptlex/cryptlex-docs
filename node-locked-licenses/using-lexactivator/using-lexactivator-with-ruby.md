@@ -18,7 +18,7 @@ After you've added a product for your app in the dashboard, go to the product pa
 
 Product.dat contains product data that is used by LexActivator. Product id is the identifier of your product that is to be used in the code.
 
-### Adding library to your app <a id="adding-library-to-your-app"></a>
+### Adding the library to your app <a id="adding-library-to-your-app"></a>
 
 LexActivator example project for Ruby contains **LexActivator.rb** and **LexStatusCodes.rb** files. You will need to add these files to your Ruby project. It contains all the LexActivator API functions needed to add licensing to your app. Depending on the OS you are targeting you need to copy the respective LexActivator.dll, libLexActivator.so, or libLexActivator.dylib to your project.
 

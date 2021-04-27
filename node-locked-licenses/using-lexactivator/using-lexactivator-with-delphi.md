@@ -17,7 +17,7 @@ After you've added a product for your app in the dashboard, go to the product pa
 
 Product.dat contains product data that is used by LexActivator. The product id is the identifier of your product that is to be used in the code.
 
-### Adding library to your app
+### Adding the library to your app
 
 LexActivator example project for Delphi \(7 or newer\) contains the **LexActivator.pas** unit file. In addition to that, it includes **LexActivator.DelphiFeatures.pas** unit file used internally.
 
