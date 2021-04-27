@@ -1,6 +1,6 @@
 # Using LexFloatClient with Delphi
 
-First of all, login to your Cryptlex account and download the LexFloatClient library for Windows:
+First of all, login to your Cryptlex account and download LexFloatClient library for Windows:
 
 * [Download LexFloatClient for Windows](https://app.cryptlex.com/downloads)
 
@@ -13,15 +13,17 @@ After you've added a product for your app in the dashboard, go to the product pa
 * Note the product id for the product.
 * Download the example project from [Github](https://github.com/cryptlex/lexfloatclient-delphi)
 
-The product id is the identifier of your product that is to be used in the code. The product id of the LexFloatServer and LexFloatClient must match.
+Product id is the identifier of your product which is to be used in the code. The product id of the LexFloatServer and LexFloatClient must match.
 
-### Adding the library to your app
+### Adding library to your app
 
 LexFloatClient example project for Delphi \(7 or newer\) contains the **LexFloatClient.pas** unit file. In addition to that, it includes **LexFloatClient.DelphiFeatures.pas** unit file used internally.
 
 You need to add these files to your app in order to use LexFloatClient API in your app. Both units must be added, but only the LexFloatClient unit must be added to the uses list.
 
 LexFloatClient has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+
+LexFloatClient has a dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product id
 
@@ -33,7 +35,7 @@ SetHostProductId('PASTE_PRODUCT_ID');
 
 ### Requesting license lease
 
-To receive a floating license, you will use `LexFloatClient.SetHostUrl`, `LexFloatClient.SetFloatingLicenseCallback` and `LexFloatClient.RequestFloatingLicense` LexFloatClient API methods. It sets the LexFloatServer address, the callback for status notifications, contacts the server and receives the floating license.
+To receive a floating license, you will use `LexFloatClient.SetHostUrl`, `LexFloatClient.SetFloatingLicenseCallback` and `LexFloatClient.RequestFloatingLicense` LexFloatClient API methods. It sets LexFloatServer address, callback for status notifications, contacts the server and receives the floating license.
 
 ```text
 var
@@ -81,11 +83,11 @@ end;
 
 The above code can be executed every time user starts the app or needs a new license.
 
-The second argument of `LexFloatClient.SetFloatingLicenseCallback` is False because console applications have no message loop. In GUI applications `Synchronized` is recommended to be `True` to enforce execution in the main thread.
+The second argument of `LexFloatClient.SetFloatingLicenseCallback` is False because console applications have no message loop. In GUI applications `Synchronized` is recommended to be `True` to enforce execution in main thread.
 
 ### Renewing license lease
 
-License lease automatically renews itself in a background thread. When something goes wrong, the callback is invoked \(from the background thread\). The callback can be either procedure, object method, class method or a closure \(also known as an anonymous function\). Note that GUI applications cannot safely interact with GUI elements from a thread other than GUI one. `System.Classes.TThread.Synchronize` will be used if `Synchronized` was `True` when the callback was set. On another hand, `Synchronized` cannot work without a message loop in the main thread \(e.g. in console applications\), so synchronization must be performed in another way then.
+License lease automatically renews itself in a background thread. When something goes wrong, Callback is invoked \(from background thread\). Callback can be either procedure, object method, class method or a closure \(also known as anonymous function\). Note that GUI applications cannot safely interact with GUI elements from a thread other than GUI one. `System.Classes.TThread.Synchronize` will be used if `Synchronized` was `True` when callback was set. On another hand, `Synchronized` cannot work without message loop in main thread \(e.g. in console applications\), so synchronization must be performed in another way then.
 
 ```text
 procedure OnLexFloatClient(const Error: Exception);
@@ -103,13 +105,13 @@ begin
 end;
 ```
 
-You would ideally request a new license if the callback gets invoked.
+You would ideally request for a new license if Callback gets invoked.
 
 ### Dropping license lease
 
 When your user is done using the app, the app should send a request to free the license, thereby making it available for other users. If the app doesn't, the license becomes \(zombie\) useless until lease time is over.
 
-GUI \(e.g. VCL\) applications are supposed to divide the code into initialization and finalization. `LexFloatClient.ResetFloatingLicenseCallback` should be called before the callback is going to become invalid. E.g. form method is invalid after the form is destroyed, so putting `ResetFloatingLicenseCallback` in `TForm.OnDestroy` is a proper place. `LexFloatClient.DropFloatingLicense` should also be invoked, but beware of exceptions it can raise. Sample code:
+GUI \(e.g. VCL\) applications are supposed to divide the code into initialization and finalization. `LexFloatClient.ResetFloatingLicenseCallback` should be called before callback is going to become invalid. E.g. form method is invalid after form is destroyed, so putting `ResetFloatingLicenseCallback` in `TForm.OnDestroy` is a proper place. `LexFloatClient.DropFloatingLicense` should also be invoked, but beware of exceptions it can raise. Sample code:
 
 ```text
 procedure TForm1.OnDestroy;
@@ -127,5 +129,5 @@ The above code should be executed every time user closes the app.
 
 ## Need more help
 
-In case you need more help with adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
+In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
 
