@@ -1,6 +1,6 @@
 # Using LexActivator with C, C++ & Objective C
 
-First of all, login to your Cryptlex account and download LexActivator library for Windows, MacOS or Linux:
+First of all, login to your Cryptlex account and download the LexActivator library for Windows, macOS or Linux:
 
 * [Download LexActivator for Windows](https://app.cryptlex.com/downloads)
 * [Download LexActivator for Mac OS X](https://app.cryptlex.com/downloads)
@@ -16,17 +16,15 @@ After you've added a product for your app in the dashboard, go to the product pa
 * Download the Product.dat for the product.
 * Download the example project from [Github](https://github.com/cryptlex/lexactivator-c).
 
-Product.dat contains product data which is used by LexActivator. Product id is the identifier of your product which is to be used in the code.
+Product.dat contains product data that is used by LexActivator. The product id is the identifier of your product that is to be used in the code.
 
 ### Adding library to your app
 
-LexActivator example project for C contains the **LexActivator.h** header file. In addition to that, it includes **LexActivator.lib** file required in the case of Windows. It contains all the LexActivator API functions needed to add licensing to your app.
+LexActivator example project for C contains the **LexActivator.h** header file. In addition to that, it includes the **LexActivator.lib** file required in the case of Windows. It contains all the LexActivator API functions needed to add licensing to your app.
 
 Depending on the platform you are targeting **\(x86 or x64\)** you need to link the respective LexActivator.dll with your application.
 
 LexActivator has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
-
-LexActivator has a dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product.dat file and product id
 
@@ -47,7 +45,7 @@ In case your app doesn't have write access to the disk, you can use `LA_IN_MEMOR
 
 ### License activation
 
-To activate the license in your app using the license key, you will use `ActivateLicense()` LexActivator API function. It invokes the `/v3/activations` Cryptlex Web API endpoint, verifies the  encrypted and digitally signed response to validate the license.
+To activate the license in your app using the license key, you will use `ActivateLicense()` LexActivator API function. It invokes the `/v3/activations` Cryptlex Web API endpoint, verifies the encrypted and digitally signed response to validate the license.
 
 ```c
 int status;
@@ -86,7 +84,7 @@ The above code should be executed at the time of license activation, ideally on 
 
 ### Verifying license activation
 
-Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this you need to use `IsLicenseGenuine()` LexActivator API function.
+Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this, you need to use `IsLicenseGenuine()` LexActivator API function.
 
 ```c
 int status;
@@ -115,5 +113,5 @@ The above code should be executed every time user starts the app. After verifyin
 
 ## Need more help
 
-In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
+In case you need more help with adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
 

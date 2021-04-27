@@ -16,7 +16,7 @@ After you've added a product for your app in the dashboard, go to the product pa
 * Download the Product.dat for the product.
 * Download the example project from [Github](https://github.com/cryptlex/lexactivator-java)
 
-Product.dat contains product data which is used by LexActivator. Product id is the identifier of your product which is to be used in the code.
+Product.dat contains product data that is used by LexActivator. The product id is the identifier of your product that is to be used in the code.
 
 ### Adding library to your app <a id="adding-library-to-your-app"></a>
 
@@ -42,8 +42,6 @@ lexactivator/
 In case you are creating platform-specific installers, you only need to include the versions of LexActivator applicable to that platform.
 
 LexActivator has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
-
-LexActivator has a dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 
@@ -92,7 +90,7 @@ The above code should be executed at the time of registration, ideally on a butt
 
 ### Verifying license activation <a id="verifying-license-activation"></a>
 
-Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this you need to use `IsLicenseGenuine()` LexActivator API function.
+Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this, you need to use `IsLicenseGenuine()` LexActivator API function.
 
 ```java
 int status;
@@ -131,5 +129,5 @@ The above code should be executed every time user starts the app. After verifyin
 
 ## Need more help <a id="need-more-help"></a>
 
-In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
+In case you need more help with adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
 
