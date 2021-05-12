@@ -4,6 +4,13 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatServer & Client
 
+## 4.5.3 \(2021-05-06\)
+
+### Updated
+
+* **LexFloatServer:** Updated networking library for Windows.
+* **LexFloatClient:** Updated networking library for Windows.
+
 ## 4.5.2 \(2021-04-22\)
 
 ### Updated

@@ -4,6 +4,18 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.14.9 \(2021-05-11\)
+
+### Fixed
+
+* Issue causing `GetActivationMeterAttributeUses()` function to return incorrect value in case `LA_IN_MEMORY` flag is used.
+
+## 3.14.8 \(2021-05-06\)
+
+### Fixed
+
+* Issue causing networking errors on Windows.
+
 ## 3.14.7 \(2021-04-22\)
 
 ### Fixed
