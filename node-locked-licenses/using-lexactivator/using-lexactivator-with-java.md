@@ -1,49 +1,31 @@
 # Using LexActivator with Java
 
-First of all, login to your Cryptlex account and download the LexActivator library for Windows, macOS or Linux:
-
-* ​[Download LexActivator for Windows](https://app.cryptlex.com/downloads)​
-* ​[Download LexActivator for Mac OS X](https://app.cryptlex.com/downloads)​
-* ​[Download LexActivator for Linux](https://app.cryptlex.com/downloads)​
-
-The above download package contains the library which you will be using to add licensing to your app.
-
 ## Adding licensing to your app <a id="adding-licensing-to-your-app"></a>
 
 After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
 
 * Note the product id for the product.
 * Download the Product.dat for the product.
-* Download the example project from [Github](https://github.com/cryptlex/lexactivator-java)
+* Download the example project from [Github](https://github.com/cryptlex/lexactivator-java/tree/master/examples)
 
-Product.dat contains product data which is used by LexActivator. Product id is the identifier of your product which is to be used in the code.
+Product.dat contains product data that is used by LexActivator. The product id is the identifier of your product that is to be used in the code.
 
-### Adding library to your app <a id="adding-library-to-your-app"></a>
+### Adding the library to your app <a id="adding-library-to-your-app"></a>
 
-LexActivator example project \(Netbeans\) for Java contains the LexActivator package and [JNA](https://github.com/java-native-access/jna) jar file. You will need to add these files to your project. It contains all the LexActivator API functions needed to add licensing to your app.
+LexActivator wrapper for Java is available on the [central maven repository](https://search.maven.org/artifact/com.cryptlex.lexactivator/lexactivator) and can be easily installed using maven by adding the following dependency to your POM file:
 
-LexActivator is compiled as a native binary, so you will need to include the LexActivator binaries for every platform you want to support. It looks for the native platform libraries in the folder `lexactivator` relative to your jar file. The folder structure should be as follows:
-
-```text
-myapp.jar
-lexactivator/
-     mac/
-          libLexActivator.dylib
-     win32-x86/
-          LexActivator.dll
-     win32-x86-64/
-          LexActivator.dll
-     linux-x86/
-          libLexActivator.so
-     linux-x86-64/
-          libLexActivator.so
+```markup
+<dependency>
+  <groupId>com.cryptlex.lexactivator</groupId>
+  <artifactId>lexactivator</artifactId>
+  <!-- Make sure that you use the latest version -->
+  <version>3.14.5</version>
+</dependency>
 ```
 
-In case you are creating platform-specific installers, you only need to include the versions of LexActivator applicable to that platform.
+Alternatively, you can also download the [JAR](https://repo1.maven.org/maven2/com/cryptlex/lexactivator/lexactivator/) file and add it to your project.
 
 LexActivator has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
-
-LexActivator has a dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 
@@ -92,7 +74,7 @@ The above code should be executed at the time of registration, ideally on a butt
 
 ### Verifying license activation <a id="verifying-license-activation"></a>
 
-Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this you need to use `IsLicenseGenuine()` LexActivator API function.
+Each time, your app starts, you need to verify whether your license is already activated or not. This verification should occur locally by verifying the cryptographic digital signature of activation. Ideally, it should also asynchronously contact Cryptlex servers to validate and sync the license activation periodically. For this, you need to use `IsLicenseGenuine()` LexActivator API function.
 
 ```java
 int status;
@@ -131,5 +113,5 @@ The above code should be executed every time user starts the app. After verifyin
 
 ## Need more help <a id="need-more-help"></a>
 
-In case you need more help for adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
+In case you need more help with adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
 
