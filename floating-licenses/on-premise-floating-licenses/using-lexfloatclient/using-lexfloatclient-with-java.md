@@ -11,7 +11,7 @@ The product id is the identifier of your product that is to be used in the code.
 
 ### Adding the library to your app
 
-LexFloatClient wrapper for Java is available on the [central maven repository](https://search.maven.org/artifact/com.cryptlex.lexfloatclient/lexfloatclient) and can be easily installed using maven by adding the following dependency to your POM file:
+LexFloatClient wrapper for Java is available on the [central maven repository](https://search.maven.org/artifact/com.cryptlex.lexfloatclient/lexfloatclient) and can be easily installed using maven by adding the following dependency in your POM file:
 
 ```markup
 <dependency>

@@ -12,7 +12,7 @@ Product.dat contains product data that is used by LexActivator. The product id i
 
 ### Adding the library to your app <a id="adding-library-to-your-app"></a>
 
-LexActivator wrapper for Java is available on the [central maven repository](https://search.maven.org/artifact/com.cryptlex.lexactivator/lexactivator) and can be easily installed using maven by adding the following dependency to your POM file:
+LexActivator wrapper for Java is available on the [central maven repository](https://search.maven.org/artifact/com.cryptlex.lexactivator/lexactivator) and can be easily installed using maven by adding the following dependency in your POM file:
 
 ```markup
 <dependency>
