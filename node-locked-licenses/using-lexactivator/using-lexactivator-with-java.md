@@ -19,7 +19,7 @@ LexActivator wrapper for Java is available on the [central maven repository](htt
   <groupId>com.cryptlex.lexactivator</groupId>
   <artifactId>lexactivator</artifactId>
   <!-- Make sure that you use the latest version -->
-  <version>3.14.5</version>
+  <version>3.14.9</version>
 </dependency>
 ```
 

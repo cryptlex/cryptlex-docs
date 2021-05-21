@@ -18,7 +18,7 @@ LexFloatClient wrapper for Java is available on the [central maven repository](h
   <groupId>com.cryptlex.lexfloatclient</groupId>
   <artifactId>lexfloatclient</artifactId>
   <!-- Make sure that you use the latest version -->
-  <version>4.5.3</version>
+  <version>4.5.4</version>
 </dependency>
 ```
 
