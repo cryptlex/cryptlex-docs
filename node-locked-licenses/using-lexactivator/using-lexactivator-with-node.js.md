@@ -8,13 +8,13 @@ After you've added a product for your app in the dashboard, go to the product pa
 * Download the Product.dat for the product.
 * Download the example project from [Github](https://github.com/cryptlex/lexactivator-js/tree/master/examples).
 
-Product.dat contains product data which is used by LexActivator. Product id is the identifier of your product which is to be used in the code.
+Product.dat contains product data that is used by LexActivator. The product id is the identifier of your product that is to be used in the code.
 
 {% hint style="info" %}
 In order to package your Node.js project into an executable, check out [pkg](https://github.com/zeit/pkg) project.
 {% endhint %}
 
-### Adding library to your app <a id="adding-library-to-your-app"></a>
+### Adding the library to your app <a id="adding-library-to-your-app"></a>
 
 LexActivator wrapper for Node.js can be easily installed through [npm](https://www.npmjs.com/package/@cryptlex/lexactivator):
 
@@ -22,20 +22,7 @@ LexActivator wrapper for Node.js can be easily installed through [npm](https://w
 npm i @cryptlex/lexactivator 
 ```
 
-**Note:** In case you are building a cross-platform **Electron** app, you can install LexActivator for other targeted platforms as follows:
-
-```text
-npm install @cryptlex/lexactivator --target_arch=ia32 --target_platform=win32 --target_libc=unknown
-npm install @cryptlex/lexactivator --target_arch=x64 --target_platform=win32 --target_libc=unknown
-npm install @cryptlex/lexactivator --target_arch=x64 --target_platform=darwin --target_libc=unknown
-npm install @cryptlex/lexactivator --target_arch=x64 --target_platform=linux --target_libc=glibc
-```
-
-This would install the precompiled binaries for the targeted platforms.
-
 LexActivator has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
-
-LexActivator has a dependency on `libnss3` library on **Linux**. On the target machines where you will deploy your app, ensure `libnss3` library is installed.
 
 ### Setting product.dat file and product Id <a id="setting-product.dat-file-and-product-id"></a>
 
