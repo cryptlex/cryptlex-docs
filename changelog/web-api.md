@@ -1,5 +1,11 @@
 # Web API
 
+## 3.42.0 \(2021-05-19\)
+
+### Added <a id="changed"></a>
+
+* `allowCustomerPortalAccess` property to the user resource.
+
 ## 3.41.0 \(2021-03-18\)
 
 ### Added <a id="changed"></a>
