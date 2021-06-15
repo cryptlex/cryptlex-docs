@@ -69,7 +69,7 @@
 * [Changelog](changelog/README.md)
   * [Web API](changelog/web-api.md)
   * [LexActivator](changelog/lexactivator.md)
-  * [LexFloatServer & Client](changelog/lexfloatserver-and-client.md)
+  * [LexFloatClient](changelog/lexfloatclient.md)
   * [LexFloatServer](changelog/lexfloatserver.md)
 * [Legal](legal/README.md)
   * [Terms of Service](legal/terms-of-service.md)
