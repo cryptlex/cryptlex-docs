@@ -2,55 +2,41 @@
 
 Cryptlex includes computer software supplied by third parties, including \(but not limited to\) those set forth below \(the “Third-Party Software”\), with its LexActivator, LexFloatClient and LexFloatServer software product. Cryptlex is providing the Third-Party Software to you by permission of the respective licensors and/or copyright holders on the terms provided by such parties, including those terms required to be provided to you that are set forth below. Cryptlex expressly disclaims any warranty or other assurance to you regarding the Third-Party Software. The following terms relate only to the Third-Party Software identified below and not to the Cryptlex Software.
 
-### MbedTLS
-
-[https://github.com/ARMmbed/mbedtls](https://github.com/ARMmbed/mbedtls)
+### [MbedTLS](https://github.com/ARMmbed/mbedtls)
 
 Licensed under the Apache License, Version 2.0, see the [License](https://github.com/ARMmbed/mbedtls/blob/development/LICENSE) file for details.
 
-### ArduinoJson
-
-{% embed url="https://github.com/bblanchon/ArduinoJson" %}
+### [ArduinoJson](https://github.com/bblanchon/ArduinoJson)
 
 Copyright © 2014-2021 Benoit BLANCHON
 
 Licensed under the MIT License, see the [License](https://github.com/bblanchon/ArduinoJson/blob/6.x/LICENSE.md) file for details.
 
-### Botan
-
-{% embed url="https://github.com/randombit/botan/blob/master/license.txt" %}
+### [Botan](https://github.com/randombit/botan)
 
 Copyright © 1999-2021 The Botan Authors
 
 Licensed under the BSD 2-Clause "Simplified" License, see the [License](https://github.com/randombit/botan/blob/master/license.txt) file for details.
 
-### Curl
-
-{% embed url="https://github.com/curl/curl" %}
+### [Curl](https://github.com/curl/curl)
 
 Copyright © 1996 - 2021, Daniel Stenberg
 
 Licensed under the MIT License, see the [License](https://github.com/curl/curl/blob/master/COPYING) file for details.
 
-### Zerolog
-
-{% embed url="https://github.com/rs/zerolog" %}
+### [Zerolog](https://github.com/rs/zerolog)
 
 Copyright \(c\) 2017 Olivier Poitrey
 
 Licensed under the MIT License, see the [License](https://github.com/rs/zerolog/blob/master/LICENSE) file for details.
 
-### Viper
-
-{% embed url="https://github.com/spf13/viper" %}
+### [Viper](https://github.com/spf13/viper)
 
 Copyright \(c\) 2014 Steve Francia
 
 Licensed under the MIT License, see the [License](https://github.com/spf13/viper/blob/master/LICENSE) file for details.
 
-### Pflag
-
-{% embed url="https://github.com/spf13/pflag" %}
+### [Pflag](https://github.com/spf13/pflag)
 
 Copyright \(c\) 2012 Alex Ogier, The Go Authors
 
