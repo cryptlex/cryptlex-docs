@@ -1,10 +1,12 @@
 # Open Source Licenses
 
-Cryptlex products use the software provided by third parties, including \(but not limited to\) those set forth below \(the “Third-Party Software”\) with its LexActivator, LexFloatClient and LexFloatServer software products. The following copyright statements and licenses apply to various components that are distributed with various Cryptlex products. All the Cryptlex products do not necessarily use all of the Third-Party Software components referred to below. Cryptlex is providing the Third-Party Software to you by permission of the respective licensors and/or copyright holders on the terms provided by such parties, including those terms required to be provided to you that are set forth below. Cryptlex expressly disclaims any warranty or other assurance to you regarding the Third-Party Software. The following terms relate only to the Third-Party Software identified below and not to the Cryptlex software products.
+Cryptlex products use the software provided by third parties, including \(but not limited to\) those set forth below \(the “Third-Party Software”\). The following copyright statements and licenses apply to various components that are distributed with various Cryptlex products. All the Cryptlex products do not necessarily use all of the Third-Party Software components referred to below. Cryptlex is providing the Third-Party Software to you by permission of the respective licensors and/or copyright holders on the terms provided by such parties, including those terms required to be provided to you that are set forth below. Cryptlex expressly disclaims any warranty or other assurance to you regarding the Third-Party Software. The following terms relate only to the Third-Party Software identified below and not to the Cryptlex software products.
 
 ### [MbedTLS](https://github.com/ARMmbed/mbedtls)
 
-Licensed under the Apache License, Version 2.0, see the [License](https://github.com/ARMmbed/mbedtls/blob/development/LICENSE) file for details.
+Licensed under the Apache License, Version 2.0 \(the "License"\); you may not use this file except in compliance with the License. You may obtain a copy of the License at:[ http://www.apache.org/licenses/LICENSE-2.0  
+](%20%20%20http://www.apache.org/licenses/LICENSE-2.0
+)Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
 ### [ArduinoJson](https://github.com/bblanchon/ArduinoJson)
 
