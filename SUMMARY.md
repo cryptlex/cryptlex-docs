@@ -78,6 +78,7 @@
   * [Data Processing Addendum](legal/data-processing-addendum.md)
   * [Service Level Agreement](legal/service-level-agreement.md)
   * [Security, Privacy, and Compliance](legal/security-privacy-and-compliance.md)
+  * [Open Source Licenses](legal/open-source-licenses.md)
 * [Cryptlex On-Premise](cryptlex-on-premise/README.md)
   * [Overview](cryptlex-on-premise/overview.md)
   * [System Requirements](cryptlex-on-premise/system-requirements.md)
