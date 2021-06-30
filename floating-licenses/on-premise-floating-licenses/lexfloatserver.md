@@ -346,7 +346,8 @@ Gets the current server stats
   "leasingStrategy": "per-machine",
   "version": "4.0.0",
   "status": "ok",
-  "expiresAt": 1580732402
+  "expiresAt": 1580732402,
+  "serverSyncGracePeriodExpiryDate": 1580739313
 }
 ```
 {% endapi-method-response-example %}
