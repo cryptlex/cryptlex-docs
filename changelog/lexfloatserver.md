@@ -1,5 +1,18 @@
 # LexFloatServer
 
+## 4.6.3 \(2021-06-15\)
+
+### Fixed
+
+* Issues related to incrementing of meter attributes.
+* Issue related to incorrect encoding.
+
+## 4.6.2 \(2021-06-15\)
+
+### Fixed
+
+* Issue causing server activation to disappear on restart in Windows.
+
 ## 4.6.1 \(2021-06-15\)
 
 ### Fixed
