@@ -44,7 +44,7 @@ LexFloatServer provides a web-based local dashboard that can be used to activate
 
 #### Online activation
 
-Open the dashboard using https://localhost:8090 URL in your browser. Click the Settings page icon and put in the license key to activate the server
+Open the dashboard using `http://localhost:8090` URL in your browser. Click the Settings page icon and put in the license key to activate the server
 
 #### Offline activation
 
