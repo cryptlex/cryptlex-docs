@@ -44,7 +44,7 @@ LexFloatServer provides a web-based local dashboard that can be used to activate
 
 #### Online activation
 
-Open the dashboard using https://localhost:8090 URL in your browser. Click the Settings page icon and put in the license key to activate the server
+Open the dashboard using `http://localhost:8090` URL in your browser. Click the Settings page icon and put in the license key to activate the server
 
 #### Offline activation
 
@@ -275,8 +275,8 @@ After installation, it is set to start with the computer and run silently in the
 To stop or start the server from the command line, you need the service name. If the service name was not passed during installation then it defaults to `lexfloatserver.productId` \(where product id is the id of your product\):
 
 ```bash
-sudo service stop myfloatingserver
-sudo service start myfloatingserver
+sudo service myfloatingserver stop
+sudo service myfloatingserver start
 ```
 
 ### Uninstalling LexFloatServer on Linux
@@ -346,7 +346,8 @@ Gets the current server stats
   "leasingStrategy": "per-machine",
   "version": "4.0.0",
   "status": "ok",
-  "expiresAt": 1580732402
+  "expiresAt": 1580732402,
+  "serverSyncGracePeriodExpiryDate": 1580739313
 }
 ```
 {% endapi-method-response-example %}
