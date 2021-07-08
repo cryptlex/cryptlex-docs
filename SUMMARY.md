@@ -38,6 +38,8 @@
     * [Using LexActivator with Go](node-locked-licenses/using-lexactivator/using-lexactivator-with-go.md)
     * [Using LexActivator with Node.js](node-locked-licenses/using-lexactivator/using-lexactivator-with-node.js.md)
     * [Using LexActivator with Ruby](node-locked-licenses/using-lexactivator/using-lexactivator-with-ruby.md)
+    * [Using LexActivator with Android](node-locked-licenses/using-lexactivator/using-lexactivator-with-android.md)
+    * [Using LexActivator with iOS](node-locked-licenses/using-lexactivator/using-lexactivator-with-ios.md)
   * [Using Web API](node-locked-licenses/using-web-api.md)
   * [Offline Activations](node-locked-licenses/offline-activations.md)
   * [Proxies and Firewall](node-locked-licenses/proxies-and-firewall.md)
