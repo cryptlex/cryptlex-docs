@@ -16,23 +16,21 @@ LexActivator wrapper for Android is available on the [central maven repository](
 
 ```markup
 dependencies {
-    implementation 'com.cryptlex.android.lexactivator:lexactivator:3.14.0'
+    implementation 'com.cryptlex.android.lexactivator:lexactivator:3.15.0'
 }
 ```
 
 Alternatively, you can also download the [AAR](https://repo1.maven.org/maven2/com/cryptlex/lexactivator/lexactivator/) file and add it to your project.
 
-### Setting product.dat file, product id, data directory and Android id <a id="setting-product.dat-file-and-product-id"></a>
+The minimum supported Android API level is 23 and the minimum supported Android NDK version is r21e.
 
-The first thing you need to do is set the data directory where LexActivator will store its data. You also need to provide the Android Id which is needed by LexActivator. 
+### Setting product.dat file and product id
 
-The next thing you need to do is either embed the Product.dat file in your app using `SetProductData()` function or set the absolute path of the file using `SetProductFile()` function.
+The first thing you need to do is either embed the Product.dat file in your app using `SetProductData()`  function or set the absolute path of the file using `SetProductFile()`  function.
 
-Next, you need to set the product id of your application in your code using `SetProductId()` function. It sets the id of the product you will be adding licensing to.
+The next thing you need to do is to set the product id of your application in your code using `SetProductId()` function. It sets the id of the product you will be adding licensing to.
 
 ```java
-LexActivator.SetDataDirectory(getApplicationContext().getFilesDir().getAbsolutePath());
-LexActivator.SetAndroidId(Secure.getString(getApplicationContext().getContentResolver(), Secure.ANDROID_ID));
 LexActivator.SetProductData("PASTE_PRODUCT_DATA");
 LexActivator.SetProductId("PASTE_PRODUCT_ID", LexActivator.LA_USER);
 ```
@@ -67,11 +65,8 @@ Each time, your app starts, you need to verify whether your license is already a
 
 ```java
 try {
-    LexActivator.SetDataDirectory(getApplicationContext().getFilesDir().getAbsolutePath());
-    LexActivator.SetAndroidId(Secure.getString(getApplicationContext().getContentResolver(), Secure.ANDROID_ID));
     LexActivator.SetProductData("PASTE_PRODUCT_DATA");
     LexActivator.SetProductId("PASTE_PRODUCT_ID", LexActivator.LA_USER);
-    
     int status = LexActivator.IsLicenseGenuine();
     if (LexActivator.LA_OK == status) {
         statusTextView.setText("License is genuinely activated!");
