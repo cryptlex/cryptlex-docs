@@ -1,7 +1,7 @@
 # Using Web API
 
 {% hint style="info" %}
-We **strongly** recommend using LexActivator library for license activation. Web API should **only be used** for license activation, in case LexActivator library is not available for your OS e.g. Android and iOS. 
+We **strongly** recommend using **LexActivator** library for license activation. Web API should **only be used** for license activation, in case LexActivator library is not available for your OS. 
 {% endhint %}
 
 ## Adding licensing to your app
