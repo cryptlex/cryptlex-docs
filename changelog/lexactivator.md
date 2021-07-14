@@ -10,6 +10,7 @@ description: All notable changes to LexActivator are documented here.
 
 * Support for Android and iOS.
 * Support for auto-proxy detection from PAC file on Windows.
+* `SetDataDirectory()`  function to allow changing the default directory used by LexActivator to store the activation data.
 
 ## 3.14.9 \(2021-05-11\)
 
