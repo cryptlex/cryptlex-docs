@@ -4,6 +4,13 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.15.0 \(2021-07-14\)
+
+### Added
+
+* Support for Android and iOS.
+* Support for auto-proxy detection from PAC file on Windows.
+
 ## 3.14.9 \(2021-05-11\)
 
 ### Fixed

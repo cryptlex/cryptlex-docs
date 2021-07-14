@@ -4,6 +4,12 @@ description: All notable changes to LexFloatServer and LexFloatClient are docume
 
 # LexFloatClient
 
+## 4.6.0 \(2021-07-14\)
+
+### Added
+
+* Support for Android and iOS.
+
 ## 4.5.3 \(2021-05-06\)
 
 ### Updated
