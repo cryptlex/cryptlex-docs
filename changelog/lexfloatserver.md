@@ -1,5 +1,17 @@
 # LexFloatServer
 
+## 4.6.5 \(2021-07-15\)
+
+### Updated
+
+* Minor performance improvements.
+
+## 4.6.4 \(2021-07-08\)
+
+### Fixed
+
+* Issue related to log folder path.
+
 ## 4.6.3 \(2021-06-15\)
 
 ### Fixed
