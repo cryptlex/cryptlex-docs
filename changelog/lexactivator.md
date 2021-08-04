@@ -4,6 +4,13 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.15.1 \(2021-08-04\)
+
+### Fixed
+
+* Issue causing crash on iOS in case of static linking.
+* Issue causing crash on 32-bit Windows in case of Java.
+
 ## 3.15.0 \(2021-07-14\)
 
 ### Added
