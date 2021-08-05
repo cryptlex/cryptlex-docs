@@ -1,5 +1,11 @@
 # LexFloatServer
 
+## 4.6.6 \(2021-08-03\)
+
+### Fixed
+
+* Minor bug fixes.
+
 ## 4.6.5 \(2021-07-15\)
 
 ### Updated
