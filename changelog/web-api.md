@@ -1,5 +1,11 @@
 # Web API
 
+## 3.43.0 \(2021-08-05\)
+
+### Added <a id="changed"></a>
+
+* `createdAfter` and `createdBefore` query params to [/v3/activation-logs](https://api.cryptlex.com/v3/docs#tag/ActivationLogs) endpoint.
+
 ## 3.42.0 \(2021-05-19\)
 
 ### Added <a id="changed"></a>
