@@ -114,7 +114,7 @@ When an email client receives a message, it performs an SPF check on the sending
 To create or edit an SPF record to reference Cryptlex, edit your domain's DNS settings to add a TXT record. The steps vary depending on your domain registrar. Cryptlex recommends using the following SPF record:
 
 ```text
-v=spf1 include:mail.cryptlex.com ?all
+v=spf1 include:mail.cryptlex.com include:mg.cryptlex.com ?all
 ```
 
 If you've already set up an SPF record for another purpose, you can simply add a reference of Cryptlex to it. The SPF specification requires that you only have one SPF record on your domain, if you have multiple records, it may cause issues, and cause rejections of your email.
@@ -122,6 +122,6 @@ If you've already set up an SPF record for another purpose, you can simply add a
 For example, instead of having two separate records, such as `v=spf1 include:_spf.google.com ~all` and `v=spf1 include:mail.cryptlex.com ~all`, you can combine them into one, like this:
 
 ```text
-v=spf1 include:_spf.google.com include:mail.cryptlex.com ~all
+v=spf1 include:_spf.google.com include:mail.cryptlex.com include:mg.cryptlex.com ~all
 ```
 
