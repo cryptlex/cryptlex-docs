@@ -48,7 +48,7 @@ curl -X PUT https://releases.cryptlex.com/v3/{RELEASE_ID}/myapp.zip \
      -T "/path/to/myapp.zip"
 
 # In case you are using Cryptlex On-Premise then use following instead
-curl -X PUT https://releases.cryptlex.com/v3/{RELEASE_ID}/myapp.zip \
+curl -X PUT https://releases.mycompany.com/v3/{RELEASE_ID}/myapp.zip \
      -H "Authorization: Bearer {ACCESS_TOKEN}" \
      -F "file=@/path/to/myapp.zip"
 ```
