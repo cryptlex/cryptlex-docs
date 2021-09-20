@@ -12,11 +12,6 @@
 
 * `createdAfter` and `createdBefore` in /v3/licenses, /v3/users, /v3/activation-logs endpoints. These can be replaced with `createdAt[gt]` and `createdAt[lt]` respectively.
 * `lastSeenAfter` and `lastSeenBefore` in /v3/users endpoint. These can be replaced with `lastSeenAt[gt]` and `lastSeenAt[lt]` respectively.
-
-### Changed
-
-Some query params have been renamed \(of course the old ones will continue to work for backward compatibility\):
-
 * `metadataKey` and `metadataValue` in /v3/licenses and /v3/users endpoints. These can be replaced with `metadata.key` and `metadata.value` respectively.
 * `email` in /v3/licenses endpoint. This can be replaced with `user.email`.
 
