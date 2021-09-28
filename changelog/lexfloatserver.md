@@ -1,5 +1,23 @@
 # LexFloatServer
 
+## 4.6.9 \(2021-09-28\)
+
+### Fixed
+
+* Intermittent hangs caused during exit.
+
+## 4.6.8 \(2021-08-11\)
+
+### Fixed
+
+* Incorrect exit return codes.
+
+## 4.6.7 \(2021-08-11\)
+
+### Fixed
+
+* Minor bug fixes.
+
 ## 4.6.6 \(2021-08-03\)
 
 ### Fixed
