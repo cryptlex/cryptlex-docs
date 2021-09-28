@@ -98,7 +98,7 @@ For user data, as outlined in section 1.2.2, you \(our customer\) will be the da
 
 **1.2.3.2 Processor**
 
-The processor is the entity which processes personal data on behalf of the controller under the controller’s instructions.
+The processor is the entity that processes personal data on behalf of the controller under the controller’s instructions.
 
 We \(Cryptlex\) are a data processor.
 
@@ -138,7 +138,7 @@ If you have questions or concerns, reach out to us at [security@cryptlex.com](ma
 
 ## 3. Retention and deletion
 
-Cryptlex will not retain data longer than is necessary to fulfill the purposes for which it was collected or as required by applicable laws or regulations. When a user's account is terminated, all the related Personal Data stored within Cryptlex will be deleted, as required by applicable law. For the user data, collected by you \(our customer\), with an active account, you will have the responsibility to delete the data when required.
+Cryptlex will not retain data longer than is necessary to fulfil the purposes for which it was collected or as required by applicable laws or regulations. When a user's account is terminated, all the related Personal Data stored within Cryptlex will be deleted, as required by applicable law. For the user data, collected by you \(our customer\), with an active account, you will have the responsibility to delete the data when required.
 
 ## 4. Acceptance of these conditions
 
@@ -162,9 +162,9 @@ You have the right to opt-out of certain uses and disclosures of your personal i
 
 ### 7.2 Email communications
 
-If you receive an unwanted email from us, you can use the unsubscribe link found at the bottom of the email to opt-out of receiving future emails. We will process your request within a reasonable time after receipt. Note that you will continue to receive transaction-related emails regarding products or services you have requested. We may also send you certain non-promotional communications regarding Cryptlex and our services and you will not be able to opt-out of those communications \(e.g., communications regarding updates to our Terms or this Privacy Policy\).
+If you receive an unwanted email from us, you can use the unsubscribe link found at the bottom of the email to opt out of receiving future emails. We will process your request within a reasonable time after receipt. Note that you will continue to receive transaction-related emails regarding products or services you have requested. We may also send you certain non-promotional communications regarding Cryptlex and our services and you will not be able to opt-out of those communications \(e.g., communications regarding updates to our Terms or this Privacy Policy\).
 
-WE MAINTAIN “DO-NOT-MAIL” LISTS AS MANDATED BY LAW. WE PROCESS REQUESTS TO BE PLACED ON DO-NOT-MAIL AND DO-NOT-CONTACT LISTS WITHIN 60 DAYS AFTER RECEIPT, OR SUCH SHORTER TIME AS MAY BE REQUIRED BY LAW.
+WE MAINTAIN “DO-NOT-MAIL” LISTS AS MANDATED BY LAW. WE PROCESS REQUESTS TO BE PLACED ON DO-NOT-MAIL AND DO-NOT-CONTACT LISTS WITHIN 60 DAYS AFTER RECEIPT, OR SUCH A SHORTER TIME AS MAY BE REQUIRED BY LAW.
 
 ## 4. Onward **t**ransfer - Cryptlex may disclose your information
 
@@ -176,13 +176,13 @@ We may share your information as described in this Privacy Policy \(e.g., with o
 * **Privacy Shield.** With respect to onward transfers to Agents under Privacy Shield, Privacy Shield requires that Cryptlex remain liable should its Agents process personal information in a manner inconsistent with the Privacy Shield Principles.
 * **Disclosures to protect us or others \(e.g., as Required by law and similar disclosures\).** We may access, preserve, and disclose your Personal Information, other account information, and content, if we believe doing so is required or appropriate to \(i\) comply with law enforcement or national security requests and legal process, such as a court order or subpoena; \(ii\) respond to your requests; \(iii\) protect yours’, ours’ or others’ rights, property, or safety; \(iv\) to enforce Cryptlex policies or contracts; \(v\) to collect amounts owed to Cryptlex; \(vi\) when we believe disclosure is necessary or appropriate to prevent physical harm or financial loss or in connection with an investigation or prosecution of suspected or actual illegal activity; or \(vii\) if we, in good faith, believe that disclosure is otherwise necessary or advisable.
 
-  In addition, from time to time, server logs may be reviewed for security purposes – e.g., to detect unauthorized activity on the Services. In such cases, server log data containing IP addresses may be shared with law enforcement bodies in order that they may identify users in connection with their investigation of the unauthorized activities.
+  In addition, from time to time, server logs may be reviewed for security purposes – e.g., to detect unauthorized activity on the Services. In such cases, server log data containing IP addresses may be shared with law enforcement bodies in order that they may identify users in connection with their investigation of unauthorized activities.
 
-* **Merger, sale, or other asset transfers.** If we are involved in a merger, acquisition, financing due diligence, reorganization, bankruptcy, receivership, sale of company assets, or transition of service to another provider, then your information may be sold or transferred as part of such a transaction as permitted by law and/or contract. In such an event, Cryptlex will endeavor to direct the transferee to use personal information in a manner that is consistent with the Privacy Policy in effect at the time such personal information was collected.
+* **Merger, sale, or other asset transfers.** If we are involved in a merger, acquisition, financing due diligence, reorganization, bankruptcy, receivership, sale of company assets, or transition of service to another provider, then your information may be sold or transferred as part of such a transaction as permitted by law and/or contract. In such an event, Cryptlex will endeavour to direct the transferee to use personal information in a manner that is consistent with the Privacy Policy in effect at the time such personal information was collected.
 
 ## 8. For further information
 
 If you have any further questions regarding the data Cryptlex collects, or how we use it, then please feel free to contact us by email at [legal@cryptlex.com](mailto:legal@cryptlex.com)
 
-**Effective Date:** January 23, 2020
+**Last Updated:** September 28th, 2021
 
