@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.15.2 \(2021-09-29\)
+
+### Fixed
+
+* Issue causing failure in the detection of AWS EC2 VMs.
+
 ## 3.15.1 \(2021-08-04\)
 
 ### Fixed
