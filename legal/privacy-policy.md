@@ -122,6 +122,12 @@ Cryptlex has further committed to cooperate with the panel established by the EU
 
 An individual has the possibility, under certain conditions, to invoke binding arbitration for complaints regarding Privacy Shield compliance not resolved by any of the other Privacy Shield mechanisms. For additional information please refer to [Annex I](https://www.privacyshield.gov/article?id=ANNEX-I-introduction).
 
+**1.2.5. Standard Contractual Clauses** 
+
+According to the General Data Protection Regulation \(GDPR\), contractual clauses ensuring appropriate data protection safeguards can be used as a ground for data transfers from the EU to third countries. Cryptlex relies on the European Commission-approved Standard Contractual Clauses \(SCCs\) as a legal mechanism for data transfers from the EU. SCCs are contractual commitments between companies transferring personal data, binding them to protect the privacy and security of such data. Cryptlex adopted SCCs so that the necessary data flows can be protected when transferred outside the EU to countries that have not been deemed by the European Commission to adequately protect personal data, including protecting data transfers to the United States.
+
+Please refer to this article on the [European Commission website](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en) to learn more about SCCs.
+
 ## 2. Data security
 
 Cryptlex is committed to ensuring that your privacy and the data you share with us is protected. We use the best industrial practices to secure and protect the important business data you store within Cryptlex. 
