@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.15.4 \(2021-09-30\)
+
+### Fixed
+
+* Issue related to incorrect system encodings.
+
 ## 3.15.3 \(2021-09-29\)
 
 ### Fixed
