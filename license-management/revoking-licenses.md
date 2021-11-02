@@ -8,42 +8,24 @@ Approving the license later will require user to reactivate the license.
 
 To revoke a license you need to hit the [license update endpoint](https://api.cryptlex.com/v3/docs#operation/patch/v3/licenses/{id}) and set `revoked` property to `true`.
 
-{% api-method method="patch" host="https://api.cryptlex.com" path="/v3/licenses/:id" %}
-{% api-method-summary %}
-Revoking a license
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.cryptlex.com" path="/v3/licenses/:id" method="patch" summary="Revoking a license" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=true %}
+{% swagger-parameter in="path" name="id" type="string" %}
 Unique identifier for the license.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 Bearer access token.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="revoked" type="boolean" required=true %}
+{% swagger-parameter in="body" name="revoked" type="boolean" %}
 Set true to revoke the license.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
   "key": "0A2035-E8A2A3-4D31B7-8FF9C6-81A6CA-539E54",
@@ -77,10 +59,6 @@ Set true to revoke the license.
   "updatedAt": "2018-05-06T08:49:17.9361158Z"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-
+{% endswagger-response %}
+{% endswagger %}
 
