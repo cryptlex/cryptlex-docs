@@ -1,66 +1,64 @@
+---
+description: All notable changes to LexFloatServer and LexFloatClient are documented here.
+---
+
 # LexFloatClient
 
-## 4.6.0 (2021-07-14)
-
-### Added
-
-* Support for Android and iOS.
-
-## 4.5.3 (2021-05-06)
+## 4.5.3 \(2021-05-06\)
 
 ### Updated
 
 * Updated networking library for Windows.
 
-## 4.5.2 (2021-04-22)
+## 4.5.2 \(2021-04-22\)
 
 ### Updated
 
 * Dropped dependency on `libnss3` for Linux.
 
-## 4.5.1 (2021-04-06)
+## 4.5.1 \(2021-04-06\)
 
 ### Fixed
 
 * Fixed a minor security issue.
 
-## 4.5.0 (2021-03-23)
+## 4.5.0 \(2021-03-23\)
 
 ### Added
 
 * Support for getting grossUses of meter attributes.
 
-## 4.4.3 (2021-02-25)
+## 4.4.3 \(2021-02-25\)
 
 ### Fixed
 
 * Intermittent crashes in multi-threaded usage.
 
-## 4.3.2 (2020-01-30)
+## 4.3.2 \(2020-01-30\)
 
 ### Fixed
 
 * Minor bug fixes.
 
-## 4.3.1 (2019-11-19)
+## 4.3.1 \(2019-11-19\)
 
 ### Fixed
 
 * Minor bug fixes.
 
-## 4.1.0 (2019-07-02) <a href="3-0-0-2018-05-03" id="3-0-0-2018-05-03"></a>
+## 4.1.0 \(2019-07-02\) <a id="3-0-0-2018-05-03"></a>
 
-### Added <a href="added-2" id="added-2"></a>
+### Added <a id="added-2"></a>
 
 * `GetHostLicenseMeterAttribute()`, `GetFloatingClientMeterAttributeUses()`, `IncrementFloatingClientMeterAttributeUses()`, `DecrementFloatingClientMeterAttributeUses()` and `ResetFloatingClientMeterAttributeUses()` API functions.
 
-## 4.0.0 (2018-12-17) <a href="3-0-0-2018-05-03" id="3-0-0-2018-05-03"></a>
+## 4.0.0 \(2018-12-17\) <a id="3-0-0-2018-05-03"></a>
 
-### Added <a href="added-2" id="added-2"></a>
+### Added <a id="added-2"></a>
 
 * `SetFloatingClientMetadata()` and `GetHostLicenseExpiryDate()` API functions.
 
-### Changed <a href="changed" id="changed"></a>
+### Changed <a id="changed"></a>
 
 * All status codes have been updated.
 * Header file and samples for all languages on Github have been updated.
@@ -72,12 +70,12 @@
 * Renamed `DropLicense()` function to `DropFloatingLicense()`
 * Renamed `HasLicense()` function to `HasFloatingLicense()`
 
-### Deleted <a href="deleted" id="deleted"></a>
+### Deleted <a id="deleted"></a>
 
 * `FindHandle()` function
 * `GlobalCleanup()` function
 
-## 3.0.0 (2018-05-03)
+## 3.0.0 \(2018-05-03\)
 
 ### Changed
 
@@ -87,10 +85,11 @@
 
 ### Deleted
 
-* `SetProductFile()` function&#x20;
+* `SetProductFile()` function 
 
-## 2.9.0 (2017-07-03)
+## 2.9.0 \(2017-07-03\)
 
 ### Added
 
 * clang build for macOS
+

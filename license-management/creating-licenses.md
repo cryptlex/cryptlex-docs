@@ -2,7 +2,7 @@
 
 ## Creating a license
 
-A license inherits all it's properties from the default license policy attached to it's product. But you may way want to override some properties like `allowedActivations`, `validity`, add some `metadata` etc. You can check out all the properties in the web API [reference page](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses).&#x20;
+A license inherits all it's properties from the default license policy attached to it's product. But you may way want to override some properties like `allowedActivations`, `validity`, add some `metadata` etc. You can check out all the properties in the web API [reference page](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses). 
 
 {% hint style="info" %}
 You can also override the default license policy by providing the `licensePolicyId` at the time of creating a license.
@@ -10,32 +10,48 @@ You can also override the default license policy by providing the `licensePolicy
 
 Following is a sample request which you will usually make to create a license:
 
-{% swagger baseUrl="https://api.cryptlex.com" path="/v3/licenses" method="post" summary="Creating License" %}
-{% swagger-description %}
+{% api-method method="post" host="https://api.cryptlex.com" path="/v3/licenses" %}
+{% api-method-summary %}
+Creating License
+{% endapi-method-summary %}
 
-{% endswagger-description %}
+{% api-method-description %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 Bearer access token.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 
-{% swagger-parameter in="body" name="validity" type="number" %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="validity" type="number" required=false %}
 The duration  after which the license will expire.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
 
-{% swagger-parameter in="body" name="allowedActivations" type="number" %}
+{% api-method-parameter name="allowedActivations" type="number" required=false %}
 Allowed number of activations for the license.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
 
-{% swagger-parameter in="body" name="userId" type="string" %}
+{% api-method-parameter name="userId" type="string" required=false %}
 Unique identifier for the user.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
 
-{% swagger-parameter in="body" name="productId" type="string" %}
+{% api-method-parameter name="productId" type="string" required=true %}
 Unique identifier for the product.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
 
-{% swagger-response status="201" description="" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=201 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
 ```javascript
 {
   "key": "0A2035-E8A2A3-4D31B7-8FF9C6-81A6CA-539E54",
@@ -69,5 +85,8 @@ Unique identifier for the product.
   "updatedAt": "2018-05-06T08:49:17.9361158Z"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+

@@ -8,24 +8,42 @@ Allowing the license later will automatically cause **LexActivator** `IsLicenseG
 
 To suspend a license you need to hit the [license update endpoint](https://api.cryptlex.com/v3/docs#operation/patch/v3/licenses/{id}) and set `suspended` property to `true`.
 
-{% swagger baseUrl="https://api.cryptlex.com" path="/v3/licenses/:id" method="patch" summary="Suspending a license" %}
-{% swagger-description %}
+{% api-method method="patch" host="https://api.cryptlex.com" path="/v3/licenses/:id" %}
+{% api-method-summary %}
+Suspending a license
+{% endapi-method-summary %}
 
-{% endswagger-description %}
+{% api-method-description %}
 
-{% swagger-parameter in="path" name="id" type="string" %}
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=true %}
 Unique identifier for the license.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 Bearer access token.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 
-{% swagger-parameter in="body" name="suspended" type="boolean" %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="suspended" type="boolean" required=true %}
 Set true to suspend the license.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
 
-{% swagger-response status="200" description="" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
 ```javascript
 {
   "key": "0A2035-E8A2A3-4D31B7-8FF9C6-81A6CA-539E54",
@@ -59,6 +77,10 @@ Set true to suspend the license.
   "updatedAt": "2018-05-06T08:49:17.9361158Z"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
 

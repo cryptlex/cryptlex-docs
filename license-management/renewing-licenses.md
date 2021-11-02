@@ -4,30 +4,46 @@
 
 Whenever you create a license with validity say 30 days, you will see a property in the license resource named `expiresAt`. It is a read only, computed property and determines the time when license will expire.
 
-If the license expiration strategy for license (or it's policy) is set to `immediate`, `expiresAt` property will be populated with the date on which license will expire starting from the time when license was created.
+If the license expiration strategy for license \(or it's policy\) is set to `immediate`, `expiresAt` property will be populated with the date on which license will expire starting from the time when license was created.
 
-If the license expiration strategy for license (or it's policy) is set to `delayed`, `expiresAt` property will be `null` till license is activated, as license will start expiring after it is used.
+If the license expiration strategy for license \(or it's policy\) is set to `delayed`, `expiresAt` property will be `null` till license is activated, as license will start expiring after it is used.
 
-If the license expiration strategy for license (or it's policy) is set to `rolling`, `expiresAt` property will always be `null` as license expiry is specific to each activation. In this case you can refer to `expiresAt` property of license activation.
+If the license expiration strategy for license \(or it's policy\) is set to `rolling`, `expiresAt` property will always be `null` as license expiry is specific to each activation. In this case you can refer to `expiresAt` property of license activation.
 
 ## Renewing license expiry
 
 To renew the license subscription you need to hit the [license renew endpoint](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses/{id}/renew). It extends the license expiry by it's validity.
 
-{% swagger baseUrl="https://api.cryptlex.com" path="/v3/licenses/:id/renew" method="post" summary="Renewing license" %}
-{% swagger-description %}
+{% api-method method="post" host="https://api.cryptlex.com" path="/v3/licenses/:id/renew" %}
+{% api-method-summary %}
+Renewing license
+{% endapi-method-summary %}
 
-{% endswagger-description %}
+{% api-method-description %}
 
-{% swagger-parameter in="path" name="id" type="string" %}
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=true %}
 Unique identifier for the license.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 Bearer access token.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
-{% swagger-response status="200" description="" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
 ```javascript
 {
   "key": "0A2035-E8A2A3-4D31B7-8FF9C6-81A6CA-539E54",
@@ -61,6 +77,10 @@ Bearer access token.
   "updatedAt": "2018-05-06T08:49:17.9361158Z"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
 

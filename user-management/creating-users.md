@@ -4,36 +4,52 @@ You will usually create users with **admin role** through dashboard but creating
 
 Following is a sample request which creates a user with user role:
 
-{% swagger baseUrl="https://api.cryptlex.com" path="/v3/users" method="post" summary="Creating user" %}
-{% swagger-description %}
+{% api-method method="post" host="https://api.cryptlex.com" path="/v3/users" %}
+{% api-method-summary %}
+Creating user
+{% endapi-method-summary %}
+
+{% api-method-description %}
 Creates a new user.
-{% endswagger-description %}
+{% endapi-method-description %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
 Bearer access token.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 
-{% swagger-parameter in="body" name="firstName" type="string" %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="firstName" type="string" required=true %}
 First name of the user.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
 
-{% swagger-parameter in="body" name="lastName" type="string" %}
+{% api-method-parameter name="lastName" type="string" required=true %}
 Last name of the user.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
 
-{% swagger-parameter in="body" name="email" type="string" %}
+{% api-method-parameter name="email" type="string" required=true %}
 Email address of the user.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
 
-{% swagger-parameter in="body" name="password" type="string" %}
+{% api-method-parameter name="password" type="string" required=true %}
 Password of the user.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
 
-{% swagger-parameter in="body" name="roles" type="array" %}
-List of roles, set it to ["user"]
-{% endswagger-parameter %}
+{% api-method-parameter name="roles" type="array" required=true %}
+List of roles, set it to \["user"\]
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
 
-{% swagger-response status="201" description="" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=201 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
 ```
 {
   "name": "John Doe",
@@ -48,7 +64,10 @@ List of roles, set it to ["user"]
   "updatedAt": "2018-05-01T07:53:56.0095495Z"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
-##
+## 
+

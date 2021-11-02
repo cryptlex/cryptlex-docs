@@ -35,12 +35,13 @@ Similarly you can use the `SetCryptlexHost()` LexActivator API function for othe
 
 ## LexFloatServer
 
-By default, LexFloatServer will send its own license activation request to **api.cryptlex.com**_. _
+By default, LexFloatServer will send its own license activation request to **api.cryptlex.com**_._ 
 
-In_ _order to configure LexFloatServer to send the license activation requests to your On-Premise installation, you should add **cryptlexhost** property in the LexFloatServer config file:
+In __order to configure LexFloatServer to send the license activation requests to your On-Premise installation, you should add **cryptlexhost** property in the LexFloatServer config file:
 
 ```bash
 ...
 # Cryptlex host
 cryptlexhost=https://cryptlex-api.mycompany.com
 ```
+

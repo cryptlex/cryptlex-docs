@@ -40,4 +40,5 @@ After you have created meter attributes for the license, you can easily get, inc
 
 **`GetActivationMeterAttributeUses()`**, **`IncrementActivationMeterAttributeUses()`**, **`DecrementActivationMeterAttributeUses()`**, **`ResetActivationMeterAttributeUses()`**
 
-When the usage count reaches the **allowedUses** limit, further incrementing the usage count will return **`LA_E_METER_ATTRIBUTE_USES_LIMIT_REACHED` **error code.
+When the usage count reaches the **allowedUses** limit, further incrementing the usage count will return **`LA_E_METER_ATTRIBUTE_USES_LIMIT_REACHED`** error code.
+
