@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.17.1 (2021-11-30)
+
+### Fixed
+
+* Issue causing crash when PAC file is used for proxy settings on Windows.
+
 ## 3.17.0 (2021-11-17)
 
 ### Added
@@ -161,7 +167,7 @@ description: All notable changes to LexActivator are documented here.
 
 * `SetCustomDeviceFingerprint()`  function to allow setting a custom device fingerprint.
 * `GetLicenseAllowedActivations()`  function to get the allowed activations of the license.
-* `GetLicenseTotalActivations() ` function to get the total activations of the license.
+* `GetLicenseTotalActivations()` function to get the total activations of the license.
 * `GetLibraryVersion()` function to get the library version.
 
 ### Updated
@@ -280,7 +286,7 @@ description: All notable changes to LexActivator are documented here.
 
 * `GenerateOfflineTrialActivationRequest()` and `ActivateTrialOffline()` functions to allow for offline trial activations.
 
-### Updated <a href="updated" id="updated"></a>
+### Updated <a href="#updated" id="updated"></a>
 
 * Wrappers for languages have been updated with `GenerateOfflineTrialActivationRequest()` and `ActivateTrialOffline()`  API functions. Please update your wrappers using the latest code on [Github](https://github.com/cryptlex).
 
@@ -510,5 +516,5 @@ description: All notable changes to LexActivator are documented here.
 
 ### Added
 
-* `GetExtraActivationData() `function to get the value of the extra activation data.
+* `GetExtraActivationData()` function to get the value of the extra activation data.
 * `GetDaysLeftToExpiration()` function to get the number of remaining days after which the license expires.
