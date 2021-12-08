@@ -5,17 +5,17 @@ Email templates can be used to automatically send emails to your customers when 
 * `license.created`
 * `license.renewed`
 * `license.extended`
-* `license.expiring-soon` \(triggered **three** days before license expiry date\)
+* `license.expiring-soon` (triggered **three** days before the license expiry date)
 * `license.expired`
 
 **NOTE:** Use [webhooks](webhooks.md) instead of email templates if you have a complex workflow.
 
 ## Creating an email template
 
-You can easily create an email template through dashboard. Go to the [email templates](https://app.cryptlex.com/email-templates) section in the dashboard and click the add the button. An email template form with following fields will popup: 
+You can easily create an email template through the dashboard. Go to the [email templates](https://app.cryptlex.com/email-templates) section in the dashboard and click the add button. An email template form with the following fields will popup:&#x20;
 
 {% hint style="info" %}
-After creating the email template, make sure you link it with product.
+After creating the email template, make sure you link it with the product.
 {% endhint %}
 
 #### **Name**
@@ -24,14 +24,14 @@ Name of the email template.
 
 #### **From Name**
 
-The from name which should appear for the email.
+The from name that should appear for the email.
 
 #### **From Email**
 
 The email address to be used for sending the email.
 
 {% hint style="info" %}
-The from email address will only be used if you have verified your domain, otherwise it will default to **noreply@cryptlex.com**.
+The from email address will only be used if you have verified your domain, otherwise, it will default to **noreply@cryptlex.com**.
 {% endhint %}
 
 #### Subject
@@ -56,7 +56,7 @@ Whether email should be sent or not, you can use it to disable the email templat
 
 #### **Custom**
 
-By default your email body will be automatically wrapped in a responsive HTML email. In case you want to prevent that and use your own branded email, this property can be set to `true`.
+By default, your email body will be automatically wrapped in a responsive HTML email. In case you want to prevent that and use your own branded email, this property can be set to `true`.
 
 ## Data placeholders
 
@@ -82,38 +82,75 @@ assist you promptly.</p>
 The MyCompany HelpDesk</p>
 ```
 
+## Data filters
+
+Data filters can be used to format the date and number fields in the email templates.
+
+### format\_date
+
+Formats date and times.
+
+Input
+
+```
+{{ license.expiresAt | format_date: "G" }}
+```
+
+Output
+
+```
+6/15/2021 1:45:30 PM
+```
+
+For more date format specifiers refer to the following: [https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#table-of-format-specifiers](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings#table-of-format-specifiers)
+
+### format\_number
+
+Formats numbers.
+
+Input
+
+```
+{{ license.allowedActivations | format_number: "N" }}
+```
+
+Output
+
+```
+10.00
+```
+
 ## Sending test emails
 
-After you have created the email template, click the email template in the email templates table. On the email template page you will find a **`Send Test Email`** button on the right top. You can use this to test your email template by providing the sample data.
+After you have created the email template, click the email template in the email templates table. On the email template page, you will find a **`Send Test Email`** button on the right top. You can use this to test your email template by providing the sample data.
 
 ## Verifying email domain
 
-In order for Cryptlex to send emails on your behalf using your **From Email** address, you must verify that you own the domain. This is done by adding a TXT record \(a domain verification record\) to your DNS server that Cryptlex will check. The domain verification record is unique for each Cryptlex account.
+In order for Cryptlex to send emails on your behalf using your **From Email** address, you must verify that you own the domain. This is done by adding a TXT record (a domain verification record) to your DNS server that Cryptlex will check. The domain verification record is unique for each Cryptlex account.
 
-If you don’t add the domain verification record, Cryptlex sends emails using **noreply@cryptlex.com** email address. If you want to give your customers a white label experience, hiding all Cryptlex branding, you must add this record.
+If you don’t add the domain verification record, Cryptlex sends emails using **noreply@cryptlex.com** email address. If you want to give your customers a white-label experience, hiding all Cryptlex branding, you must add this record.
 
 ### **To verify that a domain belongs to you**
 
 1. Select the email template in the dashboard and click on the **`Verify Email Domain`** button.
-2. Edit your domain's DNS settings and add this TXT record:
+2.  Edit your domain's DNS settings and add this TXT record:
 
-   | Type | Name | Value | TTL |
-   | :--- | :--- | :--- | :--- |
-   | TXT | &lt;mydomain.com&gt; | &lt;your unique value found in the verify email domain dialog&gt; | 3600 or use default |
-
+    | Type | Name            | Value                                                        | TTL                 |
+    | ---- | --------------- | ------------------------------------------------------------ | ------------------- |
+    | TXT  | \<mydomain.com> | \<your unique value found in the verify email domain dialog> | 3600 or use default |
 3. After you add the TXT record, click the **`Verify`** button to confirm that all of your records are now valid.
 
-After your domain is verified, leave the domain verification TXT record in-place.
+After your domain is verified, leave the domain verification TXT record in place.
 
 ### Setting up an SPF record
 
-Sender Policy Framework \(SPF\) is a domain level email authorization protocol that allows you to declare which IP addresses are allowed to send email as if it originated from your domain.
+Sender Policy Framework (SPF) is a domain level email authorization protocol that allows you to declare which IP addresses are allowed to send email as if it originated from your domain.
 
 When an email client receives a message, it performs an SPF check on the sending domain to verify that the email came from who it says it did. If this check fails, or there isn't a DNS record that says that Cryptlex is a permitted sender, some receivers might consider that email spam or a phishing attempt, and flag it as untrustworthy or not display it to your customers at all.
 
 To create or edit an SPF record to reference Cryptlex, edit your domain's DNS settings to add a TXT record. The steps vary depending on your domain registrar. Cryptlex recommends using the following SPF record:
 
-```text
+```
 v=spf1 include:mail.cryptlex.com include:mg.cryptlex.com ?all
 ```
 
@@ -121,7 +158,6 @@ If you've already set up an SPF record for another purpose, you can simply add a
 
 For example, instead of having two separate records, such as `v=spf1 include:_spf.google.com ~all` and `v=spf1 include:mail.cryptlex.com ~all`, you can combine them into one, like this:
 
-```text
+```
 v=spf1 include:_spf.google.com include:mail.cryptlex.com include:mg.cryptlex.com ~all
 ```
-
