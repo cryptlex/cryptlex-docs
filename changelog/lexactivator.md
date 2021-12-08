@@ -4,6 +4,13 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.17.2 (2021-12-08)
+
+### Fixed
+
+* PAC file related issue on Windows.
+* False positives in VM detection for macOS.
+
 ## 3.17.1 (2021-11-30)
 
 ### Fixed
