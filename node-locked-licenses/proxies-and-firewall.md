@@ -14,7 +14,7 @@ You can allow the user to set the proxy settings to be used by LexActivator. Sim
 SetNetworkProxy("http://username:password@host:port/");
 ```
 
-The proxy format should be: 
+The proxy format should be:&#x20;
 
 `[protocol://][username:password@]machine[:port]`
 
@@ -28,16 +28,13 @@ Following are some examples of the valid proxy strings:
 
 Whitelist Cryptlex IP addresses to enable LexActivator license and trial activations through the firewall.
 
-### Access through firewall <a id="access-through-firewall"></a>
+### Access through firewall <a href="#access-through-firewall" id="access-through-firewall"></a>
 
 If your customer's policy denies access from external IP addresses and websites, you will need to whitelist the IP addresses below. A whitelist provides access to designated IP addresses and sites that would otherwise be prevented by your security policy.
 
-* `54.147.158.222`
-* `54.147.163.93`
-* `54.144.124.187`
-* `54.144.46.201`
+* `52.223.22.71`
+* `35.71.188.31`
 
 Alternatively, you can also whitelist Cryptlex Web API URL:
 
-`https:/api.cryptlex.com:443`
-
+`https://api.cryptlex.com:443`
