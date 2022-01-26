@@ -190,4 +190,4 @@ In case you don't want to store the IP address and location of the license activ
 
 ### Disable clock validation
 
-In case the machine which is to be licensed doesn't have a hardware clock and can't keep the correct time you can set this property to `true`. This will only work in the case of node-locked license and validity should also be set to `0`.
+In case the machine which is to be licensed doesn't have a hardware clock and can't keep the correct time you can set this property to `true`. This will only work in the case of node-locked perpetual license (validity set to `0`).
