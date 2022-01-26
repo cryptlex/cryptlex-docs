@@ -4,6 +4,12 @@ description: All notable changes to LexActivator are documented here.
 
 # LexActivator
 
+## 3.18.0 (2022-01-27)
+
+### Added
+
+* Support for `disableClockValidation` license property.
+
 ## 3.17.2 (2021-12-08)
 
 ### Fixed

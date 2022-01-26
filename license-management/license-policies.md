@@ -187,3 +187,7 @@ In case you want to enforce user authentication for license activation in additi
 ### Disable geolocation
 
 In case you don't want to store the IP address and location of the license activation, you can set this property to `true`.
+
+### Disable clock validation
+
+In case the machine which is to be licensed doesn't have a hardware clock and can't keep the correct time you can set this property to `true`. This will only work in the case of node-locked license and validity should also be set to `0`.
