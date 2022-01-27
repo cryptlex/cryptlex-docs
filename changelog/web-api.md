@@ -1,5 +1,11 @@
 # Web API
 
+## 3.50.0 (2022-01-27)
+
+### Added <a href="#changed" id="changed"></a>
+
+* `disableValidationCheck` property to the license resource.
+
 ## 3.49.0 (2021-12-01)
 
 ### Added <a href="#changed" id="changed"></a>
