@@ -7,6 +7,11 @@ Email templates can be used to automatically send emails to your customers when 
 * `license.extended`
 * `license.expiring-soon` (triggered **three** days before the license expiry date)
 * `license.expired`
+* `license.deleted`
+* `user.created`
+*   `user.reset-password-request`
+
+    ****
 
 **NOTE:** Use [webhooks](webhooks.md) instead of email templates if you have a complex workflow.
 
@@ -119,6 +124,10 @@ Output
 ```
 10.00
 ```
+
+For other supported filters please refer to the following:
+
+[https://shopify.github.io/liquid/filters/abs/](https://shopify.github.io/liquid/filters/abs/)
 
 ## Sending test emails
 
