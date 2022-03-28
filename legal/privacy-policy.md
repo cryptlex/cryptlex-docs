@@ -154,9 +154,9 @@ If you receive an unwanted email from us, you can use the unsubscribe link found
 
 WE MAINTAIN “DO-NOT-MAIL” LISTS AS MANDATED BY LAW. WE PROCESS REQUESTS TO BE PLACED ON DO-NOT-MAIL AND DO-NOT-CONTACT LISTS WITHIN 60 DAYS AFTER RECEIPT, OR SUCH A SHORTER TIME AS MAY BE REQUIRED BY LAW.
 
-## 4. Onward **t**ransfer - Cryptlex may disclose your information
+## 8. Onward **t**ransfer - Cryptlex may disclose your information
 
-#### 4.1 Information we share <a href="#4-1-information-we-share" id="4-1-information-we-share"></a>
+#### 8.1 Information we share <a href="#4-1-information-we-share" id="4-1-information-we-share"></a>
 
 We may share your information as described in this Privacy Policy (e.g., with our Third-Party service providers; to comply with legal obligations; to protect and defend our rights and property) or with your permission.
 
@@ -166,7 +166,7 @@ We may share your information as described in this Privacy Policy (e.g., with ou
     In addition, from time to time, server logs may be reviewed for security purposes – e.g., to detect unauthorized activity on the Services. In such cases, server log data containing IP addresses may be shared with law enforcement bodies in order that they may identify users in connection with their investigation of unauthorized activities.
 * **Merger, sale, or other asset transfers.** If we are involved in a merger, acquisition, financing due diligence, reorganization, bankruptcy, receivership, sale of company assets, or transition of service to another provider, then your information may be sold or transferred as part of such a transaction as permitted by law and/or contract. In such an event, Cryptlex will endeavour to direct the transferee to use personal information in a manner that is consistent with the Privacy Policy in effect at the time such personal information was collected.
 
-## 8. For further information
+## 9. For further information
 
 If you have any further questions regarding the data Cryptlex collects, or how we use it, then please feel free to contact us by email at [legal@cryptlex.com](mailto:legal@cryptlex.com)
 
