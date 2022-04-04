@@ -135,38 +135,15 @@ After you have created the email template, click the email template in the email
 
 ## Verifying email domain
 
-In order for Cryptlex to send emails on your behalf using your **From Email** address, you must verify that you own the domain. This is done by adding a TXT record (a domain verification record) to your DNS server that Cryptlex will check. The domain verification record is unique for each Cryptlex account.
+In order for Cryptlex to send emails on your behalf using your **From Email** address, you must verify that you own the domain. This is done by adding a Sending Domain in Cryptlex and verifying the  DNS records shown in the Sending Domain.
 
-If you don’t add the domain verification record, Cryptlex sends emails using **noreply@cryptlex.com** email address. If you want to give your customers a white-label experience, hiding all Cryptlex branding, you must add this record.
+If you don’t add the domain verification record, Cryptlex sends emails using **noreply@cryptlex.com** email address. If you want to give your customers a white-label experience, hiding all Cryptlex branding, you must add and verify the sending domain.
 
 ### **To verify that a domain belongs to you**
 
-1. Select the email template in the dashboard and click on the **`Verify Email Domain`** button.
-2.  Edit your domain's DNS settings and add this TXT record:
+1. On the email templates page in the dashboard, click on the Sending Domains button.
+2. On the Sending Domains page click on the Add button to add your domain.
+3. Verify the domain by adding the required TXT and CNAME DNS entries.&#x20;
+4. After you have added the CNAME and TXT records, click the **`Verify`** button to confirm that all of your records are now valid.
 
-    | Type | Name            | Value                                                        | TTL                 |
-    | ---- | --------------- | ------------------------------------------------------------ | ------------------- |
-    | TXT  | \<mydomain.com> | \<your unique value found in the verify email domain dialog> | 3600 or use default |
-3. After you add the TXT record, click the **`Verify`** button to confirm that all of your records are now valid.
-
-After your domain is verified, leave the domain verification TXT record in place.
-
-### Setting up an SPF record
-
-Sender Policy Framework (SPF) is a domain level email authorization protocol that allows you to declare which IP addresses are allowed to send email as if it originated from your domain.
-
-When an email client receives a message, it performs an SPF check on the sending domain to verify that the email came from who it says it did. If this check fails, or there isn't a DNS record that says that Cryptlex is a permitted sender, some receivers might consider that email spam or a phishing attempt, and flag it as untrustworthy or not display it to your customers at all.
-
-To create or edit an SPF record to reference Cryptlex, edit your domain's DNS settings to add a TXT record. The steps vary depending on your domain registrar. Cryptlex recommends using the following SPF record:
-
-```
-v=spf1 include:mail.cryptlex.com include:mg.cryptlex.com ?all
-```
-
-If you've already set up an SPF record for another purpose, you can simply add a reference of Cryptlex to it. The SPF specification requires that you only have one SPF record on your domain, if you have multiple records, it may cause issues, and cause rejections of your email.
-
-For example, instead of having two separate records, such as `v=spf1 include:_spf.google.com ~all` and `v=spf1 include:mail.cryptlex.com ~all`, you can combine them into one, like this:
-
-```
-v=spf1 include:_spf.google.com include:mail.cryptlex.com include:mg.cryptlex.com ~all
-```
+After your domain is verified, leave the CNAME and TXT records in place.
