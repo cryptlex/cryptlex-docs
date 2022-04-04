@@ -137,12 +137,12 @@ After you have created the email template, click the email template in the email
 
 In order for Cryptlex to send emails on your behalf using your **From Email** address, you must verify that you own the domain. This is done by adding a Sending Domain in Cryptlex and verifying the  DNS records shown in the Sending Domain.
 
-If you don’t add the domain verification record, Cryptlex sends emails using **noreply@cryptlex.com** email address. If you want to give your customers a white-label experience, hiding all Cryptlex branding, you must add and verify the sending domain.
+If you don’t add the domain verification records, Cryptlex sends emails using **noreply@cryptlex.com** email address. If you want to give your customers a white-label experience, hiding all Cryptlex branding, you must add and verify the sending domain.
 
 ### **To verify that a domain belongs to you**
 
-1. On the email templates page in the dashboard, click on the Sending Domains button.
-2. On the Sending Domains page click on the Add button to add your domain.
+1. On the email templates page in the dashboard, click on the **`Sending Domains`** button.
+2. On the Sending Domains page click on the **`Add`** button to add your domain.
 3. Verify the domain by adding the required TXT and CNAME DNS entries.&#x20;
 4. After you have added the CNAME and TXT records, click the **`Verify`** button to confirm that all of your records are now valid.
 
