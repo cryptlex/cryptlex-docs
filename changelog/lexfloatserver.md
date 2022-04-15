@@ -1,5 +1,11 @@
 # LexFloatServer
 
+## 4.8.0 (2022-04-06)
+
+### Added
+
+* Support for the feature flags.
+
 ## 4.7.0 (2021-12-08)
 
 ### Updated
@@ -8,7 +14,7 @@
 
 ### Fixed
 
-* Issues releated to meter attributes when license is activated through Dashboard.
+* Issues related to meter attributes when the license is activated through Dashboard.
 
 ## 4.6.8 (2021-08-11)
 

@@ -1,8 +1,10 @@
----
-description: All notable changes to LexActivator are documented here.
----
-
 # LexActivator
+
+## 3.18.1 (2022-04-05)
+
+### Updated
+
+* Dropped dependency on system `libcurl` in the case of Alpine Linux (musl).
 
 ## 3.18.0 (2022-01-27)
 

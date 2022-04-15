@@ -1,5 +1,17 @@
 # Web API
 
+## 3.52.0 (2022-03-28)
+
+### Added <a href="#changed" id="changed"></a>
+
+* /v3/sending-domains endpoint to add support for DMARC compliant emails.
+
+## 3.51.0 (2022-02-11)
+
+### Added <a href="#changed" id="changed"></a>
+
+* `resourceId` query param to event logs.
+
 ## 3.50.0 (2022-01-27)
 
 ### Added <a href="#changed" id="changed"></a>
