@@ -1,5 +1,11 @@
 # LexActivator
 
+## 3.18.2 (2021-04-25)
+
+### Fixed
+
+* Issues related to device fingerprinting on Android.
+
 ## 3.18.1 (2022-04-05)
 
 ### Updated
