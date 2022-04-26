@@ -26,7 +26,7 @@ The minimum supported Android API level is 23 and the minimum supported Android 
 
 ### Adding permissions
 
-LexActivator library requires two permissions to be set in the Andoird manifest.
+LexActivator library requires two permissions to be set in the Android manifest.
 
 ```
 <uses-permission android:name="android.permission.INTERNET" />
