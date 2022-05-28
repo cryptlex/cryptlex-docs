@@ -34,7 +34,7 @@ The following sample request checks whether a new release is available by compar
 
 {% endswagger-description %}
 
-{% swagger-parameter in="query" name="accountId" required="true" %}
+{% swagger-parameter in="query" name="accountId" required="true" type="string" %}
 Unique identifier for the account
 {% endswagger-parameter %}
 
@@ -175,7 +175,7 @@ The following sample request fetches the latest release details.
 
 {% endswagger-description %}
 
-{% swagger-parameter in="query" name="accountId" %}
+{% swagger-parameter in="query" name="accountId" type="string" %}
 Unique identifier for the account
 {% endswagger-parameter %}
 
