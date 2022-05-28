@@ -187,7 +187,7 @@ Unique identifier for the product
 Release platform
 {% endswagger-parameter %}
 
-{% swagger-parameter in="query" name="channel" type="string" required="true" %}
+{% swagger-parameter in="query" name="channel" type="string" required="false" %}
 Release channel (defaults to "stable")
 {% endswagger-parameter %}
 
