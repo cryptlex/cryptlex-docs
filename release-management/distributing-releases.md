@@ -27,48 +27,38 @@ In order to detect whether an update is available for your product, you can eith
 
 ### Using Web API
 
-Following sample request checks whether a new release is available by comparing it with the provided release version.
+The following sample request checks whether a new release is available by comparing it with the provided release version.
 
-{% api-method method="get" host="https://api.cryptlex.com" path="/v3/releases/update" %}
-{% api-method-summary %}
-Check for an update
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.cryptlex.com" path="/v3/releases/update" method="get" summary="Check for an update" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="query" name="accountId" required="true" %}
+Unique identifier for the account
+{% endswagger-parameter %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="productId" type="string" required=true %}
+{% swagger-parameter in="query" name="productId" type="string" required="true" %}
 Unique identifier for the product
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="platform" type="string" required=true %}
+{% swagger-parameter in="query" name="platform" type="string" required="true" %}
 Release platform
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="channel" type="string" required=false %}
-Release channel \(defaults to "stable"\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="channel" type="string" required="true" %}
+Release channel (defaults to "stable")
+{% endswagger-parameter %}
 
-{% api-method-parameter name="version" type="string" required=true %}
+{% swagger-parameter in="query" name="version" type="string" required="true" %}
 Current release version
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="key" type="string" required=true %}
+{% swagger-parameter in="query" name="key" type="string" required="true" %}
 License key
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
   "name": "MyApp v2.2",
@@ -105,10 +95,8 @@ License key
   "updatedAt": "2018-06-29T08:55:03.515414"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 If an update is available it returns a **`200`** success response containing the download url, else it will return a **`204`** empty response.
 
@@ -163,16 +151,16 @@ int main()
 
 ### Ignoring PATCH and BUILD updates
 
-The version format syntax in Cryptlex is **`$MAJOR.$MINOR.$PATCH.$BUILD`.** In case you want to ignore **`$PATCH`** and **`$BUILD`** releases in the update API endpoint you can pass the partial version too. 
+The version format syntax in Cryptlex is **`$MAJOR.$MINOR.$PATCH.$BUILD`.** In case you want to ignore **`$PATCH`** and **`$BUILD`** releases in the update API endpoint you can pass the partial version too.&#x20;
 
-Following table summarises the expected response by update API endpoint if it is invoked with **`version`** query param set to the values in the first column:
+The following table summarises the expected response by the `/v3/releases/update` API endpoint if it is invoked with **`version`** query param set to the values in the first column:
 
-| Version \(Query Param\) | Latest Version | Response \(Status Code\) |
-| :--- | :--- | :--- |
-| 1.2.3.5 | 1.2.3.5 | 204 |
-| 1.2.3.4 | 1.2.3.5 | 200 |
-| 1.2.3 | 1.2.3.4 | 204 |
-| 1.2 | 1.2.3.4 | 204 |
+| Version (Query Param) | Latest Version | Response (Status Code) |
+| --------------------- | -------------- | ---------------------- |
+| 1.2.3.5               | 1.2.3.5        | 204                    |
+| 1.2.3.4               | 1.2.3.5        | 200                    |
+| 1.2.3                 | 1.2.3.4        | 204                    |
+| 1.2                   | 1.2.3.4        | 204                    |
 
 Suppose your latest release version is **`1.2.3.4`** and you invoke the update API endpoint with **`version`** query param having a value **`1.2.3`**, then it will return **`204`** status code indicating no update.
 
@@ -182,42 +170,32 @@ In order to download the latest release of your product, you need to invoke the 
 
 The following sample request fetches the latest release details.
 
-{% api-method method="get" host="https://api.cryptlex.com" path="/v3/releases/latest" %}
-{% api-method-summary %}
-Download latest release
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.cryptlex.com" path="/v3/releases/latest" method="get" summary="Download latest release" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="query" name="accountId" %}
+Unique identifier for the account
+{% endswagger-parameter %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="productId" type="string" required=true %}
+{% swagger-parameter in="query" name="productId" type="string" required="true" %}
 Unique identifier for the product
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="platform" type="string" required=true %}
+{% swagger-parameter in="query" name="platform" type="string" required="true" %}
 Release platform
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="channel" type="string" required=false %}
-Release channel \(defaults to "stable"\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="channel" type="string" required="true" %}
+Release channel (defaults to "stable")
+{% endswagger-parameter %}
 
-{% api-method-parameter name="key" type="string" required=true %}
+{% swagger-parameter in="query" name="key" type="string" required="true" %}
 License key
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
   "name": "MyApp v2.2",
@@ -254,10 +232,7 @@ License key
   "updatedAt": "2018-06-29T08:55:03.515414"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 It returns a **`200`** success response containing the download URLs of the latest release.
-
