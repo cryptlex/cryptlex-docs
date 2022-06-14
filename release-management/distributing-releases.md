@@ -6,11 +6,11 @@ In order to download the release, the release URL must contain license key as  *
 
 ```bash
 # download file using license key
-curl https://releases.cryptlex.com/v3/{RELEASE_ID}/myapp.zip?key={LICENSE_KEY} \
+curl https://releases.cryptlex.com/v3/{ACCOUNT_ID}/{RELEASE_ID}/myapp.zip?key={LICENSE_KEY} \
      -o="myapp.zip"
 
 # download file using access token
-curl -O -J -L https://releases.cryptlex.com/v3/{RELEASE_ID}/myapp.zip \
+curl -O -J -L https://releases.cryptlex.com/v3/{ACCOUNT_ID}/{RELEASE_ID}/myapp.zip \
      -H "Authorization: Bearer {ACCESS_TOKEN}" \
      -o="myapp.zip"
 ```
