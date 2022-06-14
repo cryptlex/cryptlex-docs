@@ -1,6 +1,6 @@
 # LexFloatServer
 
-LexFloatServer is the server software that leases floating licenses to your app. It is usually installed on some computer \(which is referred to as a license server\) in your customer's local network. Normally, only one license server is required in your network.
+LexFloatServer is the server software that leases floating licenses to your app. It is usually installed on some computer (which is referred to as a license server) in your customer's local network. Normally, only one license server is required in your network.
 
 LexFloatServer is designed to be robust, low memory and very fast. Hence, it can even be installed on any old machine connected to the local network.
 
@@ -24,14 +24,14 @@ The config is loaded at the start of the server. Any changes to the config file 
 
 ## Starting LexFloatServer in terminal
 
-For testing purpose, you can easily run the LexFloatServer in the terminal \(command prompt\). To start the server simply pass the **"-s"** option:
+For testing purpose, you can easily run the LexFloatServer in the terminal (command prompt). To start the server simply pass the **"-s"** option:
 
 ```bash
 lexfloatserver -s
 ```
 
 {% hint style="info" %}
-You need admin rights to run the LexFloatServer. 
+You need admin rights to run the LexFloatServer.&#x20;
 {% endhint %}
 
 ## Activating the LexFloatServer
@@ -56,7 +56,7 @@ After generating the offline response from the Cryptlex admin dashboard for this
 
 #### Online activation
 
-To activate use **"-a"** option along with the license key and product file path \(if not set in the config.yml file\):
+To activate use **"-a"** option along with the license key and product file path (if not set in the config.yml file):
 
 ```bash
 lexfloatserver -a --license-key LICENSE_KEY
@@ -72,7 +72,7 @@ lexfloatserver -g --license-key LICENSE_KEY --offline-request FILEPATH
 
 After generating the offline response from the admin dashboard, pass it along with **"-a"** option to activate the server:
 
-```text
+```
 lexfloatserver -a --license-key=LICENSE_KEY --offline-response=FILEPATH
 ```
 
@@ -84,153 +84,97 @@ LexFloatServer exposes few API endpoints which can also be used to activate the 
 
 Send a POST request to the **/api/server/activate** API endpoint with JSON request body containing the license key and optionally the activation metadata.
 
-{% api-method method="post" host="http://localhost:8090" path="/api/server/activate" %}
-{% api-method-summary %}
-Activate server
-{% endapi-method-summary %}
+{% swagger baseUrl="http://localhost:8090" path="/api/server/activate" method="post" summary="Activate server" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="licenseKey" type="string" required=true %}
+{% swagger-parameter in="body" name="licenseKey" type="string" %}
 License key to activate the server.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="metadata" type="array" required=false %}
+{% swagger-parameter in="body" name="metadata" type="array" %}
 Activation metadata.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
   "message": "Server license activation successful!",
   "code": "SERVER_LICENSE_ACTIVATED"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="" %}
 ```javascript
 {
   "message": "Server license activation failed!",
   "code": "SERVER_INVALID_LICENSE_KEY"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 #### Offline activation
 
 Send a POST request to the **/api/server/offline-activation-request** API endpoint with JSON request body containing the license key and optionally the activation metadata.
 
-{% api-method method="post" host="http://localhost:8090" path="/api/server/offline-activation-request" %}
-{% api-method-summary %}
-Generate offline activation request
-{% endapi-method-summary %}
+{% swagger baseUrl="http://localhost:8090" path="/api/server/offline-activation-request" method="post" summary="Generate offline activation request" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="licenseKey" type="string" required=true %}
+{% swagger-parameter in="body" name="licenseKey" type="string" %}
 License key to activate the server.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="metadata" type="array" required=false %}
+{% swagger-parameter in="body" name="metadata" type="array" %}
 Activation metadata.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
   "offlineRequest": "U7l69tNy8..."
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 After generating the offline response from the admin dashboard, send a POST request to the **/api/server/offline-activate** API endpoint with JSON request body containing the license key and the offline response.
 
-{% api-method method="post" host="http://localhost:8090" path="/api/server/offline-activate" %}
-{% api-method-summary %}
-Activate server offline
-{% endapi-method-summary %}
+{% swagger baseUrl="http://localhost:8090" path="/api/server/offline-activate" method="post" summary="Activate server offline" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="licenseKey" type="string" required=true %}
+{% swagger-parameter in="body" name="licenseKey" type="string" %}
 License key to activate the server.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="offlineResponse" type="string" required=true %}
+{% swagger-parameter in="body" name="offlineResponse" type="string" %}
 Offline activation response.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
   "message": "Server offline license activation successful!",
   "code": "SERVER_LICENSE_ACTIVATED"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="" %}
 ```javascript
 {
   "message": "Server offline license activation failed!",
   "code": "SERVER_INVALID_LICENSE_KEY"
 
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ## Installing LexFloatServer on Windows
 
@@ -244,9 +188,9 @@ After installation, it is set to start with the computer and run silently in the
 
 ### Stop/Start LexFloatServer on Windows
 
-To stop or start the server from the command line you need the "service name". If the service name was not passed during installation then it defaults to `lexfloatserver-productId` \(where product id is the id of your product\):
+To stop or start the server from the command line you need the "service name". If the service name was not passed during installation then it defaults to `lexfloatserver-productId` (where product id is the id of your product):
 
-```text
+```
 sc stop myfloatingserver
 sc start myfloatingserver
 ```
@@ -255,14 +199,14 @@ sc start myfloatingserver
 
 To uninstall simply pass **"-d"** option to deactivate the server license and then **"-u"** option to remove the service:
 
-```text
+```
 lexfloatserver -d
 lexfloatserver -u --service-name myfloatingserver
 ```
 
 ## Installing LexFloatServer on Linux
 
-LexFloatServer can run as a Systemd, Upstart or SysV service on Linux. To install it as a service simply pass the **"-i"** option ****along with the service name:
+LexFloatServer can run as a Systemd, Upstart or SysV service on Linux. To install it as a service simply pass the **"-i"** option **** along with the service name:
 
 ```bash
 lexfloatserver -i --service-name myfloatingserver
@@ -272,7 +216,7 @@ After installation, it is set to start with the computer and run silently in the
 
 ### Stop/Start LexFloatServer on Linux
 
-To stop or start the server from the command line, you need the service name. If the service name was not passed during installation then it defaults to `lexfloatserver.productId` \(where product id is the id of your product\):
+To stop or start the server from the command line, you need the service name. If the service name was not passed during installation then it defaults to `lexfloatserver.productId` (where product id is the id of your product):
 
 ```bash
 sudo service myfloatingserver stop
@@ -290,7 +234,7 @@ lexfloatserver -u --service-name myfloatingserver
 
 ## Installing LexFloatServer on macOS
 
-LexFloatServer runs as a launchd daemon on macOS. To install it as a service simply pass the **"-i"** option ****along with the service name:
+LexFloatServer runs as a launchd daemon on macOS. To install it as a service simply pass the **"-i"** option **** along with the service name:
 
 ```bash
 lexfloatserver -i --service-name com.mycompany.myfloatingserver
@@ -300,7 +244,7 @@ After installation, it is set to start with the computer and run silently in the
 
 ### Stop/Start LexFloatServer on macOS
 
-To stop or start the server from the command line, you need the service name. If the service name was not passed during installation then it defaults to `com.lexfloatserver.productId` \(where product id is the id of your product\):
+To stop or start the server from the command line, you need the service name. If the service name was not passed during installation then it defaults to `com.lexfloatserver.productId` (where product id is the id of your product):
 
 ```bash
 sudo launchctl stop com.mycompany.myfloatingserver
@@ -320,24 +264,12 @@ lexfloatserver -u --service-name com.mycompany.myfloatingserver
 
 LexFloatServer exposes a stats API endpoint that can be used to get the current stats of the server.
 
-{% api-method method="get" host="http://localhost:8090" path="/api/server/stats" %}
-{% api-method-summary %}
-Server stats
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="http://localhost:8090" path="/api/server/stats" method="get" summary="Server stats" %}
+{% swagger-description %}
 Gets the current server stats
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
   "leaseDuration": 1800,
@@ -350,33 +282,19 @@ Gets the current server stats
   "serverSyncGracePeriodExpiryDate": 1580739313
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ## Getting list of floating licenses
 
 LexFloatServer exposes a floating-licenses API endpoint that can be used to get the leased floating licenses.
 
-{% api-method method="get" host="http://localhost:8090" path="/api/floating-licenses" %}
-{% api-method-summary %}
-List of floating licenses
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="http://localhost:8090" path="/api/floating-licenses" method="get" summary="List of floating licenses" %}
+{% swagger-description %}
 Gets the current server stats
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 [
   {
@@ -398,10 +316,7 @@ Gets the current server stats
   }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-## 
-
+##

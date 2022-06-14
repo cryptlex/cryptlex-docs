@@ -4,42 +4,24 @@
 
 Renewing a license extends the license expiry by it's validity. In case you want to extend the license expiry by some other duration you need to hit the [license extend endpoint](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses/{id}/extend). It extends the license expiry by provided extension length.
 
-{% api-method method="post" host="https://api.cryptlex.com" path="/v3/licenses/:id/extend" %}
-{% api-method-summary %}
-Extending license
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.cryptlex.com" path="/v3/licenses/:id/extend" method="post" summary="Extending license" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=true %}
+{% swagger-parameter in="path" name="id" type="string" %}
 Unique identifier for the license.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
 Bearer access token.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="extensionLength" type="string" required=true %}
+{% swagger-parameter in="body" name="extensionLength" type="string" %}
 License extension duration to extend the license expiry.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```javascript
 {
   "key": "0A2035-E8A2A3-4D31B7-8FF9C6-81A6CA-539E54",
@@ -73,10 +55,6 @@ License extension duration to extend the license expiry.
   "updatedAt": "2018-05-06T08:49:17.9361158Z"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-
+{% endswagger-response %}
+{% endswagger %}
 
