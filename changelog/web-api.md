@@ -17,14 +17,14 @@
 ### Added <a href="#changed" id="changed"></a>
 
 * [/v3/activations/{id}deactivate](https://api.cryptlex.com/v3/docs#tag/Activations/operation/post/v3/activations/%7Bid%7D/deactivate) endpoint for secure deactivation of activations.
-* Added `accountId` in login endpoint
-* Added `accountId` in activation, trial activation and deactivation endpoints
-* Added `accountId` in release update and latest endpoint
-* Added `accountId` in release download URL
+* Added `accountId` in login endpoint.
+* Added `accountId` in activation, trial activation and deactivation endpoints.
+* Added `accountId` in release update and latest endpoint.
+* Added `accountId` in release download URL.
 
 ### Updated
 
-* Renamed `companyId` to `accountAlias` in login endpoint
+* Renamed `companyId` to `accountAlias` in login endpoint.
 
 ## 3.52.0 (2022-03-28)
 
