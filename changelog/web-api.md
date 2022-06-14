@@ -1,5 +1,31 @@
 # Web API
 
+## 3.54.0 (2022-06-13)
+
+### Added <a href="#changed" id="changed"></a>
+
+* [/v3/product-versions](https://api.cryptlex.com/v3/docs#tag/ProductVersions) endpoint to add support for maintenance policies.
+* [/v3/feature-flags](https://api.cryptlex.com/v3/docs#tag/FeatureFlags) endpoint to add support for renewing license maintenance.
+* [/v3/feature-flags](https://api.cryptlex.com/v3/docs#tag/FeatureFlags) endpoint to add support for extending license maintenance.
+* `maintenancePolicyId` property to the license resource.
+* `currentReleaseVersion` property to the license resource.
+* `maxAllowedRelease` property to the license resource.
+* `releaseVersion` property to the activation resource.
+
+## 3.53.0 (2022-06-01)
+
+### Added <a href="#changed" id="changed"></a>
+
+* [/v3/activations/{id}deactivate](https://api.cryptlex.com/v3/docs#tag/Activations/operation/post/v3/activations/%7Bid%7D/deactivate) endpoint for secure deactivation of activations.
+* Added `accountId` in login endpoint
+* Added `accountId` in activation, trial activation and deactivation endpoints
+* Added `accountId` in release update and latest endpoint
+* Added `accountId` in release download URL
+
+### Updated
+
+* Renamed `companyId` to `accountAlias` in login endpoint
+
 ## 3.52.0 (2022-03-28)
 
 ### Added <a href="#changed" id="changed"></a>
