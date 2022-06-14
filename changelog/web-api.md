@@ -9,7 +9,7 @@
 * [/v3/licenses/{id}/maintenance/extend](https://api.cryptlex.com/v3/docs#tag/Licenses/operation/post/v3/licenses/%7Bid%7D/maintenance/extend) endpoint to add support for extending license maintenance.
 * `maintenancePolicyId` property to the license resource.
 * `currentReleaseVersion` property to the license resource.
-* `maxAllowedRelease` property to the license resource.
+* `maxAllowedReleaseVersion` property to the license resource.
 * `releaseVersion` property to the activation resource.
 
 ## 3.53.0 (2022-06-01)
