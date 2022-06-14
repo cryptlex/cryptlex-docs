@@ -2,47 +2,29 @@
 
 You can authenticate your users to get the access token of the user which can further be used to get the user profile and list of user licenses.
 
-{% api-method method="post" host="https://api.cryptlex.com" path="/v3/accounts/login" %}
-{% api-method-summary %}
-Authenticate user
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.cryptlex.com" path="/v3/accounts/login" method="post" summary="Authenticate user" %}
+{% swagger-description %}
 Authenticates the user using the login credentials and returns an access token.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="companyId" type="string" required=true %}
-Unique company identifier.
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="accountAlias" type="string" required="true" %}
+Unique account alias.
+{% endswagger-parameter %}
 
-{% api-method-parameter name="email" type="string" required=true %}
+{% swagger-parameter in="body" name="email" type="string" required="true" %}
 Email address of the user.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="password" type="string" required=true %}
+{% swagger-parameter in="body" name="password" type="string" required="true" %}
 Password of the user.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 {
   "accessToken": "eyJhbGciOiJIUzI1NiIsInR..."
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-
+{% endswagger-response %}
+{% endswagger %}
 

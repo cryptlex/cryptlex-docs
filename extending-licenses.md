@@ -1,20 +1,10 @@
-# Renewing Licenses
+# Copy of Extending Licenses
 
-## Understanding license expiry
+## Extending license expiry
 
-Whenever you create a license with validity say 30 days, you will see a property in the license resource named `expiresAt`. It is a read-only, computed property and determines the time when the license will expire.
+Renewing a license extends the license expiry by it's validity. In case you want to extend the license expiry by some other duration you need to hit the [license extend endpoint](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses/{id}/extend). It extends the license expiry by provided extension length.
 
-If the license expiration strategy for a license (or its policy) is set to `immediate`, the `expiresAt` property will be populated with the date on which the license will expire starting from the time when the license was created.
-
-If the license expiration strategy for a license (or its policy) is set to `delayed`, the `expiresAt` property will be `null` till the license is activated, as the license will start expiring after it is used.
-
-If the license expiration strategy for a license (or its policy) is set to `rolling`, the `expiresAt` property will always be `null` as license expiry is specific to each activation. In this case, you can refer to `expiresAt` property of license activation.
-
-## Renewing license expiry
-
-To renew the license subscription you need to hit the [license renew endpoint](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses/{id}/renew). It extends the license expiry by its validity.
-
-{% swagger baseUrl="https://api.cryptlex.com" path="/v3/licenses/:id/renew" method="post" summary="Renewing license" %}
+{% swagger baseUrl="https://api.cryptlex.com" path="/v3/licenses/:id/extend" method="post" summary="Extending license" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -25,6 +15,10 @@ Unique identifier for the license.
 
 {% swagger-parameter in="header" name="Authorization" type="string" %}
 Bearer access token.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="extensionLength" type="string" %}
+License extension duration to extend the license expiry.
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}

@@ -14,6 +14,8 @@
   * [Extending Licenses](license-management/extending-licenses.md)
   * [Suspending Licenses](license-management/suspending-licenses.md)
   * [Revoking Licenses](license-management/revoking-licenses.md)
+  * [Maintenance Policies](license-management/meter-attributes-1.md)
+* [Copy of Extending Licenses](extending-licenses.md)
 * [User Management](user-management/README.md)
   * [Roles](user-management/roles.md)
   * [Creating Users](user-management/creating-users.md)
