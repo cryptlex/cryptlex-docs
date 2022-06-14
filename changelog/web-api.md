@@ -4,9 +4,9 @@
 
 ### Added <a href="#changed" id="changed"></a>
 
-* [/v3/product-versions](https://api.cryptlex.com/v3/docs#tag/ProductVersions) endpoint to add support for maintenance policies.
-* [/v3/feature-flags](https://api.cryptlex.com/v3/docs#tag/FeatureFlags) endpoint to add support for renewing license maintenance.
-* [/v3/feature-flags](https://api.cryptlex.com/v3/docs#tag/FeatureFlags) endpoint to add support for extending license maintenance.
+* [/v3/maintenance-policies](https://api.cryptlex.com/v3/docs#tag/MaintenancePolicies/operation/get/v3/maintenance-policies) endpoint to add support for maintenance policies.
+* [/v3/licenses/{id}/maintenance/renew](https://api.cryptlex.com/v3/docs#tag/Licenses/operation/post/v3/licenses/%7Bid%7D/maintenance/renew) endpoint to add support for renewing license maintenance.
+* [/v3/licenses/{id}/maintenance/extend](https://api.cryptlex.com/v3/docs#tag/Licenses/operation/post/v3/licenses/%7Bid%7D/maintenance/extend) endpoint to add support for extending license maintenance.
 * `maintenancePolicyId` property to the license resource.
 * `currentReleaseVersion` property to the license resource.
 * `maxAllowedRelease` property to the license resource.
