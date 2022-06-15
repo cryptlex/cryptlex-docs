@@ -20,7 +20,7 @@ Determines whether the metadata key/value is accessible in the app after trial o
 
 This metadata can be added to products and can be accessed in your application once a trial or license is activated.
 
-It can be used for storing some product level information that you want to access in your app and this information can change over time.
+It can be used for storing some product-level information that you want to access in your app and this information can change over time.
 
 ## License metadata
 

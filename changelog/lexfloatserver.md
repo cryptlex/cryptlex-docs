@@ -1,5 +1,11 @@
 # LexFloatServer
 
+## 4.8.1 (2022-06-15)
+
+### Updated
+
+* Support for the new product.dat file.
+
 ## 4.8.0 (2022-04-06)
 
 ### Added

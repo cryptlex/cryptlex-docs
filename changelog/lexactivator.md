@@ -1,5 +1,13 @@
 # LexActivator
 
+## 3.19.0 (2022-06-14)
+
+### Added
+
+* `GetActivationMode()`  function to get the mode of activation (online or offline).
+* `GetLicenseMaintenanceExpiryDate()`  function to get the expiry date of maintenance.
+* `SetReleaseVersion()`  function to set the release version.
+
 ## 3.18.2 (2022-04-25)
 
 ### Fixed
