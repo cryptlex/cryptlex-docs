@@ -1,7 +1,5 @@
 # Maintenance Policies
 
-A maintenance policy can be used to configure how the end-user can update the software (product). You can add restrictions on the major version, minor version and duration of updates.
-
 A maintenance policy can be used to configure how the end-user can update the software (product). You can add restrictions on the major version, minor version and duration for which the updates will be available. The maintenance policy once created can be linked to the licenses.
 
 {% hint style="info" %}
