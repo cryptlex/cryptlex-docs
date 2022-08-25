@@ -1,5 +1,17 @@
 # LexActivator
 
+## 3.19.2 (2022-08-10)
+
+### Fixed
+
+* Removed external `libcurl` dependency in Linux `musl` build
+
+## 3.19.1 (2022-06-18)
+
+### Fixed
+
+* Minor bug fixes.
+
 ## 3.19.0 (2022-06-14)
 
 ### Added
