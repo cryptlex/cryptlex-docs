@@ -1,8 +1,8 @@
 # Terms of Service
 
-By using or accessing the Services, you're agreeing to these Terms,  and our [Data Processing Addendum](https://docs.cryptlex.com/legal/data-processing-addendum) (collectively, this “Agreement”). If you're using the Services for an organization, you're agreeing to this Agreement on behalf of that organization, and you represent and warrant that you can do so.&#x20;
+By using or accessing the Services, you're agreeing to these Terms, and our [Data Processing Addendum](https://docs.cryptlex.com/legal/data-processing-addendum) (collectively, this “Agreement”). If you're using the Services for an organization, you're agreeing to this Agreement on behalf of that organization, and you represent and warrant that you can do so.&#x20;
 
-If you do not agree with any of these terms, you are prohibited from using or accessing our Services. Violation of any of the terms below will result in the termination of your Account.You agree to use the Service at your own risk.
+If you do not agree with any of these terms, you are prohibited from using or accessing our Services. Violation of any of the terms below will result in the termination of your Account. You agree to use the Service at your own risk.
 
 ## Using our Services
 
@@ -16,7 +16,7 @@ Using our Services does not give you ownership of any intellectual property righ
 
 Our Services display some content that is not Cryptlex’s. This content is the sole responsibility of the entity that makes it available. We may review content to determine whether it is illegal or violates our policies, and we may remove or refuse to display content that we reasonably believe violates our policies or the law. But that does not necessarily mean that we review content, so please don’t assume that we do.
 
-You understand that Cryptlex uses third party vendors and hosting partners to provide the necessary hardware, software, networking, storage, and related technology required to run the Service.
+You understand that Cryptlex uses third-party vendors and hosting partners to provide the necessary hardware, software, networking, storage, and related technology required to run the Service.
 
 ## Your Cryptlex Account
 
@@ -38,9 +38,9 @@ For any upgrade or downgrade in plan level, your credit card that you provided w
 
 Some of our Services allow you to upload, submit, store, send or receive content. You retain ownership of any intellectual property rights that you hold in that content. In short, what belongs to you stays yours.
 
-When you upload, submit, store, send or receive content to or through our Services, you give Cryptlex a license to use, store, reproduce, modify such content. The rights you grant in this license are for the limited purpose of operating, promoting, and improving our Services, and to develop new ones. Some Services may offer you ways to access and remove content that has been provided to that Service. Also, in some of our Services, there are terms or settings that narrow the scope of our use of the content submitted in those Services. Make sure you have the necessary rights to grant us this license for any content that you submit to our Services.
+When you upload, submit, store, send or receive content to or through our Services, you give Cryptlex a license to use, store, reproduce, and modify such content. The rights you grant in this license are for the limited purpose of operating, promoting, and improving our Services, and to develop new ones. Some Services may offer you ways to access and remove content that has been provided to that Service. Also, in some of our Services, there are terms or settings that narrow the scope of our use of the content submitted in those Services. Make sure you have the necessary rights to grant us this license for any content that you submit to our Services.
 
-We may, but have no obligation to, remove Content and Accounts containing Content that we determine in our sole discretion are unlawful, offensive, threatening, libelous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.
+We may, but have no obligation to, remove Content and Accounts containing Content that we determine in our sole discretion are unlawful, offensive, threatening, libellous, defamatory, pornographic, obscene or otherwise objectionable or violates any party’s intellectual property or these Terms of Service.
 
 You can find more information about how Cryptlex uses and stores content in the privacy policy. If you submit feedback or suggestions about our Services, we may use your feedback or suggestions without obligation to you.
 

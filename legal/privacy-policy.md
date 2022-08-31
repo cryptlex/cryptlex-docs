@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Cryptlex (Cryptlex, LLC) provides a software licensing service through a Software as a  Service (SaaS) model. This privacy policy explains how Cryptlex processes and protects information that can be used to directly or indirectly identify an individual (“Personal Data”) collected through the use of all the products and services offered by Cryptlex.
+Cryptlex provides a software licensing service through a Software as a  Service (SaaS) model. This privacy policy explains how Cryptlex processes and protects information that can be used to directly or indirectly identify an individual (“Personal Data”) collected through the use of all the products and services offered by Cryptlex.
 
 For the purposes of this policy, Cryptlex defines the term “User” as an entity who registers for our services through our website or an individual whose data you (our customer) collect and store using our services and the term “Visitor” as an individual that visits our website (e.g. https://cryptlex.com).
 

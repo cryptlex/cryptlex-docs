@@ -7,3 +7,4 @@
 * Intercom
 * Hubspot
 * Stripe
+* Paddle
