@@ -83,7 +83,7 @@ The `webapi.env` file contains the following environment variables which you **m
 
 | Environment Variables     | Description                                                                                      |
 | ------------------------- | ------------------------------------------------------------------------------------------------ |
-| `RSA_PASSPHRASE`          | Use the random secret used in step 3 above to encrypt the private key.                           |
+| `RSA_PASSPHRASE`          | Use any random string, this is used to encrypt the private keys stored in the database.          |
 | `APPLICATION_LICENSE_KEY` | The license key which you get after you purchase the license for the Cryptlex On-Premise server. |
 
 Other than the above three you need to set environment variables for the email provider (Mailgun, SendGrid, or SMTP), and additionally you can configure other monitoring and error reporting services.
