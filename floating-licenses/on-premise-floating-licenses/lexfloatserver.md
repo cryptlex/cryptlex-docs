@@ -181,7 +181,7 @@ Offline activation response.
 LexFloatServer runs as a service on Windows. To install it as a service simply pass the **"-i"** option along with the service name and optionally a service display name which is displayed in the Windows Services Manager:
 
 ```bash
-lexfloatserver -i --service-name myfloatingserver --service-diplay-name MyFloatingServer
+lexfloatserver -i --service-name myfloatingserver --service-display-name MyFloatingServer
 ```
 
 After installation, it is set to start with the computer and run silently in the background.
