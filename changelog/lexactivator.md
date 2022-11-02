@@ -1,5 +1,20 @@
 # LexActivator
 
+## 3.20.1 (2022-11-02)
+
+### Fixed
+
+* Minor bug fixes.
+
+## 3.20.0 (2022-11-01)
+
+### Added
+
+* `GetLicenseMaxAllowedReleaseVersion()`  function to get the maximum allowed release version of the license.
+* `SetReleaseChannel()`  function to set the release channel e.g. stable, beta etc. of the application.
+* `SetReleasePlatform()`  function to set the release platform e.g. windows, macos, linux etc. of the application.
+* `SetReleasePublishedDate()` function to set the release published date of your application.
+
 ## 3.19.2 (2022-08-10)
 
 ### Fixed
