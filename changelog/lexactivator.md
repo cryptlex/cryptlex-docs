@@ -1,5 +1,11 @@
 # LexActivator
 
+## 3.20.2 (2022-11-04)
+
+### Fixed
+
+* Minor bug fixes.
+
 ## 3.20.1 (2022-11-02)
 
 ### Fixed
