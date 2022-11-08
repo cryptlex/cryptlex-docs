@@ -40,11 +40,13 @@ If set to true then all the minor version updates will be allowed till the licen
 
 ## Using maintenance policies
 
-After you have created a maintenance policy and linked it with the license, you need to call the following LexActivator function in your code after calling `SetProductId()` function:&#x20;
+After you have created a maintenance policy and linked it with the license, you need to call the following LexActivator functions in your code after calling `SetProductId()` function:&#x20;
 
 **`SetReleaseVersion("1.2.3");`**
 
-The allowed version format syntax is **`$MAJOR.$MINOR.$PATCH.$BUILD`.** So, only following three formats are allowed:
+**`SetReleasePublishedDate();`**
+
+The allowed version format syntax is **`$MAJOR.$MINOR.$PATCH.$BUILD`.** So, only the following three formats are allowed:
 
 * x.x - **`$MAJOR.$MINOR`**
 * x.x.x - **`$MAJOR.$MINOR.$PATCH`**
@@ -56,7 +58,7 @@ The version set in this function is stored in the license as `"CurrentReleaseVer
 
 ## Using max allowed release version
 
-In case your use-case is simple and you want to allow updates up to a particular max version, then you don't need to create any maintenance policy. Just set the `"MaxAllowedReleaseVersion"` property of the license to the max version up to which you want to allow updates. And in your application just call **`SetReleaseVersion("x.x.x")`** function.
+In case your use case is simple and you want to allow updates up to a particular max version, then you don't need to create any maintenance policy. Just set the `"MaxAllowedReleaseVersion"` property of the license to the max version up to which you want to allow updates. And in your application just call **`SetReleaseVersion("x.x.x")`** the function.
 
 ## Renewing maintenance
 
