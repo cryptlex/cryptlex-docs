@@ -1,5 +1,23 @@
 # LexActivator
 
+## 3.20.5 (2022-11-17)
+
+### Fixed
+
+* NTLM proxy authentication issue.
+
+## 3.20.4 (2022-11-14)
+
+### Fixed
+
+* Fingerprint issue in Android trial activations.
+
+## 3.20.3 (2022-11-11)
+
+### Fixed
+
+* Missing OS version in the case of some Windows server machines.
+
 ## 3.20.2 (2022-11-04)
 
 ### Fixed
