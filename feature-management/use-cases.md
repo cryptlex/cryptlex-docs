@@ -11,7 +11,7 @@ Some of the numerous cases in which our feature management suite can be used are
 
 Creating `Feature Flags` for functionality you want to control among product flavours allows for hassle-free management. Example: When shipping your software, you want to have three variants: Lite, Pro, and Max with different features. For each variant, you can easily create a `Product Version` and within the `Product Version`, features defined by the `Feature Flags` can be enabled or disabled.
 
-SaaS plans like Freemium, and Enterprise can also be maintained using Product Versions.
+SaaS plans like `Basic`, `Pro`, `Enterprise` etc. can also be maintained using Product Versions.
 
 ## **Testing**
 
