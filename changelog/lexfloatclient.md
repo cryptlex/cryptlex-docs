@@ -1,5 +1,23 @@
 # LexFloatClient
 
+## 4.7.3 (2022-10-19)
+
+### Fixed
+
+* Added missing digital signature for Windows DLLs.
+
+## 4.7.2 (2022-08-10)
+
+### Fixed
+
+* Removed external `libcurl` dependency in Linux `musl` build.
+
+## 4.7.1 (2022-04-12)
+
+### Fixed
+
+* Issue with the function name.
+
 ## 4.7.0 (2022-04-11)
 
 ### Added
