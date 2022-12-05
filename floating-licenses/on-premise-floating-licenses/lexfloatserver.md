@@ -1,6 +1,6 @@
 # LexFloatServer
 
-LexFloatServer is the server software that leases floating licenses to your app. It is usually installed on some computer (which is referred to as a license server) in your customer's local network. Normally, only one license server is required in your network.
+LexFloatServer is the licensing server software that leases floating licenses to your app. It is usually installed on any computer in your customer's local network. In case you have multiple products, each product will require its own instance of licensing server.
 
 LexFloatServer is designed to be robust, low memory and very fast. Hence, it can even be installed on any old machine connected to the local network.
 
@@ -18,13 +18,13 @@ LexFloatServer can be downloaded from the downloads page in the dashboard. Simpl
 
 ## Configuring the LexFloatServer
 
-LexFloatServer uses a simple YAML based text file as its config file. It expects a `config.yml` file to be in the same directory as LexFloatServer. If the config file is in some other directory it can be passed using the **"-c"** option.
+LexFloatServer uses a simple YAML-based text file as its config file. It expects a `config.yml` file to be in the same directory as LexFloatServer. If the config file is in some other directory it can be passed using the **"-c"** option.
 
 The config is loaded at the start of the server. Any changes to the config file will be ignored until the server is restarted.
 
 ## Starting LexFloatServer in terminal
 
-For testing purpose, you can easily run the LexFloatServer in the terminal (command prompt). To start the server simply pass the **"-s"** option:
+For testing purposes, you can easily run the LexFloatServer in the terminal (command prompt). To start the server simply pass the **"-s"** option:
 
 ```bash
 lexfloatserver -s
@@ -78,11 +78,11 @@ lexfloatserver -a --license-key=LICENSE_KEY --offline-response=FILEPATH
 
 ### Using Web API
 
-LexFloatServer exposes few API endpoints which can also be used to activate the server.
+LexFloatServer exposes a few API endpoints which can also be used to activate the server.
 
 #### Online activation
 
-Send a POST request to the **/api/server/activate** API endpoint with JSON request body containing the license key and optionally the activation metadata.
+Send a POST request to the **/api/server/activate** API endpoint with a JSON request body containing the license key and optionally the activation metadata.
 
 {% swagger baseUrl="http://localhost:8090" path="/api/server/activate" method="post" summary="Activate server" %}
 {% swagger-description %}
@@ -118,7 +118,7 @@ Activation metadata.
 
 #### Offline activation
 
-Send a POST request to the **/api/server/offline-activation-request** API endpoint with JSON request body containing the license key and optionally the activation metadata.
+Send a POST request to the **/api/server/offline-activation-request** API endpoint with a JSON request body containing the license key and optionally the activation metadata.
 
 {% swagger baseUrl="http://localhost:8090" path="/api/server/offline-activation-request" method="post" summary="Generate offline activation request" %}
 {% swagger-description %}
@@ -142,7 +142,7 @@ Activation metadata.
 {% endswagger-response %}
 {% endswagger %}
 
-After generating the offline response from the admin dashboard, send a POST request to the **/api/server/offline-activate** API endpoint with JSON request body containing the license key and the offline response.
+After generating the offline response from the admin dashboard, send a POST request to the **/api/server/offline-activate** API endpoint with a JSON request body containing the license key and the offline response.
 
 {% swagger baseUrl="http://localhost:8090" path="/api/server/offline-activate" method="post" summary="Activate server offline" %}
 {% swagger-description %}
@@ -285,7 +285,7 @@ Gets the current server stats
 {% endswagger-response %}
 {% endswagger %}
 
-## Getting list of floating licenses
+## Getting the list of floating licenses
 
 LexFloatServer exposes a floating-licenses API endpoint that can be used to get the leased floating licenses.
 
