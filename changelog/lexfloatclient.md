@@ -1,5 +1,11 @@
 # LexFloatClient
 
+## 4.7.4 (2022-12-05)
+
+### Fixed
+
+* Encoding issues in feature related functions.
+
 ## 4.7.3 (2022-10-19)
 
 ### Fixed
