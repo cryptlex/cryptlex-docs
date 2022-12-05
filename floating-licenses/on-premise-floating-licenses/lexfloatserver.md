@@ -1,6 +1,6 @@
 # LexFloatServer
 
-LexFloatServer is the licensing server software that leases floating licenses to your app. It is usually installed on any computer in your customer's local network. In case you have multiple products, each product will require its own instance of licensing server.
+LexFloatServer is the licensing server software that leases floating licenses to your app. It is usually installed on any computer in your customer's local network. In case you have multiple products, each product will require its own instance of LexFloatServer.
 
 LexFloatServer is designed to be robust, low memory and very fast. Hence, it can even be installed on any old machine connected to the local network.
 
