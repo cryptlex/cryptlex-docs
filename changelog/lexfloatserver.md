@@ -1,5 +1,47 @@
 # LexFloatServer
 
+## 4.8.8 (2022-12-01)
+
+### Updated
+
+* LexActivator version to v3.20.7.
+
+## 4.8.7 (2022-11-03)
+
+### Updated
+
+* LexActivator version to v3.20.2.
+
+## 4.8.6 (2022-10-31)
+
+### Fixed
+
+* Added missing digital signature in case of Windows.
+
+## 4.8.5 (2022-07-26)
+
+### Updated
+
+* Improved error logs.
+
+## 4.8.4 (2022-07-05)
+
+### Updated
+
+* Allow activation if the server is already activated.
+
+## 4.8.3 (2022-07-01)
+
+### Fixed
+
+* Added missing error return codes.
+
+## 4.8.2 (2022-06-20)
+
+### Updated
+
+* LexActivator version to v3.19.1.
+
 ## 4.8.1 (2022-06-15)
 
 ### Updated
