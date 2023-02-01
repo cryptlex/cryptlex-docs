@@ -1,5 +1,11 @@
 # Web API
 
+## 3.56.0 (2022-12-14)
+
+### Added <a href="#changed" id="changed"></a>
+
+* &#x20;`allowed` query param to the /v3/releases/update endpoint
+
 ## 3.55.0 (2022-08-26)
 
 ### Added <a href="#changed" id="changed"></a>
