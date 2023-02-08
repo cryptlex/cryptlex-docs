@@ -1,5 +1,16 @@
 # Web API
 
+## 3.57.0 (2023-02-08)
+
+### Added <a href="#changed" id="changed"></a>
+
+* &#x20;`expiresAt` and `expiringSoon` query params to the /v3/licenses endpoint
+* `offline` property to the activation log resource
+
+### Fixed
+
+* Issue causing emails sent through SendGrid to fail.
+
 ## 3.56.0 (2022-12-14)
 
 ### Added <a href="#changed" id="changed"></a>
