@@ -1,23 +1,5 @@
 # LexActivator
 
-## 3.20.8 (2023-02-10)
-
-### Fixed
-
-* Container detection issue on recent Linux distributions.&#x20;
-
-## 3.20.7 (2022-12-01)
-
-### Fixed
-
-* Encoding issue in `GetProductVersionName()` function.&#x20;
-
-## 3.20.6 (2022-11-22)
-
-### Fixed
-
-* Issue preventing detection of Windows Server 2022.
-
 ## 3.20.5 (2022-11-17)
 
 ### Fixed
