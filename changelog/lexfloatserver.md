@@ -1,5 +1,17 @@
 # LexFloatServer
 
+## 4.8.10 (2023-02-10)
+
+### Fixed
+
+* False positive container detection on some Linux distributions.
+
+## 4.8.9 (2023-02-10)
+
+### Fixed
+
+* Container detection issue on recent Linux distributions.
+
 ## 4.8.8 (2022-12-01)
 
 ### Updated
