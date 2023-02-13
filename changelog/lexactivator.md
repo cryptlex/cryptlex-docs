@@ -4,7 +4,7 @@
 
 ### Fixed
 
-* Fixed crash caused by container detection on some Linux distributions.
+* False positive container detection on some Linux distributions.
 
 ## 3.20.8 (2023-02-10)
 
