@@ -1,5 +1,28 @@
 # Web API
 
+## 3.58.0 (2023-02-21)
+
+### Added <a href="#changed" id="changed"></a>
+
+* `lcat` (license created at) and `laat` (license activated at) properties in the activation JWT response.
+
+## 3.57.0 (2023-02-08)
+
+### Added <a href="#changed" id="changed"></a>
+
+* `expiresAt` and `expiringSoon` query params to the /v3/licenses endpoint.
+* `offline` property to the activation log resource.
+
+### Fixed
+
+* Issue causing emails sent through SendGrid to fail.
+
+## 3.56.0 (2022-12-14)
+
+### Added <a href="#changed" id="changed"></a>
+
+* &#x20;`allowed` query param to the /v3/releases/update endpoint
+
 ## 3.55.0 (2022-08-26)
 
 ### Added <a href="#changed" id="changed"></a>
