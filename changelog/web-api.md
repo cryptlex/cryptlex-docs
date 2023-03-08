@@ -1,5 +1,11 @@
 # Web API
 
+## 3.59.0 (2023-03-08)
+
+### Added <a href="#changed" id="changed"></a>
+
+* [/v3/organizations](https://api.cryptlex.com/v3/docs#tag/Organizations/operation/get/v3/organizations) endpoint to add support for organizations.
+
 ## 3.58.0 (2023-02-21)
 
 ### Added <a href="#changed" id="changed"></a>
