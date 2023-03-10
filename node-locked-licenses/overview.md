@@ -2,9 +2,9 @@
 
 ## Node locked licenses
 
-The basic concept of node-locked licensing is that your application should contact an online license server, to confirm the validity of the license key provided by the user to activate the license. 
+The basic concept of node-locked licensing is that your application should contact an online license server, to confirm the validity of the license key provided by the user to activate the license.&#x20;
 
-At the time of license activation, it should also generate a unique device fingerprint, and send it along with the license activation request. 
+At the time of license activation, it should also generate a unique device fingerprint, and send it along with the license activation request.&#x20;
 
 The license server must store the device fingerprint and use it to validate the license key for further activations to prevent the usage of the license key on other devices.
 
@@ -24,7 +24,6 @@ These licensing API endpoints can be invoked using any HTTP library, but it does
 
 ## Minimum requirements
 
-LexActivator works on Windows XP through Windows 10, macOS 10.6+ and all Linux distributions \(minimum supported `glibc` library version is `v2.13`\).
+LexActivator works on Windows XP through Windows 11, macOS 10.6+ and all Linux distributions (minimum supported `glibc` library version is `v2.13`).
 
 There are no additional dependencies. It supports 32 bit as well as 64 bit CPU architectures for all the platforms. Additionally, for Linux and macOS ARM CPU architecture is also supported.
-
