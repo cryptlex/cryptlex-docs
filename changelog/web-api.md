@@ -1,5 +1,13 @@
 # Web API
 
+## 3.60.0 (2023-03-10)
+
+### Added <a href="#changed" id="changed"></a>
+
+* `license.maintenance-expired` and `license.maintenance-expiring-soon` events in webhooks and email templates.
+* [/v3/activation-logs/export](https://api.cryptlex.com/v3/docs#tag/ActivationLogs/operation/get/v3/activation-logs/export) endpoint to export activation logs in CSV format.
+* `on` (organization name) and `oa` (organization address) properties in the activation JWT response.
+
 ## 3.59.0 (2023-03-08)
 
 ### Added <a href="#changed" id="changed"></a>
