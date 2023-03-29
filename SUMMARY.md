@@ -69,7 +69,7 @@
   * [Unverified Trials](timed-trials/unverified-trials.md)
 * [Licensing Docker Apps](licensing-docker-apps.md)
 * [Webhooks](webhooks.md)
-* [Email Templates](email-templates.md)
+* [Automated Emails](automated-emails.md)
 * [Web Integration](web-integration/README.md)
   * [Personal Access Tokens](web-integration/personal-access-tokens.md)
   * [Using Web API](web-integration/using-web-api.md)

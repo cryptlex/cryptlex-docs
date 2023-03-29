@@ -1,11 +1,11 @@
-# Email Templates
+# Automated Emails
 
-Email templates can be used to automatically send emails to your customers when a specific event is triggered. Following are the supported events:
+Automated emails can be used to automatically send emails to your customers when a specific event is triggered. The following are the supported events:
 
 * `license.created`
 * `license.renewed`
 * `license.extended`
-* `license.expiring-soon` (triggered **three** days before the license expiry date)
+* `license.expiring-soon`&#x20;
 * `license.expired`
 * `license.deleted`
 * `user.created`
@@ -13,19 +13,19 @@ Email templates can be used to automatically send emails to your customers when 
 
     ****
 
-**NOTE:** Use [webhooks](webhooks.md) instead of email templates if you have a complex workflow.
+**NOTE:** Use [webhooks](webhooks.md) instead of automated emails if you have a complex workflow.
 
-## Creating an email template
+## Creating an automated email
 
-You can easily create an email template through the dashboard. Go to the [email templates](https://app.cryptlex.com/email-templates) section in the dashboard and click the add button. An email template form with the following fields will popup:&#x20;
+You can easily create an automated email through the dashboard. Go to the [automated emails](https://app.cryptlex.com/automated-emails) section in the dashboard and click the add button. An automated email form with the following fields will popup:&#x20;
 
 {% hint style="info" %}
-After creating the email template, make sure you link it with the product.
+After creating the automated email, make sure you link it with the product.
 {% endhint %}
 
 #### **Name**
 
-Name of the email template.
+Name of the automated email.
 
 #### **From Name**
 
@@ -57,7 +57,7 @@ The event to trigger the email.
 
 #### **Enabled**
 
-Whether email should be sent or not, you can use it to disable the email template.
+Whether an email should be sent or not, you can use it to disable the automated email.
 
 #### **Custom**
 
@@ -65,7 +65,7 @@ By default, your email body will be automatically wrapped in a responsive HTML e
 
 ## Data placeholders
 
-All the properties of [user](https://api.cryptlex.com/v3/docs#operation/get/v3/users/{id}), [license](https://api.cryptlex.com/v3/docs#operation/get/v3/licenses/{id}) and [product](https://api.cryptlex.com/v3/docs#operation/get/v3/products/{id}) resources can be accessed in the **body** and the **subject** of the email template. The general syntax is **`resource.propertName`**. Following is a sample email template body:
+All the properties of [user](https://api.cryptlex.com/v3/docs#operation/get/v3/users/{id}), [license](https://api.cryptlex.com/v3/docs#operation/get/v3/licenses/{id}) and [product](https://api.cryptlex.com/v3/docs#operation/get/v3/products/{id}) resources can be accessed in the **body** and the **subject** of the automated email. The general syntax is **`resource.propertName`**. Following is a sample automated email body:
 
 ```markup
 <p>Dear {{user.firstName}},</p>
@@ -89,7 +89,7 @@ The MyCompany HelpDesk</p>
 
 ## Data filters
 
-Data filters can be used to format the date and number fields in the email templates.
+Data filters can be used to format the date and number fields in automated emails.
 
 ### format\_date
 
@@ -131,7 +131,7 @@ For other supported filters please refer to the following:
 
 ## Sending test emails
 
-After you have created the email template, click the email template in the email templates table. On the email template page, you will find a **`Send Test Email`** button on the right top. You can use this to test your email template by providing the sample data.
+After you have created the automated email, click the automated email in the automated emails table. On the automated email page, you will find a **`Send Test Email`** button on the right top. You can use this to test your automated email by providing the sample data.
 
 ## Verifying email domain
 
@@ -141,9 +141,13 @@ If you don’t add the domain verification records, Cryptlex sends emails using 
 
 ### **To verify that a domain belongs to you**
 
-1. On the email templates page in the dashboard, click on the **`Sending Domains`** button.
+1. On the automated emails page in the dashboard, click on the **`Sending Domains`** button.
 2. On the Sending Domains page click on the **`Add`** button to add your domain.
 3. Verify the domain by adding the required TXT and CNAME DNS entries.&#x20;
 4. After you have added the CNAME and TXT records, click the **`Verify`** button to confirm that all of your records are now valid.
 
 After your domain is verified, leave the CNAME and TXT records in place.
+
+## Automated email event logs
+
+Automated email event logs show information about the emails that were sent by an automated email. You can use automated email event logs to see the status of all the emails that were sent, the email body and even manually resend the email if needed.

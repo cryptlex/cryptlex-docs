@@ -1,5 +1,16 @@
 # Web API
 
+## 3.61.0 (2023-03-29)
+
+### Added <a href="#changed" id="changed"></a>
+
+* [/v3/webhook-event-logs](https://api.cryptlex.com/v3/docs#tag/WebhookEventLogs) endpoint to get the log of all the triggered webhook events.
+* [/v3/automated-email-event-logs](https://api.cryptlex.com/v3/docs#tag/AutomatedEmailEventLogs) endpoint to get the log of all the triggered automated email events.
+
+### Updated
+
+* Renamed `email-templates` to `automated-emails` in login endpoint.
+
 ## 3.60.0 (2023-03-10)
 
 ### Added <a href="#changed" id="changed"></a>
@@ -246,7 +257,7 @@
 
 ### Added <a href="#changed" id="changed"></a>
 
-* [/v3/email-templates](https://api.cryptlex.com/v3/docs#tag/EmailTemplates) endpoint to add support for [email templates](../email-templates.md).
+* [/v3/email-templates](https://api.cryptlex.com/v3/docs#tag/EmailTemplates) endpoint to add support for [email templates](broken-reference).
 
 ## 3.25.0 (2020-01-25)
 
