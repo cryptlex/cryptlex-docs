@@ -1,5 +1,17 @@
 # LexActivator
 
+## 3.21.0 (2023-04-06)
+
+### Added
+
+* `GetLicenseOrganizationName()` function to get the license organization name.
+* `GetLicenseOrganizationAddress()` function to get the license organization address.
+* `CheckReleaseUpdate()` function to check whether a new release is available for the product. It also determines if the update is allowed or not and provides the release object if a new release is available.
+
+### Deprecated
+
+* `CheckForReleaseUpdate()` function has been deprecated in favour of `CheckReleaseUpdate()` function.
+
 ## 3.20.9 (2023-02-10)
 
 ### Fixed

@@ -1,5 +1,15 @@
 # LexFloatServer
 
+## 4.9.0 (2023-04-04)
+
+### Added
+
+* `/api/server/license-info` endpoint to get the information related to the license used to activate the LexFloatServer.
+
+### Fixed
+
+* Issue related to the service path on Linux.
+
 ## 4.8.10 (2023-02-10)
 
 ### Fixed
