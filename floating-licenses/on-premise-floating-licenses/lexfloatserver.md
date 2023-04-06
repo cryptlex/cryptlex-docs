@@ -206,7 +206,7 @@ lexfloatserver -u --service-name myfloatingserver
 
 ## Installing LexFloatServer on Linux
 
-LexFloatServer can run as a Systemd, Upstart or SysV service on Linux. To install it as a service simply pass the **"-i"** option **** along with the service name:
+LexFloatServer can run as a Systemd, Upstart or SysV service on Linux. To install it as a service simply pass the **"-i"** option along with the service name:
 
 ```bash
 lexfloatserver -i --service-name myfloatingserver
@@ -234,7 +234,7 @@ lexfloatserver -u --service-name myfloatingserver
 
 ## Installing LexFloatServer on macOS
 
-LexFloatServer runs as a launchd daemon on macOS. To install it as a service simply pass the **"-i"** option **** along with the service name:
+LexFloatServer runs as a launchd daemon on macOS. To install it as a service simply pass the **"-i"** option along with the service name:
 
 ```bash
 lexfloatserver -i --service-name com.mycompany.myfloatingserver
@@ -264,7 +264,7 @@ lexfloatserver -u --service-name com.mycompany.myfloatingserver
 
 LexFloatServer exposes a stats API endpoint that can be used to get the current stats of the server.
 
-{% swagger baseUrl="http://localhost:8090" path="/api/server/stats" method="get" summary="Server stats" %}
+{% swagger baseUrl="http://localhost:8090" path="/api/server/stats" method="get" summary="Gets the server stats" %}
 {% swagger-description %}
 Gets the current server stats
 {% endswagger-description %}
@@ -285,11 +285,44 @@ Gets the current server stats
 {% endswagger-response %}
 {% endswagger %}
 
+## Getting server license info
+
+LexFloatServer exposes a license info API endpoint that can be used to get the information related to the license used to activate the LexFloatServer.
+
+{% swagger method="get" path="/api/server/license-info" baseUrl="http://localhost:8090" summary="Gets the license info" %}
+{% swagger-description %}
+Gets the license info of the license used to activate the LexFloatServer
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+  "key": "280D2B-B48A03-406BBC-2EEE4A-C20FB3-749630",
+  "allowedFloatingClients": 10,
+  "createdAt": 1680518500,
+  "activatedAt": 1680518506,
+  "expiresAt": 1681814506,
+  "serverSyncGracePeriodExpiresAt": 1680775357,
+  "activationMode": {
+    "initial": "online",
+    "current": "online"
+  },
+  "user": {
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "company": "My Example Company"
+  },
+  "organization": null
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
 ## Getting the list of floating licenses
 
 LexFloatServer exposes a floating-licenses API endpoint that can be used to get the leased floating licenses.
 
-{% swagger baseUrl="http://localhost:8090" path="/api/floating-licenses" method="get" summary="List of floating licenses" %}
+{% swagger baseUrl="http://localhost:8090" path="/api/floating-licenses" method="get" summary="Gets the list of floating licenses" %}
 {% swagger-description %}
 Gets the current server stats
 {% endswagger-description %}
