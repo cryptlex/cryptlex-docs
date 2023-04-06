@@ -1,5 +1,19 @@
 # Web API
 
+## 3.63.0 (2023-04-06)
+
+### Added <a href="#changed" id="changed"></a>
+
+* &#x20;`expired`, `metadata.key`, `metadata.value` and `createdAt` query params to the /v3/trial-activations endpoint.
+
+## 3.62.0 (2023-04-04)
+
+### Added <a href="#changed" id="changed"></a>
+
+* &#x20;`published` and `private` query params to the /v3/releases endpoint.
+* `published` query param to the /v3/releases-files endpoint.
+* `action` query param to the /v3/activation-logs endpoint.
+
 ## 3.61.0 (2023-03-29)
 
 ### Added <a href="#changed" id="changed"></a>
