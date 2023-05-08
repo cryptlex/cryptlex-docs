@@ -8,3 +8,4 @@
 * Hubspot
 * Stripe
 * Paddle
+* PostHog

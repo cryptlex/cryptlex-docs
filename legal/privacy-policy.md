@@ -40,20 +40,20 @@ In order to provide services to its Users (our customers and your customers), Cr
 
 #### 1.2.1 Collection of User data from our customers
 
-Information in this category includes the information you provide when registering to use our services and further usage of our services. This data is primarily stored within Cryptlex and a part of it may also be stored in third party services.
+Information in this category includes the information you provide when registering to use our services and further usage of our services. This data is primarily stored within Cryptlex and a part of it may also be stored in third-party services.
 
 **1.2.1.1 Personal information stored within Cryptlex**
 
 * First name, last name, email, company name
 * Stripe customer and subscription unique identifiers
+* Paddle customer unique identifiers
 * IP addresses for rate-limiting (stored temporarily)
 
 **1.2.1.2 Personal information stored in third-party services**
 
-* Name and email (through Stripe, Hubspot, and Intercom)
-* Company name (through Stripe, Hubspot, and Intercom)
+* First name, last name, email, company name (through Stripe, Paddle, Hubspot, PostHog and Intercom)
 * Links to social media profiles (through Hubspot)
-* Credit card information (securely stored within Stripe)
+* Credit card information (securely stored within Stripe and Paddle)
 * Website usage (through Google Analytics)
 * Geographic location (through Google Analytics)
 * Name, email, and IP addresses in crash reports (through Bugsnag retained for seven days)
