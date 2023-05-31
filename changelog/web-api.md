@@ -1,5 +1,14 @@
 # Web API
 
+## 3.64.0 (2023-05-30)
+
+### Added <a href="#changed" id="changed"></a>
+
+* &#x20;/v3/activations/export endpoint to export all activations.
+* All /v3/licenses endpoint query params to /v3/licenses/export endpoint
+* `name` query param in /v3/users endpoint
+* `createdAt` query param in /v3/organizations
+
 ## 3.63.0 (2023-04-06)
 
 ### Added <a href="#changed" id="changed"></a>

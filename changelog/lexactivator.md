@@ -1,5 +1,24 @@
 # LexActivator
 
+## 3.21.3 (2023-05-31)
+
+### Fixed
+
+* Crash in some OEM Android devices due to GSF ID.
+* Fingerpint-related issue in Android devices of the same make.
+
+## 3.21.2 (2023-04-17)
+
+### Fixed
+
+* Minor bug fixes.
+
+## 3.21.1 (2023-04-10)
+
+### Fixed
+
+* Minor bug fixes.
+
 ## 3.21.0 (2023-04-06)
 
 ### Added
