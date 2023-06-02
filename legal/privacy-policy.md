@@ -54,8 +54,7 @@ Information in this category includes the information you provide when registeri
 * First name, last name, email, company name (through Stripe, Paddle, Hubspot, PostHog and Intercom)
 * Links to social media profiles (through Hubspot)
 * Credit card information (securely stored within Stripe and Paddle)
-* Website usage (through Google Analytics)
-* Geographic location (through Google Analytics)
+* Geographic location (through PostHog)
 * Name, email, and IP addresses in crash reports (through Bugsnag retained for seven days)
 
 #### 1.2.2 Collection of User data from your customers
@@ -170,4 +169,4 @@ We may share your information as described in this Privacy Policy (e.g., with ou
 
 If you have any further questions regarding the data Cryptlex collects, or how we use it, then please feel free to contact us by email at [legal@cryptlex.com](mailto:legal@cryptlex.com)
 
-**Last Updated:** September 28th, 2021
+**Last Updated:** June 2nd, 2023
