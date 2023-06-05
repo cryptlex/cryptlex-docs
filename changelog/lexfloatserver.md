@@ -2,6 +2,10 @@
 
 ## 4.9.2 (2023-06-03)
 
+### Fixed
+
+* Issues related to service uninstallation on Windows.
+
 ### Updated
 
 * LexActivator version to v3.21.4.
@@ -10,7 +14,7 @@
 
 ### Fixed
 
-* Issues related to service uninstallation on Windows.
+* Minor bug fixes.
 
 ## 4.9.0 (2023-04-04)
 
