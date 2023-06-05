@@ -1,5 +1,17 @@
 # LexFloatServer
 
+## 4.9.2 (2023-06-03)
+
+### Updated
+
+* LexActivator version to v3.21.4.
+
+## 4.9.1 (2023-05-05)
+
+### Fixed
+
+* Issues related to service uninstallation on Windows.
+
 ## 4.9.0 (2023-04-04)
 
 ### Added

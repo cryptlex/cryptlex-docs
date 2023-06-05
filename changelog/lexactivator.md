@@ -1,5 +1,11 @@
 # LexActivator
 
+## 3.21.4 (2023-06-03)
+
+### Fixed
+
+* Activation validation issue due to a very large number of metadata fields.
+
 ## 3.21.3 (2023-05-31)
 
 ### Fixed
