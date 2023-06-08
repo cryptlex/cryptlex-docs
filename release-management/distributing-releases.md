@@ -23,7 +23,7 @@ The external release files are not secured and hence don't require**`key`** quer
 
 ## Downloading an update
 
-In order to detect whether an update is available for your product, you can either invoke the [/v3/releases/update](https://api.cryptlex.com/v3/docs#operation/get/v3/releases/update) Web API endpoint or use **`CheckForReleaseUpdate()`** LexActivator function.
+In order to detect whether an update is available for your product, you can either invoke the [/v3/releases/update](https://api.cryptlex.com/v3/docs#operation/get/v3/releases/update) Web API endpoint or use **`CheckReleaseUpdate()`** LexActivator function.
 
 ### Using Web API
 
@@ -98,23 +98,29 @@ License key
 {% endswagger-response %}
 {% endswagger %}
 
-If an update is available it returns a **`200`** success response containing the download url, else it will return a **`204`** empty response.
+If an update is available it returns a **`200`** success response containing the download URL, else it will return a **`204`** empty response.
 
 ### Using LexActivator
 
-The sample code for checking the release update is available on Github for all the languages in their sample files. The following sample code demonstrates it for C/C++.
+The sample code for checking the release update is available on GitHub for all the languages in their sample files. The following sample code demonstrates it for C/C++.
 
 ```cpp
-void LA_CC SoftwareReleaseUpdateCallback(uint32_t status)
+void LA_CC SoftwareReleaseUpdateCallback(int status, Release* release, void* custom_data)
 {
 	switch (status)
 	{
 	case LA_RELEASE_UPDATE_AVAILABLE:
 		printf("A new update is available for the app.\n");
+		printf("Release notes: %s", release->notes);
 		break;
 
-	case LA_RELEASE_NO_UPDATE_AVAILABLE:
+	case LA_RELEASE_UPDATE_AVAILABLE_NOT_ALLOWED:
 		printf("Current version is already latest.\n");
+		printf("Release notes: %s", release->notes);
+		break;
+
+	case LA_RELEASE_UPDATE_NOT_AVAILABLE:
+		printf("A new update is available for the app but it's not allowed.\n");
 		break;
 
 	default:
@@ -125,22 +131,24 @@ void LA_CC SoftwareReleaseUpdateCallback(uint32_t status)
 int main()
 {
 	int status;
-	status = SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");
+	// init code - SetProductId(), SetProductData()
+	// ...
+	status = SetReleasePlatform("windows");
 	if (LA_OK != status)
 	{
 		// handle error
 	}
-	status = SetProductId("PASTE_PRODUCT_ID", LA_USER);
+	status = SetReleaseChannel("stable");
 	if (LA_OK != status)
 	{
 		// handle error
 	}
-	status = SetLicenseKey("PASTE_LICENCE_KEY");
+	status = SetReleaseVersion("1.2.3.4");
 	if (LA_OK != status)
 	{
 		// handle error
 	}
-	status = CheckForReleaseUpdate("windows", "1.0.0", "stable", SoftwareReleaseUpdateCallback);
+	status = CheckReleaseUpdate(SoftwareReleaseUpdateCallback, LA_RELEASES_ALL, data);
 	if (LA_OK != status)
 	{
 		printf("Error checking for software release update: %d", status);
