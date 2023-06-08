@@ -132,7 +132,7 @@ int main()
 {
 	int status;
 	// init code - SetProductId(), SetProductData()
-	// ...
+	// Ensure that platform, channel and version actually exist for the release
 	status = SetReleasePlatform("windows");
 	if (LA_OK != status)
 	{
