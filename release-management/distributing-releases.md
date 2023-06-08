@@ -115,12 +115,12 @@ void LA_CC SoftwareReleaseUpdateCallback(int status, Release* release, void* cus
 		break;
 
 	case LA_RELEASE_UPDATE_AVAILABLE_NOT_ALLOWED:
-		printf("Current version is already latest.\n");
+		printf("A new update is available for the app but it's not allowed.\n");
 		printf("Release notes: %s", release->notes);
 		break;
 
 	case LA_RELEASE_UPDATE_NOT_AVAILABLE:
-		printf("A new update is available for the app but it's not allowed.\n");
+		printf("Current version is already latest.\n");
 		break;
 
 	default:
