@@ -1,5 +1,20 @@
 # LexActivator
 
+## 3.22.0 (2023-07-31)
+
+### Added
+
+* `AuthenticateUser()` function to authenticate the user.
+* `GetUserLicenses()` function to get the licenses linked with the user.
+* `GetLicenseCreationDate()` function to get the creation date timestamp of the license.
+* `GetLicenseActivationDate()` function to get the activation date timestamp of the license.
+
+## 3.21.5 (2023-06-23)
+
+### Fixed
+
+* Minor bug fix.
+
 ## 3.21.4 (2023-06-03)
 
 ### Fixed
