@@ -1,5 +1,17 @@
 # Web API
 
+## 3.66.0 (2023-08-09)
+
+### Added <a href="#changed" id="changed"></a>
+
+* &#x20;Organizations and related API endpoints for customer portal.
+
+## 3.65.0 (2023-07-21)
+
+### Added <a href="#changed" id="changed"></a>
+
+* &#x20;/v3/license-templates endpoint as an alternative for license policies.
+
 ## 3.64.0 (2023-05-30)
 
 ### Added <a href="#changed" id="changed"></a>
