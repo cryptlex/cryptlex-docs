@@ -1,5 +1,15 @@
 # LexActivator
 
+## 3.23.0 (2023-08-10)
+
+### Added
+
+* `SetTwoFactorAuthenticationCode()` function to authenticate the users with 2FA enabled.
+
+### Fixed
+
+* Fingerprint-related issues in Android devices.
+
 ## 3.22.0 (2023-07-31)
 
 ### Added
@@ -26,7 +36,7 @@
 ### Fixed
 
 * Crash in some OEM Android devices due to GSF ID.
-* Fingerpint-related issue in Android devices of the same make.
+* Fingerprint-related issue in Android devices of the same make.
 
 ## 3.21.2 (2023-04-17)
 
