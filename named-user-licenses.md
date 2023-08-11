@@ -10,7 +10,7 @@ Named user licenses can be either node-locked or floating. Regardless of the typ
 
 User authentication is achieved by calling the `AuthenticateUser(string email, string password)` LexActivator API function.
 
-In scenarios where users have enabled two-factor authentication (2FA), executing the function results in an `LA_E_TWO_FACTOR_AUTHENTICATION_CODE_MISSING` exception. In such instances, it becomes necessary to provide the 2FA code using the `SetTwoFactorAuthenticationCode()` LexActivator API function.
+In scenarios where users have enabled two-factor authentication (2FA), executing the function results in a `LA_E_TWO_FACTOR_AUTHENTICATION_CODE_MISSING` exception. In such instances, it becomes necessary to provide the 2FA code using the `SetTwoFactorAuthenticationCode()` LexActivator API function.
 
 Once the 2FA code has been set, you need to call the `AuthenticateUser()` LexActivator API function again.
 
@@ -22,4 +22,4 @@ In scenarios where multiple licenses are linked to a particular user, it is poss
 
 ## 3- Activating the license
 
-Once the license key is obtained, the subsequent activation procedure aligns closely with the guidelines provided in the documentation for each respective [programming language](node-locked-licenses/using-lexactivator/using-lexactivator-with-python.md). To activate the license within your application, simply call the `ActivateLicense()` function from the LexActivator API.
+Once the license key is obtained, the subsequent activation procedure aligns closely with the guidelines provided in the documentation for each respective [programming language](node-locked-licenses/using-lexactivator/). To activate the license within your application, simply call the `ActivateLicense()` function from the LexActivator API.
