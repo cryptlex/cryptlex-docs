@@ -1,5 +1,16 @@
 # LexFloatServer
 
+## 4.9.4 (2023-08-11)
+
+### Fixed
+
+* Added missing WMI service error log.
+* Enforced service startup type to auto-delayed (Windows).
+
+### Updated
+
+* LexActivator version to v3.23.0
+
 ## 4.9.3 (2023-06-24)
 
 ### Fixed

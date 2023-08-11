@@ -64,6 +64,7 @@
       * [Using LexFloatClient with Go](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-go.md)
       * [Using LexFloatClient with Android](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-android.md)
       * [Using LexFloatClient with iOS](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-ios.md)
+* [Named User Licenses](named-user-licenses.md)
 * [Timed Trials](timed-trials/README.md)
   * [Verified Trials](timed-trials/verified-trials.md)
   * [Unverified Trials](timed-trials/unverified-trials.md)
