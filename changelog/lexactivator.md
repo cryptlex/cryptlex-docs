@@ -1,5 +1,12 @@
 # LexActivator
 
+## 3.23.1 (2023-09-05)
+
+### Fixed
+
+* Added missing check for the existence of meter attribute before incrementing, decrementing and resetting the count.
+* Added missing server sync in the case when `IsLicenseGenuine()` function returns `LA_E_RELEASE_VERSION_NOT_ALLOWED` error code.
+
 ## 3.23.0 (2023-08-10)
 
 ### Added
