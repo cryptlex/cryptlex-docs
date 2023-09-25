@@ -20,7 +20,7 @@ You understand that Cryptlex uses third-party vendors and hosting partners to pr
 
 ## Your Cryptlex Account
 
-You need a Cryptlex Account in order to use our Services. You may create your own Cryptlex Account, or your Cryptlex Account may be assigned to you by an administrator, such as your employer or educational institution. If you are using a Cryptlex Account assigned to you by an administrator, different or additional terms may apply and your administrator may be able to access or disable your account.
+You need a Cryptlex Account in order to use our Services. You may create your own Cryptlex Account or your Cryptlex Account may be assigned to you by an administrator, such as your employer or educational institution. If you are using a Cryptlex Account assigned to you by an administrator, different or additional terms may apply and your administrator may be able to access or disable your account.
 
 You must be above 13 years of age and provide your legal full name, a valid email address, and any other information requested in order to complete the signup process. Your login may only be used by one person – a single login shared by multiple people is not permitted. You may create separate logins for as many people as your plan allows.
 
@@ -28,11 +28,11 @@ To protect your Cryptlex Account, keep your password confidential. You are respo
 
 ## Payment Terms
 
-The Service is billed in advance on a monthly basis and is non-refundable. There will be no refunds or credits for partial months of service, upgrade/downgrade refunds, or refunds for months unused with an open account. In order to treat everyone equally, no exceptions will be made.
+The Service is billed in advance on a monthly or yearly basis and is non-refundable. There will be no refunds or credits for partial months of service, upgrade/downgrade refunds, or refunds for months unused with an open account. In order to treat everyone equally, no exceptions will be made.
 
-All fees are exclusive of all taxes, levies, or duties imposed by taxing authorities, and you shall be responsible for payment of all such taxes, levies, or duties, excluding only United States (federal or state) taxes.
+All fees are exclusive of all taxes, levies, or duties imposed by taxing authorities, and you shall be responsible for payment of all such taxes, levies, or duties.
 
-For any upgrade or downgrade in plan level, your credit card that you provided will automatically be charged the new rate on your next billing cycle.
+For any upgrade or downgrade in plan level, the credit card that you provided will automatically be charged the new rate on your next billing cycle.
 
 ## Your Content in our Services
 
@@ -52,7 +52,7 @@ You may not copy, modify, sell, or lease any part of our Services or included so
 
 ## About API in our Services
 
-Customers may access their Cryptlex account data via an API (Application Program Interface). Any use of the API, including use of the API through a third-party product that accesses Cryptlex, is bound by the terms of this agreement.
+Customers may access their Cryptlex account data via an API (Application Program Interface). Any use of the API, including the use of the API through a third-party product that accesses Cryptlex, is bound by the terms of this agreement.
 
 Any abuse or excessively frequent requests to Cryptlex via the API may result in the temporary or permanent suspension of your account's access to the API. Cryptlex, in its sole discretion, will determine abuse or excessive usage of the API. Cryptlex will make a reasonable attempt via email to warn the account owner prior to suspension.
 
@@ -62,15 +62,15 @@ Cryptlex reserves the right at any time to modify or discontinue, temporarily or
 
 We are constantly changing and improving our Services. We may add or remove functionalities or features, and we may suspend or stop a Service altogether with or without notice.
 
-Prices of all Services, including but not limited to monthly subscription plan fees to the Service, are subject to change upon 30 days notice from us. Such notice may be provided at any time by posting the changes to the Cryptlex Site (https://cryptlex.com/pricing) or the Service itself.
+Prices of all Services, including but not limited to monthly subscription plan fees to the Service, are subject to change upon 30 days' notice from us. Such notice may be provided at any time by posting the changes to the Cryptlex Site (https://cryptlex.com/pricing) or the Service itself.
 
 Cryptlex shall not be liable to you or to any third party for any modification, price change, suspension or discontinuance of the Service.
 
 ## Terminating our Services
 
-You can stop using our Services by canceling your subscription at any time by visiting the account section of your Cryptlex dashboard, although we’ll be sorry to see you go. Cryptlex may also stop providing Services to you, or add or create new limits to our Services at any time.
+You can stop using our Services by cancelling your subscription at any time by visiting the account section of your Cryptlex dashboard, although we’ll be sorry to see you go. Cryptlex may also stop providing Services to you, or add or create new limits to our Services at any time.
 
-If you cancel the Service before the end of your current paid up month, your cancellation will take effect immediately and you will not be charged again.
+If you cancel the Service before the end of your current paid-up month, your cancellation will take effect immediately and you will not be charged again.
 
 Cryptlex, in its sole discretion, has the right to suspend or terminate your account and refuse any and all current or future use of the Service, or any other Cryptlex service, for any reason at any time. Such termination of the Service will result in the deactivation or deletion of your Account or your access to your Account, and the forfeiture and relinquishment of all Content in your Account. Cryptlex reserves the right to refuse service to anyone for any reason at any time.
 
@@ -98,6 +98,6 @@ If you are using our Services on behalf of a business, that business accepts the
 
 We may modify these terms or any additional terms that apply to a Service to, for example, reflect changes to the law or changes to our Services. You should look at the terms regularly. We’ll post notice of modifications to these terms on this page. We’ll post notice of modified additional terms in the applicable Service. Changes will not apply retroactively and will become effective no sooner than fourteen days after they are posted. However, changes addressing new functions for a Service or changes made for legal reasons will be effective immediately. If you do not agree to the modified terms for a Service, you should discontinue your use of that Service. If it turns out that a particular term is not enforceable, this will not affect any other terms.
 
-The failure of Cryptlex to exercise or enforce any right or provision of the Terms of Service shall not constitute a waiver of such right or provision. The Terms of Service constitutes the entire agreement between you and Cryptlex and govern your use of the Service, superseding any prior agreements between you and Cryptlex (including, but not limited to, any prior versions of the Terms of Service).
+The failure of Cryptlex to exercise or enforce any right or provision of the Terms of Service shall not constitute a waiver of such right or provision. The Terms of Service constitute the agreement between you and Cryptlex and govern your use of the Service, superseding any prior agreements between you and Cryptlex (including, but not limited to, any prior versions of the Terms of Service).
 
-For any queries related to the Terms of Service you can contact us through email at [legal@cryptlex.com](mailto:legal@cryptlex.com).
+For any queries related to the Terms of Service, you can contact us through email at [legal@cryptlex.com](mailto:legal@cryptlex.com).
