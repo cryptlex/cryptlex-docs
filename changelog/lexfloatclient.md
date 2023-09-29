@@ -10,7 +10,7 @@
 
 ### Updated
 
-* Updated HTTP client timeout to 60 secs.
+* Increased default network timeout to 60 secs.
 
 ## 4.7.5 (2023-04-10)
 

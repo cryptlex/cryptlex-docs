@@ -8,9 +8,9 @@
 
 ## 3.23.2 (2023-09-21)
 
-### Updated
+### Fixed
 
-* Updated HTTP client timeout.
+* Minor bug fix.
 
 ## 3.23.1 (2023-09-05)
 
