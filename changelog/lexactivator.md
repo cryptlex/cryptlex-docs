@@ -1,5 +1,17 @@
 # LexActivator
 
+## 3.23.3 (2023-09-23)
+
+### Fixed
+
+* Minor bug fix.
+
+## 3.23.2 (2023-09-21)
+
+### Updated
+
+* Updated HTTP client timeout.
+
 ## 3.23.1 (2023-09-05)
 
 ### Fixed

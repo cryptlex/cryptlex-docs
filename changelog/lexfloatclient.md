@@ -1,5 +1,23 @@
 # LexFloatClient
 
+## 4.7.7 (2023-09-23)
+
+### Fixed
+
+* Minor bug fix.
+
+## 4.7.6 (2023-09-21)
+
+### Updated
+
+* Updated HTTP client timeout to 60 secs.
+
+## 4.7.5 (2023-04-10)
+
+### Fixed
+
+* Minor bug fix.
+
 ## 4.7.4 (2022-12-05)
 
 ### Fixed
