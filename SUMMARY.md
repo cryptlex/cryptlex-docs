@@ -20,6 +20,7 @@
   * [Creating Users](user-management/creating-users.md)
   * [Authenticating Users](user-management/authenticating-users.md)
   * [Customer Portal](user-management/customer-portal.md)
+  * [Resellers](user-management/resellers.md)
   * [Google SSO](user-management/google-sso.md)
   * [SAML SSO](user-management/saml-sso.md)
 * [Feature Management](feature-management/README.md)
