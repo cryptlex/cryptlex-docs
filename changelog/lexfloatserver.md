@@ -1,5 +1,25 @@
 # LexFloatServer
 
+## 4.10.0 (2023-11-09)
+
+### Added
+
+* `/api/server/license-meter-attributes` endpoint to get the meter attributes associated with the license.
+
+### Updated
+
+* Improved meter attribute logs.
+
+### Fixed
+
+* Minor bug fixes.
+
+## 4.9.5 (2023-09-21)
+
+### Updated
+
+* LexActivator version to v3.24.1
+
 ## 4.9.4 (2023-08-11)
 
 ### Fixed
