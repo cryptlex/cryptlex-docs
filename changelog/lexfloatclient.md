@@ -1,5 +1,11 @@
 # LexFloatClient
 
+## 4.8.0 (2023-12-01)
+
+### Added
+
+* `GetFloatingClientLibraryVersion()` API function.
+
 ## 4.7.7 (2023-09-23)
 
 ### Fixed

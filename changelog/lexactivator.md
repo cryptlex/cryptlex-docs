@@ -1,5 +1,24 @@
 # LexActivator
 
+## 3.25.0 (2023-12-01)
+
+### Added
+
+* `GetActivationId()` function to get the activation ID.
+* Added support for EU data center.
+
+## 3.24.1 (2023-10-10)
+
+### Fixed
+
+* Minor bug fix.
+
+## 3.24.0 (2023-09-27)
+
+### Added
+
+* `AuthenticateUserWithIdToken()`function to authenticate the user via the OIDC ID token.
+
 ## 3.23.3 (2023-09-23)
 
 ### Fixed
