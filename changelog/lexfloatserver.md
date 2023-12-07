@@ -1,5 +1,15 @@
 # LexFloatServer
 
+## 4.11.0 (2023-12-07)
+
+### Added
+
+* `enableIpv6` config file param to enable LexFloatServer to serve requests over IPV6.
+
+### Fixed
+
+* `productFilePath` config file param now takes an absolute path as well.
+
 ## 4.10.0 (2023-11-09)
 
 ### Added
