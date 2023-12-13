@@ -26,7 +26,7 @@ There are three types of licenses:
 
 * **Node-locked:** This is the default type that locks the license to the machine.
 * **Hosted Floating:** This type is used for creating a hosted floating license.
-* **On-Premise floating:** This **** type is used for creating an on-premise floating license.
+* **On-Premise floating:** This type is used for creating an on-premise floating license.
 
 ### Lease duration
 

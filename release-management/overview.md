@@ -1,6 +1,6 @@
 # Overview
 
-Cryptlex **** lets you to distribute your software applications securely to licensed users, hence protecting your software applications from **unlicensed distribution.**\
+Cryptlex lets you to distribute your software applications securely to licensed users, hence protecting your software applications from **unlicensed distribution.**\
 
 
 ## **Secure hosting and delivery**

@@ -171,7 +171,7 @@ It uses [Traefik](https://traefik.io/) reverse proxy server to route the traffic
 
 ### Traefik admin dashboard
 
-Traefik provides a dashboard that can be used to monitor the health and status of the Cryptlex on-Premise instance. You can access the Traefik dashboard at the following URL: [**https://cryptlex-app.mycompany.com/traefik**](https://cryptlex-app.mycompany.com/traefik)****
+Traefik provides a dashboard that can be used to monitor the health and status of the Cryptlex on-Premise instance. You can access the Traefik dashboard at the following URL: [**https://cryptlex-app.mycompany.com/traefik**](https://cryptlex-app.mycompany.com/traefik)
 
 You will need to put in the credentials set in the `.env` file to access the dashboard.
 

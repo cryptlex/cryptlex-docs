@@ -11,7 +11,7 @@ Automated emails can be used to automatically send emails to your customers when
 * `user.created`
 *   `user.reset-password-request`
 
-    ****
+
 
 **NOTE:** Use [webhooks](webhooks.md) instead of automated emails if you have a complex workflow.
 

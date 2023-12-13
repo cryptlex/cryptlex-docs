@@ -38,7 +38,7 @@ You can enforce the schema for metadata fields in the license policy too, so you
 
 ## User metadata
 
-This metadata can be added to your license users at the time of creating a user. You can store additional data like `phone_number`, `address` etc. __ in the user metadata.
+This metadata can be added to your license users at the time of creating a user. You can store additional data like `phone_number`, `address` etc. in the user metadata.
 
 ## Activation metadata
 

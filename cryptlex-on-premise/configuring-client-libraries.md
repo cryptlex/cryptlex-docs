@@ -37,7 +37,7 @@ Similarly you can use the `SetCryptlexHost()` LexActivator API function for othe
 
 By default, LexFloatServer will send its own license activation request to **api.cryptlex.com**_._&#x20;
 
-In __ order to configure LexFloatServer to send the license activation requests to your On-Premise installation, you should update **cryptlexHost** property in the LexFloatServer config.yml file:
+In order to configure LexFloatServer to send the license activation requests to your On-Premise installation, you should update **cryptlexHost** property in the LexFloatServer config.yml file:
 
 ```bash
 server:
