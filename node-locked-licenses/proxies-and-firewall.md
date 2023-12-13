@@ -24,17 +24,28 @@ Following are some examples of the valid proxy strings:
 * `http://user:pass@127.0.0.1:8000/`
 * `socks5://127.0.0.1:8000/`
 
-## Firewall whitelisting
+## **Firewall Whitelisting**
 
-Whitelist Cryptlex IP addresses to enable LexActivator license and trial activations through the firewall.
+To enable LexActivator license and trial activations through your firewall, it's essential to whitelist Cryptlex IP addresses. This ensures smooth operation even if your customer's policy restricts access from external IP addresses and websites.
 
-### Access through firewall <a href="#access-through-firewall" id="access-through-firewall"></a>
+### **Access Through Firewall**
 
-If your customer's policy denies access from external IP addresses and websites, you will need to whitelist the IP addresses below. A whitelist provides access to designated IP addresses and sites that would otherwise be prevented by your security policy.
+If the security policy at your customer's end denies access from external IP addresses and websites, you will need to whitelist specific IP addresses. A whitelist permits access to designated IP addresses and sites that would otherwise be blocked by your security policy.
 
-* `52.223.22.71`
-* `35.71.188.31`
+#### **For Our US Data Center:**
 
-Alternatively, you can also whitelist Cryptlex Web API URL:
+* IP Addresses to Whitelist:
+  * `52.223.22.71`
+  * `35.71.188.31`
+* Web API URL to Whitelist:
+  * `https://api.cryptlex.com:443`
 
-`https://api.cryptlex.com:443`
+#### **For Our EU Data Center:**
+
+For customers utilizing our EU data center, the following IP addresses and URL should be whitelisted:
+
+* IP Addresses to Whitelist:
+  * `75.2.113.112`
+  * `99.83.149.57`
+* Web API URL to Whitelist:
+  * `https://api.eu.cryptlex.com:443`
