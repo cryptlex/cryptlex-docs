@@ -10,7 +10,7 @@
 
 ### Added
 
-* `enableIpv6` config file param to enable LexFloatServer to serve requests over IPV6.
+* `enableIpv6` config file param to enable LexFloatServer to serve requests over IPv6.
 
 ### Fixed
 
