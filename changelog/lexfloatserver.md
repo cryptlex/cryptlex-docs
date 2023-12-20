@@ -1,5 +1,11 @@
 # LexFloatServer
 
+## 4.11.1 (2023-12-14)
+
+### Updated
+
+* LexActivator version to v3.25.0
+
 ## 4.11.0 (2023-12-07)
 
 ### Added
