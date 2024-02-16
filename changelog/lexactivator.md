@@ -1,5 +1,28 @@
 # LexActivator
 
+## 3.26.0 (2024-02-09)
+
+### Added
+
+* `GetLicenseAllowedDeactivations()` function to get the allowed deactivations of the license.
+* `GetLicenseTotalDeactivations()` function to get the total deactivations of the license.
+
+### Fixed
+
+* Minor bug fix.
+
+## 3.25.2 (2024-01-17)
+
+### Fixed
+
+* Minor bug fix.
+
+## 3.25.1 (2024-01-02)
+
+### Fixed
+
+* Minor bug fix.
+
 ## 3.25.0 (2023-12-01)
 
 ### Added

@@ -1,5 +1,11 @@
 # LexFloatServer
 
+## 4.11.2 (2023-12-22)
+
+### Fixed
+
+* Minor bug fixes.
+
 ## 4.11.1 (2023-12-14)
 
 ### Updated
@@ -204,7 +210,7 @@
 
 * Minor bug fixes.
 
-## 4.6.0 (2021-06-14) <a href="#3-0-0-2018-05-03" id="3-0-0-2018-05-03"></a>
+## 4.6.0 (2021-06-14) <a href="#id-3-0-0-2018-05-03" id="id-3-0-0-2018-05-03"></a>
 
 ### Added <a href="#added-2" id="added-2"></a>
 
@@ -309,38 +315,38 @@
 
 * Minor bug fixes.
 
-## 4.3.0 (2019-10-28) <a href="#3-0-0-2018-05-03" id="3-0-0-2018-05-03"></a>
+## 4.3.0 (2019-10-28) <a href="#id-3-0-0-2018-05-03" id="id-3-0-0-2018-05-03"></a>
 
 ### Added <a href="#added-2" id="added-2"></a>
 
 * `dailylogrotation` config file param.
 * New [/api/server/activate](https://docs.cryptlex.com/floating-licenses/on-premise-floating-licenses/lexfloatserver#online-activation-1), [/api/server/offline-activation-request](https://docs.cryptlex.com/floating-licenses/on-premise-floating-licenses/lexfloatserver#offline-activation-1) and [/api/server/offline-activate](https://docs.cryptlex.com/floating-licenses/on-premise-floating-licenses/lexfloatserver#offline-activation-1) endpoints.
 
-## 4.2.0 (2019-07-23) <a href="#3-0-0-2018-05-03" id="3-0-0-2018-05-03"></a>
+## 4.2.0 (2019-07-23) <a href="#id-3-0-0-2018-05-03" id="id-3-0-0-2018-05-03"></a>
 
 ### Added <a href="#added-2" id="added-2"></a>
 
 * `allowedclockoffset` config file param.
 
-## 4.1.0 (2019-07-02) <a href="#3-0-0-2018-05-03" id="3-0-0-2018-05-03"></a>
+## 4.1.0 (2019-07-02) <a href="#id-3-0-0-2018-05-03" id="id-3-0-0-2018-05-03"></a>
 
 ### Added <a href="#added-2" id="added-2"></a>
 
 * Support for meter attributes.
 
-## 4.0.2 (2019-03-25) <a href="#3-0-0-2018-05-03" id="3-0-0-2018-05-03"></a>
+## 4.0.2 (2019-03-25) <a href="#id-3-0-0-2018-05-03" id="id-3-0-0-2018-05-03"></a>
 
 ### Added <a href="#added-2" id="added-2"></a>
 
 * Support for detecting Dockers to prevent the running of LexFloatServer inside a Docker container.&#x20;
 
-## 4.0.1 (2019-02-24) <a href="#3-0-0-2018-05-03" id="3-0-0-2018-05-03"></a>
+## 4.0.1 (2019-02-24) <a href="#id-3-0-0-2018-05-03" id="id-3-0-0-2018-05-03"></a>
 
 ### Added <a href="#added-2" id="added-2"></a>
 
 * New command line parameter `-cryptlexhost` to allow setting a custom host.
 
-## 4.0.0 (2018-12-17) <a href="#3-0-0-2018-05-03" id="3-0-0-2018-05-03"></a>
+## 4.0.0 (2018-12-17) <a href="#id-3-0-0-2018-05-03" id="id-3-0-0-2018-05-03"></a>
 
 ### Added <a href="#added-2" id="added-2"></a>
 
