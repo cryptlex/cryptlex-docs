@@ -352,4 +352,25 @@ Gets the current server stats
 {% endswagger-response %}
 {% endswagger %}
 
-##
+## Getting server license meter attributes
+
+LexFloatServer exposes a license meter attributes API endpoint that can be used to get the list of all the meter attributes of the license used to activate the LexFloatServer.
+
+{% swagger method="get" path="/api/server/license-meter-attributes" baseUrl="http://localhost:8090" summary="Gets the list of license meter attributes" %}
+{% swagger-description %}
+Gets the list of meter attributes of the license used to activate the LexFloatServer
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="" %}
+<pre class="language-javascript"><code class="lang-javascript">[
+  {
+    "id": "string",
+    "name": "string",
+<strong>    "allowedUses": 0,
+</strong>    "totalUses": 0,
+    "grossUses": 0,  
+  }
+]
+</code></pre>
+{% endswagger-response %}
+{% endswagger %}
