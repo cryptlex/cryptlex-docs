@@ -1,5 +1,11 @@
 # LexActivator
 
+## 3.26.1 (2024-03-15)
+
+### Fixed
+
+* Minor bug fix.
+
 ## 3.26.0 (2024-02-09)
 
 ### Added
