@@ -1,5 +1,27 @@
 # LexActivator
 
+## 3.28.0 (2024-04-25)
+
+### Added
+
+* `SetCacheMode()` function to disable or enable in-memory caching.
+
+## 3.27.1 (2024-04-16)
+
+### Fixed
+
+* Minor bug fix.
+
+## 3.27.0 (2024-03-28)
+
+### Added
+
+* `LA_ALL_USERS` permission flag to enable system-wide activation on Windows.
+
+### Fixed
+
+* Minor bug fix.
+
 ## 3.26.1 (2024-03-15)
 
 ### Fixed
