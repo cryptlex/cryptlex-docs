@@ -1,5 +1,15 @@
 # LexFloatServer
 
+## 4.12.0 (2024-05-14)
+
+### Added
+
+* LexFloatServer now support enabling `SSL`  through the `config.yml` file.
+
+### Fixed
+
+* LexFloatServer now updates license expiry date automatically after activation or server sync without requiring a restart.
+
 ## 4.11.2 (2023-12-22)
 
 ### Fixed

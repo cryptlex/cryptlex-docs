@@ -1,5 +1,11 @@
 # LexFloatClient
 
+## 4.8.1 (2024-05-15)
+
+### Updated
+
+* Included SSL support for secure communications.
+
 ## 4.8.0 (2023-12-01)
 
 ### Added
@@ -102,13 +108,13 @@
 
 * Minor bug fixes.
 
-## 4.1.0 (2019-07-02) <a href="#3-0-0-2018-05-03" id="3-0-0-2018-05-03"></a>
+## 4.1.0 (2019-07-02) <a href="#id-3-0-0-2018-05-03" id="id-3-0-0-2018-05-03"></a>
 
 ### Added <a href="#added-2" id="added-2"></a>
 
 * `GetHostLicenseMeterAttribute()`, `GetFloatingClientMeterAttributeUses()`, `IncrementFloatingClientMeterAttributeUses()`, `DecrementFloatingClientMeterAttributeUses()` and `ResetFloatingClientMeterAttributeUses()` API functions.
 
-## 4.0.0 (2018-12-17) <a href="#3-0-0-2018-05-03" id="3-0-0-2018-05-03"></a>
+## 4.0.0 (2018-12-17) <a href="#id-3-0-0-2018-05-03" id="id-3-0-0-2018-05-03"></a>
 
 ### Added <a href="#added-2" id="added-2"></a>
 
