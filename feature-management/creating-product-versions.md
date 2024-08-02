@@ -1,12 +1,22 @@
 # Creating Product Versions
 
-## Using the Dashboard
+## Using the Admin Portal
 
-After you have created a `Product`, within your Product Page, there is a button labelled Product Versions which will lead you to a page where you can create `Product Versions` for that particular `Product`. Before creating `Product Versions`, you must create `Feature Flags` by navigating via the following route:
+After creating a product, follow these steps to create product versions:
 
-> (Dashboard Home > Products > ProductA > Product Versions > Feature Flags)
+### 1. Create feature flags:
 
-The values of each flag can then be set when creating `Product Versions`. `Feature Flags`  created later will automatically reflect in all `Product Versions` with no data and are disabled by default. You can then update your product versions and set the value of the feature flag as required.
+• Navigate to the Feature Flags page by going to `Features -> Feature Flags` in the sidebar.
+
+• Create all necessary feature flags for your product.
+
+### 2. Create product versions:
+
+• Navigate to the Product Versions page by going to `Features -> Product Versions` in the sidebar.
+
+• Create product versions for your product.
+
+The values of each feature flag can be set when creating product versions. Any feature flags created later will automatically appear in all product versions but will be disabled by default. You can then update your product versions and set the value of each feature flag as required.
 
 ## Accessing feature flags in your application
 

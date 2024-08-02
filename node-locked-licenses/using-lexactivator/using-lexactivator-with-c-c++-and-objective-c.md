@@ -1,19 +1,19 @@
-# Using LexActivator with C, C++ & Objective C
+# Using LexActivator with C, C++ and Objective C
 
 First of all, login to your Cryptlex account and download the LexActivator library for Windows, macOS or Linux:
 
-* [Download LexActivator for Windows](https://app.cryptlex.com/downloads)
-* [Download LexActivator for macOS](https://app.cryptlex.com/downloads)
-* [Download LexActivator for Linux](https://app.cryptlex.com/downloads)
+* [Download LexActivator for Windows](https://app.cryptlex.com/developer/sdk-downloads)
+* [Download LexActivator for macOS](https://app.cryptlex.com/developer/sdk-downloads)
+* [Download LexActivator for Linux](https://app.cryptlex.com/developer/sdk-downloads)
 
-The above download package contains the library \(shared as well as static\) which you will be using to add licensing to your app.
+The above download package contains the library (shared as well as static) which you will be using to add licensing to your app.
 
 ## Adding licensing to your app
 
-After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
+After you've added a product for your app in the admin portal, you will need to do the following things:
 
-* Note the product id for the product.
-* Download the Product.dat for the product.
+* Note the product id for the product (from the actions menu in the table).
+* Download the Product.dat for the product (from the actions menu in the table).
 * Download the example project from [Github](https://github.com/cryptlex/lexactivator-c).
 
 Product.dat contains product data that is used by LexActivator. The product id is the identifier of your product that is to be used in the code.
@@ -22,7 +22,7 @@ Product.dat contains product data that is used by LexActivator. The product id i
 
 LexActivator example project for C contains the **LexActivator.h** header file. In addition to that, it includes the **LexActivator.lib** file required in the case of Windows. It contains all the LexActivator API functions needed to add licensing to your app.
 
-Depending on the platform you are targeting **\(x86 or x64\)** you need to link the respective LexActivator.dll with your application.
+Depending on the platform you are targeting **(x86 or x64)** you need to link the respective LexActivator.dll with your application.
 
 LexActivator has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
 
@@ -37,7 +37,7 @@ SetProductData("PASTE_CONTENT_OF_PRODUCT.DAT_FILE");
 SetProductId("PASTE_PRODUCT_ID", LA_USER);
 ```
 
-If your app requires admin \(root\) privileges to run \(e.g. services, daemons etc.\), instead of passing `LA_USER` flag, you need to pass `LA_SYSTEM` flag.
+If your app requires admin (root) privileges to run (e.g. services, daemons etc.), instead of passing `LA_USER` flag, you need to pass `LA_SYSTEM` flag.
 
 {% hint style="info" %}
 In case your app doesn't have write access to the disk, you can use `LA_IN_MEMORY` flag instead, which causes all the data to be stored in the memory. But this would require you to activate the license every time you restart the app.
@@ -114,4 +114,3 @@ The above code should be executed every time user starts the app. After verifyin
 ## Need more help
 
 In case you need more help with adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
-

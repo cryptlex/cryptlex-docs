@@ -2,26 +2,26 @@
 
 First of all, login to your Cryptlex account and download the LexActivator library for iOS:
 
-* [Download LexActivator for iOS](https://app.cryptlex.com/downloads)
+* [Download LexActivator for iOS](https://app.cryptlex.com/developer/sdk-downloads)
 
 The above download package contains the library in the .xcframework format. The .xcframework supports the following architectures:
 
-* iOS Simulator - x86\_64 \(Intel\), ARM64 \(Apple Silicon\) 
+* iOS Simulator - x86\_64 (Intel), ARM64 (Apple Silicon)&#x20;
 * iOS - ARM64
 
 ## Adding licensing to your app
 
-After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
+After you've added a product for your app in the admin portal, you will need to do the following things:
 
-* Note the product id for the product.
-* Download the Product.dat for the product.
+* Note the product id for the product (from the actions menu in the table).
+* Download the Product.dat for the product (from the actions menu in the table).
 * Download the example project from [Github](https://github.com/cryptlex/lexactivator-ios/tree/main/examples/sample).
 
 Product.dat contains product data that is used by LexActivator. The product id is the identifier of your product that is to be used in the code.
 
 ### Adding the library to your app
 
-After downloading the library in .xcframework format, just add it to your project in Xcode. You can add the dynamic as well as the static framework depending on your requirements.   
+After downloading the library in .xcframework format, just add it to your project in Xcode. You can add the dynamic as well as the static framework depending on your requirements.  &#x20;
 
 ### Setting product.dat file and product id
 
@@ -91,4 +91,3 @@ The above code should be executed every time user starts the app. After verifyin
 ## Need more help
 
 In case you need more help with adding LexActivator to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
-

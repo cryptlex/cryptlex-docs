@@ -1,13 +1,15 @@
 # Customer Portal
 
-Your customers can also log into the dashboard to manage their own licenses. They can view their licenses, update their profile etc.
+Your customers can also log into the customer portal to manage their licenses. They can view their licenses, update their profile etc.
 
-The customer portal can be accessed at the following URL:
+The customer portal can be accessed at the following URLs:
 
-`https://{{accountAlias}}.cryptlex.app`
+`https://{{account_alias}}.customer.cryptlex.com`
+
+`https://{{account_alias}}.eu.customer.cryptlex.com`
 
 {% hint style="info" %}
-You can find your customer portal URL on the [settings](https://app.cryptlex.com/settings) page in the dashboard.
+You can find your customer portal URL on the `Settings -> Customizations` page in the admin portal.
 {% endhint %}
 
 ## License and User Management&#x20;
@@ -32,7 +34,7 @@ The design of these views ensures clear and organized license management tailore
 
 ## Offline activation and deactivation
 
-Your customers can also use the portal for offline activations and deactivations. This saves you a considerable amount of time on product support.
+Your customers can also use the customer portal for offline activations and deactivations. This saves you a considerable amount of time on product support.
 
 {% hint style="info" %}
 Offline trial activations can't be handled in the customer portal as it requires user authentication. But you can easily host the following website on Github or your own server to automate the offline trial activation process: [https://github.com/cryptlex/offline-trial-activation-form](https://github.com/cryptlex/offline-trial-activation-form)
@@ -48,8 +50,8 @@ Your customers can also see and update their profile details like first name, la
 
 ## Customizing customer portal <a href="#need-more-help" id="need-more-help"></a>
 
-You can easily change the logo in the customer portal, by setting the same in the dashboard settings. You can also setup a custom domain for your portal, by setting the custom domain in the dashboard settings page and pointing a CNAME record to **hosting.cryptlex.app.**
+You can easily change the logo in the customer portal, by configuring the same in the admin portal `Settings -> Customizations` page. You can also set up a custom domain for your customer portal, by setting the custom domain in the admin portal `Settings -> Customizations`  page.
 
 ## Need more features <a href="#need-more-help" id="need-more-help"></a>
 
-In case you need more features in the customer portal, we'll be glad to add them in the portal. You can either post your requests on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).
+In case you need more features in the customer portal, we'll be glad to add them to the portal. You can either post your requests on our [support forum](https://forums.cryptlex.com) or contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexActivator).

@@ -18,7 +18,7 @@ The most common use case of webhooks is to automate the communication between Cr
 
 ## Creating a webhook
 
-You can easily create a webhook through the dashboard. Go to the [webhooks](https://app.cryptlex.com/webhooks) section in the dashboard and click the add button. A webhook form with the following fields will popup:&#x20;
+You can easily create a webhook through the admin portal. Go to the `Developer -> Webhooks` section in the admin portal and click the add button. A webhook form with the following fields will popup:&#x20;
 
 #### **Name**
 

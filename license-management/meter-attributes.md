@@ -28,11 +28,11 @@ If set to true then this meter attribute will be visible to users in the custome
 
 #### Floating
 
-If set to true then the uses consumed by the activation will auto-reset if activation is deleted.
+If set to true then the uses consumed by the activation will auto-reset if the activation is deleted.
 
 ## Enforcing meter attributes schema
 
-You can easily make some meter attributes required for your licenses by adding them to the **requiredMeterAttributes** property of the license policy. This also automatically creates the meter attributes in the license form.
+You can easily make some meter attributes required for your licenses by adding them to the **requiredMeterAttributes** property of the license template. This also automatically creates the meter attributes in the license form.
 
 ## Using meter attributes
 
@@ -40,4 +40,4 @@ After you have created meter attributes for the license, you can easily get, inc
 
 **`GetActivationMeterAttributeUses()`**, **`IncrementActivationMeterAttributeUses()`**, **`DecrementActivationMeterAttributeUses()`**, **`ResetActivationMeterAttributeUses()`**
 
-When the usage count reaches the **allowedUses** limit, further incrementing the usage count will return **`LA_E_METER_ATTRIBUTE_USES_LIMIT_REACHED`** error code.
+When the usage count reaches the `allowedUses` limit, further incrementing the usage count will return **`LA_E_METER_ATTRIBUTE_USES_LIMIT_REACHED`** error code.

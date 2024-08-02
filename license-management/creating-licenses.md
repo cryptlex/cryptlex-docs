@@ -2,40 +2,35 @@
 
 ## Creating a license
 
-A license inherits all it's properties from the default license policy attached to it's product. But you may way want to override some properties like `allowedActivations`, `validity`, add some `metadata` etc. You can check out all the properties in the web API [reference page](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses).&#x20;
+A license inherits all it's properties from the default license template attached to its product. But you may way want to override some properties like `allowedActivations`, `validity`, add some `metadata` etc. You can check out all the properties on the web API [reference page](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses).&#x20;
 
 {% hint style="info" %}
-You can also override the default license policy by providing the `licensePolicyId` at the time of creating a license.
+You can also override the default license template by providing the `licenseTemplateId` at the time of creating a license.
 {% endhint %}
 
 Following is a sample request which you will usually make to create a license:
 
-{% swagger baseUrl="https://api.cryptlex.com" path="/v3/licenses" method="post" summary="Creating License" %}
-{% swagger-description %}
+## Creating License
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://api.cryptlex.com/v3/licenses`
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer access token.
-{% endswagger-parameter %}
+#### Headers
 
-{% swagger-parameter in="body" name="validity" type="number" %}
-The duration  after which the license will expire.
-{% endswagger-parameter %}
+| Name          | Type   | Description          |
+| ------------- | ------ | -------------------- |
+| Authorization | string | Bearer access token. |
 
-{% swagger-parameter in="body" name="allowedActivations" type="number" %}
-Allowed number of activations for the license.
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="userId" type="string" %}
-Unique identifier for the user.
-{% endswagger-parameter %}
+| Name               | Type   | Description                                        |
+| ------------------ | ------ | -------------------------------------------------- |
+| validity           | number | The duration  after which the license will expire. |
+| allowedActivations | number | Allowed number of activations for the license.     |
+| userId             | string | Unique identifier for the user.                    |
+| productId          | string | Unique identifier for the product.                 |
 
-{% swagger-parameter in="body" name="productId" type="string" %}
-Unique identifier for the product.
-{% endswagger-parameter %}
-
-{% swagger-response status="201" description="" %}
+{% tabs %}
+{% tab title="201 " %}
 ```javascript
 {
   "key": "0A2035-E8A2A3-4D31B7-8FF9C6-81A6CA-539E54",
@@ -69,5 +64,5 @@ Unique identifier for the product.
   "updatedAt": "2018-05-06T08:49:17.9361158Z"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}

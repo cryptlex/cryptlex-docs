@@ -2,10 +2,10 @@
 
 ## Adding licensing to your app <a href="#adding-licensing-to-your-app" id="adding-licensing-to-your-app"></a>
 
-After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
+After you've added a product for your app in the admin portal, you will need to do the following things:
 
-* Note the product id for the product.
-* Download the Product.dat for the product.
+* Note the product id for the product (from the actions menu in the table).
+* Download the Product.dat for the product (from the actions menu in the table).
 * Download the example project from [Github](https://github.com/cryptlex/lexactivator-android/tree/main/examples)
 
 Product.dat contains product data that is used by LexActivator. The product id is the identifier of your product that is to be used in the code.

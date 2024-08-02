@@ -2,9 +2,9 @@
 
 ## Adding licensing to your app
 
-After you've added a product for your app in the dashboard, go to the product page of the product you will be adding licensing to. You will need to do two things:
+After you've added a product for your app in the admin portal, you will need to do the following things:
 
-* Note the product id for the product.
+* Note the product id for the product (from the actions menu in the table).
 * Download the example project from [Github](https://github.com/cryptlex/lexfloatclient-android/tree/main/examples)
 
 The product id is the identifier of your product that is to be used in the code. The product id of the LexFloatServer and LexFloatClient must match.
@@ -25,7 +25,7 @@ The minimum supported Android API level is 23 and the minimum supported Android 
 
 ### Setting product id
 
-The first LexFloatClient API function you need to use in your code is `SetHostProductId()`. It sets the product id of the product you will be adding licensing to. 
+The first LexFloatClient API function you need to use in your code is `SetHostProductId()`. It sets the product id of the product you will be adding licensing to.&#x20;
 
 ```java
 LexFloatClient.SetHostProductId("PASTE_PRODUCT_ID");
@@ -55,7 +55,7 @@ The above code can be executed every time user starts the app or needs a new lic
 
 ### Renewing floating license
 
-License lease automatically renews itself in a background thread. When a license is renewed or it fails to renew, the callback is invoked \(from the background thread\).
+License lease automatically renews itself in a background thread. When a license is renewed or it fails to renew, the callback is invoked (from the background thread).
 
 ```java
 class CallbackEventListener implements LicenseCallbackEvent {
@@ -81,7 +81,7 @@ class CallbackEventListener implements LicenseCallbackEvent {
 
 ### Dropping floating license
 
-When your user is done using the app, the app should send a request to free the license, thereby making it available to other users. If the app doesn't, the license becomes \(zombie\) useless until lease time is over.
+When your user is done using the app, the app should send a request to free the license, thereby making it available to other users. If the app doesn't, the license becomes (zombie) useless until lease time is over.
 
 ```java
 try {
@@ -97,4 +97,3 @@ The above code should be executed every time user closes the app.
 ## Need more help
 
 In case you need more help with adding LexFloatClient to your app, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or can contact us through [email](mailto:support@cryptlex.com?Subject=Using%20LexFloatClient).
-

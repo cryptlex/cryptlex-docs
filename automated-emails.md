@@ -17,7 +17,7 @@ Automated emails can be used to automatically send emails to your customers when
 
 ## Creating an automated email
 
-You can easily create an automated email through the dashboard. Go to the [automated emails](https://app.cryptlex.com/automated-emails) section in the dashboard and click the add button. An automated email form with the following fields will popup:&#x20;
+You can easily create an automated email through the admin portal. Go to the `Developer -> Automated Emails` section in the admin portal and click the add button. An automated email form with the following fields will popup:&#x20;
 
 {% hint style="info" %}
 After creating the automated email, make sure you link it with the product.
@@ -131,20 +131,19 @@ For other supported filters please refer to the following:
 
 ## Sending test emails
 
-After you have created the automated email, click the automated email in the automated emails table. On the automated email page, you will find a **`Send Test Email`** button on the right top. You can use this to test your automated email by providing the sample data.
+After you have created the automated email, click the  **`Send Test Email`** option in the actions menu in the table. You can use this to test your automated email.
 
 ## Verifying email domain
 
-In order for Cryptlex to send emails on your behalf using your **From Email** address, you must verify that you own the domain. This is done by adding a Sending Domain in Cryptlex and verifying the  DNS records shown in the Sending Domain.
+For Cryptlex to send emails on your behalf using your **From Email** address, you must verify that you own the domain. This is done by adding a Sending Domain in Cryptlex and verifying the  DNS records shown in the Sending Domain.
 
-If you don’t add the domain verification records, Cryptlex sends emails using **noreply@cryptlex.com** email address. If you want to give your customers a white-label experience, hiding all Cryptlex branding, you must add and verify the sending domain.
+If you don’t add the domain verification records, Cryptlex sends emails using `noreply@cryptlex-mail.com` email address. If you want to give your customers a white-label experience, hiding all Cryptlex branding, you must add and verify the sending domain.
 
 ### **To verify that a domain belongs to you**
 
-1. On the automated emails page in the dashboard, click on the **`Sending Domains`** button.
-2. On the Sending Domains page click on the **`Add`** button to add your domain.
-3. Verify the domain by adding the required TXT and CNAME DNS entries.&#x20;
-4. After you have added the CNAME and TXT records, click the **`Verify`** button to confirm that all of your records are now valid.
+1. On the `Settings -> Customizations` page in the admin portal, click on the **`Add`** button in the `Email Sending Domain` section to add your domain.
+2. Verify the domain by adding the required TXT and CNAME DNS entries.&#x20;
+3. After you have added the CNAME and TXT records, click the **`Verify`** button to confirm that all of your records are now valid.
 
 After your domain is verified, leave the CNAME and TXT records in place.
 

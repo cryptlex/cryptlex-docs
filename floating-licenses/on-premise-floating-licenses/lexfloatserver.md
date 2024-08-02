@@ -12,9 +12,9 @@ LexFloatServer has [`VS2015 runtime`](https://www.microsoft.com/en-in/download/d
 
 LexFloatServer can be downloaded from the downloads page in the dashboard. Simply login to your Cryptlex account and download LexFloatServer binary for Windows, macOS or Linux:
 
-* ​[Download LexFloatServer for Windows](https://app.cryptlex.com/downloads)​
-* [​Download LexFloatServer for macOS](https://app.cryptlex.com/downloads)
-* ​[Download LexFloatServer for Linux](https://app.cryptlex.com/downloads)​
+* ​[Download LexFloatServer for Windows](https://app.cryptlex.com/developer/sdk-downloads)​
+* [​Download LexFloatServer for macOS](https://app.cryptlex.com/developer/sdk-downloads)
+* ​[Download LexFloatServer for Linux](https://app.cryptlex.com/developer/sdk-downloads)​
 
 ## Configuring the LexFloatServer
 
@@ -84,97 +84,94 @@ LexFloatServer exposes a few API endpoints which can also be used to activate th
 
 Send a POST request to the **/api/server/activate** API endpoint with a JSON request body containing the license key and optionally the activation metadata.
 
-{% swagger baseUrl="http://localhost:8090" path="/api/server/activate" method="post" summary="Activate server" %}
-{% swagger-description %}
+## Activate server
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `http://localhost:8090/api/server/activate`
 
-{% swagger-parameter in="body" name="licenseKey" type="string" %}
-License key to activate the server.
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="metadata" type="array" %}
-Activation metadata.
-{% endswagger-parameter %}
+| Name       | Type   | Description                         |
+| ---------- | ------ | ----------------------------------- |
+| licenseKey | string | License key to activate the server. |
+| metadata   | array  | Activation metadata.                |
 
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 ```javascript
 {
   "message": "Server license activation successful!",
   "code": "SERVER_LICENSE_ACTIVATED"
 }
 ```
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="400" description="" %}
+{% tab title="400 " %}
 ```javascript
 {
   "message": "Server license activation failed!",
   "code": "SERVER_INVALID_LICENSE_KEY"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 #### Offline activation
 
 Send a POST request to the **/api/server/offline-activation-request** API endpoint with a JSON request body containing the license key and optionally the activation metadata.
 
-{% swagger baseUrl="http://localhost:8090" path="/api/server/offline-activation-request" method="post" summary="Generate offline activation request" %}
-{% swagger-description %}
+## Generate offline activation request
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `http://localhost:8090/api/server/offline-activation-request`
 
-{% swagger-parameter in="body" name="licenseKey" type="string" %}
-License key to activate the server.
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="metadata" type="array" %}
-Activation metadata.
-{% endswagger-parameter %}
+| Name       | Type   | Description                         |
+| ---------- | ------ | ----------------------------------- |
+| licenseKey | string | License key to activate the server. |
+| metadata   | array  | Activation metadata.                |
 
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 ```javascript
 {
   "offlineRequest": "U7l69tNy8..."
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 After generating the offline response from the admin dashboard, send a POST request to the **/api/server/offline-activate** API endpoint with a JSON request body containing the license key and the offline response.
 
-{% swagger baseUrl="http://localhost:8090" path="/api/server/offline-activate" method="post" summary="Activate server offline" %}
-{% swagger-description %}
+## Activate server offline
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `http://localhost:8090/api/server/offline-activate`
 
-{% swagger-parameter in="body" name="licenseKey" type="string" %}
-License key to activate the server.
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="offlineResponse" type="string" %}
-Offline activation response.
-{% endswagger-parameter %}
+| Name            | Type   | Description                         |
+| --------------- | ------ | ----------------------------------- |
+| licenseKey      | string | License key to activate the server. |
+| offlineResponse | string | Offline activation response.        |
 
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 ```javascript
 {
   "message": "Server offline license activation successful!",
   "code": "SERVER_LICENSE_ACTIVATED"
 }
 ```
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="400" description="" %}
+{% tab title="400 " %}
 ```javascript
 {
   "message": "Server offline license activation failed!",
   "code": "SERVER_INVALID_LICENSE_KEY"
 
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ## Installing LexFloatServer on Windows
 
@@ -264,12 +261,14 @@ lexfloatserver -u --service-name com.mycompany.myfloatingserver
 
 LexFloatServer exposes a stats API endpoint that can be used to get the current stats of the server.
 
-{% swagger baseUrl="http://localhost:8090" path="/api/server/stats" method="get" summary="Gets the server stats" %}
-{% swagger-description %}
-Gets the current server stats
-{% endswagger-description %}
+## Gets the server stats
 
-{% swagger-response status="200" description="" %}
+<mark style="color:blue;">`GET`</mark> `http://localhost:8090/api/server/stats`
+
+Gets the current server stats
+
+{% tabs %}
+{% tab title="200 " %}
 ```javascript
 {
   "leaseDuration": 1800,
@@ -282,19 +281,21 @@ Gets the current server stats
   "serverSyncGracePeriodExpiryDate": 1580739313
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ## Getting server license info
 
 LexFloatServer exposes a license info API endpoint that can be used to get the information related to the license used to activate the LexFloatServer.
 
-{% swagger method="get" path="/api/server/license-info" baseUrl="http://localhost:8090" summary="Gets the license info" %}
-{% swagger-description %}
-Gets the license info of the license used to activate the LexFloatServer
-{% endswagger-description %}
+## Gets the license info
 
-{% swagger-response status="200: OK" description="" %}
+<mark style="color:blue;">`GET`</mark> `http://localhost:8090/api/server/license-info`
+
+Gets the license info of the license used to activate the LexFloatServer
+
+{% tabs %}
+{% tab title="200: OK " %}
 ```javascript
 {
   "key": "280D2B-B48A03-406BBC-2EEE4A-C20FB3-749630",
@@ -315,19 +316,21 @@ Gets the license info of the license used to activate the LexFloatServer
   "organization": null
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ## Getting the list of floating licenses
 
 LexFloatServer exposes a floating-licenses API endpoint that can be used to get the leased floating licenses.
 
-{% swagger baseUrl="http://localhost:8090" path="/api/floating-licenses" method="get" summary="Gets the list of floating licenses" %}
-{% swagger-description %}
-Gets the current server stats
-{% endswagger-description %}
+## Gets the list of floating licenses
 
-{% swagger-response status="200" description="" %}
+<mark style="color:blue;">`GET`</mark> `http://localhost:8090/api/floating-licenses`
+
+Gets the current server stats
+
+{% tabs %}
+{% tab title="200 " %}
 ```javascript
 [
   {
@@ -349,19 +352,21 @@ Gets the current server stats
   }
 ]
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ## Getting server license meter attributes
 
 LexFloatServer exposes a license meter attributes API endpoint that can be used to get the list of all the meter attributes of the license used to activate the LexFloatServer.
 
-{% swagger method="get" path="/api/server/license-meter-attributes" baseUrl="http://localhost:8090" summary="Gets the list of license meter attributes" %}
-{% swagger-description %}
-Gets the list of meter attributes of the license used to activate the LexFloatServer
-{% endswagger-description %}
+## Gets the list of license meter attributes
 
-{% swagger-response status="200: OK" description="" %}
+<mark style="color:blue;">`GET`</mark> `http://localhost:8090/api/server/license-meter-attributes`
+
+Gets the list of meter attributes of the license used to activate the LexFloatServer
+
+{% tabs %}
+{% tab title="200: OK " %}
 <pre class="language-javascript"><code class="lang-javascript">[
   {
     "id": "string",
@@ -372,5 +377,5 @@ Gets the list of meter attributes of the license used to activate the LexFloatSe
   }
 ]
 </code></pre>
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}

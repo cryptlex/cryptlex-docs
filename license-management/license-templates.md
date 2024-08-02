@@ -1,16 +1,16 @@
-# License Policies
+# License Templates
 
-A license policy acts as a template (blueprint) for the licenses you create for your customers. Before you start creating licenses, you need to create a license policy that would contain the default values for the fields of any license.
+A license template acts as a blueprint for the licenses you create for your customers. Before you start creating licenses, you need to create a license template that would contain the default values for the fields of any license.
 
-While creating a license from any license policy, you can override all the properties of the license policy. License policy provides you with default values for all the properties of a license, so you don't have to provide them every time you create a new license.
+While creating a license from any license template, you can override all the properties of the license template. The license template provides you with default values for all the properties of a license, so you don't have to provide them every time you create a new license.
 
-## Creating a license policy
+## Creating a license template
 
-You can easily create a license policy through the dashboard. Go to the [license policies](https://app.cryptlex.com/license-policies) section in the dashboard and click the add the button. A license policy form with the following fields will popup:&#x20;
+You can easily create a license template through the admin portal. Go to the license templates section in the admin portals and click the add the button. A license template form with the following fields will popup:&#x20;
 
 ### Name
 
-The name of the license policy.
+The name of the license template.
 
 ### Validity
 
@@ -130,11 +130,11 @@ Sometimes few machines misbehave by reporting major changes in hardware fingerpr
 
 ### Required metadata keys
 
-List of required metadata keys that a license inheriting the policy must-have.
+List of required metadata keys that a license using the license template must have.
 
 ### Required meter attributes
 
-List of required meter attributes which a license inheriting the policy must-have.
+List of required meter attributes which a license using the license template must have.
 
 ### Expiring soon event offset
 

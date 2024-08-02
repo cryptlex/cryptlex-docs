@@ -29,36 +29,23 @@ In order to detect whether an update is available for your product, you can eith
 
 The following sample request checks whether a new release is available by comparing it with the provided release version.
 
-{% swagger baseUrl="https://api.cryptlex.com" path="/v3/releases/update" method="get" summary="Check for an update" %}
-{% swagger-description %}
+## Check for an update
 
-{% endswagger-description %}
+<mark style="color:blue;">`GET`</mark> `https://api.cryptlex.com/v3/releases/update`
 
-{% swagger-parameter in="query" name="accountId" required="true" type="string" %}
-Unique identifier for the account
-{% endswagger-parameter %}
+#### Query Parameters
 
-{% swagger-parameter in="query" name="productId" type="string" required="true" %}
-Unique identifier for the product
-{% endswagger-parameter %}
+| Name                                        | Type   | Description                            |
+| ------------------------------------------- | ------ | -------------------------------------- |
+| productId<mark style="color:red;">\*</mark> | string | Unique identifier for the product      |
+| platform<mark style="color:red;">\*</mark>  | string | Release platform                       |
+| channel                                     | string | Release channel (defaults to "stable") |
+| version<mark style="color:red;">\*</mark>   | string | Current release version                |
+| key<mark style="color:red;">\*</mark>       | string | License key                            |
+| accountId<mark style="color:red;">\*</mark> | string | Unique identifier for the account      |
 
-{% swagger-parameter in="query" name="platform" type="string" required="true" %}
-Release platform
-{% endswagger-parameter %}
-
-{% swagger-parameter in="query" name="channel" type="string" required="false" %}
-Release channel (defaults to "stable")
-{% endswagger-parameter %}
-
-{% swagger-parameter in="query" name="version" type="string" required="true" %}
-Current release version
-{% endswagger-parameter %}
-
-{% swagger-parameter in="query" name="key" type="string" required="true" %}
-License key
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 ```javascript
 {
   "name": "MyApp v2.2",
@@ -95,8 +82,8 @@ License key
   "updatedAt": "2018-06-29T08:55:03.515414"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 If an update is available it returns a **`200`** success response containing the download URL, else it will return a **`204`** empty response.
 
@@ -178,32 +165,22 @@ In order to download the latest release of your product, you need to invoke the 
 
 The following sample request fetches the latest release details.
 
-{% swagger baseUrl="https://api.cryptlex.com" path="/v3/releases/latest" method="get" summary="Download latest release" %}
-{% swagger-description %}
+## Download latest release
 
-{% endswagger-description %}
+<mark style="color:blue;">`GET`</mark> `https://api.cryptlex.com/v3/releases/latest`
 
-{% swagger-parameter in="query" name="accountId" type="string" %}
-Unique identifier for the account
-{% endswagger-parameter %}
+#### Query Parameters
 
-{% swagger-parameter in="query" name="productId" type="string" required="true" %}
-Unique identifier for the product
-{% endswagger-parameter %}
+| Name                                        | Type   | Description                            |
+| ------------------------------------------- | ------ | -------------------------------------- |
+| productId<mark style="color:red;">\*</mark> | string | Unique identifier for the product      |
+| platform<mark style="color:red;">\*</mark>  | string | Release platform                       |
+| channel                                     | string | Release channel (defaults to "stable") |
+| key<mark style="color:red;">\*</mark>       | string | License key                            |
+| accountId                                   | string | Unique identifier for the account      |
 
-{% swagger-parameter in="query" name="platform" type="string" required="true" %}
-Release platform
-{% endswagger-parameter %}
-
-{% swagger-parameter in="query" name="channel" type="string" required="false" %}
-Release channel (defaults to "stable")
-{% endswagger-parameter %}
-
-{% swagger-parameter in="query" name="key" type="string" required="true" %}
-License key
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 ```javascript
 {
   "name": "MyApp v2.2",
@@ -240,7 +217,7 @@ License key
   "updatedAt": "2018-06-29T08:55:03.515414"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 It returns a **`200`** success response containing the download URLs of the latest release.

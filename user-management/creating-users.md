@@ -1,39 +1,33 @@
 # Creating Users
 
-You will usually create users with **admin roles** through the dashboard but creating users with **user or organization-admin** roles for your licenses will be most of the time done using the Web API, when your customer makes a purchase.
+You will usually create users with **admin roles** through the admin portal but creating users with **user or organization-admin** roles for your licenses will be most of the time done using the Web API, when your customer makes a purchase.
 
 Following is a sample request which creates a user with a `user` role:
 
-{% swagger baseUrl="https://api.cryptlex.com" path="/v3/users" method="post" summary="Creating user" %}
-{% swagger-description %}
+## Creating user
+
+<mark style="color:green;">`POST`</mark> `https://api.cryptlex.com/v3/users`
+
 Creates a new user.
-{% endswagger-description %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer access token.
-{% endswagger-parameter %}
+#### Headers
 
-{% swagger-parameter in="body" name="firstName" type="string" required="true" %}
-First name of the user.
-{% endswagger-parameter %}
+| Name                                            | Type   | Description          |
+| ----------------------------------------------- | ------ | -------------------- |
+| Authorization<mark style="color:red;">\*</mark> | string | Bearer access token. |
 
-{% swagger-parameter in="body" name="lastName" type="string" required="true" %}
-Last name of the user.
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="email" type="string" required="true" %}
-Email address of the user.
-{% endswagger-parameter %}
+| Name                                        | Type   | Description                                       |
+| ------------------------------------------- | ------ | ------------------------------------------------- |
+| firstName<mark style="color:red;">\*</mark> | string | First name of the user.                           |
+| lastName<mark style="color:red;">\*</mark>  | string | Last name of the user.                            |
+| email<mark style="color:red;">\*</mark>     | string | Email address of the user.                        |
+| password<mark style="color:red;">\*</mark>  | string | Password of the user.                             |
+| role<mark style="color:red;">\*</mark>      | string | Role of the user - 'user' or 'organization-admin' |
 
-{% swagger-parameter in="body" name="password" type="string" required="true" %}
-Password of the user.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="role" type="string" required="true" %}
-Role of the user - 'user' or 'organization-admin'
-{% endswagger-parameter %}
-
-{% swagger-response status="201" description="" %}
+{% tabs %}
+{% tab title="201 " %}
 ```
 {
   "name": "John Doe",
@@ -46,7 +40,7 @@ Role of the user - 'user' or 'organization-admin'
   "updatedAt": "2018-05-01T07:53:56.0095495Z"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ##
