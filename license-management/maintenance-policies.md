@@ -68,7 +68,7 @@ If the license maintenance policy expiration strategy is set to `immediate`, the
 
 If the license maintenance policy expiration strategy is set to `delayed`, the `maintenanceExpiresAt` property will be `null` till the license is activated, as the license maintenance will start expiring after it is used.
 
-To renew the license maintenance you need to invoke the [license maintenance renew endpoint](https://api.cryptlex.com/v3/docs#tag/Licenses/operation/post/v3/licenses/%7Bid%7D/maintenance/renew) or renew it through the license page on the Dashboard. It extends the license maintenance expiry by its maintenance policy's validity.
+To renew the license maintenance you need to invoke the [license maintenance renew endpoint](https://api.cryptlex.com/v3/docs#tag/Licenses/operation/RenewMaintenanceLicense) or renew it through the license page on the Dashboard. It extends the license maintenance expiry by its maintenance policy's validity.
 
 ## Possible use cases
 

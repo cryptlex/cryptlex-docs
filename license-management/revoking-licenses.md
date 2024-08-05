@@ -6,26 +6,32 @@ Approving the license later will require the user to reactivate the license.
 
 ## Revoking a license
 
-To revoke a license you need to hit the [license update endpoint](https://api.cryptlex.com/v3/docs#operation/patch/v3/licenses/{id}) and set `revoked` property to `true`.
+To revoke a license you need to hit the [license update endpoint](https://api.cryptlex.com/v3/docs#tag/Licenses/operation/UpdateLicense) and set `revoked` property to `true`.
 
-{% swagger baseUrl="https://api.cryptlex.com" path="/v3/licenses/:id" method="patch" summary="Revoking a license" %}
-{% swagger-description %}
+## Revoking a license
 
-{% endswagger-description %}
+<mark style="color:purple;">`PATCH`</mark> `https://api.cryptlex.com/v3/licenses/:id`
 
-{% swagger-parameter in="path" name="id" type="string" %}
-Unique identifier for the license.
-{% endswagger-parameter %}
+#### Path Parameters
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer access token.
-{% endswagger-parameter %}
+| Name | Type   | Description                        |
+| ---- | ------ | ---------------------------------- |
+| id   | string | Unique identifier for the license. |
 
-{% swagger-parameter in="body" name="revoked" type="boolean" %}
-Set true to revoke the license.
-{% endswagger-parameter %}
+#### Headers
 
-{% swagger-response status="200" description="" %}
+| Name          | Type   | Description          |
+| ------------- | ------ | -------------------- |
+| Authorization | string | Bearer access token. |
+
+#### Request Body
+
+| Name    | Type    | Description                     |
+| ------- | ------- | ------------------------------- |
+| revoked | boolean | Set true to revoke the license. |
+
+{% tabs %}
+{% tab title="200 " %}
 ```javascript
 {
   "key": "0A2035-E8A2A3-4D31B7-8FF9C6-81A6CA-539E54",
@@ -59,6 +65,6 @@ Set true to revoke the license.
   "updatedAt": "2018-05-06T08:49:17.9361158Z"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 

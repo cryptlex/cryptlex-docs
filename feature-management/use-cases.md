@@ -19,7 +19,7 @@ The creation of different `Product Versions` allows you to test new functionalit
 
 ## **Changes without deployment**
 
-You can easily change the values of a Feature Flag using our dashboard and, our API. This is essentially useful when you want to change values that are causing errors in your application. Example: Your analytics plugin was updated with the new release of your application, however, this new plugin seems to be causing unexpected issues on your user's devices. If you have associated the usage of analytics with a Feature Flag, simply disabling the flag will stop your application from malfunctioning.
+You can easily change the values of a Feature Flag using our admin portal or Web API. This is essentially useful when you want to change values that are causing errors in your application. Example: Your analytics plugin was updated with the new release of your application, however, this new plugin seems to be causing unexpected issues on your user's devices. If you have associated the usage of analytics with a Feature Flag, simply disabling the flag will stop your application from malfunctioning.
 
 ## **Value-based changes**
 

@@ -1,12 +1,12 @@
 # License Templates
 
-A license template acts as a blueprint for the licenses you create for your customers. Before you start creating licenses, you need to create a license template that would contain the default values for the fields of any license.
+A license template acts as a blueprint for the licenses you create for your customers. Before you start creating licenses, you need to create a license template that contains the default values for the license fields.
 
 While creating a license from any license template, you can override all the properties of the license template. The license template provides you with default values for all the properties of a license, so you don't have to provide them every time you create a new license.
 
 ## Creating a license template
 
-You can easily create a license template through the admin portal. Go to the license templates section in the admin portals and click the add the button. A license template form with the following fields will popup:&#x20;
+You can easily create a license template through the admin portal. Go to the license templates section in the admin portal and click the create button. A license template form with the following fields will popup:&#x20;
 
 ### Name
 

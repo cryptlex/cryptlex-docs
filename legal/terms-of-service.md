@@ -68,7 +68,7 @@ Cryptlex shall not be liable to you or to any third party for any modification, 
 
 ## Terminating our Services
 
-You can stop using our Services by cancelling your subscription at any time by visiting the account section of your Cryptlex dashboard, although we’ll be sorry to see you go. Cryptlex may also stop providing Services to you, or add or create new limits to our Services at any time.
+You can stop using our Services by cancelling your subscription at any time by visiting the account section of your Cryptlex admin portal, although we’ll be sorry to see you go. Cryptlex may also stop providing Services to you, or add or create new limits to our Services at any time.
 
 If you cancel the Service before the end of your current paid-up month or year, your cancellation will take effect immediately and you will not be charged again.
 

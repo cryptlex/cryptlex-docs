@@ -2,26 +2,32 @@
 
 ## Extending license expiry
 
-Renewing a license extends the license expiry by it's validity. In case you want to extend the license expiry by some other duration you need to hit the [license extend endpoint](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses/{id}/extend). It extends the license expiry by provided extension length.
+Renewing a license extends the license expiry by it's validity. In case you want to extend the license expiry by some other duration you need to hit the [license extend endpoint](https://api.cryptlex.com/v3/docs#tag/Licenses/operation/ExtendLicense). It extends the license expiry by provided extension length.
 
-{% swagger baseUrl="https://api.cryptlex.com" path="/v3/licenses/:id/extend" method="post" summary="Extending license" %}
-{% swagger-description %}
+## Extending license
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://api.cryptlex.com/v3/licenses/:id/extend`
 
-{% swagger-parameter in="path" name="id" type="string" %}
-Unique identifier for the license.
-{% endswagger-parameter %}
+#### Path Parameters
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer access token.
-{% endswagger-parameter %}
+| Name | Type   | Description                        |
+| ---- | ------ | ---------------------------------- |
+| id   | string | Unique identifier for the license. |
 
-{% swagger-parameter in="body" name="extensionLength" type="string" %}
-License extension duration to extend the license expiry.
-{% endswagger-parameter %}
+#### Headers
 
-{% swagger-response status="200" description="" %}
+| Name          | Type   | Description          |
+| ------------- | ------ | -------------------- |
+| Authorization | string | Bearer access token. |
+
+#### Request Body
+
+| Name            | Type   | Description                                              |
+| --------------- | ------ | -------------------------------------------------------- |
+| extensionLength | string | License extension duration to extend the license expiry. |
+
+{% tabs %}
+{% tab title="200 " %}
 ```javascript
 {
   "key": "0A2035-E8A2A3-4D31B7-8FF9C6-81A6CA-539E54",
@@ -55,6 +61,6 @@ License extension duration to extend the license expiry.
   "updatedAt": "2018-05-06T08:49:17.9361158Z"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 

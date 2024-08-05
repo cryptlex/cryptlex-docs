@@ -44,8 +44,8 @@ Personal access tokens can be created with one or more scopes that allow various
 | `invoice:read`              | Read-only access to all the invoices.                                                       |
 | `license:read`              | Read-only access to all the licenses.                                                       |
 | `license:write`             | Create, update and delete licenses.                                                         |
-| `licensePolicy:read`        | Read-only access to all the license policies.                                               |
-| `licensePolicy:write`       | Create, update and delete license policies.                                                 |
+| `licenseTemplate:read`      | Read-only access to all the license templates.                                              |
+| `licenseTemaplate:write`    | Create, update and delete license templates.                                                |
 | `paymentMethod:read`        | Read-only access to all the credit cards.                                                   |
 | `paymentMethod:write`       | Create, update and delete credit cards.                                                     |
 | `personalAccessToken:write` | Create, revoke and delete personal access tokens.                                           |

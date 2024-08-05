@@ -34,7 +34,7 @@ In order to require licenses to have specific metadata properties, set them in t
 
 ### Enforcing schema for metadata fields
 
-You can enforce the schema for metadata fields in the license template too, so you don't have to manually create the fields every time you create a license. Just provide the field names as comma-separated strings e.g. `order_id`_,_ `customer_id` , `feature1`, `feature2` etc. in the [required metadata keys](https://docs.cryptlex.com/license-management/license-policies#required-metadata-keys) property of the license template.
+You can enforce the schema for metadata fields in the license template too, so you don't have to manually create the fields every time you create a license. Just provide the field names as comma-separated strings e.g. `order_id`_,_ `customer_id` , `feature1`, `feature2` etc. in the required metadata keys property of the license template.
 
 ## User metadata
 
