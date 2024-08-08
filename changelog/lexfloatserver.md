@@ -2,24 +2,20 @@
 
 ## 4.13.0 (2024-08-05)
 
-### Added
+### **Added**
 
-* `maxOfflineLeaseDuration` config file param to set the maximum duration, in seconds, that an offline license lease can last.
+* `maxOfflineLeaseDuration` config file param to set the maximum duration in seconds that an offline license lease can last.
 * `allowedOfflineFloatingClients` config file param to set the maximum number of clients that can simultaneously hold an offline license lease.
 * `/api/server/config` public endpoint to get the value of the properties set in the `config.yml`.
 * `maxOfflineLeaseDuration`, `allowedOfflineFloatingClients`, `totalOfflineFloatingClients` properties added to `/api/server/stats` endpoint.
-* LexFloatServer now supports listing the trusted proxies via `config.yml` file.
+* LexFloatServer now supports listing the trusted proxies via the `config.yml` file.
 
-### Updated
+### **Updated**
 
 * Logging of floating licenses that were not gracefully dropped (zombie licenses).
 * LexActivator version to v3.29.0.
 * `/api/server/stats` endpoint’s `totalLicense` property has been renamed to `allowedFloatingClient`.
 * `/api/server/stats` endpoint’s `availableLicense` property has been renamed to `totalLicenses`.
-
-### Fixed
-
-* Minor bug fixes.
 
 ## 4.12.0 (2024-05-14)
 

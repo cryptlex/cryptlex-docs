@@ -2,13 +2,13 @@
 
 ## 4.9.0 (2024-08-05)
 
-### Added
+### **Added**
 
 * `GetFloatingClientMetadata()` , `RequestOfflineFloatingLicense()`, `GetFloatingLicenseMode()`, `GetFloatingClientLeaseExpiryDate()`, `GetHostConfig()`, `SetPermissionFlag()`API functions.
 
-### Updated
+### **Updated**
 
-* `GetHostLicenseMeterAttribute()` function - Updated the data type of `allowedUses` to `int64_t`, `totalUses` to `uint64_t` and `grossUses` to `uint64_t`.
+* Updated the data type of `allowedUses` to `int64_t`, `totalUses` to `uint64_t` and `grossUses` to `uint64_t` of `GetHostLicenseMeterAttribute()` function.
 
 ## 4.8.1 (2024-05-15)
 

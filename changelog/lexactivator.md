@@ -1,17 +1,15 @@
 # LexActivator
 
-## 3.29.0 (2024-08-05)
+## **3.29.0 (2024-08-05)**
 
-### Updated
+### **Updated**
 
-* Minimum supported macOS version updated to 10.13.
-* `GetLicenseMeterAttribute()` function - Updated the data type of `allowedUses` to `int64_t`, `totalUses` to `uint64_t` and `grossUses` to `uint64_t`.
-* `SetActivationLeaseDuration()` function - Updated the argument type from `uint32_t` to `int64_t`.
-* `GetLicenseAllowedActivations()` function - Updated the argument type from `uint32_t` to `int64_t`.
-* `GetLicenseAllowedDeactivations()` function - Updated the argument type from `uint32_t` to `int64_t`.
-* `UserLicense` Struct - Updated the data types of `allowedActivations` and `allowedDeactivations` from `int` to `int64_t`.
-
-
+* The minimum supported macOS version has been updated to 10.13.
+* Updated the data type of `allowedUses` to `int64_t`, `totalUses` to `uint64_t` and `grossUses` to `uint64_t` of `GetLicenseMeterAttribute()` function.
+* Updated the data type of argument from `uint32_t` to `int64_t` of `SetActivationLeaseDuration()` function.
+* Updated the argument type from `uint32_t` to `int64_t` of `GetLicenseAllowedActivations()` function .
+* Updated the argument type from `uint32_t` to `int64_t` of `GetLicenseAllowedDeactivations()` function.
+* Updated the data types of `allowedActivations` and `allowedDeactivations` from `int` to `int64_t` of `UserLicense` struct.
 
 ## 3.28.0 (2024-04-25)
 
