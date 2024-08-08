@@ -28,6 +28,10 @@ This would copy the LexActivator.dll to your project directory.
 
 LexActivator has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
 
+{% hint style="info" %}
+This package relies on `cgo` to interface with a C library. As a result, `cgo` must be enabled when building and using this package. Disabling `cgo` (e.g., by setting `CGO_ENABLED=0`) will result in compilation errors.
+{% endhint %}
+
 ### Setting product.dat file and product Id <a href="#setting-product.dat-file-and-product-id" id="setting-product.dat-file-and-product-id"></a>
 
 The first thing you need to do is either embed the Product.dat file in your app using `SetProductData()` function or set the absolute path of the file using `SetProductFile()` function.

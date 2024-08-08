@@ -1,5 +1,15 @@
 # LexFloatClient
 
+## 4.9.0 (2024-08-05)
+
+### Added
+
+* `GetFloatingClientMetadata()` , `RequestOfflineFloatingLicense()`, `GetFloatingLicenseMode()`, `GetFloatingClientLeaseExpiryDate()`, `GetHostConfig()`, `SetPermissionFlag()`API functions.
+
+### Updated
+
+* `GetHostLicenseMeterAttribute()` function - Updated the data type of `allowedUses` to `int64_t`, `totalUses` to `uint64_t` and `grossUses` to `uint64_t`.
+
 ## 4.8.1 (2024-05-15)
 
 ### Updated

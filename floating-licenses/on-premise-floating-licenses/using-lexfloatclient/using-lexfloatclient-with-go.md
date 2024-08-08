@@ -27,6 +27,10 @@ This would copy the LexFloatClient.dll to your project directory.
 
 LexFloatClient has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
 
+{% hint style="info" %}
+This package relies on `cgo` to interface with a C library. As a result, `cgo` must be enabled when building and using this package. Disabling `cgo` (e.g., by setting `CGO_ENABLED=0`) will result in compilation errors.
+{% endhint %}
+
 ### Setting product id
 
 The first LexFloatClient API function you need to use in your code is `SetHostProductId()`. It sets the product id of the product you will be adding licensing to.&#x20;
