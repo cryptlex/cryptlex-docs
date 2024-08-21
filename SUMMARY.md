@@ -53,6 +53,7 @@
   * [Overview](floating-licenses/overview.md)
   * [Hosted Floating License Server](floating-licenses/hosted-floating-license-server.md)
   * [On-Premise Floating Licenses](floating-licenses/on-premise-floating-licenses/README.md)
+    * [Offline Floating License](floating-licenses/on-premise-floating-licenses/offline-floating-license.md)
     * [LexFloatServer](floating-licenses/on-premise-floating-licenses/lexfloatserver.md)
     * [Using LexFloatClient](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/README.md)
       * [Using LexFloatClient with C, C++ & Objective C](floating-licenses/on-premise-floating-licenses/using-lexfloatclient/using-lexfloatclient-with-c-c++-and-objective-c.md)
