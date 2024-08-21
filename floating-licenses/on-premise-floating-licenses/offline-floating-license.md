@@ -2,7 +2,7 @@
 
 ## Overview
 
-Offline floating licenses offer flexibility for users to continue accessing licensed functionality even when they are not connected to the LexFloatServer. This feature allows LexFloatServer to lease licenses that can be used outside the company network for a specified duration.
+Offline floating licenses (also known as borrowing a floating license) offer flexibility for users to continue accessing licensed functionality even when they are not connected to the LexFloatServer. This feature allows LexFloatServer to lease licenses that can be used outside the company network for a specified duration.
 
 LexFloatServer administrators can set the maximum lease duration using the `maxOfflineLeaseDuration` parameter and control the number of clients that can hold an offline license lease simultaneously with the `allowedOfflineFloatingClients` parameter in the `config.yml`.
 
