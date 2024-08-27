@@ -22,13 +22,21 @@ The current uses for the attribute. Its value can be incremented, decremented, o
 
 This property keeps track of the lifetime usage of the meter attribute.
 
-#### Visible
-
-If set to true then this meter attribute will be visible to users in the customer portal.
-
 #### Floating
 
 If set to true then the uses consumed by the activation will auto-reset if the activation is deleted.
+
+#### View Permissions
+
+Admins can control the visibility of meter attributes for different users by configuring the meter attribute permissions as follows:
+
+• **Activation**: Meter attributes will be accessible to developers in the LexActivator SDK (and via Web API through the `POST v3/activations` endpoint).
+
+• **User**: Meter attributes will be visible to users within the customer portal (and via Web API through the `v3/me/licenses` endpoint).
+
+• **Organization**: Meter attributes will be visible to the organization-admins in the customer portal (and via Web API through the `v3/organizations/:id/licenses` endpoint).
+
+• **Reseller**: Meter attributes will be visible to reseller-admins in the reseller portal (and via Web API through the `v3/resellers/:id/licenses` endpoint).
 
 ## Enforcing meter attributes schema
 

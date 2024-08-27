@@ -12,9 +12,17 @@ Name of the metadata key.
 
 Value of the metadata key.
 
-#### Visible
+#### View Permissions
 
-Determines whether the metadata key/value is accessible in the app after trial or license activation.
+Admins can control the visibility of metadata by configuring the metadata permissions as follows:
+
+• **Activation**: Metadata will be accessible to developers in the LexActivator SDK (and via Web API through the `POST v3/activations` endpoint).
+
+• **User**: Metadata will be visible to users within the customer portal (and via Web API through the `GET v3/me/licenses` endpoint).
+
+• **Organization**: Metadata will be visible to the organization-admins in the customer portal (and via Web API through the `GET v3/organizations/:id/licenses` endpoint).
+
+• **Reseller**: Metadata will be visible to reseller-admins in the reseller portal (and via Web API through the `GET v3/resellers/:id/licenses` endpoint).
 
 ## Product metadata
 
