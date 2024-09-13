@@ -192,8 +192,6 @@ docker-compose logs -t -f
 First login to your Linux server machine where Cryptlex is deployed and go to the directory where the `cryptlex-on-premise` repository was initially cloned. Then execute the following commands:
 
 ```bash
-# get the latest changes
-git pull
 # execute the update script
 ./update.sh
 # execute the following command to check the logs for any error
