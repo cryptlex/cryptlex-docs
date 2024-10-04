@@ -8,7 +8,7 @@ description: >-
 
 ## Operating System
 
-Cryptlex On-premise is deployed using Docker. Hence it can be deployed on any Linux, Mac, and Windows-based servers that can run current versions of Docker \(at least version 18.06.0-ce\). 
+Cryptlex On-premise is deployed using Docker. Hence it can be deployed on any Linux, Mac, and Windows-based servers that can run current versions of Docker (at least version 20.10.22 or higher).&#x20;
 
 ## Storage and Memory
 
@@ -24,11 +24,11 @@ Cryptlex requires at least a dual-core CPU, and that will work for low volume in
 
 ### Docker
 
-Cryptlex requires at least version 18.06.0-ce of Docker. 
+Cryptlex requires at least version 18.06.0-ce of Docker.&#x20;
 
-### Database <a id="database"></a>
+### Database <a href="#database" id="database"></a>
 
-Cryptlex requires PostgreSQL 10.x \(or higher\) for storing all the data.
+Cryptlex requires PostgreSQL 10.x (or higher) for storing all the data.
 
 ### Cache
 
@@ -37,6 +37,4 @@ Cryptlex uses Redis for storing the cache data. If no Redis database is provided
 ### Filestore
 
 It uses [Minio](https://www.minio.io/), which is an Amazon S3 compatible object storage server, for storing release files. In case you don't want to use the Cryptlex [release management](https://docs.cryptlex.com/release-management) API, this is not required.
-
-
 

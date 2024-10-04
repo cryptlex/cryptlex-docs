@@ -25,11 +25,15 @@ All of the Cryptlex Docker images are available on [Docker Hub](https://hub.dock
 
 #### Step 1: Create custom A or CNAME records
 
-You will need to create three A or CNAME records for the server machine where you will be deploying Cryptlex. For this tutorial we will choose the following three sub-domains:
+You will need to create five A or CNAME records for the server machine where you will be deploying Cryptlex. For this tutorial we will choose the following five sub-domains:
 
 `cryptlex-api.mycompany.com` for the Web API Server
 
-`cryptlex-app.mycompany.com` for the Web Dashboard
+`cryptlex-admin-portal.mycompany.com` for the Admin Portal
+
+`cryptlex-customer-portal.mycompany.com` for the Customer Portal
+
+`cryptlex-reseller-portal.mycompany.com` for the Reseller Portal
 
 `cryptlex-releases.mycompany.com` for the Release Server
 
@@ -63,19 +67,21 @@ The `cryptlex-on-premise` folder contains the following four files with environm
 
 The `.env` file contains the following environment variables which you may need to update:
 
-| Environment Variables   | Description                                                                                                            |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `POSTGRES_DB`           | Name of the database.                                                                                                  |
-| `POSTGRES_USER`         | Username of the database user.                                                                                         |
-| `POSTGRES_PASSWORD`     | The password of the database user.                                                                                     |
-| `EMAIL`                 | Email required for SSL certificate notifications.                                                                      |
-| `WEB_API_DOMAIN`        | The domain of the web API server. In this case: `cryptlex-api.mycompany.com`                                           |
-| `DASHBOARD_DOMAIN`      | The domain of the web dashboard. In this case: `cryptlex-app.mycompany.com`                                            |
-| `RELEASE_SERVER_DOMAIN` | The domain of the release server. In this case: `cryptlex-releases.mycompany.com`                                      |
-| `FILE_STORE_ACCESS_KEY` | Access key for the file store.                                                                                         |
-| `FILE_STORE_SECRET_KEY` | The secret key for the file store.                                                                                     |
-| `GOOGLE_CLIENT_ID`      | This is needed in case you want to enable Google SSO.                                                                  |
-| `TRAEFIK_BASIC_AUTH`    | [Traefik](https://traefik.io/) is the reverse proxy. You can set the basic auth credentials for the Traefik dashboard. |
+| Environment Variables    | Description                                                                                                            |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| `POSTGRES_DB`            | Name of the database.                                                                                                  |
+| `POSTGRES_USER`          | Username of the database user.                                                                                         |
+| `POSTGRES_PASSWORD`      | The password of the database user.                                                                                     |
+| `EMAIL`                  | Email required for SSL certificate notifications.                                                                      |
+| `WEB_API_DOMAIN`         | The domain of the web API server. In this case: `cryptlex-api.mycompany.com`                                           |
+| `ADMIN_PORTAL_DOMAIN`    | The domain of the Admin Portal. In this case: `cryptlex-admin-portal.mycompany.com`                                    |
+| `RESELLER_PORTAL_DOMAIN` | The domain of the Reseller Portal. In this case: `cryptlex-reseller-portal.mycompany.com`                              |
+| `CUSTOMER_PORTAL_DOMAIN` | The domain of the Customer Portal. In this case: `cryptlex-customer-portal.mycompany.com`                              |
+| `RELEASE_SERVER_DOMAIN`  | The domain of the release server. In this case: `cryptlex-releases.mycompany.com`                                      |
+| `FILE_STORE_ACCESS_KEY`  | Access key for the file store.                                                                                         |
+| `FILE_STORE_SECRET_KEY`  | The secret key for the file store.                                                                                     |
+| `GOOGLE_CLIENT_ID`       | This is needed in case you want to enable Google SSO.                                                                  |
+| `TRAEFIK_BASIC_AUTH`     | [Traefik](https://traefik.io/) is the reverse proxy. You can set the basic auth credentials for the Traefik dashboard. |
 
 **Update `webapi.env` file**
 
@@ -87,18 +93,6 @@ The `webapi.env` file contains the following environment variables which you **m
 | `APPLICATION_LICENSE_KEY` | The license key which you get after you purchase the license for the Cryptlex On-Premise server. |
 
 Other than the above three you need to set environment variables for the email provider (Mailgun, SendGrid, or SMTP), and additionally you can configure other monitoring and error reporting services.
-
-**Update `dashboard.env` file**
-
-The `dashboard.env` file contains the following environment variables which you may need to update:
-
-| Environment Variables  | Description                                                  |
-| ---------------------- | ------------------------------------------------------------ |
-| `COMPANY_NAME`         | This shows up in the browser title.                          |
-| `COMPANY_WEBSITE`      | Your company website.                                        |
-| `COMPANY_LOGO_URL`     | Logo to be displayed. It must have a transparent background. |
-| `COMPANY_FAVICON_URL`  | Favicon URL.                                                 |
-| `GOOGLE_ANALYTICS_KEY` | Google analytics key.                                        |
 
 **Update `release-server.env` file**
 
@@ -127,7 +121,7 @@ The [Traefik](https://traefik.io/) reverse proxy server configured in the `docke
 
 #### Step 6: Signup for the Cryptlex account
 
-Next, you need to open the dashboard in the browser and create your Cryptlex account, which can be done at the following URL: [**https://cryptlex-app.mycompany.com/auth/signup**](https://cryptlex-app.mycompany.com/auth/signup)**.**
+Next, you need to open the dashboard in the browser and create your Cryptlex account, which can be done at the following URL: **https://cryptlex-admin-portal.mycompany.com/auth/signup.**
 
 {% hint style="info" %}
 Only one Cryptlex account can be created in the on-premise version.
@@ -135,7 +129,7 @@ Only one Cryptlex account can be created in the on-premise version.
 
 ### Docker Compose file details
 
-In the [docker-compose.yml](https://github.com/cryptlex/cryptlex-on-premise/blob/master/docker-compose.yml) file you will find the `database`, `filestore`, `cache`, `geoip`, `web-api`, `dashboard`, `release-server`, and `reverseproxy` services. Read below to better understand how each service is configured.
+In the [docker-compose.yml](https://github.com/cryptlex/cryptlex-on-premise/blob/master/docker-compose.yml) file you will find the `database`, `filestore`, `cache`, `geoip`, `web-api`, `admin-portal`, `reseller-portal`, `customer-portal`, `release-server`, and `reverseproxy` services. Read below to better understand how each service is configured.
 
 #### Database service <a href="#database-service" id="database-service"></a>
 
@@ -143,11 +137,11 @@ It contains the Postgres database server, which is used to store all the Cryptle
 
 #### Cache service <a href="#search-service" id="search-service"></a>
 
-It uses [Redis](https://redis.io/) for storing the cache data. If no Redis database is provided it defaults to memory.
+It uses [Redis](https://redis.io/) to store the cache data. If no Redis database is provided it defaults to memory.
 
 #### Filestore service  <a href="#search-service" id="search-service"></a>
 
-It uses [Minio](https://www.minio.io/), which is an Amazon S3 compatible object storage server, for storing release files. In case you don't want to use Cryptlex [release management](https://docs.cryptlex.com/release-management) API, this service can be commented out in the `docker-compose.yml` file.
+It uses [Minio](https://www.minio.io/), an AWS S3 compatible object storage server, to store release files. In case you don't want to use Cryptlex [release management](https://docs.cryptlex.com/release-management) API, this service can be commented out in the `docker-compose.yml` file.
 
 #### GeoIP service <a href="#search-service" id="search-service"></a>
 
@@ -157,9 +151,17 @@ This service is used to get location information from the IP address of the user
 
 It is the core service that runs the Cryptlex web API server.
 
-#### Dashboard service
+#### Admin Portal service
 
-It hosts the Cryptlex web dashboard. It is a single page progressive web application.
+This service runs the Cryptlex admin portal.
+
+#### Reseller Portal service
+
+This service runs the Cryptlex reseller portal.
+
+#### Customer Portal service
+
+This service runs the Cryptlex customer portal.
 
 #### Release server service  <a href="#search-service" id="search-service"></a>
 
@@ -167,11 +169,11 @@ It handles the upload and download of releases you create in Cryptlex. In case y
 
 #### Reverse proxy service
 
-It uses [Traefik](https://traefik.io/) reverse proxy server to route the traffic and automatically generates and renews the SSL certificates for the `WEB_API_DOMAIN` , `RELEASE_SERVER_DOMAIN` and`DASHBOARD_DOMAIN`.
+It uses [Traefik](https://traefik.io/) reverse proxy server to route the traffic and automatically generates and renews the SSL certificates for the `WEB_API_DOMAIN` , `RELEASE_SERVER_DOMAIN`, `ADMIN_PORTAL_DOMAIN`, `RESELLER_PORTAL_DOMAIN and CUSTOMER_PORTAL_DOMAIN`.
 
 ### Traefik admin dashboard
 
-Traefik provides a dashboard that can be used to monitor the health and status of the Cryptlex on-Premise instance. You can access the Traefik dashboard at the following URL: [**https://cryptlex-app.mycompany.com/traefik**](https://cryptlex-app.mycompany.com/traefik)
+Traefik provides a dashboard that can be used to monitor the health and status of the Cryptlex on-Premise instance. You can access the Traefik dashboard at the following URL: **https://cryptlex-admin-portal.mycompany.com/traefik**
 
 You will need to put in the credentials set in the `.env` file to access the dashboard.
 

@@ -1,5 +1,11 @@
 # LexFloatServer
 
+## 4.13.1 (2024-09-19)
+
+### **Added**
+
+* The dashboard is now served at `/` path instead of `/app` path.  Requests to `/app` are redirected to `/` for backward compatibility.
+
 ## 4.13.0 (2024-08-05)
 
 ### **Added**
