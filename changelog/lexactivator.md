@@ -1,5 +1,15 @@
 # LexActivator
 
+## **3.30.0 (2024-08-22)**
+
+### **Added**
+
+* `GetUserLicenses()` function returns the license metadata as well.
+
+### Updated
+
+* Updated buffer sizes for various parameters of the Release struct in `LexTypes.h`
+
 ## **3.29.0 (2024-08-05)**
 
 ### **Updated**
