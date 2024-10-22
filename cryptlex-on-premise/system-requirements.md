@@ -28,7 +28,7 @@ Cryptlex requires at least version 20.10.22 (or higher) of Docker.
 
 ### Database <a href="#database" id="database"></a>
 
-Cryptlex requires PostgreSQL 10.x (or higher) for storing all the data.
+Cryptlex requires PostgreSQL 13.x (or higher) for storing all the data.
 
 ### Cache
 
