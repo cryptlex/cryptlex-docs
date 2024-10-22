@@ -24,7 +24,7 @@ Cryptlex requires at least a dual-core CPU, and that will work for low volume in
 
 ### Docker
 
-Cryptlex requires at least version 18.06.0-ce of Docker.&#x20;
+Cryptlex requires at least version 20.10.22 (or higher) of Docker.
 
 ### Database <a href="#database" id="database"></a>
 
