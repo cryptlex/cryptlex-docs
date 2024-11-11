@@ -83,9 +83,7 @@ This data is only stored within Cryptlex and is entirely owned by you. This data
 
 #### 1.2.3 GDPR
 
-The European Parliament adopted [the GDPR](http://data.consilium.europa.eu/doc/document/ST-5419-2016-INIT/en/pdf) in April 2016, replacing an outdated data protection directive from 1995. It carries provisions that require businesses to protect the personal data and privacy of EU citizens for transactions that occur within EU member states.
-
-Cryptlex processes Personal Data both as a Processor and as a Controller, as defined in the Directive and the GDPR.
+The European Parliament adopted [the GDPR](http://data.consilium.europa.eu/doc/document/ST-5419-2016-INIT/en/pdf) in April 2016, replacing an outdated data protection directive from 1995. It carries provisions that require businesses to protect the personal data and privacy of EU citizens for transactions that occur within EU member states. Cryptlex processes Personal Data both as a Processor and as a Controller.
 
 **1.2.3.1 Controller**
 
