@@ -38,6 +38,8 @@ SetProductId('PASTE_PRODUCT_ID', lfUser);
 
 If your app requires admin (root) privileges to run (e.g. services, daemons etc.), instead of passing `lfUser` flag, you need to pass `lfSystem` flag.
 
+If your app requires a single activation to be shared across all OS users (system-wide activation), pass the `lfAllUsers` flag before activation. This flag is compatible with Windows OS only.
+
 {% hint style="info" %}
 In case your app doesn't have write access to the disk, you can use `lfInMemory` flag instead, which causes all the data to be stored in the memory. But this would require you to activate the license every time you restart the app.
 {% endhint %}
