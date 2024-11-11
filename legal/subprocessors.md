@@ -4,7 +4,7 @@
 
 * Amazon Web Services
 * Intercom
-* Hubspot
-* Stripe
+* Zoho
 * Paddle
 * PostHog
+* New Relic

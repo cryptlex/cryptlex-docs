@@ -10,23 +10,13 @@ Cryptlex offers fine-grained role-based access control, which can be used to lim
 
 ## Certifications
 
-Cryptlex maintains a number of certifications to further strengthen our trust with customers. These include:
-
-### EU GDPR
-
-Cryptlex tries its best to be compliant with the EU General Data Protection Regulation (EU GDPR). Please see our [Privacy Policy](https://docs.cryptlex.com/legal/privacy-policy) for details on how EU GDPR is relevant for businesses using Cryptlex.
-
-### PCI DSS
-
-Cryptlex's payment and credit card information is handled by Stripe, which is a certified [PCI Level 1 Service Provider](https://www.visa.com/splisting/searchGrsp.do?companyNameCriteria=stripe,%20inc), the most stringent level of certification available in the payments industry. Cryptlex does not typically receive credit card data, making it compliant with PCI DSS in most situations.
-
 ### ISO 27001, ISO 27017, ISO 27018
 
-Cryptlex data centres are compliant with ISO 27001, ISO 27017, and ISO 27018 certifications. These internationally accepted security standards cover the systems, applications, people, technology, policies, procedures, and data centres serving customers. Our hosting provider, AWS (Amazon Web Services), has achieved [ISO 27001](https://aws.amazon.com/compliance/iso-27001-faqs/), [ISO 27017](https://aws.amazon.com/compliance/iso-27017-faqs/), and [ISO 27018](https://aws.amazon.com/compliance/iso-27018-faqs/) certifications.
+Cryptlex **data centres** are compliant with ISO 27001, ISO 27017, and ISO 27018 certifications. These internationally accepted security standards cover the systems, applications, people, technology, policies, procedures, and data centres serving customers. Our hosting provider, AWS (Amazon Web Services), has achieved [ISO 27001](https://aws.amazon.com/compliance/iso-27001-faqs/), [ISO 27017](https://aws.amazon.com/compliance/iso-27017-faqs/), and [ISO 27018](https://aws.amazon.com/compliance/iso-27018-faqs/) certifications.
 
 ### SOC 1, SOC 2, SOC 3&#x20;
 
-Cryptlex data centres are compliant with SOC 1, SOC 2, and SOC 3 certification. Our hosting provider, AWS (Amazon Web Services) has achieved [SOC1, SOC 2, and SOC3 certifications](https://aws.amazon.com/compliance/soc-faqs/).
+Cryptlex **data centres** are compliant with SOC 1, SOC 2, and SOC 3 certification. Our hosting provider, AWS (Amazon Web Services) has achieved [SOC1, SOC 2, and SOC3 certifications](https://aws.amazon.com/compliance/soc-faqs/).
 
 ## Cryptlex security features
 

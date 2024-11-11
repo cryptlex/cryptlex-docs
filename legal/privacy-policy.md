@@ -83,7 +83,7 @@ This data is only stored within Cryptlex and is entirely owned by you. This data
 
 #### 1.2.3 GDPR
 
-The European Parliament adopted [the GDPR](http://data.consilium.europa.eu/doc/document/ST-5419-2016-INIT/en/pdf) in April 2016, replacing an outdated data protection directive from 1995. It carries provisions that require businesses to protect the personal data and privacy of EU citizens for transactions that occur within EU member states. We will apply the GDPR to all the users whose personal data is either stored within Cryptlex or who use our services, whether inside or outside of the EU.
+The European Parliament adopted [the GDPR](http://data.consilium.europa.eu/doc/document/ST-5419-2016-INIT/en/pdf) in April 2016, replacing an outdated data protection directive from 1995. It carries provisions that require businesses to protect the personal data and privacy of EU citizens for transactions that occur within EU member states.
 
 Cryptlex processes Personal Data both as a Processor and as a Controller, as defined in the Directive and the GDPR.
 
@@ -104,16 +104,6 @@ We (Cryptlex) are a data processor.
 #### 1.2.3.3 Lawful basis of processing
 
 If you are our User, we process your Personal Data based on your consent and based on the need to perform the obligations of our contract with you. We collect and use Personal Data for the purposes of providing the Services to our Users at their instruction, processing Personal Data on behalf of Users, improving the Services, and conducting related tasks for legitimate business purposes.
-
-**1.2.3.4 Data Protection Officer**
-
-Cryptlex has a “Data Protection Officer” who is responsible for matters relating to privacy and data protection. This “Data Protection Officer” can be contacted through email at [legal@cryptlex.com](mailto:legal@cryptlex.com).
-
-**1.2.4 Standard Contractual Clauses**&#x20;
-
-According to the General Data Protection Regulation (GDPR), contractual clauses ensuring appropriate data protection safeguards can be used as a ground for data transfers from the EU to third countries. Cryptlex relies on the European Commission-approved Standard Contractual Clauses (SCCs) as a legal mechanism for data transfers from the EU. SCCs are contractual commitments between companies transferring personal data, binding them to protect the privacy and security of such data. Cryptlex adopted SCCs so that the necessary data flows can be protected when transferred outside the EU to countries that have not been deemed by the European Commission to adequately protect personal data, including protecting data transfers to the United States.
-
-Please refer to this article on the [European Commission website](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc\_en) to learn more about SCCs.
 
 ## 2. Data security
 
