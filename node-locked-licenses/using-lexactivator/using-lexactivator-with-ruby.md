@@ -37,6 +37,8 @@ LexActivator.SetProductId(LexActivator::encode_utf16("PASTE_PRODUCT_ID"), LexAct
 
 If your app requires admin (root) privileges to run (e.g. services, daemons etc.), instead of passing   `PermissionFlags::LA_USER` flag, you need to pass `PermissionFlags::LA_SYSTEM` flag.
 
+If your app requires a single activation to be shared across all OS users (system-wide activation), pass the `PermissionFlags::LA_ALL_USERS` flag before activation. This flag is compatible with Windows OS only.
+
 {% hint style="info" %}
 In case your app doesn't have write access to the disk, you can use `PermissionFlags::LA_IN_MEMORY` flag instead, which causes all the data to be stored in the memory. But this would require you to activate the license every time you restart the app.
 {% endhint %}
