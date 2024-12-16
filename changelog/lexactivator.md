@@ -1,5 +1,47 @@
 # LexActivator
 
+## **3.31.0 (2024-12-02)**
+
+### **Added**
+
+* Support for Windows ARM64 builds.
+* System-wide activations are now supported on macOS as well.
+* `GetActivationCreationDate()` function returns the activation creation date timestamp for the current activation.
+
+## **3.30.5 (2024-11-28)**
+
+### Fixed
+
+* Bug fix.
+
+## **3.30.4 (2024-11-27)**
+
+### Fixed
+
+* Bug fix.
+
+## **3.30.3 (2024-11-15)**
+
+### Fixed
+
+* Bug fix.
+
+## **3.30.2 (2024-11-14)**
+
+### Updated
+
+* The `User-Locked` property is now ignored for system-wide activations.
+
+## **3.30.1 (2024-10-30)**
+
+### Updated
+
+* Signed builds for macOS.
+
+### Fixed
+
+* Resolved an issue with `LA_E_TIME` to allow license deactivation.
+
 ## **3.30.0 (2024-08-22)**
 
 ### **Added**

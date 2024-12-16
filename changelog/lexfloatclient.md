@@ -1,5 +1,23 @@
 # LexFloatClient
 
+## **4.10.0 (2024-12-02)**
+
+### **Added**
+
+* Support for Windows ARM64 builds.
+
+## **4.9.2 (2023-11-14)**
+
+### **Fixed**
+
+* Minor bug fix.
+
+## **4.9.1 (2024-10-30)**
+
+### Updated
+
+* Signed builds for macOS.
+
 ## 4.9.0 (2024-08-05)
 
 ### **Added**

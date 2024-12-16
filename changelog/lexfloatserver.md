@@ -1,5 +1,21 @@
 # LexFloatServer
 
+## **4.13.3 (2024-11-14)**
+
+### Updated
+
+* LexActivator version to v3.30.2
+
+## **4.13.2 (2024-10-30)**
+
+### Updated
+
+* Signed builds for macOS.
+
+### **Fixed**
+
+* Bug fixes.
+
 ## 4.13.1 (2024-09-19)
 
 ### **Added**
