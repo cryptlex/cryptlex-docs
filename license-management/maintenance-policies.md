@@ -16,7 +16,11 @@ Name of the maintenance policy.
 
 ### Validity
 
-The duration (in seconds) after which the maintenance for the software updates of a license will expire. For unlimited duration set the validity to zero.
+The duration (in seconds) after which the maintenance for the software updates of a license will expire.&#x20;
+
+{% hint style="info" %}
+In order to allow a lifetime duration set the validity to zero.
+{% endhint %}
 
 ### Expiration Strategy
 

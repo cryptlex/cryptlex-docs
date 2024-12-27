@@ -101,7 +101,7 @@ You can allow an unlimited number of seats for a license (site license), and res
 
 | Property                 | Value                            |
 | ------------------------ | -------------------------------- |
-| **`allowedActivations`** | `0`                              |
+| **`allowedActivations`** | `0`, `-1`                        |
 | **`type`**               | `node-locked`, `hosted-floating` |
 | **`allowedIpAddresses`** | `[125.67.123.43]`                |
 

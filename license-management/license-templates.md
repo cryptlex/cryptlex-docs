@@ -33,7 +33,7 @@ There are three types of licenses:
 This option is valid for **hosted-floating** and **on-premise-floating** license types only. It sets the duration for which you want to lease the floating license.
 
 {% hint style="info" %}
-In case of **hosted-floating** license type,  if you want the license lease to auto-renew then ensure that the **server sync interval is less than lease duration** by a difference of atleast 30 seconds.
+In case of **hosted-floating** license type,  if you want the license lease to auto-renew then ensure that the **server sync interval is less than lease duration** by a difference of at least 30 seconds. In order to allow unlimited lease duration, this property can be set to 0 or -1.
 {% endhint %}
 
 {% hint style="info" %}
@@ -68,9 +68,19 @@ For hosted floating licenses, the maximum number of concurrent clients that can 
 
 Allowed number of activations (seats) for the license. If you allow (say) 10 activations for a license, then the license can be used on 10 different machines.
 
+{% hint style="info" %}
+In order to allow unlimited activations, this property can be set to 0 or -1.
+{% endhint %}
+
 ### Allowed deactivations
 
 Allowed number of deactivations for the license. This setting is ignored for **hosted-floating** licenses.
+
+{% hint style="info" %}
+In order to allow unlimited deactivations, this property can be set to -1.
+
+The default value for Hosted-Floating licenses is set to -1, indicating unlimited deactivations.
+{% endhint %}
 
 ### Server sync interval
 
@@ -82,7 +92,11 @@ The minimum allowed server sync interval up to the STARTUP plan is 3600 seconds,
 
 ### Server sync grace period
 
-The duration for which the server sync failure due to network error is acceptable. In order to allow an infinite grace period, this property can be set to "0".
+The duration for which the server sync failure due to network error is acceptable.
+
+{% hint style="info" %}
+In order to allow an infinite grace period, this property can be set to "-1".
+{% endhint %}
 
 ### Allowed clock offset
 
@@ -99,14 +113,6 @@ The license starts expiring right after it is created.
 #### **Delayed:**&#x20;
 
 The license starts expiring after the license is activated the first time. If the license allows more than one activation then all the other activations will also start expiring right after the first activation of the license.
-
-#### **Rolling:**&#x20;
-
-The license starts expiring after the license is activated. If the license allows more than one activation even then all the activations will start expiring after they are activated.
-
-{% hint style="info" %}
-You may not allow license deactivations if a **rolling** expiration strategy is being used, as it would reset the expiry.
-{% endhint %}
 
 ### Fingerprint matching strategy
 
@@ -187,7 +193,3 @@ In case you want to enforce user authentication for license activation in additi
 ### Disable geolocation
 
 In case you don't want to store the IP address and location of the license activation, you can set this property to `true`.
-
-### Disable clock validation
-
-In case the machine which is to be licensed doesn't have a hardware clock and can't keep the correct time you can set this property to `true`. This will only work in the case of node-locked perpetual license (validity set to `0`).

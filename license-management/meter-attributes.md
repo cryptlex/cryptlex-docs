@@ -14,6 +14,10 @@ Name of the meter attribute.
 
 The maximum allowed uses for the attribute.
 
+{% hint style="info" %}
+In order to allow unlimited uses, this property can be set to -1.
+{% endhint %}
+
 #### Total Uses
 
 The current uses for the attribute. Its value can be incremented, decremented, or reset in your app using LexActivator functions.
