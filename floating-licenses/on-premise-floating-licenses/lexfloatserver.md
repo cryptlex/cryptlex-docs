@@ -269,18 +269,20 @@ Gets the current server stats
 
 {% tabs %}
 {% tab title="200 " %}
-```javascript
-{
-  "leaseDuration": 1800,
-  "totalLicenses": 10,
-  "availableLicenses": 5,
-  "leasingStrategy": "per-machine",
-  "version": "4.0.0",
-  "status": "ok",
-  "expiresAt": 1580732402,
-  "serverSyncGracePeriodExpiryDate": 1580739313
+<pre class="language-javascript"><code class="lang-javascript"><strong>{
+</strong>    "leaseDuration": 60,
+    "maxOfflineLeaseDuration": 30,
+    "allowedFloatingClients": 10,
+    "allowedOfflineFloatingClients": 0,
+    "totalFloatingClients": 5,
+    "totalOfflineFloatingClients": 0,
+    "leasingStrategy": "per-machine",
+    "version": "4.13.3",
+    "status": "ok",
+    "expiresAt": 1751178927,
+    "serverSyncGracePeriodExpiresAt": 0
 }
-```
+</code></pre>
 {% endtab %}
 {% endtabs %}
 
