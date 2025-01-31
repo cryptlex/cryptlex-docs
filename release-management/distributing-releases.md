@@ -18,7 +18,11 @@ curl -O -J -L https://releases.cryptlex.com/v3/{ACCOUNT_ID}/{RELEASE_ID}/myapp.z
 The license key must belong to the product for which the release was created and the access token must belong to any user who is associated with the license key of the product.
 
 {% hint style="danger" %}
-The external release files are not secured and hence don't require**`key`** query parameter for download.
+The external release files are not secured and hence don't requir&#x65;**`key`** query parameter for download.
+{% endhint %}
+
+{% hint style="info" %}
+For accounts in the EU data region, please use `releases.eu.cryptlex.com` as the hostname.
 {% endhint %}
 
 ## Downloading an update
