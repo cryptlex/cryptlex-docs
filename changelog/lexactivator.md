@@ -1,5 +1,17 @@
 # LexActivator
 
+## **3.31.2 (2025-01-27)**
+
+### Fixed
+
+* Improved error handling by adding `LA_E_FREE_PLAN_ACTIVATION_LIMIT_REACHED`.
+
+## **3.31.1 (2025-01-09)**
+
+### Fixed
+
+* Fixed `SetDebugMode()` behavior.
+
 ## **3.31.0 (2024-12-02)**
 
 ### **Added**
