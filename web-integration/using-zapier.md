@@ -20,6 +20,6 @@ Zapier integration is available on invite-only, so please make sure you accept t
 
 [https://zapier.com/platform/public-invite/4340/cd16edb4280a1c5985b53917855743bf/](https://zapier.com/platform/public-invite/4340/cd16edb4280a1c5985b53917855743bf/)
 
-## Need more help
+## Need more help?
 
 In case you need more help with using Zapier, we'll be glad to help you make the integration. You can either post your questions on our [support forum](https://forums.cryptlex.com) or contact us through [email](mailto:support@cryptlex.com?Subject=Zapier%20Integration).
