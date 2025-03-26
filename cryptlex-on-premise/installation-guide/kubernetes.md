@@ -4,17 +4,15 @@ description: Easily install Cryptlex on any cloud hosting provider using Kuberne
 
 # Kubernetes
 
-## Installing Cryptlex Enterprise Helm Chart on Kubernetes Using Helm
-
 ### Introduction
 
-In this guide, you'll install the **Cryptlex Enterprise Helm chart** to deploy the Cryptlex on your Kubernetes cluster. You'll then set up an **Ingress Resource** to route traffic from your domains to the Cryptlex back-end services. After configuring the Ingress, you'll install **Cert-Manager** in your cluster to automatically provision **Let's Encrypt** TLS certificates, securing your Ingresses.
+In this guide, you'll install the **Cryptlex Enterprise Helm chart** to deploy the application on your Kubernetes cluster. You'll then set up an **Ingress Resource** to route traffic from your domains to the Cryptlex Enterprise back-end services. After configuring the Ingress, you'll install **Cert-Manager** in your cluster to automatically provision **Let's Encrypt** TLS certificates, securing your Ingresses.
 
 **Helm** is a package manager for Kubernetes that simplifies application deployment, upgrade, and lifecycle management using Helm Charts.
 
 ***
 
-### Prerequisites
+#### Prerequisites
 
 Before you begin, ensure you have the following:
 
@@ -31,7 +29,7 @@ This guide uses the following example domains:
 
 ***
 
-### Step 1 — Installing the NGINX Ingress Controller
+#### Step 1 — Installing the NGINX Ingress Controller
 
 Start by installing the **NGINX Ingress Controller** using Helm.
 
@@ -51,7 +49,7 @@ controller:
 Then, run the following commands:
 
 ```bash
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx --force-update
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx --values ingress.yaml
 ```
 
@@ -65,7 +63,7 @@ Once ready, the Ingress Controller will route HTTP and HTTPS traffic to the appr
 
 ***
 
-### Step 2 — Create DNS Records
+#### Step 2 — Create DNS Records
 
 Create **A** or **CNAME** records for the external IP address of the Ingress Controller you just installed.
 
@@ -88,7 +86,7 @@ Point all of them to the same external IP.
 
 ***
 
-### Step 3 — Securing the Ingress Using Cert-Manager
+#### Step 3 — Securing the Ingress Using Cert-Manager
 
 To enable HTTPS, install **Cert-Manager** to your Kubernetes cluster.
 
@@ -105,16 +103,16 @@ Once installed, Cert-Manager will automatically issue and renew Let's Encrypt TL
 
 ***
 
-### Step 4 — Installing the Cryptlex Enterprise Helm Chart
+#### Step 4 — Installing the Cryptlex Enterprise Helm Chart
 
-#### Step 4.1 — Choosing a Database
+**Step 4.1 — Choosing a Database**
 
 Cryptlex requires a **PostgreSQL** database.
 
 * For **staging/testing**, the Helm chart can deploy a bundled Postgres instance using a Persistent Volume Claim.
 * For **production**, it's recommended to use an external managed PostgreSQL service for reliability and scalability.
 
-#### Step 4.2 — Choosing a File Store
+**Step 4.2 — Choosing a File Store**
 
 Cryptlex uses an **AWS S3-compatible** file store for release artifacts.
 
@@ -123,7 +121,7 @@ Cryptlex uses an **AWS S3-compatible** file store for release artifacts.
 
 > Note: If you're not using Cryptlex's release management API, this service is optional.
 
-#### Step 4.3 — Download and Customize the Helm Values File
+**Step 4.3 — Download and Customize the Helm Values File**
 
 Download the default configuration file:
 
@@ -140,7 +138,7 @@ cp values.yaml production.yaml
 
 Update these files with environment-specific values (database, file store, domain names, etc.).
 
-#### Step 4.4 — Install Cryptlex Enterprise Using Helm
+**Step 4.4 — Install Cryptlex Enterprise Using Helm**
 
 Add the Cryptlex Helm chart repository:
 
@@ -170,7 +168,7 @@ helm upgrade --install cryptlex-enterprise \
 
 ***
 
-### Step 5 — Create Your Cryptlex Account
+#### Step 5 — Create Your Cryptlex Account
 
 Once deployed, open the admin portal in your browser and create your Cryptlex account:
 
@@ -182,7 +180,7 @@ https://license-admin-portal.mycompany.com/auth/signup
 
 ***
 
-### Upgrading Your Deployment
+#### Upgrading Your Deployment
 
 Regularly upgrade the applications in your cluster to receive the latest security patches and features.
 
