@@ -57,7 +57,7 @@ The `acme.json` will store the SSL certificates, which will be generated for the
 
 #### Step 3: Update the Postgres version
 
-In the `docker-compose.yml` file change the value of `services.database.image` property to the current stable version of [Postgres](https://hub.docker.com/\_/postgres). For example, if the latest version is 14.5 then set the value to `postgres:14.5-alpine`. Once the version is set, it cannot be updated later without migrating the database to a newer major version.
+In the `docker-compose.yml` file change the value of `services.database.image` property to the current stable version of [Postgres](https://hub.docker.com/_/postgres). For example, if the latest version is 14.5 then set the value to `postgres:14.5-alpine`. Once the version is set, it cannot be updated later without migrating the database to a newer major version.
 
 #### Step 4: Update the environment variables
 
@@ -87,12 +87,13 @@ The `.env` file contains the following environment variables which you may need 
 
 The `webapi.env` file contains the following environment variables which you **must** update:
 
-| Environment Variables     | Description                                                                                      |
-| ------------------------- | ------------------------------------------------------------------------------------------------ |
-| `RSA_PASSPHRASE`          | Use any random string, this is used to encrypt the private keys stored in the database.          |
-| `APPLICATION_LICENSE_KEY` | The license key which you get after you purchase the license for the Cryptlex On-Premise server. |
+| Environment Variables     | Description                                                                                                |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `RSA_PASSPHRASE`          | Use any random string, this is used to encrypt the private keys stored in the database.                    |
+| `ENCRYPTION_KEY`          | Use any random string, this is used to encrypt the private keys and other secrets stored in the database.  |
+| `APPLICATION_LICENSE_KEY` | The license key which you get after you purchase the license for the Cryptlex On-Premise server.           |
 
-Other than the above three you need to set environment variables for the email provider (Mailgun, SendGrid, or SMTP), and additionally you can configure other monitoring and error reporting services.
+Other than the above three you need to set environment variables for the email provider, and additionally you can configure other monitoring and error reporting services.
 
 **Update `release-server.env` file**
 
@@ -110,11 +111,11 @@ Execute the following commands to start the server:
 
 ```bash
 # ensure you have access to Cryptlex Docker images
-docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+docker login -u $DOCKER_USERNAME
 # start the Cryptlex services
-docker-compose up -d
+docker compose up -d
 # execute the following command to check the logs for any error
-docker-compose logs -t -f
+docker compose logs -t -f
 ```
 
 The [Traefik](https://traefik.io/) reverse proxy server configured in the `docker-compose.yml` file will automatically generate SSL certificates for the above-mentioned domains and store them in `acme.json`. Additionally, it will automatically route the traffic to the respective containers.
@@ -141,11 +142,11 @@ It uses [Redis](https://redis.io/) to store the cache data. If no Redis database
 
 #### Filestore service  <a href="#search-service" id="search-service"></a>
 
-It uses [Minio](https://www.minio.io/), an AWS S3 compatible object storage server, to store release files. In case you don't want to use Cryptlex [release management](https://docs.cryptlex.com/release-management) API, this service can be commented out in the `docker-compose.yml` file.
+It stores release files using Minio, an AWS S3 compatible object storage server. In case you don't want to use Cryptlex [release management](https://docs.cryptlex.com/release-management) API, this service can be commented out in the `docker-compose.yml` file.
 
 #### GeoIP service <a href="#search-service" id="search-service"></a>
 
-This service is used to get location information from the IP address of the user.
+This service is used to get location information from the user's IP address.
 
 #### Web API service
 
@@ -173,7 +174,7 @@ It uses [Traefik](https://traefik.io/) reverse proxy server to route the traffic
 
 ### Traefik admin dashboard
 
-Traefik provides a dashboard that can be used to monitor the health and status of the Cryptlex on-Premise instance. You can access the Traefik dashboard at the following URL: **https://cryptlex-admin-portal.mycompany.com/traefik**
+Traefik provides a dashboard that can be used to monitor the health and status of the Cryptlex On-Premise instance. You can access the Traefik dashboard at the following URL: **https://cryptlex-admin-portal.mycompany.com/traefik**
 
 You will need to put in the credentials set in the `.env` file to access the dashboard.
 
@@ -186,7 +187,7 @@ To prevent logs from taking up the whole disk space, `20MB` limit has been appli
 To view the logs in realtime you can execute the following command:
 
 ```bash
-docker-compose logs -t -f
+docker compose logs -t -f
 ```
 
 ## Upgrading
@@ -197,7 +198,7 @@ First login to your Linux server machine where Cryptlex is deployed and go to th
 # execute the update script
 ./update.sh
 # execute the following command to check the logs for any error
-docker-compose logs -t -f
+docker compose logs -t -f
 ```
 
 {% hint style="info" %}
