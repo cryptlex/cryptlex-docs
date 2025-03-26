@@ -32,12 +32,12 @@ It can be used for storing some product-level information that you want to acces
 
 ## License metadata
 
-This metadata can be added to your licenses at the time of creating a license. You can store additional data like `order_id`_,_ `customer_id` , `feature1`, `feature2` etc_._ with the license.
+This metadata can be added to your licenses at the time of creating a license. You can store additional data like `order_id`_,_ `customer_id` , `feature1`, `feature2` et&#x63;_._ with the license.
 
 This can be accessed in your application once a license is activated. Its common use case is feature detection, i.e. if you wish to restrict the features in your application based on the value of metadata fields.
 
 {% hint style="info" %}
-In order to require licenses to have specific metadata properties, set them in the license template **requiredMetadataKeys** field**.**
+In order to require licenses to have specific metadata properties, set them in the license template **requiredMetadataKeys** fiel&#x64;**.**
 {% endhint %}
 
 ### Enforcing schema for metadata fields

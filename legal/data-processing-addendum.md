@@ -6,13 +6,13 @@ This Cryptlex Data Processing Addendum forms part of and is subject to the provi
 
 The following definitions apply solely to this Data Processing Addendum:
 
-\(a\) “**Data Protection Legislation**” means European Directives 95/46/EC and 2002/58/EC, and any legislation and/or regulation implementing or made pursuant to them, or which amends or replaces any of them \(including the General Data Protection Regulation, Regulation \(EU\) 2016/679\).
+(a) “**Data Protection Legislation**” means European Directives 95/46/EC and 2002/58/EC, and any legislation and/or regulation implementing or made pursuant to them, or which amends or replaces any of them (including the General Data Protection Regulation, Regulation (EU) 2016/679).
 
-\(b\) “**Data Processor**”, “**Data Subject**”, “**Processor**”, “**Processing**”, “**Sub-Processor**” and “**Supervisory Authority**” be interpreted in accordance with applicable Data Protection Legislation.
+(b) “**Data Processor**”, “**Data Subject**”, “**Processor**”, “**Processing**”, “**Sub-Processor**” and “**Supervisory Authority**” be interpreted in accordance with applicable Data Protection Legislation.
 
-\(c\) “**Your Controlled Data**” as used in this Addendum means information relating to an identifiable or identified Data Subject, which Cryptlex Processes as a Data Processor in the course of providing you with the Services.
+(c) “**Your Controlled Data**” as used in this Addendum means information relating to an identifiable or identified Data Subject, which Cryptlex Processes as a Data Processor in the course of providing you with the Services.
 
-\(d\). “**Breach**” means a breach of the security measures resulting in access to Cryptlex's equipment or facilities storing Your Controlled Data and the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, Your Controlled Data transmitted, stored, or processed by Cryptlex on your behalf and instructions through the Services.
+(d). “**Breach**” means a breach of the security measures resulting in access to Cryptlex's equipment or facilities storing Your Controlled Data and the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, Your Controlled Data transmitted, stored, or processed by Cryptlex on your behalf and instructions through the Services.
 
 ## **2. Applicability**
 
@@ -30,17 +30,17 @@ When Cryptlex Processes Personal Data in the course of providing the Services, C
 
 ## **4. Processing Roles and Activities**
 
-### 4.1 **Cryptlex as Processor and You as Controller.** 
+### 4.1 **Cryptlex as Processor and You as Controller.**&#x20;
 
 You are the controller and Cryptlex is the processor of Your Controlled Data.
 
-### 4.2 **Cryptlex as Controller.** 
+### 4.2 **Cryptlex as Controller.**&#x20;
 
 Cryptlex may also be an independent controller for some personal data relating to you. Please see our [Privacy Policy](https://docs.cryptlex.com/legal/privacy-policy) and [Terms of Service](https://docs.cryptlex.com/legal/terms-of-service) for details about this personal data which we control.
 
-### 4.3 **Description of Processing Activities.** 
+### 4.3 **Description of Processing Activities.**&#x20;
 
-We will process Your Controlled Data for the purpose of providing you with the Services, as may be used, configured, or modified from within your Account \(the “Purpose”\).
+We will process Your Controlled Data for the purpose of providing you with the Services, as may be used, configured, or modified from within your Account (the “Purpose”).
 
 ### 4.4 Compliance with Laws
 
@@ -64,17 +64,16 @@ We will provide you notice without undue delay after becoming aware of and confi
 
 In the course of providing the Services, you acknowledge and agree that Cryptlex may use Sub-Processors to Process the Personal Data. Cryptlex’s use of any specific Sub-Processor to process the Personal Data must be in compliance with Data Protection Legislation and must be governed by a contract between Cryptlex and Sub-Processor.
 
-## 6**. Liability**
+## &#x36;**. Liability**
 
 The liability of each party under this Data Processing Addendum is subject to the exclusions and limitations of liability set out in the Agreement. You agree that any regulatory penalties or claims by data subjects or others incurred by Cryptlex in relation to Your Controlled Data that arise as a result of, or in connection with, your failure to comply with your obligations under this Data Processing Addendum or Data Protection Legislation shall reduce Cryptlex's maximum aggregate liability to you under the Agreement in the same amount as the fine and/or liability incurred by us as a result.
 
-## 7**. Conflict**
+## &#x37;**. Conflict**
 
 In the event of any conflict or inconsistency between the provisions of the Agreement and this Addendum, the provisions of this Addendum shall prevail. For the avoidance of doubt and to the extent allowed by applicable law, any and all liability under this Addendum, including limitations thereof, will be governed by the relevant provisions of the Agreement. You acknowledge and agree that Cryptlex may amend this Addendum from time to time by posting the relevant amended and restated Addendum and such amendments to the Addendum are effective as of the date of posting. Your continued use of the Services after the amended Addendum is posted to Cryptlex’s website constitutes your agreement to, and acceptance of, the amended Addendum. If you do not agree to any changes to the Addendum, do not continue to use the Service.
 
-## 8**. Miscellaneous**
+## &#x38;**. Miscellaneous**
 
-You are responsible for any costs and expenses arising from Cryptlex’s compliance with your instructions or requests pursuant to the Agreement \(including this Data Processing Addendum\) which fall outside the standard functionality made available by Cryptlex generally through the Services.
+You are responsible for any costs and expenses arising from Cryptlex’s compliance with your instructions or requests pursuant to the Agreement (including this Data Processing Addendum) which fall outside the standard functionality made available by Cryptlex generally through the Services.
 
 Save as specifically modified and amended in this Addendum, all of the terms, provisions, and requirements contained in the Agreement shall remain in full force and effect and govern this Addendum. If any provision of the Addendum is held illegal or unenforceable in a judicial proceeding, such provision shall be severed and shall be inoperative, and the remainder of this Addendum shall remain operative and binding on the parties.
-

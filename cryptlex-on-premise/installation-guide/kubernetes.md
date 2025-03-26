@@ -4,167 +4,208 @@ description: Easily install Cryptlex on any cloud hosting provider using Kuberne
 
 # Kubernetes
 
-## Introduction
+## Installing Cryptlex Enterprise Helm Chart on Kubernetes Using Helm
 
-In this guide, you’ll install the Cryptlex Enterprise Kubernetes application using [Helm](https://helm.sh/). You’ll then create an Ingress Resource to route traffic from your domains to the Cryptlex Enterprise back-end services. Once you’ve set up the Ingress, you’ll install [Cert Manager](https://github.com/jetstack/cert-manager) to your cluster to be able to automatically provision Let’s Encrypt TLS certificates to secure your Ingresses.
+### Introduction
 
-[Helm](https://helm.sh/) is a package manager for managing Kubernetes. Using Helm Charts with your Kubernetes provides configurability and lifecycle management to update, rollback, and delete a Kubernetes application.
+In this guide, you'll install the **Cryptlex Enterprise Helm chart** to deploy the Cryptlex on your Kubernetes cluster. You'll then set up an **Ingress Resource** to route traffic from your domains to the Cryptlex back-end services. After configuring the Ingress, you'll install **Cert-Manager** in your cluster to automatically provision **Let's Encrypt** TLS certificates, securing your Ingresses.
 
-## Prerequisites
+**Helm** is a package manager for Kubernetes that simplifies application deployment, upgrade, and lifecycle management using Helm Charts.
 
-* A Kubernetes 1.16+ cluster with your connection configuration configured as the `kubectl` default.
-* The Helm 3 package manager installed on your local machine.
-* A fully registered domain name with three available A records. This tutorial will use `license-api.mycompany.com`, `license-portal.mycompany.com` and  `releases.mycompany.com`throughout.
+***
 
-## Installation
+### Prerequisites
 
-### Step 1 — Installing the Kubernetes Nginx Ingress Controller
+Before you begin, ensure you have the following:
 
-You will first need to install the Kubernetes-maintained [Nginx Ingress Controller](https://github.com/kubernetes/ingress-nginx) using Helm. 
+* A **Kubernetes 1.28+** cluster with `kubectl` configured to connect to it.
+* **Helm 3** installed on your local machine.
+* A fully registered domain name with at least four available **A** or **CNAME** records.
 
-This Service is of type LoadBalancer, and because you are deploying it to a Kubernetes cluster, the cluster will automatically create a Load Balancer, through which all external traffic will flow to the appropriate backend services.
+This guide uses the following example domains:
 
-The Nginx Ingress Helm chart uses an `ingress.yaml` file for setting the configuration. You need to download this file to your local machine.
+* `license-api.mycompany.com`
+* `license-admin-portal.mycompany.com`
+* `license-customer-portal.mycompany.com`
+* `releases.mycompany.com`
 
-{% code title="ingress.yaml" %}
+***
+
+### Step 1 — Installing the NGINX Ingress Controller
+
+Start by installing the **NGINX Ingress Controller** using Helm.
+
+The NGINX Ingress Controller will expose your services to the internet via a Load Balancer.
+
+First, create a file called `ingress.yaml` with the following content:
+
 ```yaml
-# nginx configuration
-
 controller:
   publishService:
     enabled: true
   service:
     enabled: true
     externalTrafficPolicy: "Local"
-  #config:
-    #ssl-ciphers: "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-SHA256:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:DES-CBC3-SHA"
-    #ssl-protocols: "TLSv1 TLSv1.1 TLSv1.2 TLSv1.3"
 ```
-{% endcode %}
 
-To install the Nginx Ingress Controller to your cluster, run the following commands:
+Then, run the following commands:
 
-```text
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+```bash
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx --force-update
 helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx --values ingress.yaml
 ```
 
-You can watch the Load Balancer become available by running:
-
-```text
-kubectl get services -o wide -w ingress-nginx-controller
-```
-
-You’ve installed the Nginx Ingress maintained by the Kubernetes community. It will route HTTP and HTTPS traffic from the Load Balancer to appropriate back-end Services, configured in Ingress Resources.
-
-### Step 2 — Create custom A/CNAME records
-
-You will need to create three A/CNAME records for the external IP address of the Nginx Ingress installed in the previous step. For this tutorial we will choose the following three sub-domains:
-
-`license-api.mycompany.com` for the Web API Server
-
-`license-portal.mycompany.com` for the Web Dashboard
-
-`releases.mycompany.com` for the Release Server
-
-In order to get the external IP address you can execute the following command:
-
-```text
-kubectl get services -o wide -w ingress-nginx-controller
-```
-
-Now to create the records:
-
-* Go to your DNS provider’s website \(e.g. [GoDaddy](https://ie.godaddy.com/help/add-a-cname-record-19236) or [Cloudflare](https://www.cloudflare.com/dns/)\).
-* Create A/CNAME records for the above custom domains.
-* Point all of them to the same IP address.
-
-### Step 3 — Securing the Nginx Ingress using Cert-Manager
-
-To secure your Ingress Resources, you need to install the [Cert-Manager](https://cert-manager.io/docs/installation/kubernetes/). Once installed and configured, your app will be running behind HTTPS.
-
-To install the Cert-Manager to your cluster, run the following commands:
-
-```text
-kubectl create namespace cert-manager
-helm repo add jetstack https://charts.jetstack.io
-helm upgrade --install cert-manager jetstack/cert-manager --version v1.1.0 --namespace cert-manager --set installCRDs=true
-```
-
-### Step 4 — Installing the Cryptlex Enterprise Kubernetes application
-
-In this section, you will deploy the Cryptlex Enterprise Kubernetes application in your Kubernetes cluster.
-
-#### Step 4.1 —  Choosing the database
-
-Postgres database is required for storing all Cryptlex data. The Cryptlex Enterprise Kubernetes app will automatically spin up a Postgres database instance and will use the persistent volume claim for requesting the storage disk. This option may be good for staging/testing environments, but for the production environment, we recommend using a third-party Postgres database service.
-
-#### Step 4.2 —  Choosing the file store
-
-The file store \(AWS S3 compatible\) is required for storing releases. In case you don't want to use the Cryptlex [release management](https://docs.cryptlex.com/release-management) API, this service is not required. 
-
-The Cryptlex Enterprise Kubernetes app will automatically spin up a [Minio](https://min.io/) instance and will use the persistent volume claim for requesting the storage disk. This option may be good for staging/testing environments, but for the production environment, we recommend using a third-party AWS S3 compatible file store service.
-
-#### Step 4.3 —  Download and update the Helm values file
-
-The Cryptlex Enterprise Helm chart uses a `values.yaml` file for setting the configuration. You need to download this file to your local machine and update this file for each environment.
-
-[https://raw.githubusercontent.com/cryptlex/helm-charts/master/cryptlex/cryptlex-enterprise/values.yaml](https://raw.githubusercontent.com/cryptlex/helm-charts/master/cryptlex/cryptlex-enterprise/values.yaml)
-
-Download two copies of this file and rename them to `production.yaml` and `staging.yaml` \(or `testing.yaml`, `development.yaml` etc.\).
-
-You need to update this file for each environment.
-
-#### Step 4.4 —  Installing the Cryptlex Enterprise Helm chart
-
-After you have updated the `values.yaml` \(in this case `production.yaml` and `staging.yaml`\) file for each environment, execute the following commands to install the Cryptlex Enterprise Helm chart for each environment:
+To watch the Load Balancer become available:
 
 ```bash
-helm repo add cryptlex https://cryptlex.github.io/helm-charts
+kubectl get services -o wide -w ingress-nginx-controller
+```
 
-# Staging environment
+Once ready, the Ingress Controller will route HTTP and HTTPS traffic to the appropriate backend services defined in your Ingress Resources.
+
+***
+
+### Step 2 — Create DNS Records
+
+Create **A** or **CNAME** records for the external IP address of the Ingress Controller you just installed.
+
+To find the external IP:
+
+```bash
+kubectl get services -o wide -w ingress-nginx-controller
+```
+
+Then, go to your DNS provider (e.g., GoDaddy or Cloudflare) and create the following records:
+
+| Subdomain                               | Purpose         |
+| --------------------------------------- | --------------- |
+| `license-api.mycompany.com`             | Web API Server  |
+| `license-admin-portal.mycompany.com`    | Admin Portal    |
+| `license-customer-portal.mycompany.com` | Customer Portal |
+| `releases.mycompany.com`                | Release Server  |
+
+Point all of them to the same external IP.
+
+***
+
+### Step 3 — Securing the Ingress Using Cert-Manager
+
+To enable HTTPS, install **Cert-Manager** to your Kubernetes cluster.
+
+Run the following commands:
+
+```bash
+helm repo add jetstack https://charts.jetstack.io --force-update
+helm upgrade --install cert-manager jetstack/cert-manager \
+  --create-namespace --namespace cert-manager --atomic \
+  --set crds.enabled=true
+```
+
+Once installed, Cert-Manager will automatically issue and renew Let's Encrypt TLS certificates for your Ingress resources.
+
+***
+
+### Step 4 — Installing the Cryptlex Enterprise Helm Chart
+
+#### Step 4.1 — Choosing a Database
+
+Cryptlex requires a **PostgreSQL** database.
+
+* For **staging/testing**, the Helm chart can deploy a bundled Postgres instance using a Persistent Volume Claim.
+* For **production**, it's recommended to use an external managed PostgreSQL service for reliability and scalability.
+
+#### Step 4.2 — Choosing a File Store
+
+Cryptlex uses an **AWS S3-compatible** file store for release artifacts.
+
+* The Helm chart includes a bundled **MinIO** instance for staging/testing environments.
+* For **production**, it's best to use a managed S3-compatible storage service (e.g., AWS S3, Wasabi).
+
+> Note: If you're not using Cryptlex's release management API, this service is optional.
+
+#### Step 4.3 — Download and Customize the Helm Values File
+
+Download the default configuration file:
+
+```bash
+curl -O https://raw.githubusercontent.com/cryptlex/helm-charts/master/cryptlex/cryptlex-enterprise/values.yaml
+```
+
+Create separate config files for each environment:
+
+```bash
+cp values.yaml staging.yaml
+cp values.yaml production.yaml
+```
+
+Update these files with environment-specific values (database, file store, domain names, etc.).
+
+#### Step 4.4 — Install Cryptlex Enterprise Using Helm
+
+Add the Cryptlex Helm chart repository:
+
+```bash
+helm repo add cryptlex https://cryptlex.github.io/helm-charts --force-update
+```
+
+Deploy for each environment:
+
+**Staging:**
+
+```bash
 kubectl create namespace cryptlex-stg
-helm upgrade --install cryptlex-enterprise-stg --values staging.yaml --namespace cryptlex-stg cryptlex/cryptlex-enterprise
-
-# Production environment
-kubectl create namespace cryptlex
-helm upgrade --install cryptlex-enterprise --values production.yaml --namespace cryptlex cryptlex/cryptlex-enterprise
-
+helm upgrade --install cryptlex-enterprise-stg \
+  --values staging.yaml \
+  --namespace cryptlex-stg cryptlex/cryptlex-enterprise
 ```
 
-### Step 5 — Signup for the Cryptlex account
-
-Next, you need to open the dashboard in the browser, and create your Cryptlex account, which can be done at the following URL: 
-
-**https://license-portal.mycompany.com/auth/signup**
-
-{% hint style="info" %}
-Please note that you can only create one Cryptlex account.
-{% endhint %}
-
-## Upgrading
-
-It's important that you regularly upgrade the apps installed in your Kubernetes cluster to ensure you get new security updates and bug fixes.
-
-In order to upgrade the apps just execute the following commands:
+**Production:**
 
 ```bash
-# Get the latest versions
+kubectl create namespace cryptlex
+helm upgrade --install cryptlex-enterprise \
+  --values production.yaml \
+  --namespace cryptlex cryptlex/cryptlex-enterprise
+```
+
+***
+
+### Step 5 — Create Your Cryptlex Account
+
+Once deployed, open the admin portal in your browser and create your Cryptlex account:
+
+```
+https://license-admin-portal.mycompany.com/auth/signup
+```
+
+> Note: You can only create **one Cryptlex account** per environment.
+
+***
+
+### Upgrading Your Deployment
+
+Regularly upgrade the applications in your cluster to receive the latest security patches and features.
+
+Run the following commands to upgrade:
+
+```bash
+# Update all Helm repos
 helm repo update
 
-# Upgrade the Nginx Ingress
+# Upgrade NGINX Ingress
 helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx --values ingress.yaml
 
-# Upgrade the staging Cryptlex Enterprise app
-helm upgrade --install cryptlex-enterprise-stg --values staging.yaml --namespace cryptlex-stg cryptlex/cryptlex-enterprise
+# Upgrade staging environment
+helm upgrade --install cryptlex-enterprise-stg \
+  --values staging.yaml \
+  --namespace cryptlex-stg cryptlex/cryptlex-enterprise
 
-# Upgrade the production Cryptlex Enterprise app
-helm upgrade --install cryptlex-enterprise --values production.yaml --namespace cryptlex cryptlex/cryptlex-enterprise
+# Upgrade production environment
+helm upgrade --install cryptlex-enterprise \
+  --values production.yaml \
+  --namespace cryptlex cryptlex/cryptlex-enterprise
 ```
 
-For upgrading Cert-Manager please refer to there upgrading guide:
+To upgrade **Cert-Manager**, refer to the official guide:
 
-[https://cert-manager.io/docs/installation/upgrading/](https://cert-manager.io/docs/installation/upgrading/)
-
-
-
+👉 [https://cert-manager.io/docs/installation/upgrading/](https://cert-manager.io/docs/installation/upgrading/)
