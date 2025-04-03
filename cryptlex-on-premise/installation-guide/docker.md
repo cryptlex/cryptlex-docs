@@ -87,11 +87,11 @@ The `.env` file contains the following environment variables which you may need 
 
 The `webapi.env` file contains the following environment variables which you **must** update:
 
-| Environment Variables     | Description                                                                                                |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `RSA_PASSPHRASE`          | Use any random string, this is used to encrypt the private keys stored in the database.                    |
-| `ENCRYPTION_KEY`          | Use any random string, this is used to encrypt the private keys and other secrets stored in the database.  |
-| `APPLICATION_LICENSE_KEY` | The license key which you get after you purchase the license for the Cryptlex On-Premise server.           |
+| Environment Variables     | Description                                                                                                  |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `ENCRYPTION_KEY`          | Use any random string, this is used to encrypt the private keys and other secrets stored in the database.    |
+| `RSA_PASSPHRASE`          | Set the same value as `ENCRYPTION_KEY`. This property is deprecated and will be removed in a future release. |
+| `APPLICATION_LICENSE_KEY` | The license key which you get after you purchase the license for the Cryptlex On-Premise server.             |
 
 Other than the above three you need to set environment variables for the email provider, and additionally you can configure other monitoring and error reporting services.
 
