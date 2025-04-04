@@ -17,7 +17,7 @@ Note: AllowedUsers will limit the number of user creations by an organization ad
 
 1. Navigate to the **Admin Portal**.
 2. Go to: `Customers → Users → Create`.
-3. In the **Role** field, select o**rganization-admin**.
+3. In the **Role** field, select **organization-admin**.
 4. In the Organization field select the organization which needs to be linked to this organization admin.
 
 For an **organization-admin,** customer portal offers the following functionalities:
