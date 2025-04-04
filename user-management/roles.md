@@ -44,4 +44,4 @@ Any user with an **organization-admin role** is counted against the users in you
 
 ## Reseller admin role
 
-This feature is currently in beta.
+The "reseller-admin" role grants users the ability to view and manage all licenses associated with customers under their reseller account. Additionally, they can create and manage users and organizations, as well as assign licenses as needed. This role enables resellers to efficiently manage licensing and customer access within their reseller account.

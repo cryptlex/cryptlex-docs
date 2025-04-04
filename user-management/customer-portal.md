@@ -2,12 +2,6 @@
 
 Your customers can also log into the customer portal to manage their licenses. They can view their licenses, update their profile etc.
 
-The customer portal can be accessed at the following URLs:
-
-`https://{{account_alias}}.customer.cryptlex.com`
-
-`https://{{account_alias}}.eu.customer.cryptlex.com`
-
 {% hint style="info" %}
 You can find your customer portal URL on the `Settings -> Customizations` page in the admin portal.
 {% endhint %}

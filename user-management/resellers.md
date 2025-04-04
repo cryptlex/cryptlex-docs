@@ -9,17 +9,7 @@ The Reseller feature empowers you to invite your sales partners, resellers, dist
 
 Start by creating a Reseller and assigning a User to the Reseller with the `reseller-admin` role. A User with the `reseller-admin` role can log in to the **reseller portal** to manage Licenses, Users, and Organizations.
 
-The reseller portal can be accessed at the following URLs:
-
-`https://{{account_alias}}.reseller.cryptlex.com`
-
-`https://{{account_alias}}.eu.reseller.cryptlex.com`
-
-{% hint style="info" %}
-You can find your reseller portal URL on the `Settings -> Customizations` page in the admin portal.
-{% endhint %}
-
-## Managing and billing your Resellers
+## Managing your Resellers
 
 As an independent software vendor, you can effectively limit Reseller activity using the `Allowed Users` and `Allowed Organizations` properties on the Reseller. Furthermore, you can track Reseller activity using filters and the Audit Logs.
 

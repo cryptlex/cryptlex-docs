@@ -8,6 +8,8 @@ Automated emails can be used to automatically send emails to your customers when
 * `license.expiring-soon`&#x20;
 * `license.expired`
 * `license.deleted`
+* `license.maintenance-expired`
+* `license.maintenance-expiring-soon`
 * `user.created`
 *   `user.reset-password-request`
 
