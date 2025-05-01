@@ -69,4 +69,4 @@ Then click the "Extend" option in the actions menu. The trial extension form wil
 
 ### Re-activate the trial
 
-In your app you need to call ActivateTrial() function again, this would extend the trial in user's machine.
+In your app you need to call `ActivateTrial()` function again, this would extend the trial in user's machine.
