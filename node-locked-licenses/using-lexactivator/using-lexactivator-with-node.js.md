@@ -77,7 +77,7 @@ function main() {
     try {
       LexActivator.SetProductData('PASTE_CONTENT_OF_PRODUCT.DAT_FILE');
 	    LexActivator.SetProductId('PASTE_PRODUCT_ID', PermissionFlags.LA_USER);
-	    LexActivator.SetAppVersion('PASTE_YOUR_APP_VERION');
+	    LexActivator.SetReleaseVersion('PASTE_YOUR_RELEASE_VERSION');
 	    const status = LexActivator.IsLicenseGenuine();
         if (LexStatusCodes.LA_OK == status) {
             console.log("License is genuinely activated!");

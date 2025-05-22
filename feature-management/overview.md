@@ -1,5 +1,3 @@
 # Overview
 
-This category explains how to use Cryptlex to manage entitlements within your software applications. Cryptlex's feature management tools facilitate the implementation of software flavours, software variants, and paywalls. This is done by the creation of `Product Versions` as an extension to your `Product`.
-
-`Product Versions` consist of a list of `Feature Flags` also commonly known as `Feature Toggles.`
+Feature entitlements in Cryptlex define the specific capabilities and access permissions granted to a license within your product. They represent configurable product features that determine how the software behaves for each licensed user. Feature entitlements can be assigned through Entitlement Sets, which group multiple feature entitlements into reusable collections for standardized license tiers, or directly to individual licenses for more granular control. Each feature entitlement may optionally include a value, such as a string/number/boolean value, which your application can use to enforce limits or enable conditional functionality. This flexible structure allows for precise control over product access, supports varied licensing models, and simplifies feature management across different customer segments.
