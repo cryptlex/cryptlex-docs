@@ -38,4 +38,4 @@ When a subscription is renewed, Cryptlex adds the current `subscriptionInterval`
 The `expiresAt` property of the license can manually be updated to extend, shorten, or correct the license’s expiration date. The expiration date of a license can be updated from the admin portal manually or by using our REST API in automation.
 
 * **Admin Portal:** Go to the Licenses page, click the Actions menu (three dots) next to the license, and select **Update Expiration Date** License.
-* **Web API:** Send a `PATCH` request to [Update License Expiration](https://api.dev.cryptlex.com/v3/docs#tag/Licenses/operation/UpdateExpiresAtLicense) endpoint.
+* **Web API:** Send a `PATCH` request to [Update License Expiration](https://api.cryptlex.com/v3/docs#tag/Licenses/operation/UpdateExpiresAtLicense) endpoint.
