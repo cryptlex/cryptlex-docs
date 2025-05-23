@@ -86,4 +86,4 @@ Modifying a license template does **not** affect existing licenses. You have two
 * Integration script updates are only needed if you use `Validity` or the `/v3/licenses/:id/extend` endpoint.
 * Backward compatibility is fully maintained.
 
-Need any help or the migration script? Contact us through [email](mailto:support@cryptlex.com?Subject=Migration%20to%20Subscription%20Script).
+Need any help or the migration script? Contact us through [email](mailto:support@cryptlex.com?Subject=Migration%20to%20Subscription).
