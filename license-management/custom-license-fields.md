@@ -2,7 +2,7 @@
 
 ## Metadata properties
 
-The metadata which can be added to products, licenses and users has following three properties:
+The metadata, which can be added to products, licenses, and users, has the  following three properties:
 
 #### Key
 
@@ -28,21 +28,21 @@ Admins can control the visibility of metadata by configuring the metadata permis
 
 This metadata can be added to products and can be accessed in your application once a trial or license is activated.
 
-It can be used for storing some product-level information that you want to access in your app and this information can change over time.
+It can be used for storing some product-level information that you want to access in your app, and this information can change over time.
 
 ## License metadata
 
-This metadata can be added to your licenses at the time of creating a license. You can store additional data like `order_id`_,_ `customer_id` , `feature1`, `feature2` et&#x63;_._ with the license.
+License metadata allows you to attach custom data to each license at the time of creation. You can store useful identifiers such as `order_id`, `customer_id`, or any other key-value data relevant to your business logic.
 
-This can be accessed in your application once a license is activated. Its common use case is feature detection, i.e. if you wish to restrict the features in your application based on the value of metadata fields.
+This metadata can also be accessed within your application once the license is activated, making it ideal for use cases where additional context is needed alongside the license.
 
 {% hint style="info" %}
-In order to require licenses to have specific metadata properties, set them in the license template **requiredMetadataKeys** fiel&#x64;**.**
+In order to require licenses to have specific metadata properties, set them in the license template's **requiredMetadataKeys** fiel&#x64;**.**
 {% endhint %}
 
-### Enforcing schema for metadata fields
+### Enforcing a schema for metadata fields
 
-You can enforce the schema for metadata fields in the license template too, so you don't have to manually create the fields every time you create a license. Just provide the field names as comma-separated strings e.g. `order_id`_,_ `customer_id` , `feature1`, `feature2` etc. in the required metadata keys property of the license template.
+You can enforce the schema for metadata fields in the license template, too, so you don't have to manually create the fields every time you create a license. Just provide the field names as comma-separated strings, e.g. `order_id`_,_ `customer_id`  etc. in the required metadata keys property of the license template.
 
 ## User metadata
 
@@ -52,10 +52,10 @@ This metadata can be added to your license users at the time of creating a user.
 
 This metadata can be added by your application at the time of activating the license.
 
-It can be used to collect additional details from the machine on which the license is activated, e.g. number of CPU cores, any custom data provided by the user etc.
+It can be used to collect additional details from the machine on which the license is activated, e.g., number of CPU cores, any custom data provided by the user, etc.
 
 ## Trial activation metadata
 
 This metadata can be added by your application at the time of activating the trial.
 
-It can be used to collect additional details from the machine on which the trial is activated, e.g. number of CPU cores, any custom data provided by the user etc.
+It can be used to collect additional details from the machine on which the trial is activated, e.g., number of CPU cores, any custom data provided by the user, etc.
