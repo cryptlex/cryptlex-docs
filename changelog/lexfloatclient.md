@@ -1,5 +1,28 @@
 # LexFloatClient
 
+## **4.11.0 (2025-05-22)**
+
+### **Added**
+
+* `GetHostLicenseEntitlementSetName()` function returns the name of the entitlement set associated with the LexFloatServer license.
+* `GetHostLicenseEntitlementSetDisplayName()` function returns the display name of the entitlement set associated with the LexFloatServer license.
+* `GetHostFeatureEntitlements()` function returns the list of feature entitlements associated with the LexFloatServer license.
+* `GetHostFeatureEntitlement()` function returns a specific feature entitlement associated with the LexFloatServer license.
+
+### Updated
+
+* Moved `HostConfig` struct to LexFloatClientTypes.h.
+
+### **Fixed**
+
+* Addressed crashing issue in multi threaded applications.
+
+### Deprecated
+
+* `GetHostProductVersionName()` function has been deprecated in favour of `GetHostLicenseEntitlementSetName()` function.
+* `GetHostProductVersionDisplayName()` function has been deprecated in favour of `GetHostLicenseEntitlementSetDisplayName()` function.
+* `GetHostProductVersionFeatureFlag()` has been deprecated in favour of `GetHostFeatureEntitlement()` function.
+
 ## **4.10.0 (2024-12-02)**
 
 ### **Added**

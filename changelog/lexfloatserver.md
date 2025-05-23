@@ -1,5 +1,22 @@
 # LexFloatServer
 
+## **4.14.0 (2025-05-22)**
+
+### **Added**
+
+* `/api/server/feature-entitlements` endpoint to get the list of feature entitlements associated with the LexFloatServer.
+
+### **Updated**
+
+* Windows build of LexFloatServer is now distributed as two separate files (LexFloatServer.exe and LexActivator.dll) instead of a single unified executable to address crash issues.
+* LexActivator version to v3.32.0.
+
+## **4.13.4 (2025-03-18)**
+
+### **Updated**
+
+* LexActivator version to v3.31.3.
+
 ## **4.13.3 (2024-11-14)**
 
 ### Updated

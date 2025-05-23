@@ -381,3 +381,27 @@ Gets the list of meter attributes of the license used to activate the LexFloatSe
 </code></pre>
 {% endtab %}
 {% endtabs %}
+
+## Getting server license feature entitlements
+
+LexFloatServer exposes a feature entitlement API endpoint that can be used to get the list of all the feature entitlements associated with the license used to activate the LexFloatServer.
+
+## Gets the list of feature entitlements
+
+`GET` `http://localhost:8090/api/server/feature-entitlements`
+
+Gets the list of feature entitlements associated with the license used to activate the LexFloatServer.
+
+{% tabs %}
+{% tab title="200: OK " %}
+```javascript
+[
+  {
+    "featureName": "string",
+    "featureDisplayName": "string",
+    "value": "string",
+  }
+]
+```
+{% endtab %}
+{% endtabs %}

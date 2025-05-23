@@ -1,5 +1,33 @@
 # LexActivator
 
+## **3.32.0 (2025-05-22)**
+
+### **Added**
+
+* `GetLicenseEntitlementSetName()` function returns the name of the license entitlement set.
+* `GetLicenseEntitlementSetDisplayName()` function returns the display name of the license entitlement set.
+* `GetFeatureEntitlements()` function returns the list of feature entitlements associated with the license.
+* `GetFeatureEntitlement()` returns a specific feature entitlement associated with the license.
+* `GetActivationLastSyncedDate()` function returns the activation last synced date timestamp.
+* Support for PowerPC32 architecture on Linux.
+
+### **Updated**
+
+* `ActivateLicense()` function now returns `LA_E_LICENSE_NOT_EFFECTIVE` if the license activation is attempted before its effective date.
+* `IsLicenseGenuine()`, `IsLicenseValid()` functions now return `LA_E_FEATURE_ENTITLEMENTS_INVALID` if the feature entitlements are invalid.
+
+### **Deprecated**
+
+* `GetProductVersionName()` function has been deprecated in favour of `GetLicenseEntitlementSetName()` function.
+* `GetProductVersionDisplayName()` has been deprecated in favour of `GetLicenseEntitlementSetDisplayName()` function.
+* `GetProductVersionFeatureFlag()` has been deprecated in favour of `GetFeatureEntitlement()` function.
+
+## **3.31.3 (2025-02-13)**
+
+### **Fixed**
+
+* Improved linux fingerprinting stability for loose fingerprint matching strategy.
+
 ## **3.31.2 (2025-01-27)**
 
 ### Fixed
