@@ -1,5 +1,23 @@
 # LexActivator
 
+## 3.32.3 (2025-05-28)
+
+### Fixed
+
+* Minor bug fix.
+
+## 3.32.2 (2025-05-27)
+
+### Fixed
+
+* Minor bug fix.
+
+## 3.32.1 (2025-05-27)
+
+### Fixed
+
+* Minor bug fix.
+
 ## **3.32.0 (2025-05-22)**
 
 ### **Added**
