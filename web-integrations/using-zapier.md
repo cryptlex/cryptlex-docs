@@ -10,7 +10,7 @@
 
 ## Zapier Integration
 
-To use Zapier to automate workflows, you need to create a [Personal Access Token](personal-access-tokens.md) which Zapier will use for authorization while invoking Cryptlex web API.
+To use Zapier to automate workflows, you need to create a [Personal Access Token](broken-reference) which Zapier will use for authorization while invoking Cryptlex web API.
 
 To create an access token for Zapier, go to the [Personal Access Tokens](https://app.cryptlex.com/developer/access-tokens) section in the admin portal and create an access token with the following scope (permissions):&#x20;
 

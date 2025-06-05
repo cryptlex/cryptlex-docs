@@ -24,7 +24,7 @@ LexActivator is the Cryptlex client library which you will use to add licensing 
 
 You can use the [web API](https://api.cryptlex.com/v3/docs) to automate your order processes by generating new licenses when an order is processed through your payment processor. The web API can be used with any payment processor to generate licenses when an order is processed. To learn more refer to:
 
-{% content-ref url="web-integration/" %}
-[web-integration](web-integration/)
+{% content-ref url="web-integrations/" %}
+[web-integrations](web-integrations/)
 {% endcontent-ref %}
 
