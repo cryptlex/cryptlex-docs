@@ -81,6 +81,7 @@
   * [Using Web API](web-integration/using-web-api.md)
   * [Using Zapier](web-integration/using-zapier.md)
   * [Using FastSpring](web-integration/using-fastspring.md)
+  * [Using Stripe](web-integration/using-stripe.md)
   * [Custom Development](web-integration/custom-development.md)
 * [Changelog](changelog/README.md)
   * [Web API](changelog/web-api.md)
