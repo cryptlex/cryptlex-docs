@@ -32,13 +32,13 @@ For multiple products, ensure each has unique custom attributes.
   * **`subscription.payment.overdue`** - [Suspends](https://docs.cryptlex.com/license-management/suspending-licenses) the associated license.
   * **`subscription.deactivated`** - Deletes the license.
 
-### Next steps
+### What Happens Next
 
-After setup, the integration will:
+Once the integration is active:
 
-* Generate new licenses automatically upon order completion. The license will have metadata with FastSpring order/subscription IDs.
-* Handle subscription renewals, suspensions, and cancellations automatically.
-* Create a user in Cryptlex using customer's email and name present in the checkout.
+* New licenses are automatically created upon order completion.
+* New users are created in Cryptlex using the customer's email and name present in the checkout and linked with the license.
+* Licenses are automatically renewed in Cryptlex when the corresponding FastSpring subscription renews.
 
 ## Need more help?
 
