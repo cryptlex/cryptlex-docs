@@ -30,7 +30,7 @@ In your Stripe Dashboard:
 Once the integration is active:
 
 * New licenses are automatically created after successful Stripe payments.
-* New users are created in Cryptlex using the customer's name and email from Stripe.
+* New users are created in Cryptlex using the customer's name and email from Stripe and linked with the license.
 * Licenses are automatically renewed in Cryptlex when the corresponding Stripe subscription renews.
 
 {% hint style="info" %}
