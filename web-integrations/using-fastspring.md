@@ -37,7 +37,7 @@ For multiple products, ensure each has unique custom attributes.
 Once the integration is active:
 
 * New licenses are automatically created upon order completion.
-* New users are created in Cryptlex using the customer's email and name present in the checkout and linked with the license.
+* New users are created in Cryptlex using the customer's email and name present in the checkout and are automatically linked to the corresponding license.
 * Licenses are automatically renewed in Cryptlex when the corresponding FastSpring subscription renews.
 
 ## Need more help?
