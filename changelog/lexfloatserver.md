@@ -46,6 +46,7 @@
 ### Updated
 
 * Signed builds for macOS.
+* Updated minimum Windows OS requirement to Windows 10.
 
 ### **Fixed**
 
