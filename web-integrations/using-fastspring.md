@@ -28,7 +28,7 @@ For multiple products, ensure each has unique custom attributes.
 * Configure a secret in the HMAC SHA-256 Secret field. This secret must also be passed to the integration script to ensure secure verification of webhook requests.
 * Configure the webhook to send specific or all available events, depending on your use case:
   * **`order.completed`** - Creates a new license.
-  * **`subscription.charge.completed`** - [Renews](https://docs.cryptlex.com/license-management/renewing-licenses) the associated license.
+  * **`subscription.charge.completed`** - [Renews](https://docs.cryptlex.com/license-management/license-subscriptions#renewing-a-subscription) the associated license.
   * **`subscription.payment.overdue`** - [Suspends](https://docs.cryptlex.com/license-management/suspending-licenses) the associated license.
   * **`subscription.deactivated`** - Deletes the license.
 
