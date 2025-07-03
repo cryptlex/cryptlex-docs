@@ -170,8 +170,8 @@ If you have any questions or concerns regarding these Terms of Service or requir
 
 **Cryptlex LLP**
 
-1/22, Asaf Ali Road
-New Delhi, Delhi – 110002
+1/22, Asaf Ali Road  
+New Delhi, Delhi – 110002  
 India
 
 Email: [**legal@cryptlex.com**](mailto:legal@cryptlex.com)
