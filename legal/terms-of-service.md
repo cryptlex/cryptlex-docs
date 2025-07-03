@@ -168,10 +168,8 @@ If you choose to submit ideas, suggestions, or feedback regarding the Services, 
 
 If you have any questions or concerns regarding these Terms of Service or require further clarification about any aspect of your rights or obligations under this agreement, you may contact us at:
 
-**Cryptlex LLP**
-
+**Cryptlex LLP**  
 1/22, Asaf Ali Road  
 New Delhi, Delhi – 110002  
-India
-
+India  
 Email: [**legal@cryptlex.com**](mailto:legal@cryptlex.com)
