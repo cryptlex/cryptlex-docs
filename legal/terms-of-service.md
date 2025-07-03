@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Last Updated:** J**uly 3, 2025**
+**Last Updated:** **July 3, 2025**
 
 These Terms of Service (“Terms”) constitute a legal agreement between you (“you” or “Customer”) and Cryptlex LLP (“Cryptlex,” “we,” “us,” or “our”). By accessing or using Cryptlex’s services, you confirm that you have read, understood, and agreed to be bound by these Terms.
 
@@ -171,9 +171,7 @@ If you have any questions or concerns regarding these Terms of Service or requir
 **Cryptlex LLP**
 
 1/22, Asaf Ali Road
-
 New Delhi, Delhi – 110002
-
 India
 
 Email: [**legal@cryptlex.com**](mailto:legal@cryptlex.com)
