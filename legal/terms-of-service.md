@@ -96,8 +96,7 @@ The Services may contain links to third-party websites, services, or content. Cr
 
 ### 11. Service Level Commitment
 
-Cryptlex commits to maintaining 99.9% uptime for its services. In the event of verified downtime, you may be eligible for service credits as outlined in our [Service Level Agreement (SLA)](https://docs.cryptlex.com/legal/service-level-agreement).
-
+Cryptlex commits to maintaining 99.9% uptime for its services. In the event of verified downtime, customers on eligible subscription plans may be entitled to service credits, as described in our [Service Level Agreement (SLA)](https://docs.cryptlex.com/legal/service-level-agreement).
 ***
 
 ### 12. API Usage
