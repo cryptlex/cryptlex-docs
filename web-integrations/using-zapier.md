@@ -14,7 +14,7 @@ To use Zapier to automate workflows, you need to create a [Personal Access Token
 
 To create an access token for Zapier, go to the [Personal Access Tokens](https://app.cryptlex.com/developer/access-tokens) section in the admin portal and create an access token with the following scope (permissions):&#x20;
 
-_`activation:read`, `license:read`, `license:write`, `licenseTemplate:read`, `product:read`, `trialActivation:read`, `user:read`, `user:write`, `webhook:read`, `webhook:write`_
+_`activation:read`, `license:read`, `license:write`, `licenseTemplate:read`, `product:read`, `trialActivation:read`, `user:read`, `user:write`,_ `organization:read`, `organization:write`, _`webhook:read`, `webhook:write`_
 
 {% hint style="info" %}
 To add metadata to a license, ensure the corresponding metadata key is first defined in the license template.
