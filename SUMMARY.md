@@ -77,6 +77,7 @@
 * [Webhooks](webhooks.md)
 * [Automated Emails](automated-emails.md)
 * [Web Integrations](web-integrations/README.md)
+  * [Personal Access Tokens](web-integrations/personal-access-tokens.md)
   * [Using Zapier](web-integrations/using-zapier.md)
   * [Using FastSpring](web-integrations/using-fastspring.md)
   * [Using Stripe](web-integrations/using-stripe.md)
