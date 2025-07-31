@@ -24,6 +24,10 @@ These licensing API endpoints can be invoked using any HTTP library, but it does
 
 ## Minimum requirements
 
-LexActivator works on Windows XP through Windows 11, macOS 10.6+ and all Linux distributions (minimum supported `glibc` library version is `v2.13`).
+* **Windows**: Supported from Windows 7 and above.
+* **macOS**: Supported from macOS 10.13 and above.
+* **Linux**: Compatible with all major distributions with a minimum required **glibc version of 2.13**.
+* **Android**: Minimum supported **API level 23** and **NDK version r21e**.
+* **iOS**: Supported on devices running **iOS 11.0 and later**.
 
-There are no additional dependencies. It supports 32 bit as well as 64 bit CPU architectures for all the platforms. Additionally, for Linux and macOS ARM CPU architecture is also supported.
+LexActivator supports both **32-bit and 64-bit architectures** on all desktop platforms. In addition, **ARM architecture** is supported on **Windows**, **macOS** and **Linux**.

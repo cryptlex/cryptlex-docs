@@ -2,7 +2,11 @@
 
 A named user license is a licensing model in which the software or service is allocated to a specific individual, typically identified by a unique email address.&#x20;
 
-This model necessitates license activation using the designated user's credentials, moving away from the traditional use of license keys.&#x20;
+This model necessitates license activation using the designated user's credentials, moving away from the traditional use of license keys.
+
+{% hint style="info" %}
+This model requires linking the user to the license at the time of license creation.
+{% endhint %}
 
 Named user licenses can be either node-locked or floating. Regardless of the type, users must authenticate to access the licenses associated with their account. The typical process involves the following three steps:
 

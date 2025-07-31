@@ -39,8 +39,8 @@ To revoke a license you need to hit the [license update endpoint](https://api.cr
   "suspended": false,
   "totalActivations": 0,
   "totalDeactivations": 0,
-  "validity": 2595000,
-  "expirationStrategy": "immediate",
+  "subscriptionInterval": "P1Y",
+  "subscriptionStartTrigger": "creation",
   "fingerprintMatchingStrategy": "fuzzy",
   "allowedActivations": 1,
   "allowedDeactivations": 10,
@@ -49,7 +49,7 @@ To revoke a license you need to hit the [license update endpoint](https://api.cr
   "serverSyncGracePeriod": 2595000,
   "serverSyncInterval": 3600,
   "leaseDuration": 0,
-  "expiresAt": "2018-07-06T08:49:17.9361143Z",
+  "expiresAt": "2026-05-05T08:49:17.9361143Z",
   "allowVmActivation": true,
   "userLocked": false,
   "productId": "63dfd63e-ed71-4f84-9236-02ee0ddb062c",
@@ -61,8 +61,8 @@ To revoke a license you need to hit the [license update endpoint](https://api.cr
   "metadata": [],
   "tags": [],
   "id": "23d9646c-34f5-4d37-adeb-f7f77b927bdb",
-  "createdAt": "2018-05-06T08:49:17.9361143Z",
-  "updatedAt": "2018-05-06T08:49:17.9361158Z"
+  "createdAt": "2025-05-06T08:49:17.9361143Z",
+  "updatedAt": "2025-05-06T08:49:17.9361158Z"
 }
 ```
 {% endtab %}

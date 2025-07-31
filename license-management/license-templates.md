@@ -12,14 +12,6 @@ You can easily create a license template through the admin portal. Go to the lic
 
 The name of the license template.
 
-### Validity
-
-The duration (in seconds) after which the license will expire.
-
-{% hint style="info" %}
-To create a **perpetual** license set the validity to zero and for **subscriptions** set it to any value greater than zero.
-{% endhint %}
-
 ### Type
 
 There are three types of licenses:
@@ -27,6 +19,15 @@ There are three types of licenses:
 * **Node-locked:** This is the default type that locks the license to the machine.
 * **Hosted Floating:** This type is used for creating a hosted floating license.
 * **On-Premise floating:** This type is used for creating an on-premise floating license.
+
+### Subscription Interval
+
+To define a recurring subscription, use the `subscriptionInterval` property to specify the interval and the `subscriptionStartTrigger` to determine when that duration begins.
+
+* Subscription Interval accepts intervals using ISO8601 durations (`P1Y`, `P3M10D`, `P30D`). This automatically accounts for varying lengths of months and years.
+* Subscription Start Trigger controls when the subscription period begins:
+  * **License Creation**: The subscription starts when the license is created, useful for aligning with the purchase date.
+  * **License Activation**: The subscription starts when the license is activated for the first time.
 
 ### Lease duration
 
@@ -102,18 +103,6 @@ In order to allow an infinite grace period, this property can be set to "-1".
 
 The allowed difference between the network time and the system time. This can be used to allow license activations on machines where system clocks run behind the network time.
 
-### Expiration strategy
-
-The strategy to determine the expiration start date. It allows for the following strategies:
-
-#### **Immediate:**&#x20;
-
-The license starts expiring right after it is created.
-
-#### **Delayed:**&#x20;
-
-The license starts expiring after the license is activated the first time. If the license allows more than one activation then all the other activations will also start expiring right after the first activation of the license.
-
 ### Fingerprint matching strategy
 
 LexActivator generates a structured fingerprint of the machine which allows for multiple fingerprint matching strategies. It allows for the following strategies:
@@ -185,10 +174,6 @@ Whether to allow the client app to set the lease duration for the hosted-floatin
 ### User locked
 
 It prevents multiple users inside an OS from using the same license key. If enabled, each user will consume a license activation from the allowed number of activations for a license.
-
-### Require authentication
-
-In case you want to enforce user authentication for license activation in addition to the license key, you can set this property to `true`.
 
 ### Disable geolocation
 

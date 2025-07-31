@@ -4,13 +4,13 @@
 
 A product refers to the application you want to license.
 
-You should create a single product for your application, regardless of its different versions (e.g., Lite, Pro). However, for different applications, separate products should be created.
+You should create a single product for your application, regardless of its different versions (e.g., Lite, Pro, Business, Ultimate, etc). However, for different applications, separate products should be created.
 
 ## License template
 
-A license template helps you create different types of license profiles. It acts as a blueprint for the licenses you create for your customers and helps you implement different types of licensing models.
+A license template helps you create different types of license profiles/configurations. It acts as a blueprint for the licenses you create for your customers and helps you implement different types of licensing models.
 
-A single license template can be shared across different products and each product must have a default license template.
+A single license template can be shared across different products and each product must have a default license template linked.
 
 ## Trial policy
 
@@ -42,7 +42,7 @@ By default, all activations are node-locked, which means that the machine finger
 
 ## Trial activation
 
-A trial activation is said to occur when your customer activates the trial in your application on his/her machine.
+A trial activation is said to occur when your customer activates the trial in your application on their machine.
 
 By default, all trial activations are node-locked, which means that the machine fingerprint is stored along with the trial activation details.
 

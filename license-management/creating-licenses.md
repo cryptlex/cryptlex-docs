@@ -2,7 +2,7 @@
 
 ## Creating a license
 
-A license inherits all it's properties from the default license template attached to its product. But you may way want to override some properties like `allowedActivations`, `validity`, add some `metadata` etc. You can check out all the properties on the web API [reference page](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses).&#x20;
+A license inherits all it's properties from the default license template attached to its product. But you may way want to override some properties like `allowedActivations`, `subscriptionInterval`, add some `metadata` etc. You can check out all the properties on the web API [reference page](https://api.cryptlex.com/v3/docs#operation/post/v3/licenses).&#x20;
 
 {% hint style="info" %}
 You can also override the default license template by providing the `licenseTemplateId` at the time of creating a license.
@@ -22,12 +22,12 @@ Following is a sample request which you will usually make to create a license:
 
 #### Request Body
 
-| Name               | Type   | Description                                        |
-| ------------------ | ------ | -------------------------------------------------- |
-| validity           | number | The duration  after which the license will expire. |
-| allowedActivations | number | Allowed number of activations for the license.     |
-| userId             | string | Unique identifier for the user.                    |
-| productId          | string | Unique identifier for the product.                 |
+| Name                 | Type   | Description                                        |
+| -------------------- | ------ | -------------------------------------------------- |
+| subscriptionInterval | string | The duration  after which the license will expire. |
+| allowedActivations   | number | Allowed number of activations for the license.     |
+| userId               | string | Unique identifier for the user.                    |
+| productId            | string | Unique identifier for the product.                 |
 
 {% tabs %}
 {% tab title="201 " %}
@@ -38,8 +38,8 @@ Following is a sample request which you will usually make to create a license:
   "suspended": false,
   "totalActivations": 0,
   "totalDeactivations": 0,
-  "validity": 2595000,
-  "expirationStrategy": "immediate",
+  "subscriptionInterval": "P1Y",
+  "subscriptionStartTrigger": "creation",
   "fingerprintMatchingStrategy": "fuzzy",
   "allowedActivations": 1,
   "allowedDeactivations": 10,
@@ -48,7 +48,7 @@ Following is a sample request which you will usually make to create a license:
   "serverSyncGracePeriod": 2595000,
   "serverSyncInterval": 3600,
   "leaseDuration": 0,
-  "expiresAt": "2018-06-06T08:49:17.9361143Z",
+  "expiresAt": "2026-05-05T08:49:17.9361143Z",
   "allowVmActivation": true,
   "userLocked": false,
   "productId": "63dfd63e-ed71-4f84-9236-02ee0ddb062c",
@@ -60,8 +60,8 @@ Following is a sample request which you will usually make to create a license:
   "metadata": [],
   "tags": [],
   "id": "23d9646c-34f5-4d37-adeb-f7f77b927bdb",
-  "createdAt": "2018-05-06T08:49:17.9361143Z",
-  "updatedAt": "2018-05-06T08:49:17.9361158Z"
+  "createdAt": "2025-05-06T08:49:17.9361143Z",
+  "updatedAt": "2025-05-06T08:49:17.9361158Z"
 }
 ```
 {% endtab %}

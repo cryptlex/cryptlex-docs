@@ -14,5 +14,5 @@ Start by creating a Reseller and assigning a User to the Reseller with the `rese
 As an independent software vendor, you can effectively limit Reseller activity using the `Allowed Users` and `Allowed Organizations` properties on the Reseller. Furthermore, you can track Reseller activity using filters and the Audit Logs.
 
 {% hint style="info" %}
-Note: The Resellers feature is currently in beta. Expect ongoing enhancements as we refine and optimize the experience. Your feedback is invaluable in shaping this feature, please share your thoughts on support@cryptlex.com.
+Note: The Resellers feature is currently in beta. Expect ongoing enhancements as we refine and optimize the experience. Your feedback is invaluable in shaping this feature, please share your thoughts at support@cryptlex.com.
 {% endhint %}

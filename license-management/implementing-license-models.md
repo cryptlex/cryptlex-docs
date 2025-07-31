@@ -8,19 +8,19 @@ Each licensing model you want to implement may require a different license templ
 
 ### Perpetual
 
-A perpetual license has lifetime validity.
+A perpetual (lifetime) license does not have a subscription interval or an expiration date set.
 
-| Property       | Value |
-| -------------- | ----- |
-| **`validity`** | `0`   |
+| Property                   | Value  |
+| -------------------------- | ------ |
+| **`subscriptionInterval`** | `null` |
 
 ### Subscription
 
 A subscription expires after a specific duration of time. When a license expires, LexActivator will return `LA_EXPIRED` status code.
 
-| Property       | Value |
-| -------------- | ----- |
-| **`validity`** | `>0`  |
+| Property                   | Value |
+| -------------------------- | ----- |
+| **`subscriptionInterval`** | `P1M` |
 
 ### Node-locked
 
@@ -107,13 +107,12 @@ You can allow an unlimited number of seats for a license (site license), and res
 
 ### Named-user
 
-A license activation only requires a license key. In case you want to enforce user authentication for license activation, you can set `requireAuthentication` property to `true`.
+A named-user license is assigned to a specific individual (typically identified by an email address) rather than a machine. This model requires users to authenticate using their credentials to access the license, making it different from traditional license key-based models.
 
-This also requires linking the user to the license at the time of license creation.
+{% hint style="info" %}
+This model requires linking the user to the license at the time of license creation.
+{% endhint %}
 
-| Property                    | Value             |
-| --------------------------- | ----------------- |
-| **`type`**                  | `hosted-floating` |
-| **`leasingStrategy`**       | `per-instance`    |
-| **`leaseDuration`**         | `>0`              |
-| **`requireAuthentication`** | `true`            |
+| Property   | Value                            |
+| ---------- | -------------------------------- |
+| **`type`** | `node-locked`, `hosted-floating` |
