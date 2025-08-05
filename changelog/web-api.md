@@ -79,7 +79,7 @@
 
 * Maintenance mode support (in on-premise deployments) to prevent traffic during critical updates
 
-## 3.69.0 (2023-11-12)
+## 3.69.0 (2023-12-11)
 
 ### Added <a href="#changed" id="changed"></a>
 
