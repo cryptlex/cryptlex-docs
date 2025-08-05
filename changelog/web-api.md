@@ -1,5 +1,102 @@
 # Web API
 
+## 3.78.0 (2025-05-22)
+
+### Added <a href="#changed" id="changed"></a>
+
+* Entitlement Sets and features
+* License level features and feature overriding
+* `SubscriptionInterval` and `SusbcriptionStartTrigger` properties to licenses
+* [/v3/licenses/:id/expires-at](https://api.cryptlex.com/v3/docs#tag/Licenses/operation/UpdateExpiresAtLicense) endpoint to allow updating the license expiration date
+* `activation.lastSyncedAt`  query param to the /v3/licenses endpoint
+* Response JSON in delete operations to audit logs
+
+### Deprecated <a href="#changed" id="changed"></a>
+
+* Product versions (use entitlement sets instead)
+* Feature flags (use features instead)
+* `Validity` property on license (use `SubscriptionInterval`  instead)
+* `ExpirationStrategy` property on license (use `SusbcriptionStartTrigger`  instead)
+* `/v3/licenses/:id/extend` endpoint (use update expires at endpoint instead)
+
+## 3.77.0 (2025-02-07)
+
+### Added <a href="#changed" id="changed"></a>
+
+* &#x20;Archive support for releases
+
+## 3.76.0 (2025-01-14)
+
+### Added <a href="#changed" id="changed"></a>
+
+* OpenTelemetry support
+
+## 3.75.0 (2024-11-19)
+
+### Added <a href="#changed" id="changed"></a>
+
+* Query params for reseller license and activation endpoints
+* Activation creation date to the activation JWT.
+
+### Updated <a href="#changed" id="changed"></a>
+
+* Limit the number of license metadata fields to 50 per license
+
+## 3.74.0 (2024-10-15)
+
+### Added <a href="#changed" id="changed"></a>
+
+* Support for refresh tokens in the login endpoint
+
+## 3.73.0 (2024-09-13)
+
+### Added <a href="#changed" id="changed"></a>
+
+* User and Organization resources in the activations export endpoint
+
+## 3.72.0 (2024-06-10)
+
+### Added <a href="#changed" id="changed"></a>
+
+* Support for using `-1` to represent unlimited value for `allowedActivations`, `allowedDeactivations`, `allowedFloatingClients`, `allowedClockOffset` , `leaseDuration` , `ServerSyncGracePeriod` in the license resource
+* Support for `ViewPermissions` for license metadata to control the visibility as per the user role
+* Support for `include` query param in the `\v3\activations` endpoint to conditionally get linked users and organizations
+
+### Deprecated <a href="#changed" id="changed"></a>
+
+* `DisableClockValidation` property in license (use `allowedClockOffset = -1 instead)`
+
+## 3.71.0 (2024-04-15)
+
+### Added <a href="#changed" id="changed"></a>
+
+* `LicenseKey` query param to the `/v3/activations` endpoint
+* `/v3/automated-emails/:id/preview` endpoint to support server previews for emails
+
+## 3.70.0 (2024-02-05)
+
+### Added <a href="#changed" id="changed"></a>
+
+* Maintenance mode support (in on-premise deployments) to prevent traffic during critical updates
+
+## 3.69.0 (2023-11-12)
+
+### Added <a href="#changed" id="changed"></a>
+
+* &#x20;`in` operator support to `type` query parameter in the `/v3/licenses` endpoint
+
+## 3.68.0 (2023-11-29)
+
+### Added <a href="#changed" id="changed"></a>
+
+* &#x20;Query params to the `/v3/users/export` endpoint
+
+## 3.67.0 (2023-09-06)
+
+### Added <a href="#changed" id="changed"></a>
+
+* &#x20;Support for resellers
+
 ## 3.66.0 (2023-08-09)
 
 ### Added <a href="#changed" id="changed"></a>
@@ -10,7 +107,8 @@
 
 ### Added <a href="#changed" id="changed"></a>
 
-* &#x20;/v3/license-templates endpoint as an alternative for license policies.
+* /v3/license-templates endpoint as an alternative for license policies.
+* `productId` query param in `/v3/me/licenses` endpoint
 
 ## 3.64.0 (2023-05-30)
 
@@ -469,7 +567,7 @@
 
 * Some minor bug fixes and improvements.
 
-## 3.0.1 (2018-05-18) <a href="#3-0-0-2018-05-03" id="3-0-0-2018-05-03"></a>
+## 3.0.1 (2018-05-18) <a href="#id-3-0-0-2018-05-03" id="id-3-0-0-2018-05-03"></a>
 
 ### Changed <a href="#changed" id="changed"></a>
 
