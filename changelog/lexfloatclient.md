@@ -1,5 +1,15 @@
 # LexFloatClient
 
+## **4.12.0 (2025-08-05)**
+
+### **Added**
+
+* `GetHostProductMetadata()` function returns the value of the product metadata.
+
+### **Updated**
+
+* `libcurl` version has been updated to v8.14.1
+
 ## **4.11.0 (2025-05-22)**
 
 ### **Added**

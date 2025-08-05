@@ -1,5 +1,15 @@
 # LexActivator
 
+## 3.33.0 (2025-08-05)
+
+#### **Added**
+
+* Support for x86\_64 architecture for Android packages.
+
+#### **Updated**
+
+* `libcurl` version has been updated to v8.14.1
+
 ## 3.32.3 (2025-05-28)
 
 ### Fixed
