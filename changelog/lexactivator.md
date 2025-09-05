@@ -1,5 +1,15 @@
 # LexActivator
 
+## 3.34.0 (2025-09-02)
+
+#### Added
+
+* Improved device fingerprint algorithm for Linux when using the `LA_SYSTEM` permission flag.
+
+#### Fixed
+
+* Minor bug fix.
+
 ## 3.33.0 (2025-08-05)
 
 #### **Added**

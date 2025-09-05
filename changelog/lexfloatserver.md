@@ -1,5 +1,11 @@
 # LexFloatServer
 
+## **4.15.0 (2025-09-02)**
+
+### Added
+
+* Improved device fingerprinting algorithm on Linux for improved reliability.
+
 ## **4.14.5 (2025-08-13)**
 
 ### Fixed
