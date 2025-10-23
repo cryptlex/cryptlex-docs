@@ -1,5 +1,26 @@
 # Web API
 
+## 3.80.0 (2025-09-24)
+
+### Added <a href="#changed" id="changed"></a>
+
+* Subscription logs to track all license subscription changes, such as renewals, expiration updates, and interval modifications
+* `license.first-activated` webhook event that triggers when a license is activated for the first time
+* `license.expiresAt.updated` webhook event that triggers when the license expiration date changes
+* [/v3/trial-activations/:id/expires-at](https://api.cryptlex.com/v3/trial-activations/%7Bid%7D/expires-at) endpoint to allow updating the expiration date of a trial activation directly, rather than using the deprecated extend endpoint
+* [/v3/activations](https://api.cryptlex.com/v3/docs#tag/Activations/operation/BulkDeleteActivation) endpoint to allow bulk deletion of activations within a date range for a specific license
+* `organization.user.created` and `reseller.user.created` events for automated emails
+* `entitlementSetId` and `activation.countryCode` query params to the /v3/licenses endpoint
+
+## 3.79.0 (2025-08-11)
+
+### Added <a href="#changed" id="changed"></a>
+
+* `activation.lease-expired` webhook event that triggers when an activation lease expires without renewing
+* `license.activation.limit-reached` webhook event that triggers when the maximum allowed activations are reached for a license
+* `license.subscription.updated` webhook event that triggers when the license subscription properties are updated
+* `subscriptionInterval` and s`usbcriptionStartTrigger` query params to the /v3/licenses endpoint
+
 ## 3.78.0 (2025-05-22)
 
 ### Added <a href="#changed" id="changed"></a>
