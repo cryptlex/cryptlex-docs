@@ -40,6 +40,16 @@ The `expiresAt` property of the license can manually be updated to extend, short
 * **Admin Portal:** Go to the Licenses page, click the Actions menu (three dots) next to the license, and select **Update Expiration Date** License.
 * **Web API:** Send a `PATCH` request to [Update License Expiration](https://api.cryptlex.com/v3/docs#tag/Licenses/operation/UpdateExpiresAtLicense) endpoint.
 
+## Subscription Logs
+
+The **Subscription Logs** feature in Cryptlex provides detailed tracking and history of subscription-related events for each license. This helps in auditing and troubleshooting subscription changes over time.
+
+It commonly capture events such as license expiration date updates `license.expiresAt.updated`, license renewals `license.renewed`, and modifications to subscription details `license.subscription.updated`, helping admins to monitor and audit each change made to the license subscription lifecycle.
+
+{% hint style="info" %}
+These logs can be viewed via `Licenses → Subscription Logs` page in the admin portal.
+{% endhint %}
+
 ***
 
 ## Migrating to Subscription Interval-Based Licensing

@@ -15,6 +15,7 @@ This tutorial will guide you through setting up FastSpring integration with Cryp
 * Add these custom attributes to your “Product” or “Subscription”:
   * `cryptlex_product_id`
   * `cryptlex_license_template_id`
+  * `cryptlex_subscription_interval` (Optional - Use this to override the subscription interval defined in the license template)
 
 {% hint style="info" %}
 For multiple products, ensure each has unique custom attributes.

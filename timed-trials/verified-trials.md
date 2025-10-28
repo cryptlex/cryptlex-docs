@@ -2,6 +2,10 @@
 
 Verified trials are also node-locked. It ensures that trial doesn't reset even if user formats the machine. Each verified trial activation appears in the admin portal in the `Trials -> Trial Activations` section.
 
+{% hint style="info" %}
+To ensure proper trial functionality, create a Trial Policy from the `Trials → Trial Policies` page and link it with the corresponding product via  `Home → Products` page.
+{% endhint %}
+
 ## Adding a verified trial to your app
 
 When your user installs your application for the first time, invoke `ActivateTrial()` LexActivator API functions to start the trial. The following sample code should be executed once after the user installs your app, ideally on a button click. Executing multiple times would unnecessarily re-validate the trial by contacting Cryptlex servers.
