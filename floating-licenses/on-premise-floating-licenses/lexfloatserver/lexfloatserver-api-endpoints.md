@@ -2,6 +2,10 @@
 
 LexFloatServer provides several API endpoints for retrieving information related to its status, license details, leased floating licenses, meter attributes, and feature entitlements.
 
+{% hint style="info" %}
+These are protected endpoints and require an `apiKey` to be included as a query parameter in the request URL. The `apiKey` can be configured in the `config.yml` file under the `auth` section of LexFloatServer.
+{% endhint %}
+
 ## Getting server stats
 
 LexFloatServer exposes a stats API endpoint that can be used to get the current stats of the server.
