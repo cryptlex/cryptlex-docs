@@ -32,7 +32,7 @@ ActivateLicenseOffline();
 ```
 
 {% hint style="info" %}
-The `ActivationLicenseOffline()` function requires a valid file path (including the file name and extension).
+The `ActivateLicenseOffline()` function requires a valid file path (including the file name and extension).
 {% endhint %}
 
 In case the user formats the PC, the generated offline activation response can be reused to activate your app, till the response validity expires.
