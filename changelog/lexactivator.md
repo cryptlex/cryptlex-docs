@@ -1,22 +1,46 @@
 # LexActivator
 
+## **3.35.1 (2025-10-21)**
+
+### Updated
+
+* Improved proxy detection for windows.
+
+## **3.35.0 (2025-10-10)**
+
+### **Added**
+
+* Added support for WSL detection.
+
+## **3.34.2 (2025-09-24)**
+
+### **Fixed**
+
+* Minor bug fix.
+
+## **3.34.1 (2025-09-04)**
+
+### **Fixed**
+
+* Minor bug fix.
+
 ## 3.34.0 (2025-09-02)
 
-#### Added
+### Added
 
 * Improved device fingerprint algorithm for Linux when using the `LA_SYSTEM` permission flag.
 
-#### Fixed
+### Fixed
 
 * Minor bug fix.
 
 ## 3.33.0 (2025-08-05)
 
-#### **Added**
+### **Added**
 
 * Support for x86\_64 architecture for Android packages.
 
-#### **Updated**
+### **Updated**
 
 * `libcurl` version has been updated to v8.14.1
 
