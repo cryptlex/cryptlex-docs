@@ -22,7 +22,7 @@ Product.dat contains product data that is used by LexActivator. The product id i
 
 The LexActivator C example project includes the header files **LexActivator.h**, **LexStatusCodes.h**, and **LexTypes.h**. The **LexActivator.h** file defines all the LexActivator API functions required to add licensing to your application.
 
-Depending on the target platform x86, x64, or arm64 you need to link your application with the corresponding LexActivator library.
+Depending on the target platform x86, x64, or ARM64 you need to link your application with the corresponding LexActivator library.
 
 {% hint style="info" %}
 **LexActivator** requires the Microsoft Visual C++ 2015 (or later) Runtime on older Windows versions such as Windows 7, 8, or Server 2008/2012. If not already installed, install it from the official [Visual C++ Redistributable](https://www.microsoft.com/en-in/download/details.aspx?id=48145) or include the required DLLs with your installer.
