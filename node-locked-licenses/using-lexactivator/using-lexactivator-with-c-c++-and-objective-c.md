@@ -20,11 +20,13 @@ Product.dat contains product data that is used by LexActivator. The product id i
 
 ### Adding the library to your app
 
-LexActivator example project for C contains the **LexActivator.h** header file. In addition to that, it includes the **LexActivator.lib** file required in the case of Windows. It contains all the LexActivator API functions needed to add licensing to your app.
+The LexActivator C example project includes the header files **LexActivator.h**, **LexStatusCodes.h**, and **LexTypes.h**. The **LexActivator.h** file defines all the LexActivator API functions required to add licensing to your application.
 
-Depending on the platform you are targeting **(x86 or x64)** you need to link the respective LexActivator.dll with your application.
+Depending on the target platform x86, x64, or arm64 you need to link your application with the corresponding LexActivator library.
 
-LexActivator has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+{% hint style="info" %}
+**LexActivator** requires the Microsoft Visual C++ 2015 (or later) Runtime on older Windows versions such as Windows 7, 8, or Server 2008/2012. If not already installed, install it from the official [Visual C++ Redistributable](https://www.microsoft.com/en-in/download/details.aspx?id=48145) or include the required DLLs with your installer.
+{% endhint %}
 
 ### Setting product.dat file and product id
 

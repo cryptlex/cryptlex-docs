@@ -25,7 +25,9 @@ LexActivator wrapper for Java is available on the [central maven repository](htt
 
 Alternatively, you can also download the [JAR](https://repo1.maven.org/maven2/com/cryptlex/lexactivator/lexactivator/) file and add it to your project.
 
-LexActivator has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+{% hint style="info" %}
+**LexActivator** requires the Microsoft Visual C++ 2015 (or later) Runtime on older Windows versions such as Windows 7, 8, or Server 2008/2012. If not already installed, install it from the official [Visual C++ Redistributable](https://www.microsoft.com/en-in/download/details.aspx?id=48145) or include the required DLLs with your installer.
+{% endhint %}
 
 ### Setting product.dat file and product Id <a href="#setting-product.dat-file-and-product-id" id="setting-product.dat-file-and-product-id"></a>
 

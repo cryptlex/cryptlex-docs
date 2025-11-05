@@ -19,11 +19,13 @@ The product id is the identifier of your product that is to be used in the code.
 
 ### Adding the library to your app
 
-LexFloatClient example project for C contains the **LexFloatClient.h** header file. In addition to that, it includes the **LexFloatClient.lib** file required in the case of Windows. It contains all the LexFloatClient API functions needed to add licensing to your app.
+The LexFloatClient C example project includes the header files **LexFloatClient.h** and **LexFloatStatusCodes.h**. The **LexFloatClient.h** file defines all the LexFloatClient API functions required to add licensing to your application.
 
-Depending on the platform you are targeting **(x86 or x64)** you need to link the respective LexFloatClient.dll with your application.
+Depending on the target platform (x86, x64, or ARM64), you need to link your application with the corresponding LexFloatClient library.
 
-LexFloatClient has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+{% hint style="info" %}
+**LexFloatClient** requires the Microsoft Visual C++ 2015 (or later) Runtime on older Windows versions such as Windows 7, 8, or Server 2008/2012. If not already installed, install it from the official [Visual C++ Redistributable](https://www.microsoft.com/en-in/download/details.aspx?id=48145) or include the required DLLs with your installer.
+{% endhint %}
 
 ### Setting product id
 

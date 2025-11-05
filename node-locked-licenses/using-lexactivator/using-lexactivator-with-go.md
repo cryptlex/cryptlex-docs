@@ -26,7 +26,9 @@ xcopy %USERPROFILE%\go\src\github.com\cryptlex\lexactivator-go\libs\windows_amd6
 
 This would copy the LexActivator.dll to your project directory.
 
-LexActivator has a dependency on `VS2015` runtime on **Windows**. On the target machines where you will deploy your app, you can install the `VS2015` runtime, if not present, using the link: [https://www.microsoft.com/en-in/download/details.aspx?id=48145](https://www.microsoft.com/en-in/download/details.aspx?id=48145)
+{% hint style="info" %}
+**LexActivator** requires the Microsoft Visual C++ 2015 (or later) Runtime on older Windows versions such as Windows 7, 8, or Server 2008/2012. If not already installed, install it from the official [Visual C++ Redistributable](https://www.microsoft.com/en-in/download/details.aspx?id=48145) or include the required DLLs with your installer.
+{% endhint %}
 
 {% hint style="info" %}
 This package relies on `cgo` to interface with a C library. As a result, `cgo` must be enabled when building and using this package. Disabling `cgo` (e.g., by setting `CGO_ENABLED=0`) will result in compilation errors.
